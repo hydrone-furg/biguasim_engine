@@ -5,8 +5,11 @@
 #include <map>
 #include "CollisionSensor.h"
 #include "IMUSensor.h"
+// #include "JointRotationSensor.h"
 #include "LocationSensor.h"
 #include "OrientationSensor.h"
+// #include "PressureSensor.h"
+// #include "RelativeSkeletalPositionSensor.h"
 #include "RGBCamera.h"
 #include "RotationSensor.h"
 #include "VelocitySensor.h"

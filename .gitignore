@@ -103,5 +103,4 @@ pip-wheel-metadata
 docs
 biguasim-docs
 biguasim-docs/*
-Source/Holodeck/BiguaCore/*Content/Maps/
-Content/Maps/
+Source/Holodeck/BiguaCore/*
