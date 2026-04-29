@@ -1,0 +1,264 @@
+\hypertarget{classUHolodeckServer}{}\doxysection{UHolodeck\+Server Class Reference}
+\label{classUHolodeckServer}\index{UHolodeckServer@{UHolodeckServer}}
+
+
+Core communication server for Bigua\+Sim. This class resides in the engine and handles the passing of messages to the Python client through shared memory. A new shared memory block is created for each sensor, action space, and setting.  
+
+
+
+
+{\ttfamily \#include $<$Holodeck\+Server.\+h$>$}
+
+
+
+Inheritance diagram for UHolodeck\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classUHolodeckServer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UHolodeck\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classUHolodeckServer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUHolodeckServer_a721beda9b7dac5d84bf02ebf033f703b}{UHolodeck\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUHolodeckServer_a8db880fa9f861338d374df01441cce8f}{$\sim$\+UHolodeck\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUHolodeckServer_ad923b23834320c372749d3c47400215a}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the server. Initializes the IPC semaphores based on the current platform (Windows or Linux). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUHolodeckServer_abaceb4001b5aee37f8ab9bbe722b8ba6}{Kill}} ()
+\begin{DoxyCompactList}\small\item\em Shuts the server down. Closes the system semaphores and clears the shared memory map. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classUHolodeckServer_a2ee869ace27112491a78c715dda81f79}{Malloc}} (const std\+::string \&Key, unsigned int Buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Allocates or retrieves a shared memory block. If memory has already been malloc\textquotesingle{}ed with the same key, the block is overwritten. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUHolodeckServer_a3b07fa76a0631f4fa71befbbdeb63540}{Acquire}} ()
+\begin{DoxyCompactList}\small\item\em Acquires the mutex to allow the next tick to occur. Will block the Unreal Engine thread until the Python client releases the lock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUHolodeckServer_a8f199c275ac516ae5fc5f51b69897568}{Release}} ()
+\begin{DoxyCompactList}\small\item\em Releases the mutex to allow the Python client to tick. Signals the client that Unreal Engine has finished updating the shared memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUHolodeckServer_ab1031427cd7efcbccc1b835e62e8de80}{Is\+Running}} () const
+\begin{DoxyCompactList}\small\item\em Gets whether the server is currently running. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{classUHolodeckServer_a100398ee116ba860df965e7adcea53bc}{Make\+Key}} (const std\+::string \&Agent\+Name, const std\+::string \&Item\+Name)
+\begin{DoxyCompactList}\small\item\em Generates a unique shared memory key for a specific item belonging to an agent. \end{DoxyCompactList}\item 
+static const std\+::string \mbox{\hyperlink{classUHolodeckServer_afaf2e1d45db6290d2b87147dc5dd0d83}{Make\+Key}} (const FString \&Agent\+Name, const std\+::string \&Item\+Name)
+\begin{DoxyCompactList}\small\item\em Generates a unique shared memory key for a specific item belonging to an agent. \end{DoxyCompactList}\item 
+static const std\+::string \mbox{\hyperlink{classUHolodeckServer_af1078687a7c11ca670e389c03e606236}{Make\+Key}} (const FString \&Agent\+Name, const FString \&Item\+Name)
+\begin{DoxyCompactList}\small\item\em Generates a unique shared memory key for a specific item belonging to an agent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TMap$<$ FString, \mbox{\hyperlink{classAHolodeckAgent}{AHolodeck\+Agent}} $\ast$ $>$ \mbox{\hyperlink{classUHolodeckServer_ab752cbeb4711258638d4836a4760b9ca}{Agent\+Map}}
+\begin{DoxyCompactList}\small\item\em Stores pointers to all the active agents within the world map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Core communication server for Bigua\+Sim. This class resides in the engine and handles the passing of messages to the Python client through shared memory. A new shared memory block is created for each sensor, action space, and setting. 
+
+
+\begin{DoxyItemize}
+\item There should only be one \mbox{\hyperlink{classUHolodeckServer}{UHolodeck\+Server}} active at a time, instantiated by the Holodeck\+Game\+Instance. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUHolodeckServer_a721beda9b7dac5d84bf02ebf033f703b}\label{classUHolodeckServer_a721beda9b7dac5d84bf02ebf033f703b}} 
+\index{UHolodeckServer@{UHolodeckServer}!UHolodeckServer@{UHolodeckServer}}
+\index{UHolodeckServer@{UHolodeckServer}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{UHolodeckServer()}{UHolodeckServer()}}
+{\footnotesize\ttfamily UHolodeck\+Server\+::\+UHolodeck\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Default constructor for the Holodeck\+Server. Initializes the running state to false. Warning\+: Because this class is a UObject, it may be initialized multiple times by Unreal Engine. Do not rely on singleton-\/qualities in the constructor; use the \mbox{\hyperlink{classUHolodeckServer_ad923b23834320c372749d3c47400215a}{Start()}} function instead. \mbox{\Hypertarget{classUHolodeckServer_a8db880fa9f861338d374df01441cce8f}\label{classUHolodeckServer_a8db880fa9f861338d374df01441cce8f}} 
+\index{UHolodeckServer@{UHolodeckServer}!````~UHolodeckServer@{$\sim$UHolodeckServer}}
+\index{````~UHolodeckServer@{$\sim$UHolodeckServer}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{$\sim$UHolodeckServer()}{~UHolodeckServer()}}
+{\footnotesize\ttfamily UHolodeck\+Server\+::$\sim$\+UHolodeck\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Destructor. 
+
+Destructor. Ensures the server is properly shut down and system resources are freed by calling \mbox{\hyperlink{classUHolodeckServer_abaceb4001b5aee37f8ab9bbe722b8ba6}{Kill()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUHolodeckServer_a3b07fa76a0631f4fa71befbbdeb63540}\label{classUHolodeckServer_a3b07fa76a0631f4fa71befbbdeb63540}} 
+\index{UHolodeckServer@{UHolodeckServer}!Acquire@{Acquire}}
+\index{Acquire@{Acquire}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{Acquire()}{Acquire()}}
+{\footnotesize\ttfamily void UHolodeck\+Server\+::\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Acquires the mutex to allow the next tick to occur. Will block the Unreal Engine thread until the Python client releases the lock. 
+
+Blocks the Unreal Engine thread until it receives a signal to proceed. Waits on Locking\+Semaphore1, pausing the simulation tick until the Python client reads the previous state and sends new commands. \mbox{\Hypertarget{classUHolodeckServer_ab1031427cd7efcbccc1b835e62e8de80}\label{classUHolodeckServer_ab1031427cd7efcbccc1b835e62e8de80}} 
+\index{UHolodeckServer@{UHolodeckServer}!IsRunning@{IsRunning}}
+\index{IsRunning@{IsRunning}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{IsRunning()}{IsRunning()}}
+{\footnotesize\ttfamily bool UHolodeck\+Server\+::\+Is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets whether the server is currently running. 
+
+Checks the active status of the server.
+
+\begin{DoxyReturn}{Returns}
+True if the server and semaphores are active.
+
+True if the server is running and semaphores are active, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUHolodeckServer_abaceb4001b5aee37f8ab9bbe722b8ba6}\label{classUHolodeckServer_abaceb4001b5aee37f8ab9bbe722b8ba6}} 
+\index{UHolodeckServer@{UHolodeckServer}!Kill@{Kill}}
+\index{Kill@{Kill}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{Kill()}{Kill()}}
+{\footnotesize\ttfamily void UHolodeck\+Server\+::\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shuts the server down. Closes the system semaphores and clears the shared memory map. 
+
+Shuts down the server and cleans up resources. Clears the shared memory map and securely closes/unlinks the cross-\/process semaphores. \mbox{\Hypertarget{classUHolodeckServer_af1078687a7c11ca670e389c03e606236}\label{classUHolodeckServer_af1078687a7c11ca670e389c03e606236}} 
+\index{UHolodeckServer@{UHolodeckServer}!MakeKey@{MakeKey}}
+\index{MakeKey@{MakeKey}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{MakeKey()}{MakeKey()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static const std\+::string UHolodeck\+Server\+::\+Make\+Key (\begin{DoxyParamCaption}\item[{const FString \&}]{Agent\+Name,  }\item[{const FString \&}]{Item\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generates a unique shared memory key for a specific item belonging to an agent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Agent\+Name} & The name of the agent (FString). \\
+\hline
+{\em Item\+Name} & The name of the item (FString). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A formatted key string (\char`\"{}\+Agent\+Name\+\_\+\+Item\+Name\char`\"{}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUHolodeckServer_afaf2e1d45db6290d2b87147dc5dd0d83}\label{classUHolodeckServer_afaf2e1d45db6290d2b87147dc5dd0d83}} 
+\index{UHolodeckServer@{UHolodeckServer}!MakeKey@{MakeKey}}
+\index{MakeKey@{MakeKey}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{MakeKey()}{MakeKey()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static const std\+::string UHolodeck\+Server\+::\+Make\+Key (\begin{DoxyParamCaption}\item[{const FString \&}]{Agent\+Name,  }\item[{const std\+::string \&}]{Item\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generates a unique shared memory key for a specific item belonging to an agent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Agent\+Name} & The name of the agent (FString). \\
+\hline
+{\em Item\+Name} & The name of the item (std\+::string). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A formatted key string (\char`\"{}\+Agent\+Name\+\_\+\+Item\+Name\char`\"{}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUHolodeckServer_a100398ee116ba860df965e7adcea53bc}\label{classUHolodeckServer_a100398ee116ba860df965e7adcea53bc}} 
+\index{UHolodeckServer@{UHolodeckServer}!MakeKey@{MakeKey}}
+\index{MakeKey@{MakeKey}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{MakeKey()}{MakeKey()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static const std\+::string UHolodeck\+Server\+::\+Make\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Agent\+Name,  }\item[{const std\+::string \&}]{Item\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generates a unique shared memory key for a specific item belonging to an agent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Agent\+Name} & The name of the agent (std\+::string). \\
+\hline
+{\em Item\+Name} & The name of the item, like a sensor (std\+::string). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A formatted key string (\char`\"{}\+Agent\+Name\+\_\+\+Item\+Name\char`\"{}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUHolodeckServer_a2ee869ace27112491a78c715dda81f79}\label{classUHolodeckServer_a2ee869ace27112491a78c715dda81f79}} 
+\index{UHolodeckServer@{UHolodeckServer}!Malloc@{Malloc}}
+\index{Malloc@{Malloc}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{Malloc()}{Malloc()}}
+{\footnotesize\ttfamily void $\ast$ UHolodeck\+Server\+::\+Malloc (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Key,  }\item[{unsigned int}]{Buffer\+Size }\end{DoxyParamCaption})}
+
+
+
+Allocates or retrieves a shared memory block. If memory has already been malloc\textquotesingle{}ed with the same key, the block is overwritten. 
+
+Allocates or retrieves a block of shared memory. If the requested key does not exist or the required buffer size has changed, it provisions a new shared memory block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & The unique string key for this block of memory. \\
+\hline
+{\em Buffer\+Size} & The size to allocate in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the start of the assigned shared memory.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & The unique string identifier for the memory block (e.\+g., a sensor\textquotesingle{}s name). \\
+\hline
+{\em Buffer\+Size} & The size in bytes required for this memory block. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A void pointer to the beginning of the shared memory block. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUHolodeckServer_a8f199c275ac516ae5fc5f51b69897568}\label{classUHolodeckServer_a8f199c275ac516ae5fc5f51b69897568}} 
+\index{UHolodeckServer@{UHolodeckServer}!Release@{Release}}
+\index{Release@{Release}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void UHolodeck\+Server\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Releases the mutex to allow the Python client to tick. Signals the client that Unreal Engine has finished updating the shared memory. 
+
+Signals that Unreal Engine has finished writing the current state. Releases Locking\+Semaphore2, waking up the waiting Python client process so it can read the new sensor data. \mbox{\Hypertarget{classUHolodeckServer_ad923b23834320c372749d3c47400215a}\label{classUHolodeckServer_ad923b23834320c372749d3c47400215a}} 
+\index{UHolodeckServer@{UHolodeckServer}!Start@{Start}}
+\index{Start@{Start}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void UHolodeck\+Server\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the server. Initializes the IPC semaphores based on the current platform (Windows or Linux). 
+
+Initializes the server and sets up cross-\/process synchronization. Parses the command line for a UUID to ensure unique shared memory environments. Creates or opens system-\/level semaphores (handling both Windows and Linux implementations) to lock/unlock the execution state between the Unreal Engine tick and the Python client. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUHolodeckServer_ab752cbeb4711258638d4836a4760b9ca}\label{classUHolodeckServer_ab752cbeb4711258638d4836a4760b9ca}} 
+\index{UHolodeckServer@{UHolodeckServer}!AgentMap@{AgentMap}}
+\index{AgentMap@{AgentMap}!UHolodeckServer@{UHolodeckServer}}
+\doxysubsubsection{\texorpdfstring{AgentMap}{AgentMap}}
+{\footnotesize\ttfamily TMap$<$FString, \mbox{\hyperlink{classAHolodeckAgent}{AHolodeck\+Agent}}$\ast$$>$ UHolodeck\+Server\+::\+Agent\+Map}
+
+
+
+Stores pointers to all the active agents within the world map. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Public/\mbox{\hyperlink{HolodeckServer_8h}{Holodeck\+Server.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Private/\mbox{\hyperlink{HolodeckServer_8cpp}{Holodeck\+Server.\+cpp}}\end{DoxyCompactItemize}

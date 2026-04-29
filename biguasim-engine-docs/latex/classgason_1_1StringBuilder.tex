@@ -1,0 +1,137 @@
+\hypertarget{classgason_1_1StringBuilder}{}\doxysection{gason\+::String\+Builder Class Reference}
+\label{classgason_1_1StringBuilder}\index{gason::StringBuilder@{gason::StringBuilder}}
+
+
+{\ttfamily \#include $<$jsonbuilder.\+h$>$}
+
+
+
+Inheritance diagram for gason\+::String\+Builder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classgason_1_1StringBuilder__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgason_1_1StringBuilder_a83161e178cca5723526de261864bc73e}{String\+Builder}} (char $\ast$buffer, size\+\_\+t length)
+\item 
+void \mbox{\hyperlink{classgason_1_1StringBuilder_a6032fc03e38a534cf4a7e8c4330d1706}{reset}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classgason_1_1StringBuilder_ab8e51e532c59ae340c27a8281b263247}{empty\+Spaces}} () const
+\item 
+\mbox{\hyperlink{classgason_1_1StringBuilder}{String\+Builder}} \& \mbox{\hyperlink{classgason_1_1StringBuilder_ad3f0f8bd398b5d146b69ff4816f8f8de}{append}} (const char $\ast$string, size\+\_\+t length=0)
+\item 
+\mbox{\hyperlink{classgason_1_1StringBuilder}{String\+Builder}} \& \mbox{\hyperlink{classgason_1_1StringBuilder_a3a1d15da5c8325655951716b9f83440a}{operator$<$$<$}} (const char $\ast$string)
+\item 
+\mbox{\hyperlink{classgason_1_1StringBuilder}{String\+Builder}} \& \mbox{\hyperlink{classgason_1_1StringBuilder_a8ad7184d02c2f309220f286aab93f3b2}{operator$<$$<$}} (int number)
+\item 
+\mbox{\hyperlink{classgason_1_1StringBuilder}{String\+Builder}} \& \mbox{\hyperlink{classgason_1_1StringBuilder_adc07f58c8858a13a9726aff6f2034bb7}{operator$<$$<$}} (double number)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{classgason_1_1StringBuilder_a59f68690290b9bc641299d33da1138df}{ibuffer}}
+\begin{DoxyCompactList}\small\item\em internal pointer to the start of the buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classgason_1_1StringBuilder_aebd6f7d61d6973bd3bc49b9f370118d8}{ilength}}
+\begin{DoxyCompactList}\small\item\em length (capacity) of buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classgason_1_1StringBuilder_a3c2325fdb05b235634650a5af2b59438}{iindex}}
+\begin{DoxyCompactList}\small\item\em current writing index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a string builder class. mainly used as a base for \mbox{\hyperlink{classgason_1_1JSonBuilder}{JSon\+Builder}}. this class does not own the buffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgason_1_1StringBuilder_a83161e178cca5723526de261864bc73e}\label{classgason_1_1StringBuilder_a83161e178cca5723526de261864bc73e}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!StringBuilder@{StringBuilder}}
+\index{StringBuilder@{StringBuilder}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{StringBuilder()}{StringBuilder()}}
+{\footnotesize\ttfamily gason\+::\+String\+Builder\+::\+String\+Builder (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+default ctor 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & result buffer to hold builded string. \\
+\hline
+{\em length} & length (capacity of buffer). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgason_1_1StringBuilder_ad3f0f8bd398b5d146b69ff4816f8f8de}\label{classgason_1_1StringBuilder_ad3f0f8bd398b5d146b69ff4816f8f8de}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!append@{append}}
+\index{append@{append}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgason_1_1StringBuilder}{String\+Builder}}\& gason\+::\+String\+Builder\+::append (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string,  }\item[{size\+\_\+t}]{length = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classgason_1_1StringBuilder_ab8e51e532c59ae340c27a8281b263247}\label{classgason_1_1StringBuilder_ab8e51e532c59ae340c27a8281b263247}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!emptySpaces@{emptySpaces}}
+\index{emptySpaces@{emptySpaces}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{emptySpaces()}{emptySpaces()}}
+{\footnotesize\ttfamily size\+\_\+t gason\+::\+String\+Builder\+::empty\+Spaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns the empty spaces left. return 0 if the buffer is full. \mbox{\Hypertarget{classgason_1_1StringBuilder_a3a1d15da5c8325655951716b9f83440a}\label{classgason_1_1StringBuilder_a3a1d15da5c8325655951716b9f83440a}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgason_1_1StringBuilder}{String\+Builder}}\& gason\+::\+String\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classgason_1_1StringBuilder_adc07f58c8858a13a9726aff6f2034bb7}\label{classgason_1_1StringBuilder_adc07f58c8858a13a9726aff6f2034bb7}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgason_1_1StringBuilder}{String\+Builder}}\& gason\+::\+String\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{double}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classgason_1_1StringBuilder_a8ad7184d02c2f309220f286aab93f3b2}\label{classgason_1_1StringBuilder_a8ad7184d02c2f309220f286aab93f3b2}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgason_1_1StringBuilder}{String\+Builder}}\& gason\+::\+String\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classgason_1_1StringBuilder_a6032fc03e38a534cf4a7e8c4330d1706}\label{classgason_1_1StringBuilder_a6032fc03e38a534cf4a7e8c4330d1706}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!reset@{reset}}
+\index{reset@{reset}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void gason\+::\+String\+Builder\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+resets the string object. (writes NULL into buffer). 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgason_1_1StringBuilder_a59f68690290b9bc641299d33da1138df}\label{classgason_1_1StringBuilder_a59f68690290b9bc641299d33da1138df}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!ibuffer@{ibuffer}}
+\index{ibuffer@{ibuffer}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{ibuffer}{ibuffer}}
+{\footnotesize\ttfamily char$\ast$ gason\+::\+String\+Builder\+::ibuffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+internal pointer to the start of the buffer. 
+
+\mbox{\Hypertarget{classgason_1_1StringBuilder_a3c2325fdb05b235634650a5af2b59438}\label{classgason_1_1StringBuilder_a3c2325fdb05b235634650a5af2b59438}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!iindex@{iindex}}
+\index{iindex@{iindex}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{iindex}{iindex}}
+{\footnotesize\ttfamily size\+\_\+t gason\+::\+String\+Builder\+::iindex\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+current writing index. 
+
+\mbox{\Hypertarget{classgason_1_1StringBuilder_aebd6f7d61d6973bd3bc49b9f370118d8}\label{classgason_1_1StringBuilder_aebd6f7d61d6973bd3bc49b9f370118d8}} 
+\index{gason::StringBuilder@{gason::StringBuilder}!ilength@{ilength}}
+\index{ilength@{ilength}!gason::StringBuilder@{gason::StringBuilder}}
+\doxysubsubsection{\texorpdfstring{ilength}{ilength}}
+{\footnotesize\ttfamily size\+\_\+t gason\+::\+String\+Builder\+::ilength\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+length (capacity) of buffer. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Utils/\+Public/\mbox{\hyperlink{jsonbuilder_8h}{jsonbuilder.\+h}}\end{DoxyCompactItemize}

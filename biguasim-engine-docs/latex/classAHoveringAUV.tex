@@ -1,0 +1,260 @@
+\hypertarget{classAHoveringAUV}{}\doxysection{AHovering\+AUV Class Reference}
+\label{classAHoveringAUV}\index{AHoveringAUV@{AHoveringAUV}}
+
+
+Hovering Autonomous Underwater Vehicle (AUV) agent.  
+
+
+
+
+{\ttfamily \#include $<$Hovering\+AUV.\+h$>$}
+
+
+
+Inheritance diagram for AHovering\+AUV\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classAHoveringAUV__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AHovering\+AUV\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAHoveringAUV__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAHoveringAUV_a9b7b7e7f90e95d9f505764a4f0ece4b0}{AHovering\+AUV}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAHoveringAUV_a02e1af0dfca4fe1f342612c016aee70b}{Initialize\+Agent}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the agent and its physical components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAHoveringAUV_a59038459bbc1b68aebb2b6bfd5391882}{Tick}} (float Delta\+Seconds) override
+\begin{DoxyCompactList}\small\item\em Called each frame. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classAHoveringAUV_a97dcef712ef5781f58e57f71831a0ed6}{Get\+Raw\+Action\+Size\+In\+Bytes}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the size of the action buffer in bytes. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classAHoveringAUV_ae700256c8f0b520d451c60b58bac6d3c}{Get\+Raw\+Action\+Buffer}} () const override
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the raw action buffer. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classAHoveringAUV_acc529d61749ee41ead1e3c6f413c87e3}{Get\+Acceleration\+Limit}} () override
+\begin{DoxyCompactList}\small\item\em Gets the acceleration limit for the agent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAHoveringAUV_af9e0bab5a8b6c12e2bf91429f9f94068}{Apply\+Thrusters}} (float $\ast$const Thruster\+Array)
+\begin{DoxyCompactList}\small\item\em Applies specific force values to the AUV\textquotesingle{}s thrusters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAHoveringAUV_a4ebc5d1a705586cdff7c5e4141ac0cca}{Enable\+Damping}} ()
+\begin{DoxyCompactList}\small\item\em Enables linear and angular damping for the AUV\textquotesingle{}s physical mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ FVector $>$ \mbox{\hyperlink{classAHoveringAUV_aa7e8bd31e96e0fd83476f4d8c9cad018}{thruster\+Locations}}
+\begin{DoxyCompactList}\small\item\em Location of all 8 thrusters (4 vertical, 4 vectored). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAHoveringAUV_a779fa38e10a1410f890949bd7c1a46db}{Perfect}} = true
+\begin{DoxyCompactList}\small\item\em Defines if the buoyancy calculation is mathematically idealized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hovering Autonomous Underwater Vehicle (AUV) agent. 
+
+
+\begin{DoxyItemize}
+\item Inherits from the Holodeck\+Buoyant\+Agent class. On any tick this object will apply the given forces. Desired values must be set by a controller. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAHoveringAUV_a9b7b7e7f90e95d9f505764a4f0ece4b0}\label{classAHoveringAUV_a9b7b7e7f90e95d9f505764a4f0ece4b0}} 
+\index{AHoveringAUV@{AHoveringAUV}!AHoveringAUV@{AHoveringAUV}}
+\index{AHoveringAUV@{AHoveringAUV}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{AHoveringAUV()}{AHoveringAUV()}}
+{\footnotesize\ttfamily AHovering\+AUV\+::\+AHovering\+AUV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Sets default values for the Hovering AUV agent.
+
+
+\begin{DoxyItemize}
+\item Initializes the AI controller, physical properties (mass, volume, buoyancy center), and the physical offset to align the Unreal Engine origin with the model\textquotesingle{}s center. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAHoveringAUV_af9e0bab5a8b6c12e2bf91429f9f94068}\label{classAHoveringAUV_af9e0bab5a8b6c12e2bf91429f9f94068}} 
+\index{AHoveringAUV@{AHoveringAUV}!ApplyThrusters@{ApplyThrusters}}
+\index{ApplyThrusters@{ApplyThrusters}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{ApplyThrusters()}{ApplyThrusters()}}
+{\footnotesize\ttfamily void AHovering\+AUV\+::\+Apply\+Thrusters (\begin{DoxyParamCaption}\item[{float $\ast$const}]{Thruster\+Array }\end{DoxyParamCaption})}
+
+
+
+Applies specific force values to the AUV\textquotesingle{}s thrusters. 
+
+Applies specific force values to the 8 thrusters of the AUV.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Thruster\+Array} & Pointer to an array containing the requested force for each thruster.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Iterates through the 4 vertical thrusters (indices 0-\/3) applying vertical forces, and the 4 angled/vectored thrusters (indices 4-\/7) applying split X/Y forces. 
+\begin{DoxyParams}{Parameters}
+{\em Thruster\+Array} & Pointer to an array containing the requested force for each thruster. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\mbox{\Hypertarget{classAHoveringAUV_a4ebc5d1a705586cdff7c5e4141ac0cca}\label{classAHoveringAUV_a4ebc5d1a705586cdff7c5e4141ac0cca}} 
+\index{AHoveringAUV@{AHoveringAUV}!EnableDamping@{EnableDamping}}
+\index{EnableDamping@{EnableDamping}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{EnableDamping()}{EnableDamping()}}
+{\footnotesize\ttfamily void AHovering\+AUV\+::\+Enable\+Damping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables linear and angular damping for the AUV\textquotesingle{}s physical mesh. 
+
+\mbox{\Hypertarget{classAHoveringAUV_acc529d61749ee41ead1e3c6f413c87e3}\label{classAHoveringAUV_acc529d61749ee41ead1e3c6f413c87e3}} 
+\index{AHoveringAUV@{AHoveringAUV}!GetAccelerationLimit@{GetAccelerationLimit}}
+\index{GetAccelerationLimit@{GetAccelerationLimit}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{GetAccelerationLimit()}{GetAccelerationLimit()}}
+{\footnotesize\ttfamily float AHovering\+AUV\+::\+Get\+Acceleration\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the acceleration limit for the agent. 
+
+
+\begin{DoxyItemize}
+\item Allows agent to fall up to $\sim$8 meters. \begin{DoxyReturn}{Returns}
+The acceleration limit. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAHoveringAUV_ae700256c8f0b520d451c60b58bac6d3c}\label{classAHoveringAUV_ae700256c8f0b520d451c60b58bac6d3c}} 
+\index{AHoveringAUV@{AHoveringAUV}!GetRawActionBuffer@{GetRawActionBuffer}}
+\index{GetRawActionBuffer@{GetRawActionBuffer}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{GetRawActionBuffer()}{GetRawActionBuffer()}}
+{\footnotesize\ttfamily void$\ast$ AHovering\+AUV\+::\+Get\+Raw\+Action\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a pointer to the raw action buffer. 
+
+\begin{DoxyReturn}{Returns}
+A void pointer to the command array. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAHoveringAUV_a97dcef712ef5781f58e57f71831a0ed6}\label{classAHoveringAUV_a97dcef712ef5781f58e57f71831a0ed6}} 
+\index{AHoveringAUV@{AHoveringAUV}!GetRawActionSizeInBytes@{GetRawActionSizeInBytes}}
+\index{GetRawActionSizeInBytes@{GetRawActionSizeInBytes}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{GetRawActionSizeInBytes()}{GetRawActionSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int AHovering\+AUV\+::\+Get\+Raw\+Action\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the size of the action buffer in bytes. 
+
+\begin{DoxyReturn}{Returns}
+The size of the command array in bytes (6 floats). 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAHoveringAUV_a02e1af0dfca4fe1f342612c016aee70b}\label{classAHoveringAUV_a02e1af0dfca4fe1f342612c016aee70b}} 
+\index{AHoveringAUV@{AHoveringAUV}!InitializeAgent@{InitializeAgent}}
+\index{InitializeAgent@{InitializeAgent}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{InitializeAgent()}{InitializeAgent()}}
+{\footnotesize\ttfamily void AHovering\+AUV\+::\+Initialize\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the agent and its physical components. 
+
+
+\begin{DoxyItemize}
+\item Casts the Root\+Component to a UStatic\+Mesh\+Component to allow physics manipulation. If the \textquotesingle{}Perfect\textquotesingle{} flag is true, recalculates optimal center of mass and buoyancy. Also applies the Offset\+To\+Origin to all 8 thruster locations. 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_af4631f8d3fa15b78fafe84d2939c6d43}{AHolodeck\+Buoyant\+Agent}}.
+
+\mbox{\Hypertarget{classAHoveringAUV_a59038459bbc1b68aebb2b6bfd5391882}\label{classAHoveringAUV_a59038459bbc1b68aebb2b6bfd5391882}} 
+\index{AHoveringAUV@{AHoveringAUV}!Tick@{Tick}}
+\index{Tick@{Tick}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void AHovering\+AUV\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called each frame. 
+
+Called every frame to apply physical forces to the Hovering AUV.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & The time since the last tick.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Converts linear and angular accelerations from the Python Command\+Array into forces and torques, clamps them to maximum limits, applies them to the Root\+Mesh, and logs the output for debugging. 
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & The time elapsed since the last tick. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_a79ad3f12f79786954647d728998ec80c}{AHolodeck\+Buoyant\+Agent}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classAHoveringAUV_a779fa38e10a1410f890949bd7c1a46db}\label{classAHoveringAUV_a779fa38e10a1410f890949bd7c1a46db}} 
+\index{AHoveringAUV@{AHoveringAUV}!Perfect@{Perfect}}
+\index{Perfect@{Perfect}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{Perfect}{Perfect}}
+{\footnotesize\ttfamily bool AHovering\+AUV\+::\+Perfect = true}
+
+
+
+Defines if the buoyancy calculation is mathematically idealized. 
+
+\mbox{\Hypertarget{classAHoveringAUV_aa7e8bd31e96e0fd83476f4d8c9cad018}\label{classAHoveringAUV_aa7e8bd31e96e0fd83476f4d8c9cad018}} 
+\index{AHoveringAUV@{AHoveringAUV}!thrusterLocations@{thrusterLocations}}
+\index{thrusterLocations@{thrusterLocations}!AHoveringAUV@{AHoveringAUV}}
+\doxysubsubsection{\texorpdfstring{thrusterLocations}{thrusterLocations}}
+{\footnotesize\ttfamily TArray$<$FVector$>$ AHovering\+AUV\+::thruster\+Locations}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ FVector(18.18, 22.14, -\/4), }
+\DoxyCodeLine{                                            FVector(18.18, -\/22.14, -\/4),}
+\DoxyCodeLine{                                            FVector(-\/31.43, -\/22.14, -\/4),}
+\DoxyCodeLine{                                            FVector(-\/31.43, 22.14, -\/4),}
+\DoxyCodeLine{                                            FVector(7.39, 18.23, -\/0.21),}
+\DoxyCodeLine{                                            FVector(7.39, -\/18.23, -\/0.21),}
+\DoxyCodeLine{                                            FVector(-\/20.64, -\/18.23, -\/0.21),}
+\DoxyCodeLine{                                            FVector(-\/20.64, 18.23, -\/0.21) \}}
+
+\end{DoxyCode}
+
+
+Location of all 8 thrusters (4 vertical, 4 vectored). 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{HoveringAUV_8h}{Hovering\+AUV.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{HoveringAUV_8cpp}{Hovering\+AUV.\+cpp}}\end{DoxyCompactItemize}

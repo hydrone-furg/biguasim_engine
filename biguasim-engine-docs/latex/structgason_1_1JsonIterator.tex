@@ -1,0 +1,115 @@
+\hypertarget{structgason_1_1JsonIterator}{}\doxysection{gason\+::Json\+Iterator Struct Reference}
+\label{structgason_1_1JsonIterator}\index{gason::JsonIterator@{gason::JsonIterator}}
+
+
+{\ttfamily \#include $<$gason.\+h$>$}
+
+
+
+Collaboration diagram for gason\+::Json\+Iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{structgason_1_1JsonIterator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgason_1_1JsonIterator_a8f3592f745c6babac3fe8885e044a1e4}{Json\+Iterator}} (\mbox{\hyperlink{structgason_1_1JsonNode}{Json\+Node}} $\ast$n=\mbox{\hyperlink{gason_8h_ab979d9d4b4923f7c54d6caa6e1a61936}{nullptr}})
+\item 
+void \mbox{\hyperlink{structgason_1_1JsonIterator_a14b8b5c3a1d4e6049384a65a915c3894}{operator++}} ()
+\item 
+void \mbox{\hyperlink{structgason_1_1JsonIterator_a258fee7eadb915d211ba926e95d893d5}{operator++}} (int)
+\item 
+bool \mbox{\hyperlink{structgason_1_1JsonIterator_abba151afc9158ac13b61fb65ddfc34ae}{is\+Valid}} () const
+\item 
+bool \mbox{\hyperlink{structgason_1_1JsonIterator_ae6a9a507bc4848b2984804a3bd63ff5f}{has\+Next}} () const
+\item 
+bool \mbox{\hyperlink{structgason_1_1JsonIterator_ab791681dbb0cc338bf5a99bd98be753b}{operator==}} (const char $\ast$key) const
+\item 
+bool \mbox{\hyperlink{structgason_1_1JsonIterator_a00997ac6f06e4c365ac10dd493b8126b}{operator!=}} (const \mbox{\hyperlink{structgason_1_1JsonIterator}{Json\+Iterator}} \&x) const
+\item 
+\mbox{\hyperlink{structgason_1_1JsonNode}{Json\+Node}} $\ast$ \mbox{\hyperlink{structgason_1_1JsonIterator_ad219fb8ee02dbd2c035a8a2dd9d6b998}{operator$\ast$}} () const
+\item 
+\mbox{\hyperlink{structgason_1_1JsonNode}{Json\+Node}} $\ast$ \mbox{\hyperlink{structgason_1_1JsonIterator_a1be4ff458ba4d38dd784d00b1475a437}{operator-\/$>$}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgason_1_1JsonNode}{Json\+Node}} $\ast$ \mbox{\hyperlink{structgason_1_1JsonIterator_aca16aef8a765a22cb38fd1eb14b12dd2}{p}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgason_1_1JsonIterator_a8f3592f745c6babac3fe8885e044a1e4}\label{structgason_1_1JsonIterator_a8f3592f745c6babac3fe8885e044a1e4}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!JsonIterator@{JsonIterator}}
+\index{JsonIterator@{JsonIterator}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{JsonIterator()}{JsonIterator()}}
+{\footnotesize\ttfamily gason\+::\+Json\+Iterator\+::\+Json\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgason_1_1JsonNode}{Json\+Node}} $\ast$}]{n = {\ttfamily \mbox{\hyperlink{gason_8h_ab979d9d4b4923f7c54d6caa6e1a61936}{nullptr}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgason_1_1JsonIterator_ae6a9a507bc4848b2984804a3bd63ff5f}\label{structgason_1_1JsonIterator_ae6a9a507bc4848b2984804a3bd63ff5f}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!hasNext@{hasNext}}
+\index{hasNext@{hasNext}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{hasNext()}{hasNext()}}
+{\footnotesize\ttfamily bool gason\+::\+Json\+Iterator\+::has\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgason_1_1JsonIterator_abba151afc9158ac13b61fb65ddfc34ae}\label{structgason_1_1JsonIterator_abba151afc9158ac13b61fb65ddfc34ae}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!isValid@{isValid}}
+\index{isValid@{isValid}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool gason\+::\+Json\+Iterator\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgason_1_1JsonIterator_a00997ac6f06e4c365ac10dd493b8126b}\label{structgason_1_1JsonIterator_a00997ac6f06e4c365ac10dd493b8126b}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool gason\+::\+Json\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgason_1_1JsonIterator}{Json\+Iterator}} \&}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgason_1_1JsonIterator_ad219fb8ee02dbd2c035a8a2dd9d6b998}\label{structgason_1_1JsonIterator_ad219fb8ee02dbd2c035a8a2dd9d6b998}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgason_1_1JsonNode}{Json\+Node}}$\ast$ gason\+::\+Json\+Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgason_1_1JsonIterator_a14b8b5c3a1d4e6049384a65a915c3894}\label{structgason_1_1JsonIterator_a14b8b5c3a1d4e6049384a65a915c3894}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void gason\+::\+Json\+Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgason_1_1JsonIterator_a258fee7eadb915d211ba926e95d893d5}\label{structgason_1_1JsonIterator_a258fee7eadb915d211ba926e95d893d5}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void gason\+::\+Json\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgason_1_1JsonIterator_a1be4ff458ba4d38dd784d00b1475a437}\label{structgason_1_1JsonIterator_a1be4ff458ba4d38dd784d00b1475a437}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgason_1_1JsonNode}{Json\+Node}}$\ast$ gason\+::\+Json\+Iterator\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgason_1_1JsonIterator_ab791681dbb0cc338bf5a99bd98be753b}\label{structgason_1_1JsonIterator_ab791681dbb0cc338bf5a99bd98be753b}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!operator==@{operator==}}
+\index{operator==@{operator==}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool gason\+::\+Json\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const char $\ast$}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgason_1_1JsonIterator_aca16aef8a765a22cb38fd1eb14b12dd2}\label{structgason_1_1JsonIterator_aca16aef8a765a22cb38fd1eb14b12dd2}} 
+\index{gason::JsonIterator@{gason::JsonIterator}!p@{p}}
+\index{p@{p}!gason::JsonIterator@{gason::JsonIterator}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgason_1_1JsonNode}{Json\+Node}}$\ast$ gason\+::\+Json\+Iterator\+::p}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Utils/\+Public/\mbox{\hyperlink{gason_8h}{gason.\+h}}\end{DoxyCompactItemize}

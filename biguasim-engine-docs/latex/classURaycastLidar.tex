@@ -1,0 +1,199 @@
+\hypertarget{classURaycastLidar}{}\doxysection{URaycast\+Lidar Class Reference}
+\label{classURaycastLidar}\index{URaycastLidar@{URaycastLidar}}
+
+
+High-\/fidelity Raycast Lidar sensor. Inherits from \mbox{\hyperlink{classURaycastSemanticLidar}{URaycast\+Semantic\+Lidar}}. Simulates a rotating 3D Lidar scanner with realistic physical properties, including atmospheric attenuation, Gaussian distance noise, and intensity-\/based point drop-\/off. Originates from the CARLA Simulator physics engine.  
+
+
+
+
+{\ttfamily \#include $<$Raycast\+Lidar.\+h$>$}
+
+
+
+Inheritance diagram for URaycast\+Lidar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classURaycastLidar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for URaycast\+Lidar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classURaycastLidar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classURaycastLidar_afd4ab19eb1a82c430fd4a14429dd7ad7}{URaycast\+Lidar}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classURaycastLidar_a22d71038c652debbee6ca8a740435f61}{Initialize\+Sensor}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the sensor and sets up data buffers. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classURaycastLidar_aacde889ba51e45586c987e5bddf942d4}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\begin{DoxyCompactList}\small\item\em Parses JSON parameters to configure the Lidar\textquotesingle{}s physical and noise properties. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classURaycastLidar_a1f464cce74edcf63a4ba4bcb72d8d39e}{Set}} (const \mbox{\hyperlink{structFLidarDescription}{FLidar\+Description}} \&Lidar\+Description) override
+\begin{DoxyCompactList}\small\item\em Applies the parsed description parameters to the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classURaycastLidar_a34e74fc0ce440f80ea14a97a0b990158}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\begin{DoxyCompactList}\small\item\em Main execution loop that fires the Lidar simulation. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classURaycastLidar_a6acc9405ecfbe219f65e551a9d77896f}{Get\+Num\+Items}} () override
+\begin{DoxyCompactList}\small\item\em Gets the maximum possible number of items this sensor returns (Points\+Per\+Second $\ast$ 4 elements per point). \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classURaycastLidar_a31513e9ec3687d14bff5430df3b44f36}{Get\+Item\+Size}} () override
+\begin{DoxyCompactList}\small\item\em Gets the size of each item in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \mbox{\hyperlink{classURaycastLidar_a75af54e4122f8e944369c9668cf07df6}{Buffer}}
+\item 
+\mbox{\hyperlink{classholoocean_1_1data_1_1LidarData}{FLidar\+Data}} \mbox{\hyperlink{classURaycastLidar_a719a60ce02119b66fab155bdb717f405}{Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+High-\/fidelity Raycast Lidar sensor. Inherits from \mbox{\hyperlink{classURaycastSemanticLidar}{URaycast\+Semantic\+Lidar}}. Simulates a rotating 3D Lidar scanner with realistic physical properties, including atmospheric attenuation, Gaussian distance noise, and intensity-\/based point drop-\/off. Originates from the CARLA Simulator physics engine. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classURaycastLidar_afd4ab19eb1a82c430fd4a14429dd7ad7}\label{classURaycastLidar_afd4ab19eb1a82c430fd4a14429dd7ad7}} 
+\index{URaycastLidar@{URaycastLidar}!URaycastLidar@{URaycastLidar}}
+\index{URaycastLidar@{URaycastLidar}!URaycastLidar@{URaycastLidar}}
+\doxysubsubsection{\texorpdfstring{URaycastLidar()}{URaycastLidar()}}
+{\footnotesize\ttfamily URaycast\+Lidar\+::\+URaycast\+Lidar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Default Constructor. Sets the sensor name and initializes the random engine used for noise and drop-\/off simulation. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classURaycastLidar_a31513e9ec3687d14bff5430df3b44f36}\label{classURaycastLidar_a31513e9ec3687d14bff5430df3b44f36}} 
+\index{URaycastLidar@{URaycastLidar}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!URaycastLidar@{URaycastLidar}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily virtual int URaycast\+Lidar\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the size of each item in bytes. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classURaycastSemanticLidar_a0aa1f599b33dc11566959c194a14f1ac}{URaycast\+Semantic\+Lidar}}.
+
+\mbox{\Hypertarget{classURaycastLidar_a6acc9405ecfbe219f65e551a9d77896f}\label{classURaycastLidar_a6acc9405ecfbe219f65e551a9d77896f}} 
+\index{URaycastLidar@{URaycastLidar}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!URaycastLidar@{URaycastLidar}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily virtual int URaycast\+Lidar\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the maximum possible number of items this sensor returns (Points\+Per\+Second $\ast$ 4 elements per point). 
+
+
+
+Reimplemented from \mbox{\hyperlink{classURaycastSemanticLidar_aa1fde54bc3c0d2b3f06ad58223662300}{URaycast\+Semantic\+Lidar}}.
+
+\mbox{\Hypertarget{classURaycastLidar_a22d71038c652debbee6ca8a740435f61}\label{classURaycastLidar_a22d71038c652debbee6ca8a740435f61}} 
+\index{URaycastLidar@{URaycastLidar}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!URaycastLidar@{URaycastLidar}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void URaycast\+Lidar\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the sensor and sets up data buffers. 
+
+Initializes the sensor and sets up the data buffer. Bypasses the base class initialization ({\ttfamily Super\+::\+Should\+Initialize = false}) to handle its own custom raycast structures. 
+
+Reimplemented from \mbox{\hyperlink{classURaycastSemanticLidar_a9560757db79b564ae4bb58d44d798af2}{URaycast\+Semantic\+Lidar}}.
+
+\mbox{\Hypertarget{classURaycastLidar_aacde889ba51e45586c987e5bddf942d4}\label{classURaycastLidar_aacde889ba51e45586c987e5bddf942d4}} 
+\index{URaycastLidar@{URaycastLidar}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!URaycastLidar@{URaycastLidar}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void URaycast\+Lidar\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Parses JSON parameters to configure the Lidar\textquotesingle{}s physical and noise properties. 
+
+Parses the JSON configuration sent by the Python client. Extracts physical Lidar properties such as channels, field of view, rotation frequency, atmospheric attenuation, noise models, and intensity drop-\/off rates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Parms\+Json} & JSON string containing configuration.\\
+\hline
+{\em Parms\+Json} & The JSON string containing the sensor configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classURaycastSemanticLidar_ad45e5b8b68a867e129dd7c505f09006b}{URaycast\+Semantic\+Lidar}}.
+
+\mbox{\Hypertarget{classURaycastLidar_a1f464cce74edcf63a4ba4bcb72d8d39e}\label{classURaycastLidar_a1f464cce74edcf63a4ba4bcb72d8d39e}} 
+\index{URaycastLidar@{URaycastLidar}!Set@{Set}}
+\index{Set@{Set}!URaycastLidar@{URaycastLidar}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily void URaycast\+Lidar\+::\+Set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structFLidarDescription}{FLidar\+Description}} \&}]{Lidar\+Description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the parsed description parameters to the sensor. 
+
+Applies the parsed description parameters to the sensor\textquotesingle{}s physical model. Resizes the internal point channels and computes the mathematical alpha/beta slopes for the intensity drop-\/off model.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Lidar\+Description} & The parsed lidar configuration struct.\\
+\hline
+{\em Lidar\+Description} & The struct containing all parsed Lidar specifications. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classURaycastSemanticLidar_a081989a0e2bbd0a92871563b15b29019}{URaycast\+Semantic\+Lidar}}.
+
+\mbox{\Hypertarget{classURaycastLidar_a34e74fc0ce440f80ea14a97a0b990158}\label{classURaycastLidar_a34e74fc0ce440f80ea14a97a0b990158}} 
+\index{URaycastLidar@{URaycastLidar}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!URaycastLidar@{URaycastLidar}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void URaycast\+Lidar\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Main execution loop that fires the Lidar simulation. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classURaycastSemanticLidar_a561e75f13997eaa5a05cb17c7a41d6e2}{URaycast\+Semantic\+Lidar}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classURaycastLidar_a75af54e4122f8e944369c9668cf07df6}\label{classURaycastLidar_a75af54e4122f8e944369c9668cf07df6}} 
+\index{URaycastLidar@{URaycastLidar}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!URaycastLidar@{URaycastLidar}}
+\doxysubsubsection{\texorpdfstring{Buffer}{Buffer}}
+{\footnotesize\ttfamily float$\ast$ URaycast\+Lidar\+::\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classURaycastLidar_a719a60ce02119b66fab155bdb717f405}\label{classURaycastLidar_a719a60ce02119b66fab155bdb717f405}} 
+\index{URaycastLidar@{URaycastLidar}!Data@{Data}}
+\index{Data@{Data}!URaycastLidar@{URaycastLidar}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData}{FLidar\+Data}} URaycast\+Lidar\+::\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{RaycastLidar_8h}{Raycast\+Lidar.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{RaycastLidar_8cpp}{Raycast\+Lidar.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,316 @@
+\hypertarget{classUSinglebeamSonar}{}\doxysection{USinglebeam\+Sonar Class Reference}
+\label{classUSinglebeamSonar}\index{USinglebeamSonar@{USinglebeamSonar}}
+
+
+Singlebeam Sonar (Echosounder) simulation. Inherits from the \mbox{\hyperlink{classUHolodeckSonar}{UHolodeck\+Sonar}} class. Emits a single conical acoustic pulse to measure distance and return intensity. commonly pointed downwards to measure water depth/clearance. Returns a 1D array of intensities along the range of the cone.  
+
+
+
+
+{\ttfamily \#include $<$Singlebeam\+Sonar.\+h$>$}
+
+
+
+Inheritance diagram for USinglebeam\+Sonar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classUSinglebeamSonar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for USinglebeam\+Sonar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUSinglebeamSonar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUSinglebeamSonar_a35452fc862a8a3ebb167a5f14d38d899}{USinglebeam\+Sonar}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUSinglebeamSonar_aa7ae30ff08fa2141edbea2ec8ed56c2e}{Initialize\+Sensor}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the sensor matrices and mathematical caches for the conical spread. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUSinglebeamSonar_a7454dc448bcf73b93088b8846f7dffc4}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\begin{DoxyCompactList}\small\item\em Parses JSON parameters to configure the beam geometry and noise models. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUSinglebeamSonar_accd8fee7ccffbee79890fe1b6ddfe685}{Begin\+Destroy}} () override
+\begin{DoxyCompactList}\small\item\em Cleans up memory arrays allocated for binning. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUSinglebeamSonar_a2c5ef10046e52fbe7c66ee434a98766b}{Get\+Rows}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the number of rows (Range Bins). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUSinglebeamSonar_ac411ff8f3e259ee7781f7ad4cc30b4fc}{Get\+Cols}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the number of columns. Forced to 1 to create a 1D output array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUSinglebeamSonar_a7d65bb4e78702e044e130ce4e1ffcca7}{Get\+Item\+Size}} () override
+\begin{DoxyCompactList}\small\item\em Gets the size of each item in bytes (float). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUSinglebeamSonar_acf80db1299503df1fe7520fde350ec56}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\begin{DoxyCompactList}\small\item\em Main acoustic processing loop. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUSinglebeamSonar_a93e6eb144391f4b8dfe4a09b7ebb4e60}{show\+Region}} (float Delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Draws a debug cone in the Unreal Editor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classUSinglebeamSonar_afbda3f7df359f9c003c0bd0465c1683f}{in\+Range}} (\mbox{\hyperlink{classOctree}{Octree}} $\ast$tree) override
+\begin{DoxyCompactList}\small\item\em Determines if an \mbox{\hyperlink{classOctree}{Octree}} leaf falls inside the 3D conical acoustic beam. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classUSinglebeamSonar_a6837b4aa2a53f1c03ebb5a40f57beafb}{Opening\+Angle}} = 30
+\begin{DoxyCompactList}\small\item\em The total angular width of the conical acoustic beam. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classUSinglebeamSonar_a75c6147693a2228ddf71e21a60ed0cc2}{Range\+Bins}} = 0
+\begin{DoxyCompactList}\small\item\em Number of bins used to slice the maximum range distance. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classUSinglebeamSonar_a1ca9bc6eaf7b3916fc165ec21ffeeca8}{Range\+Res}} = 0
+\begin{DoxyCompactList}\small\item\em Resolution of each range bin in cm. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classUSinglebeamSonar_a05045749cc340fe1ee91a95c57ace1a7}{Central\+Angle\+Bins}} = 0
+\begin{DoxyCompactList}\small\item\em Number of bins used to divide the 360-\/degree rotation of the cone. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classUSinglebeamSonar_abdf76b42bec378c96e6697087efcf2fe}{Central\+Angle\+Res}} = 0
+\begin{DoxyCompactList}\small\item\em Resolution of each central angle bin in degrees. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classUSinglebeamSonar_a51a967d3b04c827d748d4672958d3cad}{Opening\+Angle\+Bins}} = 0
+\begin{DoxyCompactList}\small\item\em Number of bins used to divide the outward spread of the cone. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classUSinglebeamSonar_ae3e6c546bcd2d9859faf839d75b4672b}{Opening\+Angle\+Res}} = 0
+\begin{DoxyCompactList}\small\item\em Resolution of each opening angle bin in degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Singlebeam Sonar (Echosounder) simulation. Inherits from the \mbox{\hyperlink{classUHolodeckSonar}{UHolodeck\+Sonar}} class. Emits a single conical acoustic pulse to measure distance and return intensity. commonly pointed downwards to measure water depth/clearance. Returns a 1D array of intensities along the range of the cone. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUSinglebeamSonar_a35452fc862a8a3ebb167a5f14d38d899}\label{classUSinglebeamSonar_a35452fc862a8a3ebb167a5f14d38d899}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!USinglebeamSonar@{USinglebeamSonar}}
+\index{USinglebeamSonar@{USinglebeamSonar}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{USinglebeamSonar()}{USinglebeamSonar()}}
+{\footnotesize\ttfamily USinglebeam\+Sonar\+::\+USinglebeam\+Sonar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Default Constructor. Sets the sensor name. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUSinglebeamSonar_accd8fee7ccffbee79890fe1b6ddfe685}\label{classUSinglebeamSonar_accd8fee7ccffbee79890fe1b6ddfe685}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!BeginDestroy@{BeginDestroy}}
+\index{BeginDestroy@{BeginDestroy}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{BeginDestroy()}{BeginDestroy()}}
+{\footnotesize\ttfamily void USinglebeam\+Sonar\+::\+Begin\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Cleans up memory arrays allocated for binning. 
+
+Cleans up dynamically allocated memory for the bin counting array. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a9dc8374e60480e3dcc2c4ae1f471245d}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUSinglebeamSonar_ac411ff8f3e259ee7781f7ad4cc30b4fc}\label{classUSinglebeamSonar_ac411ff8f3e259ee7781f7ad4cc30b4fc}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!GetCols@{GetCols}}
+\index{GetCols@{GetCols}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{GetCols()}{GetCols()}}
+{\footnotesize\ttfamily int USinglebeam\+Sonar\+::\+Get\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of columns. Forced to 1 to create a 1D output array. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a1f8fa1ee9c4ce2041838d6066c8df215}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUSinglebeamSonar_a7d65bb4e78702e044e130ce4e1ffcca7}\label{classUSinglebeamSonar_a7d65bb4e78702e044e130ce4e1ffcca7}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int USinglebeam\+Sonar\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the size of each item in bytes (float). 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUSinglebeamSonar_a2c5ef10046e52fbe7c66ee434a98766b}\label{classUSinglebeamSonar_a2c5ef10046e52fbe7c66ee434a98766b}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!GetRows@{GetRows}}
+\index{GetRows@{GetRows}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{GetRows()}{GetRows()}}
+{\footnotesize\ttfamily int USinglebeam\+Sonar\+::\+Get\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of rows (Range Bins). 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a9d489ce0c8ecbd736e73c7fa083c0c78}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUSinglebeamSonar_aa7ae30ff08fa2141edbea2ec8ed56c2e}\label{classUSinglebeamSonar_aa7ae30ff08fa2141edbea2ec8ed56c2e}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void USinglebeam\+Sonar\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the sensor matrices and mathematical caches for the conical spread. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUSinglebeamSonar_afbda3f7df359f9c003c0bd0465c1683f}\label{classUSinglebeamSonar_afbda3f7df359f9c003c0bd0465c1683f}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!inRange@{inRange}}
+\index{inRange@{inRange}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{inRange()}{inRange()}}
+{\footnotesize\ttfamily bool USinglebeam\+Sonar\+::in\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOctree}{Octree}} $\ast$}]{tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Determines if an \mbox{\hyperlink{classOctree}{Octree}} leaf falls inside the 3D conical acoustic beam. 
+
+Determines if an \mbox{\hyperlink{classOctree}{Octree}} leaf falls inside the 3D conical acoustic beam. Translates global coordinates to the sensor\textquotesingle{}s local frame and evaluates against the Opening Angle (cone spread) and Central Angle (rotation).
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The \mbox{\hyperlink{classOctree}{Octree}} node to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the leaf is inside the acoustic cone, False otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a4d63b00e20908ba45cd29ec46217dc8c}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUSinglebeamSonar_a7454dc448bcf73b93088b8846f7dffc4}\label{classUSinglebeamSonar_a7454dc448bcf73b93088b8846f7dffc4}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void USinglebeam\+Sonar\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Parses JSON parameters to configure the beam geometry and noise models. 
+
+Parses the JSON configuration sent by the Python client. Configures the conical geometry of the beam (Opening\+Angle), sets the resolution bins, and initializes the mathematical noise distributions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Parms\+Json} & JSON string containing configuration.\\
+\hline
+{\em Parms\+Json} & The JSON string containing the sensor configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a39cf61016a7e988a639fa384423252f2}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUSinglebeamSonar_a93e6eb144391f4b8dfe4a09b7ebb4e60}\label{classUSinglebeamSonar_a93e6eb144391f4b8dfe4a09b7ebb4e60}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!showRegion@{showRegion}}
+\index{showRegion@{showRegion}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{showRegion()}{showRegion()}}
+{\footnotesize\ttfamily void USinglebeam\+Sonar\+::show\+Region (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Draws a debug cone in the Unreal Editor. 
+
+Draws a debug cone in the Unreal Editor representing the physical acoustic beam. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a300eb07991228964e0507e2322696c03}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUSinglebeamSonar_acf80db1299503df1fe7520fde350ec56}\label{classUSinglebeamSonar_acf80db1299503df1fe7520fde350ec56}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void USinglebeam\+Sonar\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Main acoustic processing loop. 
+
+Main execution loop to simulate acoustic wave propagation for a Singlebeam profile. Aggregates all acoustic returns within the conical beam into a single 1D array representing the intensity profile over distance. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a84323d822827fe22874f324a391b33e1}{UHolodeck\+Sonar}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUSinglebeamSonar_a05045749cc340fe1ee91a95c57ace1a7}\label{classUSinglebeamSonar_a05045749cc340fe1ee91a95c57ace1a7}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!CentralAngleBins@{CentralAngleBins}}
+\index{CentralAngleBins@{CentralAngleBins}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{CentralAngleBins}{CentralAngleBins}}
+{\footnotesize\ttfamily int32 USinglebeam\+Sonar\+::\+Central\+Angle\+Bins = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of bins used to divide the 360-\/degree rotation of the cone. 
+
+\mbox{\Hypertarget{classUSinglebeamSonar_abdf76b42bec378c96e6697087efcf2fe}\label{classUSinglebeamSonar_abdf76b42bec378c96e6697087efcf2fe}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!CentralAngleRes@{CentralAngleRes}}
+\index{CentralAngleRes@{CentralAngleRes}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{CentralAngleRes}{CentralAngleRes}}
+{\footnotesize\ttfamily float USinglebeam\+Sonar\+::\+Central\+Angle\+Res = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Resolution of each central angle bin in degrees. 
+
+\mbox{\Hypertarget{classUSinglebeamSonar_a6837b4aa2a53f1c03ebb5a40f57beafb}\label{classUSinglebeamSonar_a6837b4aa2a53f1c03ebb5a40f57beafb}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!OpeningAngle@{OpeningAngle}}
+\index{OpeningAngle@{OpeningAngle}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{OpeningAngle}{OpeningAngle}}
+{\footnotesize\ttfamily float USinglebeam\+Sonar\+::\+Opening\+Angle = 30\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The total angular width of the conical acoustic beam. 
+
+\mbox{\Hypertarget{classUSinglebeamSonar_a51a967d3b04c827d748d4672958d3cad}\label{classUSinglebeamSonar_a51a967d3b04c827d748d4672958d3cad}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!OpeningAngleBins@{OpeningAngleBins}}
+\index{OpeningAngleBins@{OpeningAngleBins}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{OpeningAngleBins}{OpeningAngleBins}}
+{\footnotesize\ttfamily int32 USinglebeam\+Sonar\+::\+Opening\+Angle\+Bins = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of bins used to divide the outward spread of the cone. 
+
+\mbox{\Hypertarget{classUSinglebeamSonar_ae3e6c546bcd2d9859faf839d75b4672b}\label{classUSinglebeamSonar_ae3e6c546bcd2d9859faf839d75b4672b}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!OpeningAngleRes@{OpeningAngleRes}}
+\index{OpeningAngleRes@{OpeningAngleRes}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{OpeningAngleRes}{OpeningAngleRes}}
+{\footnotesize\ttfamily float USinglebeam\+Sonar\+::\+Opening\+Angle\+Res = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Resolution of each opening angle bin in degrees. 
+
+\mbox{\Hypertarget{classUSinglebeamSonar_a75c6147693a2228ddf71e21a60ed0cc2}\label{classUSinglebeamSonar_a75c6147693a2228ddf71e21a60ed0cc2}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!RangeBins@{RangeBins}}
+\index{RangeBins@{RangeBins}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{RangeBins}{RangeBins}}
+{\footnotesize\ttfamily int32 USinglebeam\+Sonar\+::\+Range\+Bins = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of bins used to slice the maximum range distance. 
+
+\mbox{\Hypertarget{classUSinglebeamSonar_a1ca9bc6eaf7b3916fc165ec21ffeeca8}\label{classUSinglebeamSonar_a1ca9bc6eaf7b3916fc165ec21ffeeca8}} 
+\index{USinglebeamSonar@{USinglebeamSonar}!RangeRes@{RangeRes}}
+\index{RangeRes@{RangeRes}!USinglebeamSonar@{USinglebeamSonar}}
+\doxysubsubsection{\texorpdfstring{RangeRes}{RangeRes}}
+{\footnotesize\ttfamily float USinglebeam\+Sonar\+::\+Range\+Res = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Resolution of each range bin in cm. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{SinglebeamSonar_8h}{Singlebeam\+Sonar.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{SinglebeamSonar_8cpp}{Singlebeam\+Sonar.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{classURelativeSkeletalPositionSensor}{}\doxysection{URelative\+Skeletal\+Position\+Sensor Class Reference}
+\label{classURelativeSkeletalPositionSensor}\index{URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}}
+
+
+{\ttfamily \#include $<$Relative\+Skeletal\+Position\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for URelative\+Skeletal\+Position\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classURelativeSkeletalPositionSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for URelative\+Skeletal\+Position\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classURelativeSkeletalPositionSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classURelativeSkeletalPositionSensor_a2dc09c04978d944fa2dad8bbd64b97e9}{URelative\+Skeletal\+Position\+Sensor}} ()
+\item 
+virtual void \mbox{\hyperlink{classURelativeSkeletalPositionSensor_aa4e5ff1d81ff62424cee4989888eef21}{Initialize\+Sensor}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classURelativeSkeletalPositionSensor_a4a6125f12d9459f69dc4786d27a02cc3}{Get\+Num\+Items}} () override
+\item 
+int \mbox{\hyperlink{classURelativeSkeletalPositionSensor_a7577bad0a351cfe9c4413ee2589ef3d3}{Get\+Item\+Size}} () override
+\item 
+void \mbox{\hyperlink{classURelativeSkeletalPositionSensor_a0ff9a7fc753381c12892ae5873d45e87}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classURelativeSkeletalPositionSensor_a2dc09c04978d944fa2dad8bbd64b97e9}\label{classURelativeSkeletalPositionSensor_a2dc09c04978d944fa2dad8bbd64b97e9}} 
+\index{URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}!URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}}
+\index{URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}!URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}}
+\doxysubsubsection{\texorpdfstring{URelativeSkeletalPositionSensor()}{URelativeSkeletalPositionSensor()}}
+{\footnotesize\ttfamily URelative\+Skeletal\+Position\+Sensor\+::\+URelative\+Skeletal\+Position\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classURelativeSkeletalPositionSensor_a7577bad0a351cfe9c4413ee2589ef3d3}\label{classURelativeSkeletalPositionSensor_a7577bad0a351cfe9c4413ee2589ef3d3}} 
+\index{URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int URelative\+Skeletal\+Position\+Sensor\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the size of each data item e.\+g. return sizeof(float) 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classURelativeSkeletalPositionSensor_a4a6125f12d9459f69dc4786d27a02cc3}\label{classURelativeSkeletalPositionSensor_a4a6125f12d9459f69dc4786d27a02cc3}} 
+\index{URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily int URelative\+Skeletal\+Position\+Sensor\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the number of data items e.\+g. return 100 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classURelativeSkeletalPositionSensor_aa4e5ff1d81ff62424cee4989888eef21}\label{classURelativeSkeletalPositionSensor_aa4e5ff1d81ff62424cee4989888eef21}} 
+\index{URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void URelative\+Skeletal\+Position\+Sensor\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Sensor Sets up the class 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classURelativeSkeletalPositionSensor_a0ff9a7fc753381c12892ae5873d45e87}\label{classURelativeSkeletalPositionSensor_a0ff9a7fc753381c12892ae5873d45e87}} 
+\index{URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!URelativeSkeletalPositionSensor@{URelativeSkeletalPositionSensor}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void URelative\+Skeletal\+Position\+Sensor\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Tick\+Sensor\+Component Mimics Unreal Engine\textquotesingle{}s UActor\+Component\+::\+Tick\+Component function. See it\textquotesingle{}s documentation for what the parameters are. Must be overridden by subclass Handles the logic for ticking the sensor Make sure to set the data, Cast Buffer into the right kind of pointer and set the data. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}{UHolodeck\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{RelativeSkeletalPositionSensor_8h}{Relative\+Skeletal\+Position\+Sensor.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{RelativeSkeletalPositionSensor_8cpp}{Relative\+Skeletal\+Position\+Sensor.\+cpp}}\end{DoxyCompactItemize}

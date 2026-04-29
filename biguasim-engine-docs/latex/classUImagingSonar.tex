@@ -1,0 +1,325 @@
+\hypertarget{classUImagingSonar}{}\doxysection{UImaging\+Sonar Class Reference}
+\label{classUImagingSonar}\index{UImagingSonar@{UImagingSonar}}
+
+
+Forward Looking Imaging Sonar (FLS) sensor simulation. Emits an acoustic wave, calculates intersections using an \mbox{\hyperlink{classOctree}{Octree}}, and simulates complex acoustic phenomena including multipath reflections, speckle noise, and acoustic shadowing. Supports generating ground-\/truth point clouds and elevation maps.  
+
+
+
+
+{\ttfamily \#include $<$Imaging\+Sonar.\+h$>$}
+
+
+
+Inheritance diagram for UImaging\+Sonar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classUImagingSonar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UImaging\+Sonar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUImagingSonar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUImagingSonar_a5cf1c8e6d52db0ddd891632a5e2a1fef}{UImaging\+Sonar}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUImagingSonar_a9e4f5539cfe48218adb05628577d5bd7}{Initialize\+Sensor}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the sensor matrices and computes shadowing scales. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUImagingSonar_a22c972e8ee49146332610700392667ea}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\begin{DoxyCompactList}\small\item\em Parses configuration settings from a JSON payload. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUImagingSonar_a7a2572b90604410ce152dcc558451ffd}{Begin\+Destroy}} () override
+\begin{DoxyCompactList}\small\item\em Cleans up memory arrays allocated for the octree and binning. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUImagingSonar_a4e2d1cef629a1f20a2b2082bc2fcf069}{Get\+Rows}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the number of rows (Range Bins) for the output buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUImagingSonar_a68ead18843f1cffc5e33dc4a34b99f53}{Get\+Cols}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the number of columns (Azimuth Bins) for the output buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUImagingSonar_a9aaa05cb486d3cd70148866f50358a29}{Get\+Item\+Size}} () override
+\begin{DoxyCompactList}\small\item\em Determines the byte size of each item in the buffer (float). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUImagingSonar_af336570765a077e4d19238a9d1e7c4a1}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\begin{DoxyCompactList}\small\item\em The core processing loop to calculate acoustics and noise per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32 \mbox{\hyperlink{classUImagingSonar_a3af6773a8ff226776b8d768c2af07010}{Range\+Bins}} = 0
+\begin{DoxyCompactList}\small\item\em Number of bins used to slice the maximum range distance. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classUImagingSonar_a5b5f3b0bfd118da2fd10fd97aee57020}{Range\+Res}} = 0
+\begin{DoxyCompactList}\small\item\em Resolution of each range bin in centimeters. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classUImagingSonar_a305c05280dadf896721a20c6cf76c6a2}{Azimuth\+Bins}} = 0
+\begin{DoxyCompactList}\small\item\em Number of horizontal sweeping bins. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classUImagingSonar_a2d4b719a8238d09a4d10344fcc9b4869}{Azimuth\+Res}} = 0
+\begin{DoxyCompactList}\small\item\em Degree resolution per azimuth bin. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classUImagingSonar_ac7c091c649842f5636529edeff47533c}{Elevation\+Bins}} = 0
+\begin{DoxyCompactList}\small\item\em Number of vertical sweeping bins for acoustic propagation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classUImagingSonar_a9ba3b145692561f151ae54cc1b6d4aa8}{Elevation\+Res}} = 0
+\begin{DoxyCompactList}\small\item\em Degree resolution per elevation bin. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUImagingSonar_ab9e524d2bd86b182cca6704a6849541d}{Multi\+Path}} = false
+\begin{DoxyCompactList}\small\item\em Flag to enable simulating secondary multipath acoustic bounces. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classUImagingSonar_a1e063310e0d0662e6773682d679586ca}{Cluster\+Size}} = 5
+\begin{DoxyCompactList}\small\item\em Size of the cluster area when calculating multipath reflections. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUImagingSonar_ac52ec92d03cbb2a9d46a71e89a85100d}{Scale\+Noise}} = true
+\begin{DoxyCompactList}\small\item\em Flag to scale noise logarithmically by distance and angle. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classUImagingSonar_a4db68a753eb400d0c2fff90511f5ff28}{Azimuth\+Streaks}} = 0
+\begin{DoxyCompactList}\small\item\em Flag to simulate hardware defects (streaks) along specific azimuth angles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Forward Looking Imaging Sonar (FLS) sensor simulation. Emits an acoustic wave, calculates intersections using an \mbox{\hyperlink{classOctree}{Octree}}, and simulates complex acoustic phenomena including multipath reflections, speckle noise, and acoustic shadowing. Supports generating ground-\/truth point clouds and elevation maps. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUImagingSonar_a5cf1c8e6d52db0ddd891632a5e2a1fef}\label{classUImagingSonar_a5cf1c8e6d52db0ddd891632a5e2a1fef}} 
+\index{UImagingSonar@{UImagingSonar}!UImagingSonar@{UImagingSonar}}
+\index{UImagingSonar@{UImagingSonar}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{UImagingSonar()}{UImagingSonar()}}
+{\footnotesize\ttfamily UImaging\+Sonar\+::\+UImaging\+Sonar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Default Constructor. Initializes the sensor name. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUImagingSonar_a7a2572b90604410ce152dcc558451ffd}\label{classUImagingSonar_a7a2572b90604410ce152dcc558451ffd}} 
+\index{UImagingSonar@{UImagingSonar}!BeginDestroy@{BeginDestroy}}
+\index{BeginDestroy@{BeginDestroy}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{BeginDestroy()}{BeginDestroy()}}
+{\footnotesize\ttfamily void UImaging\+Sonar\+::\+Begin\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Cleans up memory arrays allocated for the octree and binning. 
+
+Cleans up dynamically allocated memory for the octree arrays. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a9dc8374e60480e3dcc2c4ae1f471245d}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUImagingSonar_a68ead18843f1cffc5e33dc4a34b99f53}\label{classUImagingSonar_a68ead18843f1cffc5e33dc4a34b99f53}} 
+\index{UImagingSonar@{UImagingSonar}!GetCols@{GetCols}}
+\index{GetCols@{GetCols}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{GetCols()}{GetCols()}}
+{\footnotesize\ttfamily int UImaging\+Sonar\+::\+Get\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of columns (Azimuth Bins) for the output buffer. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a1f8fa1ee9c4ce2041838d6066c8df215}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUImagingSonar_a9aaa05cb486d3cd70148866f50358a29}\label{classUImagingSonar_a9aaa05cb486d3cd70148866f50358a29}} 
+\index{UImagingSonar@{UImagingSonar}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int UImaging\+Sonar\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Determines the byte size of each item in the buffer (float). 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUImagingSonar_a4e2d1cef629a1f20a2b2082bc2fcf069}\label{classUImagingSonar_a4e2d1cef629a1f20a2b2082bc2fcf069}} 
+\index{UImagingSonar@{UImagingSonar}!GetRows@{GetRows}}
+\index{GetRows@{GetRows}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{GetRows()}{GetRows()}}
+{\footnotesize\ttfamily int UImaging\+Sonar\+::\+Get\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of rows (Range Bins) for the output buffer. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a9d489ce0c8ecbd736e73c7fa083c0c78}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUImagingSonar_a9e4f5539cfe48218adb05628577d5bd7}\label{classUImagingSonar_a9e4f5539cfe48218adb05628577d5bd7}} 
+\index{UImagingSonar@{UImagingSonar}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UImaging\+Sonar\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the sensor matrices and computes shadowing scales. 
+
+Initializes the sensor matrices, calculates optimal azimuth bin scales for shadowing, and sets up tracking for perfect reflections. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUImagingSonar_a22c972e8ee49146332610700392667ea}\label{classUImagingSonar_a22c972e8ee49146332610700392667ea}} 
+\index{UImagingSonar@{UImagingSonar}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void UImaging\+Sonar\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Parses configuration settings from a JSON payload. 
+
+Parses the JSON configuration sent by the Python client to dynamically set sensor parameters. Extracts noise settings (Sigma, Covariance), Multipath toggles, and resolution bins (Range, Azimuth, Elevation).
+
+
+\begin{DoxyParams}{Parameters}
+{\em Parms\+Json} & JSON string containing noise parameters, resolutions, and multipath flags.\\
+\hline
+{\em Parms\+Json} & The JSON string containing the sensor configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a39cf61016a7e988a639fa384423252f2}{UHolodeck\+Sonar}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classUProfilingSonar_a224732c5001f66f74ab5607166c514b6}{UProfiling\+Sonar}}.
+
+\mbox{\Hypertarget{classUImagingSonar_af336570765a077e4d19238a9d1e7c4a1}\label{classUImagingSonar_af336570765a077e4d19238a9d1e7c4a1}} 
+\index{UImagingSonar@{UImagingSonar}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UImaging\+Sonar\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+The core processing loop to calculate acoustics and noise per frame. 
+
+Executed every tick to simulate acoustic wave propagation, generate noise, calculate multipath reflections, and output raw imagery and ground truth data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & Time since the last frame. \\
+\hline
+{\em Tick\+Type} & The type of tick this is. \\
+\hline
+{\em This\+Tick\+Function} & Tick function that is calling this. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSonar_a84323d822827fe22874f324a391b33e1}{UHolodeck\+Sonar}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUImagingSonar_a305c05280dadf896721a20c6cf76c6a2}\label{classUImagingSonar_a305c05280dadf896721a20c6cf76c6a2}} 
+\index{UImagingSonar@{UImagingSonar}!AzimuthBins@{AzimuthBins}}
+\index{AzimuthBins@{AzimuthBins}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{AzimuthBins}{AzimuthBins}}
+{\footnotesize\ttfamily int32 UImaging\+Sonar\+::\+Azimuth\+Bins = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of horizontal sweeping bins. 
+
+\mbox{\Hypertarget{classUImagingSonar_a2d4b719a8238d09a4d10344fcc9b4869}\label{classUImagingSonar_a2d4b719a8238d09a4d10344fcc9b4869}} 
+\index{UImagingSonar@{UImagingSonar}!AzimuthRes@{AzimuthRes}}
+\index{AzimuthRes@{AzimuthRes}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{AzimuthRes}{AzimuthRes}}
+{\footnotesize\ttfamily float UImaging\+Sonar\+::\+Azimuth\+Res = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Degree resolution per azimuth bin. 
+
+\mbox{\Hypertarget{classUImagingSonar_a4db68a753eb400d0c2fff90511f5ff28}\label{classUImagingSonar_a4db68a753eb400d0c2fff90511f5ff28}} 
+\index{UImagingSonar@{UImagingSonar}!AzimuthStreaks@{AzimuthStreaks}}
+\index{AzimuthStreaks@{AzimuthStreaks}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{AzimuthStreaks}{AzimuthStreaks}}
+{\footnotesize\ttfamily int32 UImaging\+Sonar\+::\+Azimuth\+Streaks = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flag to simulate hardware defects (streaks) along specific azimuth angles. 
+
+\mbox{\Hypertarget{classUImagingSonar_a1e063310e0d0662e6773682d679586ca}\label{classUImagingSonar_a1e063310e0d0662e6773682d679586ca}} 
+\index{UImagingSonar@{UImagingSonar}!ClusterSize@{ClusterSize}}
+\index{ClusterSize@{ClusterSize}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{ClusterSize}{ClusterSize}}
+{\footnotesize\ttfamily int32 UImaging\+Sonar\+::\+Cluster\+Size = 5\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Size of the cluster area when calculating multipath reflections. 
+
+\mbox{\Hypertarget{classUImagingSonar_ac7c091c649842f5636529edeff47533c}\label{classUImagingSonar_ac7c091c649842f5636529edeff47533c}} 
+\index{UImagingSonar@{UImagingSonar}!ElevationBins@{ElevationBins}}
+\index{ElevationBins@{ElevationBins}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{ElevationBins}{ElevationBins}}
+{\footnotesize\ttfamily int32 UImaging\+Sonar\+::\+Elevation\+Bins = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of vertical sweeping bins for acoustic propagation. 
+
+\mbox{\Hypertarget{classUImagingSonar_a9ba3b145692561f151ae54cc1b6d4aa8}\label{classUImagingSonar_a9ba3b145692561f151ae54cc1b6d4aa8}} 
+\index{UImagingSonar@{UImagingSonar}!ElevationRes@{ElevationRes}}
+\index{ElevationRes@{ElevationRes}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{ElevationRes}{ElevationRes}}
+{\footnotesize\ttfamily float UImaging\+Sonar\+::\+Elevation\+Res = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Degree resolution per elevation bin. 
+
+\mbox{\Hypertarget{classUImagingSonar_ab9e524d2bd86b182cca6704a6849541d}\label{classUImagingSonar_ab9e524d2bd86b182cca6704a6849541d}} 
+\index{UImagingSonar@{UImagingSonar}!MultiPath@{MultiPath}}
+\index{MultiPath@{MultiPath}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{MultiPath}{MultiPath}}
+{\footnotesize\ttfamily bool UImaging\+Sonar\+::\+Multi\+Path = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flag to enable simulating secondary multipath acoustic bounces. 
+
+\mbox{\Hypertarget{classUImagingSonar_a3af6773a8ff226776b8d768c2af07010}\label{classUImagingSonar_a3af6773a8ff226776b8d768c2af07010}} 
+\index{UImagingSonar@{UImagingSonar}!RangeBins@{RangeBins}}
+\index{RangeBins@{RangeBins}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{RangeBins}{RangeBins}}
+{\footnotesize\ttfamily int32 UImaging\+Sonar\+::\+Range\+Bins = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of bins used to slice the maximum range distance. 
+
+\mbox{\Hypertarget{classUImagingSonar_a5b5f3b0bfd118da2fd10fd97aee57020}\label{classUImagingSonar_a5b5f3b0bfd118da2fd10fd97aee57020}} 
+\index{UImagingSonar@{UImagingSonar}!RangeRes@{RangeRes}}
+\index{RangeRes@{RangeRes}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{RangeRes}{RangeRes}}
+{\footnotesize\ttfamily float UImaging\+Sonar\+::\+Range\+Res = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Resolution of each range bin in centimeters. 
+
+\mbox{\Hypertarget{classUImagingSonar_ac52ec92d03cbb2a9d46a71e89a85100d}\label{classUImagingSonar_ac52ec92d03cbb2a9d46a71e89a85100d}} 
+\index{UImagingSonar@{UImagingSonar}!ScaleNoise@{ScaleNoise}}
+\index{ScaleNoise@{ScaleNoise}!UImagingSonar@{UImagingSonar}}
+\doxysubsubsection{\texorpdfstring{ScaleNoise}{ScaleNoise}}
+{\footnotesize\ttfamily bool UImaging\+Sonar\+::\+Scale\+Noise = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flag to scale noise logarithmically by distance and angle. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{ImagingSonar_8h}{Imaging\+Sonar.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{ImagingSonar_8cpp}{Imaging\+Sonar.\+cpp}}\end{DoxyCompactItemize}

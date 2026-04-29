@@ -1,0 +1,261 @@
+\hypertarget{classAAndroid}{}\doxysection{AAndroid Class Reference}
+\label{classAAndroid}\index{AAndroid@{AAndroid}}
+
+
+{\ttfamily \#include $<$Android.\+h$>$}
+
+
+
+Inheritance diagram for AAndroid\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classAAndroid__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AAndroid\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAAndroid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAAndroid_a1ca6f3f0a4292519c5acb309fbdfcb5f}{AAndroid}} ()
+\item 
+virtual void \mbox{\hyperlink{classAAndroid_a2b4d5412eadc8c110ef2b18305b8b8b5}{Initialize\+Agent}} () override
+\item 
+void \mbox{\hyperlink{classAAndroid_aa54fe3f79d28fb549e38ddbcd72a50d0}{Tick}} (float Delta\+Seconds) override
+\item 
+void \mbox{\hyperlink{classAAndroid_a3cb2673bf8b50e2838abfa5d361e34bd}{Set\+Collisions\+Visible}} (bool Visible)
+\item 
+const FName $\ast$ \mbox{\hyperlink{classAAndroid_a6f69520ef0a7a54b6259c037a100d017}{Get\+Joints}} ()
+\item 
+bool \mbox{\hyperlink{classAAndroid_a1c2d9f30f3eb0eae47fb871a8937a758}{Get\+Collisions\+Visible}} ()
+\item 
+unsigned int \mbox{\hyperlink{classAAndroid_a7ff73d927df6a84179de2bb3424f2972}{Get\+Raw\+Action\+Size\+In\+Bytes}} () const override
+\item 
+void $\ast$ \mbox{\hyperlink{classAAndroid_a0d87ec97efd7b3268876ce4496a54a2b}{Get\+Raw\+Action\+Buffer}} () const override
+\item 
+float \mbox{\hyperlink{classAAndroid_ae5ee4693db95cb7c8725e6f236dcbee2}{Get\+Acceleration\+Limit}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+UMaterial $\ast$ \mbox{\hyperlink{classAAndroid_a718b7b79df9daa969a9c3f81721caa23}{Collision\+Decal\+Material}}
+\item 
+USkeletal\+Mesh\+Component $\ast$ \mbox{\hyperlink{classAAndroid_ad5706ef184418f18b969d82290a11640}{Skeletal\+Mesh}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{classAAndroid_a04a08563fd94feec63a4dd2262d8ec76}{NUM\+\_\+\+JOINTS}} = 48
+\item 
+static constexpr int \mbox{\hyperlink{classAAndroid_ad1558ef1148290b5eff649f82e04519b}{NUM\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS}} = 18
+\item 
+static constexpr int \mbox{\hyperlink{classAAndroid_ad2f7c2b009d3a8496a97699c05838c0e}{NUM\+\_\+2\+\_\+\+AXIS\+\_\+\+JOINTS}} = 10
+\item 
+static constexpr int \mbox{\hyperlink{classAAndroid_adcc7806dc809fe30cd184a970713e900}{NUM\+\_\+1\+\_\+\+AXIS\+\_\+\+JOINTS}} = 20
+\item 
+static constexpr int \mbox{\hyperlink{classAAndroid_abf132c8b95a961ee6ac1e261af781385}{NUM\+\_\+2\+\_\+\+PLUS\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS}} = 28
+\item 
+static constexpr int \mbox{\hyperlink{classAAndroid_a364f34f565d9006dffc8abcec31c285f}{TOTAL\+\_\+\+DOF}} = \mbox{\hyperlink{classAAndroid_ad1558ef1148290b5eff649f82e04519b}{NUM\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS}} $\ast$ 3 + \mbox{\hyperlink{classAAndroid_ad2f7c2b009d3a8496a97699c05838c0e}{NUM\+\_\+2\+\_\+\+AXIS\+\_\+\+JOINTS}} $\ast$ 2 + \mbox{\hyperlink{classAAndroid_adcc7806dc809fe30cd184a970713e900}{NUM\+\_\+1\+\_\+\+AXIS\+\_\+\+JOINTS}}
+\item 
+static const FName \mbox{\hyperlink{classAAndroid_a37dd44be20208410f2490e007bef54fa}{Joints}} \mbox{[}$\,$\mbox{]}
+\item 
+static const FName \mbox{\hyperlink{classAAndroid_a262d122c98cdbebd5e0d7429905bef0b}{Bone\+Names}} \mbox{[}$\,$\mbox{]}
+\item 
+static const int \mbox{\hyperlink{classAAndroid_a2b65218de51a49917e13aaa81fbebea0}{Num\+Bones}} = 60
+\item 
+static constexpr float \mbox{\hyperlink{classAAndroid_a86cefea6aa5ca31f9bbb46576a114c77}{MAX\+\_\+\+TORQUE}} = 30.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAAndroid_a1ca6f3f0a4292519c5acb309fbdfcb5f}\label{classAAndroid_a1ca6f3f0a4292519c5acb309fbdfcb5f}} 
+\index{AAndroid@{AAndroid}!AAndroid@{AAndroid}}
+\index{AAndroid@{AAndroid}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{AAndroid()}{AAndroid()}}
+{\footnotesize\ttfamily AAndroid\+::\+AAndroid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAAndroid_ae5ee4693db95cb7c8725e6f236dcbee2}\label{classAAndroid_ae5ee4693db95cb7c8725e6f236dcbee2}} 
+\index{AAndroid@{AAndroid}!GetAccelerationLimit@{GetAccelerationLimit}}
+\index{GetAccelerationLimit@{GetAccelerationLimit}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{GetAccelerationLimit()}{GetAccelerationLimit()}}
+{\footnotesize\ttfamily float AAndroid\+::\+Get\+Acceleration\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Acceleration\+Limit \begin{DoxyReturn}{Returns}
+Float The maximum acceleration the agent can endure before being abused. -\/1 means no limit. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAAndroid_a1c2d9f30f3eb0eae47fb871a8937a758}\label{classAAndroid_a1c2d9f30f3eb0eae47fb871a8937a758}} 
+\index{AAndroid@{AAndroid}!GetCollisionsVisible@{GetCollisionsVisible}}
+\index{GetCollisionsVisible@{GetCollisionsVisible}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{GetCollisionsVisible()}{GetCollisionsVisible()}}
+{\footnotesize\ttfamily bool AAndroid\+::\+Get\+Collisions\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get\+Collisions\+Visible \begin{DoxyReturn}{Returns}
+true if collisions are visible. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAAndroid_a6f69520ef0a7a54b6259c037a100d017}\label{classAAndroid_a6f69520ef0a7a54b6259c037a100d017}} 
+\index{AAndroid@{AAndroid}!GetJoints@{GetJoints}}
+\index{GetJoints@{GetJoints}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{GetJoints()}{GetJoints()}}
+{\footnotesize\ttfamily const FName$\ast$ AAndroid\+::\+Get\+Joints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get\+Joints Gets pointer to constant array of FName joints \begin{DoxyReturn}{Returns}
+array of FName corresponding to android joint names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAAndroid_a0d87ec97efd7b3268876ce4496a54a2b}\label{classAAndroid_a0d87ec97efd7b3268876ce4496a54a2b}} 
+\index{AAndroid@{AAndroid}!GetRawActionBuffer@{GetRawActionBuffer}}
+\index{GetRawActionBuffer@{GetRawActionBuffer}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{GetRawActionBuffer()}{GetRawActionBuffer()}}
+{\footnotesize\ttfamily void$\ast$ AAndroid\+::\+Get\+Raw\+Action\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Buffer \begin{DoxyReturn}{Returns}
+a pointer to the start of the action buffer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAAndroid_a7ff73d927df6a84179de2bb3424f2972}\label{classAAndroid_a7ff73d927df6a84179de2bb3424f2972}} 
+\index{AAndroid@{AAndroid}!GetRawActionSizeInBytes@{GetRawActionSizeInBytes}}
+\index{GetRawActionSizeInBytes@{GetRawActionSizeInBytes}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{GetRawActionSizeInBytes()}{GetRawActionSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int AAndroid\+::\+Get\+Raw\+Action\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Size\+In\+Bytes \begin{DoxyReturn}{Returns}
+the number of bytes used by the action space. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAAndroid_a2b4d5412eadc8c110ef2b18305b8b8b5}\label{classAAndroid_a2b4d5412eadc8c110ef2b18305b8b8b5}} 
+\index{AAndroid@{AAndroid}!InitializeAgent@{InitializeAgent}}
+\index{InitializeAgent@{InitializeAgent}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{InitializeAgent()}{InitializeAgent()}}
+{\footnotesize\ttfamily void AAndroid\+::\+Initialize\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the game starts. 
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a0576d34a9f13e3a4fd2806d0f2c64dea}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAAndroid_a3cb2673bf8b50e2838abfa5d361e34bd}\label{classAAndroid_a3cb2673bf8b50e2838abfa5d361e34bd}} 
+\index{AAndroid@{AAndroid}!SetCollisionsVisible@{SetCollisionsVisible}}
+\index{SetCollisionsVisible@{SetCollisionsVisible}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{SetCollisionsVisible()}{SetCollisionsVisible()}}
+{\footnotesize\ttfamily void AAndroid\+::\+Set\+Collisions\+Visible (\begin{DoxyParamCaption}\item[{bool}]{Visible }\end{DoxyParamCaption})}
+
+Set\+Collisions\+Visible Sets whether collisions with the Android can be seen. 
+\begin{DoxyParams}{Parameters}
+{\em Visible} & true to be seen. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAAndroid_aa54fe3f79d28fb549e38ddbcd72a50d0}\label{classAAndroid_aa54fe3f79d28fb549e38ddbcd72a50d0}} 
+\index{AAndroid@{AAndroid}!Tick@{Tick}}
+\index{Tick@{Tick}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void AAndroid\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Tick Called every frame. 
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & the time since the last tick. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a99953c7b1f1d4cf838573b3c8d33d9b9}{AHolodeck\+Agent}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classAAndroid_a262d122c98cdbebd5e0d7429905bef0b}\label{classAAndroid_a262d122c98cdbebd5e0d7429905bef0b}} 
+\index{AAndroid@{AAndroid}!BoneNames@{BoneNames}}
+\index{BoneNames@{BoneNames}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{BoneNames}{BoneNames}}
+{\footnotesize\ttfamily const FName AAndroid\+::\+Bone\+Names\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classAAndroid_a718b7b79df9daa969a9c3f81721caa23}\label{classAAndroid_a718b7b79df9daa969a9c3f81721caa23}} 
+\index{AAndroid@{AAndroid}!CollisionDecalMaterial@{CollisionDecalMaterial}}
+\index{CollisionDecalMaterial@{CollisionDecalMaterial}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{CollisionDecalMaterial}{CollisionDecalMaterial}}
+{\footnotesize\ttfamily UMaterial$\ast$ AAndroid\+::\+Collision\+Decal\+Material}
+
+\mbox{\Hypertarget{classAAndroid_a37dd44be20208410f2490e007bef54fa}\label{classAAndroid_a37dd44be20208410f2490e007bef54fa}} 
+\index{AAndroid@{AAndroid}!Joints@{Joints}}
+\index{Joints@{Joints}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{Joints}{Joints}}
+{\footnotesize\ttfamily const FName AAndroid\+::\+Joints\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classAAndroid_a86cefea6aa5ca31f9bbb46576a114c77}\label{classAAndroid_a86cefea6aa5ca31f9bbb46576a114c77}} 
+\index{AAndroid@{AAndroid}!MAX\_TORQUE@{MAX\_TORQUE}}
+\index{MAX\_TORQUE@{MAX\_TORQUE}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{MAX\_TORQUE}{MAX\_TORQUE}}
+{\footnotesize\ttfamily constexpr float AAndroid\+::\+MAX\+\_\+\+TORQUE = 30.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAAndroid_adcc7806dc809fe30cd184a970713e900}\label{classAAndroid_adcc7806dc809fe30cd184a970713e900}} 
+\index{AAndroid@{AAndroid}!NUM\_1\_AXIS\_JOINTS@{NUM\_1\_AXIS\_JOINTS}}
+\index{NUM\_1\_AXIS\_JOINTS@{NUM\_1\_AXIS\_JOINTS}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{NUM\_1\_AXIS\_JOINTS}{NUM\_1\_AXIS\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AAndroid\+::\+NUM\+\_\+1\+\_\+\+AXIS\+\_\+\+JOINTS = 20\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAAndroid_ad2f7c2b009d3a8496a97699c05838c0e}\label{classAAndroid_ad2f7c2b009d3a8496a97699c05838c0e}} 
+\index{AAndroid@{AAndroid}!NUM\_2\_AXIS\_JOINTS@{NUM\_2\_AXIS\_JOINTS}}
+\index{NUM\_2\_AXIS\_JOINTS@{NUM\_2\_AXIS\_JOINTS}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{NUM\_2\_AXIS\_JOINTS}{NUM\_2\_AXIS\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AAndroid\+::\+NUM\+\_\+2\+\_\+\+AXIS\+\_\+\+JOINTS = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAAndroid_abf132c8b95a961ee6ac1e261af781385}\label{classAAndroid_abf132c8b95a961ee6ac1e261af781385}} 
+\index{AAndroid@{AAndroid}!NUM\_2\_PLUS\_3\_AXIS\_JOINTS@{NUM\_2\_PLUS\_3\_AXIS\_JOINTS}}
+\index{NUM\_2\_PLUS\_3\_AXIS\_JOINTS@{NUM\_2\_PLUS\_3\_AXIS\_JOINTS}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{NUM\_2\_PLUS\_3\_AXIS\_JOINTS}{NUM\_2\_PLUS\_3\_AXIS\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AAndroid\+::\+NUM\+\_\+2\+\_\+\+PLUS\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS = 28\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAAndroid_ad1558ef1148290b5eff649f82e04519b}\label{classAAndroid_ad1558ef1148290b5eff649f82e04519b}} 
+\index{AAndroid@{AAndroid}!NUM\_3\_AXIS\_JOINTS@{NUM\_3\_AXIS\_JOINTS}}
+\index{NUM\_3\_AXIS\_JOINTS@{NUM\_3\_AXIS\_JOINTS}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{NUM\_3\_AXIS\_JOINTS}{NUM\_3\_AXIS\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AAndroid\+::\+NUM\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS = 18\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAAndroid_a04a08563fd94feec63a4dd2262d8ec76}\label{classAAndroid_a04a08563fd94feec63a4dd2262d8ec76}} 
+\index{AAndroid@{AAndroid}!NUM\_JOINTS@{NUM\_JOINTS}}
+\index{NUM\_JOINTS@{NUM\_JOINTS}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{NUM\_JOINTS}{NUM\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AAndroid\+::\+NUM\+\_\+\+JOINTS = 48\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAAndroid_a2b65218de51a49917e13aaa81fbebea0}\label{classAAndroid_a2b65218de51a49917e13aaa81fbebea0}} 
+\index{AAndroid@{AAndroid}!NumBones@{NumBones}}
+\index{NumBones@{NumBones}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{NumBones}{NumBones}}
+{\footnotesize\ttfamily const int AAndroid\+::\+Num\+Bones = 60\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classAAndroid_ad5706ef184418f18b969d82290a11640}\label{classAAndroid_ad5706ef184418f18b969d82290a11640}} 
+\index{AAndroid@{AAndroid}!SkeletalMesh@{SkeletalMesh}}
+\index{SkeletalMesh@{SkeletalMesh}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{SkeletalMesh}{SkeletalMesh}}
+{\footnotesize\ttfamily USkeletal\+Mesh\+Component$\ast$ AAndroid\+::\+Skeletal\+Mesh}
+
+\mbox{\Hypertarget{classAAndroid_a364f34f565d9006dffc8abcec31c285f}\label{classAAndroid_a364f34f565d9006dffc8abcec31c285f}} 
+\index{AAndroid@{AAndroid}!TOTAL\_DOF@{TOTAL\_DOF}}
+\index{TOTAL\_DOF@{TOTAL\_DOF}!AAndroid@{AAndroid}}
+\doxysubsubsection{\texorpdfstring{TOTAL\_DOF}{TOTAL\_DOF}}
+{\footnotesize\ttfamily constexpr int AAndroid\+::\+TOTAL\+\_\+\+DOF = \mbox{\hyperlink{classAAndroid_ad1558ef1148290b5eff649f82e04519b}{NUM\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS}} $\ast$ 3 + \mbox{\hyperlink{classAAndroid_ad2f7c2b009d3a8496a97699c05838c0e}{NUM\+\_\+2\+\_\+\+AXIS\+\_\+\+JOINTS}} $\ast$ 2 + \mbox{\hyperlink{classAAndroid_adcc7806dc809fe30cd184a970713e900}{NUM\+\_\+1\+\_\+\+AXIS\+\_\+\+JOINTS}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{Android_8h}{Android.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{Android_8cpp}{Android.\+cpp}}\end{DoxyCompactItemize}

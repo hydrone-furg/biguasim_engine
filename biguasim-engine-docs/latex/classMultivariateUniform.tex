@@ -1,0 +1,145 @@
+\hypertarget{classMultivariateUniform}{}\doxysection{Multivariate\+Uniform$<$ N $>$ Class Template Reference}
+\label{classMultivariateUniform}\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+
+
+{\ttfamily \#include $<$Multivariate\+Uniform.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMultivariateUniform_a03fc81e8d67af11c232ec9edfe289e4f}{Multivariate\+Uniform}} ()
+\item 
+\mbox{\hyperlink{classMultivariateUniform_af8c0154bd963e32e87a8ada3c6334e11}{$\sim$\+Multivariate\+Uniform}} ()
+\item 
+void \mbox{\hyperlink{classMultivariateUniform_acfbc5b1612d4b4b057c515a009da1646}{init\+Bounds}} (float max\+\_\+)
+\item 
+void \mbox{\hyperlink{classMultivariateUniform_aeba6e98626297bbf6334647689d0f6f0}{init\+Bounds}} (std\+::array$<$ float, N $>$ max\+\_\+)
+\item 
+void \mbox{\hyperlink{classMultivariateUniform_adc4889d7378b4cc679578794dfb2d7fe}{init\+Bounds}} (TArray$<$ TShared\+Ptr$<$ FJson\+Value $>$$>$ max\+\_\+)
+\item 
+std\+::array$<$ float, N $>$ \mbox{\hyperlink{classMultivariateUniform_a8718277e762ab90da6732dfab0fe8737}{sample\+Array}} ()
+\item 
+TArray$<$ float $>$ \mbox{\hyperlink{classMultivariateUniform_ae1c1c73e7195fc767de5ec3164defb39}{sample\+TArray}} ()
+\item 
+FVector \mbox{\hyperlink{classMultivariateUniform_afb5d3f41c04e3d13612ad2cb8d37dd62}{sample\+FVector}} ()
+\item 
+float \mbox{\hyperlink{classMultivariateUniform_a1a6970edb87360533b3b6a12f5ca493f}{sample\+Float}} ()
+\item 
+float \mbox{\hyperlink{classMultivariateUniform_a7204f055a2b77d6c6bac103b06f6cb07}{sample\+Exponential}} ()
+\item 
+float \mbox{\hyperlink{classMultivariateUniform_a09020bcb46ce6aed12e43922d031acba}{exponential\+PDF}} (float x)
+\item 
+float \mbox{\hyperlink{classMultivariateUniform_af109c8c82a0bf75b9c26d82204fc0f57}{exponential\+Scaled\+PDF}} (float x)
+\item 
+bool \mbox{\hyperlink{classMultivariateUniform_aa509bc2fedc0544434d72cc6c8ea2552}{is\+Uncertain}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$int N$>$\newline
+class Multivariate\+Uniform$<$ N $>$}
+
+Sample from a min 0 multivariate uniform distribution with maximum as specified in the constructor
+
+TODO\+: This library has NOT been fully tested. Beware before using! 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMultivariateUniform_a03fc81e8d67af11c232ec9edfe289e4f}\label{classMultivariateUniform_a03fc81e8d67af11c232ec9edfe289e4f}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!MultivariateUniform@{MultivariateUniform}}
+\index{MultivariateUniform@{MultivariateUniform}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{MultivariateUniform()}{MultivariateUniform()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+\mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::\mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_af8c0154bd963e32e87a8ada3c6334e11}\label{classMultivariateUniform_af8c0154bd963e32e87a8ada3c6334e11}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!````~MultivariateUniform@{$\sim$MultivariateUniform}}
+\index{````~MultivariateUniform@{$\sim$MultivariateUniform}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$MultivariateUniform()}{~MultivariateUniform()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+\mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::$\sim$\mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMultivariateUniform_a09020bcb46ce6aed12e43922d031acba}\label{classMultivariateUniform_a09020bcb46ce6aed12e43922d031acba}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!exponentialPDF@{exponentialPDF}}
+\index{exponentialPDF@{exponentialPDF}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{exponentialPDF()}{exponentialPDF()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+float \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::exponential\+PDF (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_af109c8c82a0bf75b9c26d82204fc0f57}\label{classMultivariateUniform_af109c8c82a0bf75b9c26d82204fc0f57}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!exponentialScaledPDF@{exponentialScaledPDF}}
+\index{exponentialScaledPDF@{exponentialScaledPDF}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{exponentialScaledPDF()}{exponentialScaledPDF()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+float \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::exponential\+Scaled\+PDF (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_acfbc5b1612d4b4b057c515a009da1646}\label{classMultivariateUniform_acfbc5b1612d4b4b057c515a009da1646}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!initBounds@{initBounds}}
+\index{initBounds@{initBounds}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{initBounds()}{initBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+void \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::init\+Bounds (\begin{DoxyParamCaption}\item[{float}]{max\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_aeba6e98626297bbf6334647689d0f6f0}\label{classMultivariateUniform_aeba6e98626297bbf6334647689d0f6f0}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!initBounds@{initBounds}}
+\index{initBounds@{initBounds}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{initBounds()}{initBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+void \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::init\+Bounds (\begin{DoxyParamCaption}\item[{std\+::array$<$ float, N $>$}]{max\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_adc4889d7378b4cc679578794dfb2d7fe}\label{classMultivariateUniform_adc4889d7378b4cc679578794dfb2d7fe}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!initBounds@{initBounds}}
+\index{initBounds@{initBounds}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{initBounds()}{initBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+void \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::init\+Bounds (\begin{DoxyParamCaption}\item[{TArray$<$ TShared\+Ptr$<$ FJson\+Value $>$$>$}]{max\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_aa509bc2fedc0544434d72cc6c8ea2552}\label{classMultivariateUniform_aa509bc2fedc0544434d72cc6c8ea2552}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!isUncertain@{isUncertain}}
+\index{isUncertain@{isUncertain}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{isUncertain()}{isUncertain()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+bool \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::is\+Uncertain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_a8718277e762ab90da6732dfab0fe8737}\label{classMultivariateUniform_a8718277e762ab90da6732dfab0fe8737}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!sampleArray@{sampleArray}}
+\index{sampleArray@{sampleArray}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{sampleArray()}{sampleArray()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+std\+::array$<$float,N$>$ \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::sample\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_a7204f055a2b77d6c6bac103b06f6cb07}\label{classMultivariateUniform_a7204f055a2b77d6c6bac103b06f6cb07}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!sampleExponential@{sampleExponential}}
+\index{sampleExponential@{sampleExponential}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{sampleExponential()}{sampleExponential()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+float \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::sample\+Exponential (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_a1a6970edb87360533b3b6a12f5ca493f}\label{classMultivariateUniform_a1a6970edb87360533b3b6a12f5ca493f}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!sampleFloat@{sampleFloat}}
+\index{sampleFloat@{sampleFloat}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{sampleFloat()}{sampleFloat()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+float \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::sample\+Float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_afb5d3f41c04e3d13612ad2cb8d37dd62}\label{classMultivariateUniform_afb5d3f41c04e3d13612ad2cb8d37dd62}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!sampleFVector@{sampleFVector}}
+\index{sampleFVector@{sampleFVector}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{sampleFVector()}{sampleFVector()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+FVector \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::sample\+FVector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMultivariateUniform_ae1c1c73e7195fc767de5ec3164defb39}\label{classMultivariateUniform_ae1c1c73e7195fc767de5ec3164defb39}} 
+\index{MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}!sampleTArray@{sampleTArray}}
+\index{sampleTArray@{sampleTArray}!MultivariateUniform$<$ N $>$@{MultivariateUniform$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{sampleTArray()}{sampleTArray()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+TArray$<$float$>$ \mbox{\hyperlink{classMultivariateUniform}{Multivariate\+Uniform}}$<$ N $>$\+::sample\+TArray (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+General/\+Public/\mbox{\hyperlink{MultivariateUniform_8h}{Multivariate\+Uniform.\+h}}\end{DoxyCompactItemize}

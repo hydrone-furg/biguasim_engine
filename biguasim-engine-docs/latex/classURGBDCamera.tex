@@ -1,0 +1,131 @@
+\hypertarget{classURGBDCamera}{}\doxysection{URGBDCamera Class Reference}
+\label{classURGBDCamera}\index{URGBDCamera@{URGBDCamera}}
+
+
+RGB-\/D (Color + Depth) Camera sensor. Inherits from the \mbox{\hyperlink{classUCameraSensor}{UCamera\+Sensor}} class. Captures both the visible light spectrum and the Z-\/buffer depth map simultaneously. Ideal for Visual SLAM and 3D point cloud reconstruction algorithms.  
+
+
+
+
+{\ttfamily \#include $<$RGBDCamera.\+h$>$}
+
+
+
+Inheritance diagram for URGBDCamera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classURGBDCamera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for URGBDCamera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classURGBDCamera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classURGBDCamera_ab3cb83e0e83d050bff6444b58ebe1acb}{URGBDCamera}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classURGBDCamera_afc8c069d4bb424fa432f0aea96fb73eb}{Initialize\+Sensor}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the sensor and sets the dual-\/capture source. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classURGBDCamera_a4f2374d7db3e8f1e74ec80ee3c6b9bb8}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\begin{DoxyCompactList}\small\item\em Parses JSON parameters dynamically. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classURGBDCamera_af07c146edf664e6f68ab4f5202df1e01}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\begin{DoxyCompactList}\small\item\em Main tick function that retrieves pixels from the render target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+RGB-\/D (Color + Depth) Camera sensor. Inherits from the \mbox{\hyperlink{classUCameraSensor}{UCamera\+Sensor}} class. Captures both the visible light spectrum and the Z-\/buffer depth map simultaneously. Ideal for Visual SLAM and 3D point cloud reconstruction algorithms. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classURGBDCamera_ab3cb83e0e83d050bff6444b58ebe1acb}\label{classURGBDCamera_ab3cb83e0e83d050bff6444b58ebe1acb}} 
+\index{URGBDCamera@{URGBDCamera}!URGBDCamera@{URGBDCamera}}
+\index{URGBDCamera@{URGBDCamera}!URGBDCamera@{URGBDCamera}}
+\doxysubsubsection{\texorpdfstring{URGBDCamera()}{URGBDCamera()}}
+{\footnotesize\ttfamily URGBDCamera\+::\+URGBDCamera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Default Constructor. Sets the sensor name to RGBDCamera. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classURGBDCamera_afc8c069d4bb424fa432f0aea96fb73eb}\label{classURGBDCamera_afc8c069d4bb424fa432f0aea96fb73eb}} 
+\index{URGBDCamera@{URGBDCamera}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!URGBDCamera@{URGBDCamera}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void URGBDCamera\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the sensor and sets the dual-\/capture source. 
+
+Initializes the rendering pipeline for the RGB-\/D Camera. Configures the Scene\+Capture\+Component to simultaneously capture Scene Color (RGB) and Scene Depth (Z-\/\+Buffer) in a single render pass to optimize performance. 
+
+Reimplemented from \mbox{\hyperlink{classUCameraSensor_abd6e92cffae2d1c7e58f114fd3159806}{UCamera\+Sensor}}.
+
+\mbox{\Hypertarget{classURGBDCamera_a4f2374d7db3e8f1e74ec80ee3c6b9bb8}\label{classURGBDCamera_a4f2374d7db3e8f1e74ec80ee3c6b9bb8}} 
+\index{URGBDCamera@{URGBDCamera}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!URGBDCamera@{URGBDCamera}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void URGBDCamera\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Parses JSON parameters dynamically. 
+
+Parses the JSON configuration sent by the Python client. Inherits default camera parsing behavior from \mbox{\hyperlink{classUCameraSensor}{UCamera\+Sensor}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Parms\+Json} & JSON string containing configuration.\\
+\hline
+{\em Parms\+Json} & The JSON string containing the sensor configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUCameraSensor_a240a519075b11f54bb0afd8ae31e2f9d}{UCamera\+Sensor}}.
+
+\mbox{\Hypertarget{classURGBDCamera_af07c146edf664e6f68ab4f5202df1e01}\label{classURGBDCamera_af07c146edf664e6f68ab4f5202df1e01}} 
+\index{URGBDCamera@{URGBDCamera}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!URGBDCamera@{URGBDCamera}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void URGBDCamera\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Main tick function that retrieves pixels from the render target. 
+
+Main execution loop that captures the combined RGB-\/D frame. Checks the tick counter and, when the capture interval is met, queues a render request to retrieve the combined pixels into the shared memory buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & The time elapsed since the last tick. \\
+\hline
+{\em Tick\+Type} & The type of tick this is. \\
+\hline
+{\em This\+Tick\+Function} & Tick function that is calling this. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUCameraSensor_a8445eb0c06daaf166b6d7598dd3a8191}{UCamera\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{RGBDCamera_8h}{RGBDCamera.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{RGBDCamera_8cpp}{RGBDCamera.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{classUCupGameTask}{}\doxysection{UCup\+Game\+Task Class Reference}
+\label{classUCupGameTask}\index{UCupGameTask@{UCupGameTask}}
+
+
+{\ttfamily \#include $<$Cup\+Game\+Task.\+h$>$}
+
+
+
+Inheritance diagram for UCup\+Game\+Task\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classUCupGameTask__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UCup\+Game\+Task\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUCupGameTask__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classUCupGameTask_aeb68ebd69ec2b63c1505985fe0987cb6}{Initialize\+Sensor}} () override
+\item 
+virtual void \mbox{\hyperlink{classUCupGameTask_a927fea428834e187d40a548267250687}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classUCupGameTask_a807a023dfc0593a3ee9b5724daa8165a}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classUCupGameTask}{UCup\+Game\+Task}} Inherits from the Task\+Sensor class. Initializes the cup game in the world and calculates reward based off of which cup is selected A reward of 1 is given for one tick if the correct cup is touched and no other cups are touched, A reward of 2 and terminal is given when the ball itself is touched and no incorrect cups are touched. A reward of -\/1 and terminal is given when an incorrect cup is touched. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUCupGameTask_aeb68ebd69ec2b63c1505985fe0987cb6}\label{classUCupGameTask_aeb68ebd69ec2b63c1505985fe0987cb6}} 
+\index{UCupGameTask@{UCupGameTask}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UCupGameTask@{UCupGameTask}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UCup\+Game\+Task\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Sensor Sets up the class 
+
+Reimplemented from \mbox{\hyperlink{classUTaskSensor_aa934f58bc59ea730c4853f018ba8bcf9}{UTask\+Sensor}}.
+
+\mbox{\Hypertarget{classUCupGameTask_a927fea428834e187d40a548267250687}\label{classUCupGameTask_a927fea428834e187d40a548267250687}} 
+\index{UCupGameTask@{UCupGameTask}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!UCupGameTask@{UCupGameTask}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void UCup\+Game\+Task\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Allows parameters to be set dynamically 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_a29fe9c31ded6b9b4a898ec14aff1d8ea}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUCupGameTask_a807a023dfc0593a3ee9b5724daa8165a}\label{classUCupGameTask_a807a023dfc0593a3ee9b5724daa8165a}} 
+\index{UCupGameTask@{UCupGameTask}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UCupGameTask@{UCupGameTask}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UCup\+Game\+Task\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Tick\+Sensor\+Component Mimics Unreal Engine\textquotesingle{}s UActor\+Component\+::\+Tick\+Component function. See it\textquotesingle{}s documentation for what the parameters are. Must be overridden by subclass Handles the logic for ticking the sensor Make sure to set the data, Cast Buffer into the right kind of pointer and set the data. 
+
+Reimplemented from \mbox{\hyperlink{classUTaskSensor_a21bfeae116d1ae6c436f6241bcb321e9}{UTask\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Tasks/\+Public/\mbox{\hyperlink{CupGameTask_8h}{Cup\+Game\+Task.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Tasks/\+Private/\mbox{\hyperlink{CupGameTask_8cpp}{Cup\+Game\+Task.\+cpp}}\end{DoxyCompactItemize}

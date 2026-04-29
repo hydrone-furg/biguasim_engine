@@ -1,0 +1,200 @@
+\hypertarget{classAHydroneClassic}{}\doxysection{AHydrone\+Classic Class Reference}
+\label{classAHydroneClassic}\index{AHydroneClassic@{AHydroneClassic}}
+
+
+{\ttfamily \#include $<$Hydrone\+Classic.\+h$>$}
+
+
+
+Inheritance diagram for AHydrone\+Classic\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classAHydroneClassic__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AHydrone\+Classic\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAHydroneClassic__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAHydroneClassic_af7f9f5f1ab9651d9b6d2a3b6eb589601}{AHydrone\+Classic}} ()
+\item 
+void \mbox{\hyperlink{classAHydroneClassic_a517521e855a8ffe9341c7311f5cedcdd}{Initialize\+Agent}} () override
+\item 
+void \mbox{\hyperlink{classAHydroneClassic_aef17d18a7cea62c25bb7cad7e0357f0d}{Tick}} (float Delta\+Seconds) override
+\item 
+unsigned int \mbox{\hyperlink{classAHydroneClassic_a7c4df3601198011a0200f0ef2ab757b5}{Get\+Raw\+Action\+Size\+In\+Bytes}} () const override
+\item 
+void $\ast$ \mbox{\hyperlink{classAHydroneClassic_a2606d29c9c0a72989a3fa015dff20bf5}{Get\+Raw\+Action\+Buffer}} () const override
+\item 
+float \mbox{\hyperlink{classAHydroneClassic_a3d897e6633a8df96f0acd7c52f14c21e}{Get\+Acceleration\+Limit}} () override
+\item 
+void \mbox{\hyperlink{classAHydroneClassic_a3ac057e8beb9c436c5e4b08937bc36d3}{Apply\+Air\+Thrusters}} (float $\ast$const Thruster\+Array)
+\item 
+void \mbox{\hyperlink{classAHydroneClassic_aef6da663454019352b7703e9e16f742a}{Apply\+Underwater\+Thrusters}} (float $\ast$const Thruster\+Array)
+\item 
+float \mbox{\hyperlink{classAHydroneClassic_a7a719d7bafd65d4ee5c7562672762190}{Get\+Flight\+Thrust}} (float x)
+\item 
+void \mbox{\hyperlink{classAHydroneClassic_a7dee37c06421fbb54b135138b677e39c}{Flight\+Force}} ()
+\item 
+void \mbox{\hyperlink{classAHydroneClassic_a51674109c7a3ef554cab6e3e3c84485c}{Dive\+Force}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ FVector $>$ \mbox{\hyperlink{classAHydroneClassic_aac40fd20c29056c75955ce257c94d83d}{thruster\+Locations}}
+\item 
+bool \mbox{\hyperlink{classAHydroneClassic_a50be983d29c8198940a1ad38895008b9}{Perfect}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hydrone\+Classic Inherits from the Holodeck\+Agent class On any tick this object will apply the given forces. Desired values must be set by a controller. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAHydroneClassic_af7f9f5f1ab9651d9b6d2a3b6eb589601}\label{classAHydroneClassic_af7f9f5f1ab9651d9b6d2a3b6eb589601}} 
+\index{AHydroneClassic@{AHydroneClassic}!AHydroneClassic@{AHydroneClassic}}
+\index{AHydroneClassic@{AHydroneClassic}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{AHydroneClassic()}{AHydroneClassic()}}
+{\footnotesize\ttfamily AHydrone\+Classic\+::\+AHydrone\+Classic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAHydroneClassic_a3ac057e8beb9c436c5e4b08937bc36d3}\label{classAHydroneClassic_a3ac057e8beb9c436c5e4b08937bc36d3}} 
+\index{AHydroneClassic@{AHydroneClassic}!ApplyAirThrusters@{ApplyAirThrusters}}
+\index{ApplyAirThrusters@{ApplyAirThrusters}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{ApplyAirThrusters()}{ApplyAirThrusters()}}
+{\footnotesize\ttfamily void AHydrone\+Classic\+::\+Apply\+Air\+Thrusters (\begin{DoxyParamCaption}\item[{float $\ast$const}]{Thruster\+Array }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAHydroneClassic_aef6da663454019352b7703e9e16f742a}\label{classAHydroneClassic_aef6da663454019352b7703e9e16f742a}} 
+\index{AHydroneClassic@{AHydroneClassic}!ApplyUnderwaterThrusters@{ApplyUnderwaterThrusters}}
+\index{ApplyUnderwaterThrusters@{ApplyUnderwaterThrusters}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{ApplyUnderwaterThrusters()}{ApplyUnderwaterThrusters()}}
+{\footnotesize\ttfamily void AHydrone\+Classic\+::\+Apply\+Underwater\+Thrusters (\begin{DoxyParamCaption}\item[{float $\ast$const}]{Thruster\+Array }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAHydroneClassic_a51674109c7a3ef554cab6e3e3c84485c}\label{classAHydroneClassic_a51674109c7a3ef554cab6e3e3c84485c}} 
+\index{AHydroneClassic@{AHydroneClassic}!DiveForce@{DiveForce}}
+\index{DiveForce@{DiveForce}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{DiveForce()}{DiveForce()}}
+{\footnotesize\ttfamily void AHydrone\+Classic\+::\+Dive\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAHydroneClassic_a7dee37c06421fbb54b135138b677e39c}\label{classAHydroneClassic_a7dee37c06421fbb54b135138b677e39c}} 
+\index{AHydroneClassic@{AHydroneClassic}!FlightForce@{FlightForce}}
+\index{FlightForce@{FlightForce}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{FlightForce()}{FlightForce()}}
+{\footnotesize\ttfamily void AHydrone\+Classic\+::\+Flight\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAHydroneClassic_a3d897e6633a8df96f0acd7c52f14c21e}\label{classAHydroneClassic_a3d897e6633a8df96f0acd7c52f14c21e}} 
+\index{AHydroneClassic@{AHydroneClassic}!GetAccelerationLimit@{GetAccelerationLimit}}
+\index{GetAccelerationLimit@{GetAccelerationLimit}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{GetAccelerationLimit()}{GetAccelerationLimit()}}
+{\footnotesize\ttfamily float AHydrone\+Classic\+::\+Get\+Acceleration\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Acceleration\+Limit \begin{DoxyReturn}{Returns}
+Float The maximum acceleration the agent can endure before being abused. -\/1 means no limit. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAHydroneClassic_a7a719d7bafd65d4ee5c7562672762190}\label{classAHydroneClassic_a7a719d7bafd65d4ee5c7562672762190}} 
+\index{AHydroneClassic@{AHydroneClassic}!GetFlightThrust@{GetFlightThrust}}
+\index{GetFlightThrust@{GetFlightThrust}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{GetFlightThrust()}{GetFlightThrust()}}
+{\footnotesize\ttfamily float AHydrone\+Classic\+::\+Get\+Flight\+Thrust (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classAHydroneClassic_a2606d29c9c0a72989a3fa015dff20bf5}\label{classAHydroneClassic_a2606d29c9c0a72989a3fa015dff20bf5}} 
+\index{AHydroneClassic@{AHydroneClassic}!GetRawActionBuffer@{GetRawActionBuffer}}
+\index{GetRawActionBuffer@{GetRawActionBuffer}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{GetRawActionBuffer()}{GetRawActionBuffer()}}
+{\footnotesize\ttfamily void$\ast$ AHydrone\+Classic\+::\+Get\+Raw\+Action\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Buffer \begin{DoxyReturn}{Returns}
+a pointer to the start of the action buffer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAHydroneClassic_a7c4df3601198011a0200f0ef2ab757b5}\label{classAHydroneClassic_a7c4df3601198011a0200f0ef2ab757b5}} 
+\index{AHydroneClassic@{AHydroneClassic}!GetRawActionSizeInBytes@{GetRawActionSizeInBytes}}
+\index{GetRawActionSizeInBytes@{GetRawActionSizeInBytes}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{GetRawActionSizeInBytes()}{GetRawActionSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int AHydrone\+Classic\+::\+Get\+Raw\+Action\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Size\+In\+Bytes \begin{DoxyReturn}{Returns}
+the number of bytes used by the action space. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAHydroneClassic_a517521e855a8ffe9341c7311f5cedcdd}\label{classAHydroneClassic_a517521e855a8ffe9341c7311f5cedcdd}} 
+\index{AHydroneClassic@{AHydroneClassic}!InitializeAgent@{InitializeAgent}}
+\index{InitializeAgent@{InitializeAgent}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{InitializeAgent()}{InitializeAgent()}}
+{\footnotesize\ttfamily void AHydrone\+Classic\+::\+Initialize\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Agent All agent initialization code should go in here. 
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_af4631f8d3fa15b78fafe84d2939c6d43}{AHolodeck\+Buoyant\+Agent}}.
+
+\mbox{\Hypertarget{classAHydroneClassic_aef17d18a7cea62c25bb7cad7e0357f0d}\label{classAHydroneClassic_aef17d18a7cea62c25bb7cad7e0357f0d}} 
+\index{AHydroneClassic@{AHydroneClassic}!Tick@{Tick}}
+\index{Tick@{Tick}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void AHydrone\+Classic\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Tick Called each frame. 
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & the time since the last tick. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_a79ad3f12f79786954647d728998ec80c}{AHolodeck\+Buoyant\+Agent}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classAHydroneClassic_a50be983d29c8198940a1ad38895008b9}\label{classAHydroneClassic_a50be983d29c8198940a1ad38895008b9}} 
+\index{AHydroneClassic@{AHydroneClassic}!Perfect@{Perfect}}
+\index{Perfect@{Perfect}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{Perfect}{Perfect}}
+{\footnotesize\ttfamily bool AHydrone\+Classic\+::\+Perfect = true}
+
+\mbox{\Hypertarget{classAHydroneClassic_aac40fd20c29056c75955ce257c94d83d}\label{classAHydroneClassic_aac40fd20c29056c75955ce257c94d83d}} 
+\index{AHydroneClassic@{AHydroneClassic}!thrusterLocations@{thrusterLocations}}
+\index{thrusterLocations@{thrusterLocations}!AHydroneClassic@{AHydroneClassic}}
+\doxysubsubsection{\texorpdfstring{thrusterLocations}{thrusterLocations}}
+{\footnotesize\ttfamily TArray$<$FVector$>$ AHydrone\+Classic\+::thruster\+Locations}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ FVector(18.15, 18.15, -\/4), }
+\DoxyCodeLine{                                        FVector(18.15, -\/18.15, -\/4),}
+\DoxyCodeLine{                                        FVector(-\/18.15, -\/18.15, -\/4),}
+\DoxyCodeLine{                                        FVector(-\/18.15, 18.15, -\/4),}
+\DoxyCodeLine{                                        FVector(18.15, 18.15, -\/0.21), }
+\DoxyCodeLine{                                        FVector(18.15, -\/18.15, -\/0.21),}
+\DoxyCodeLine{                                        FVector(-\/18.15, -\/18.15, -\/0.21),}
+\DoxyCodeLine{                                        FVector(-\/18.15, 18.15, -\/0.21)\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Bigua\+Core/\+Public/\mbox{\hyperlink{HydroneClassic_8h}{Hydrone\+Classic.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Bigua\+Core/\+Private/\mbox{\hyperlink{HydroneClassic_8cpp}{Hydrone\+Classic.\+cpp}}\end{DoxyCompactItemize}

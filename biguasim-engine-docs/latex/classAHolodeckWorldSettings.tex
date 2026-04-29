@@ -1,0 +1,82 @@
+\hypertarget{classAHolodeckWorldSettings}{}\doxysection{AHolodeck\+World\+Settings Class Reference}
+\label{classAHolodeckWorldSettings}\index{AHolodeckWorldSettings@{AHolodeckWorldSettings}}
+
+
+{\ttfamily \#include $<$Holodeck\+World\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for AHolodeck\+World\+Settings\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classAHolodeckWorldSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AHolodeck\+World\+Settings\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classAHolodeckWorldSettings__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classAHolodeckWorldSettings_a7f27aaad5769498b22616db2e48b8685}{Fixup\+Delta\+Seconds}} (float Delta\+Seconds, float Real\+Delta\+Seconds) override
+\item 
+\mbox{\hyperlink{classAHolodeckWorldSettings_a2616e4027fc3b131fd4c695bf4f320d7}{AHolodeck\+World\+Settings}} ()
+\item 
+float \mbox{\hyperlink{classAHolodeckWorldSettings_aa3832488be91e30cf78b8bd42247a898}{Get\+Constant\+Time\+Delta\+Between\+Ticks}} ()
+\item 
+void \mbox{\hyperlink{classAHolodeckWorldSettings_a29ee01ecde3bf743641aa4fb920be470}{Set\+Constant\+Time\+Delta\+Between\+Ticks}} (float Delta)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classAHolodeckWorldSettings}{AHolodeck\+World\+Settings}} The global settings being used by the simulator. This is where the tick time is set. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAHolodeckWorldSettings_a2616e4027fc3b131fd4c695bf4f320d7}\label{classAHolodeckWorldSettings_a2616e4027fc3b131fd4c695bf4f320d7}} 
+\index{AHolodeckWorldSettings@{AHolodeckWorldSettings}!AHolodeckWorldSettings@{AHolodeckWorldSettings}}
+\index{AHolodeckWorldSettings@{AHolodeckWorldSettings}!AHolodeckWorldSettings@{AHolodeckWorldSettings}}
+\doxysubsubsection{\texorpdfstring{AHolodeckWorldSettings()}{AHolodeckWorldSettings()}}
+{\footnotesize\ttfamily AHolodeck\+World\+Settings\+::\+AHolodeck\+World\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAHolodeckWorldSettings_a7f27aaad5769498b22616db2e48b8685}\label{classAHolodeckWorldSettings_a7f27aaad5769498b22616db2e48b8685}} 
+\index{AHolodeckWorldSettings@{AHolodeckWorldSettings}!FixupDeltaSeconds@{FixupDeltaSeconds}}
+\index{FixupDeltaSeconds@{FixupDeltaSeconds}!AHolodeckWorldSettings@{AHolodeckWorldSettings}}
+\doxysubsubsection{\texorpdfstring{FixupDeltaSeconds()}{FixupDeltaSeconds()}}
+{\footnotesize\ttfamily float AHolodeck\+World\+Settings\+::\+Fixup\+Delta\+Seconds (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds,  }\item[{float}]{Real\+Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Fixup\+Delta\+Seconds Overidden to ensure a tick is 0.\+033 seconds. \mbox{\Hypertarget{classAHolodeckWorldSettings_aa3832488be91e30cf78b8bd42247a898}\label{classAHolodeckWorldSettings_aa3832488be91e30cf78b8bd42247a898}} 
+\index{AHolodeckWorldSettings@{AHolodeckWorldSettings}!GetConstantTimeDeltaBetweenTicks@{GetConstantTimeDeltaBetweenTicks}}
+\index{GetConstantTimeDeltaBetweenTicks@{GetConstantTimeDeltaBetweenTicks}!AHolodeckWorldSettings@{AHolodeckWorldSettings}}
+\doxysubsubsection{\texorpdfstring{GetConstantTimeDeltaBetweenTicks()}{GetConstantTimeDeltaBetweenTicks()}}
+{\footnotesize\ttfamily float AHolodeck\+World\+Settings\+::\+Get\+Constant\+Time\+Delta\+Between\+Ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get\+Constant\+Time\+Delta\+Between\+Ticks Gets the time between ticks. \begin{DoxyReturn}{Returns}
+the time between ticks in seconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAHolodeckWorldSettings_a29ee01ecde3bf743641aa4fb920be470}\label{classAHolodeckWorldSettings_a29ee01ecde3bf743641aa4fb920be470}} 
+\index{AHolodeckWorldSettings@{AHolodeckWorldSettings}!SetConstantTimeDeltaBetweenTicks@{SetConstantTimeDeltaBetweenTicks}}
+\index{SetConstantTimeDeltaBetweenTicks@{SetConstantTimeDeltaBetweenTicks}!AHolodeckWorldSettings@{AHolodeckWorldSettings}}
+\doxysubsubsection{\texorpdfstring{SetConstantTimeDeltaBetweenTicks()}{SetConstantTimeDeltaBetweenTicks()}}
+{\footnotesize\ttfamily void AHolodeck\+World\+Settings\+::\+Set\+Constant\+Time\+Delta\+Between\+Ticks (\begin{DoxyParamCaption}\item[{float}]{Delta }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classAHolodeckWorldSettings_a29ee01ecde3bf743641aa4fb920be470}{Set\+Constant\+Time\+Delta\+Between\+Ticks(float Delta)}} Sets the time of one tick. 
+\begin{DoxyParams}{Parameters}
+{\em Delta} & the time for one tick. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Public/\mbox{\hyperlink{HolodeckWorldSettings_8h}{Holodeck\+World\+Settings.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Private/\mbox{\hyperlink{HolodeckWorldSettings_8cpp}{Holodeck\+World\+Settings.\+cpp}}\end{DoxyCompactItemize}

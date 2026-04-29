@@ -1,0 +1,84 @@
+\hypertarget{classUBlueROV2ControlThrusters}{}\doxysection{UBlue\+ROV2\+Control\+Thrusters Class Reference}
+\label{classUBlueROV2ControlThrusters}\index{UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}}
+
+
+{\ttfamily \#include $<$Blue\+ROV2\+Control\+Thrusters.\+h$>$}
+
+
+
+Inheritance diagram for UBlue\+ROV2\+Control\+Thrusters\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classUBlueROV2ControlThrusters__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UBlue\+ROV2\+Control\+Thrusters\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classUBlueROV2ControlThrusters__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUBlueROV2ControlThrusters_ae0ff045d88769190beb7c3c4d1d74867}{UBlue\+ROV2\+Control\+Thrusters}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+void \mbox{\hyperlink{classUBlueROV2ControlThrusters_ad610a5333684974116049781e275a9b7}{Execute}} (void $\ast$const Command\+Array, void $\ast$const Input\+Command, float Delta\+Seconds) override
+\item 
+unsigned int \mbox{\hyperlink{classUBlueROV2ControlThrusters_a200e31592359c1b1dac6532b7f03f9c8}{Get\+Control\+Scheme\+Size\+In\+Bytes}} () const override
+\item 
+void \mbox{\hyperlink{classUBlueROV2ControlThrusters_a272aa5067c19b183c1edf523859d2188}{Set\+Controller}} (\mbox{\hyperlink{classAHolodeckPawnController}{AHolodeck\+Pawn\+Controller}} $\ast$const Controller)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classUBlueROV2ControlThrusters}{UBlue\+ROV2\+Control\+Thrusters}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUBlueROV2ControlThrusters_ae0ff045d88769190beb7c3c4d1d74867}\label{classUBlueROV2ControlThrusters_ae0ff045d88769190beb7c3c4d1d74867}} 
+\index{UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}!UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}}
+\index{UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}!UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}}
+\doxysubsubsection{\texorpdfstring{UBlueROV2ControlThrusters()}{UBlueROV2ControlThrusters()}}
+{\footnotesize\ttfamily UBlue\+ROV2\+Control\+Thrusters\+::\+UBlue\+ROV2\+Control\+Thrusters (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUBlueROV2ControlThrusters_ad610a5333684974116049781e275a9b7}\label{classUBlueROV2ControlThrusters_ad610a5333684974116049781e275a9b7}} 
+\index{UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}!Execute@{Execute}}
+\index{Execute@{Execute}!UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void UBlue\+ROV2\+Control\+Thrusters\+::\+Execute (\begin{DoxyParamCaption}\item[{void $\ast$const}]{Command\+Array,  }\item[{void $\ast$const}]{Input\+Command,  }\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckControlScheme_a84185ec2e7515e8afd21e9b7567e6ae0}{UHolodeck\+Control\+Scheme}}.
+
+\mbox{\Hypertarget{classUBlueROV2ControlThrusters_a200e31592359c1b1dac6532b7f03f9c8}\label{classUBlueROV2ControlThrusters_a200e31592359c1b1dac6532b7f03f9c8}} 
+\index{UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}!GetControlSchemeSizeInBytes@{GetControlSchemeSizeInBytes}}
+\index{GetControlSchemeSizeInBytes@{GetControlSchemeSizeInBytes}!UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}}
+\doxysubsubsection{\texorpdfstring{GetControlSchemeSizeInBytes()}{GetControlSchemeSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int UBlue\+ROV2\+Control\+Thrusters\+::\+Get\+Control\+Scheme\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+NOTE\+: These go counter-\/clockwise, starting in front right
+
+0\+: Vertical Front Starboard Thruster 1\+: Vertical Front Port Thruster 2\+: Vertical Back Port Thruster 3\+: Vertical Back Starboard Thruster 4\+: Angled Front Starboard Thruster 5\+: Angled Front Port Thruster 6\+: Angled Back Port Thruster 7\+: Angled Back Starboard Thruster 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckControlScheme_abf94aa5488c43e99108ffc68a213e145}{UHolodeck\+Control\+Scheme}}.
+
+\mbox{\Hypertarget{classUBlueROV2ControlThrusters_a272aa5067c19b183c1edf523859d2188}\label{classUBlueROV2ControlThrusters_a272aa5067c19b183c1edf523859d2188}} 
+\index{UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}!SetController@{SetController}}
+\index{SetController@{SetController}!UBlueROV2ControlThrusters@{UBlueROV2ControlThrusters}}
+\doxysubsubsection{\texorpdfstring{SetController()}{SetController()}}
+{\footnotesize\ttfamily void UBlue\+ROV2\+Control\+Thrusters\+::\+Set\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAHolodeckPawnController}{AHolodeck\+Pawn\+Controller}} $\ast$const}]{Controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{BlueROV2ControlThrusters_8h}{Blue\+ROV2\+Control\+Thrusters.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{BlueROV2ControlThrusters_8cpp}{Blue\+ROV2\+Control\+Thrusters.\+cpp}}\end{DoxyCompactItemize}

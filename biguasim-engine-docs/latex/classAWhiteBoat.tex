@@ -1,0 +1,162 @@
+\hypertarget{classAWhiteBoat}{}\doxysection{AWhite\+Boat Class Reference}
+\label{classAWhiteBoat}\index{AWhiteBoat@{AWhiteBoat}}
+
+
+{\ttfamily \#include $<$White\+Boat.\+h$>$}
+
+
+
+Inheritance diagram for AWhite\+Boat\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classAWhiteBoat__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AWhite\+Boat\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAWhiteBoat__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAWhiteBoat_a27249eddb671ef8d849e71c93d35aead}{AWhite\+Boat}} ()
+\item 
+void \mbox{\hyperlink{classAWhiteBoat_a5c96f7972f90b7117f890fd3d1b47b59}{Initialize\+Agent}} () override
+\item 
+void \mbox{\hyperlink{classAWhiteBoat_adb0332361151f1f9f65e97309fcf4748}{Tick}} (float Delta\+Seconds) override
+\item 
+unsigned int \mbox{\hyperlink{classAWhiteBoat_a128939540730009904b3de2cf2f739d6}{Get\+Raw\+Action\+Size\+In\+Bytes}} () const override
+\item 
+void $\ast$ \mbox{\hyperlink{classAWhiteBoat_a1b8e14cf53cfd0a4b3acc4fc83586718}{Get\+Raw\+Action\+Buffer}} () const override
+\item 
+float \mbox{\hyperlink{classAWhiteBoat_a3db3fb4f21ffced9dc09bdb672843d5b}{Get\+Acceleration\+Limit}} () override
+\item 
+void \mbox{\hyperlink{classAWhiteBoat_a9698519b457aab777c785b8ffef0793f}{Apply\+Thrusters}} (float $\ast$const Thruster\+Array)
+\item 
+void \mbox{\hyperlink{classAWhiteBoat_aa23d59e6a2de8508b3f5d359d5292635}{Enable\+Damping}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ FVector $>$ \mbox{\hyperlink{classAWhiteBoat_aea3b3e1fc622ede6f3f55f2ecb8b3834}{thruster\+Locations}} \{ FVector(-\/250, -\/100, 0), FVector(-\/250, 100, 0) \}
+\item 
+bool \mbox{\hyperlink{classAWhiteBoat_af5f97c2161011a6c9bd7a42983e843dd}{Perfect}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classAWhiteBoat}{AWhite\+Boat}} Inherits from the Holodeck\+Agent class On any tick this object will apply the given forces. Desired values must be set by a controller. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAWhiteBoat_a27249eddb671ef8d849e71c93d35aead}\label{classAWhiteBoat_a27249eddb671ef8d849e71c93d35aead}} 
+\index{AWhiteBoat@{AWhiteBoat}!AWhiteBoat@{AWhiteBoat}}
+\index{AWhiteBoat@{AWhiteBoat}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{AWhiteBoat()}{AWhiteBoat()}}
+{\footnotesize\ttfamily AWhite\+Boat\+::\+AWhite\+Boat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAWhiteBoat_a9698519b457aab777c785b8ffef0793f}\label{classAWhiteBoat_a9698519b457aab777c785b8ffef0793f}} 
+\index{AWhiteBoat@{AWhiteBoat}!ApplyThrusters@{ApplyThrusters}}
+\index{ApplyThrusters@{ApplyThrusters}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{ApplyThrusters()}{ApplyThrusters()}}
+{\footnotesize\ttfamily void AWhite\+Boat\+::\+Apply\+Thrusters (\begin{DoxyParamCaption}\item[{float $\ast$const}]{Thruster\+Array }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAWhiteBoat_aa23d59e6a2de8508b3f5d359d5292635}\label{classAWhiteBoat_aa23d59e6a2de8508b3f5d359d5292635}} 
+\index{AWhiteBoat@{AWhiteBoat}!EnableDamping@{EnableDamping}}
+\index{EnableDamping@{EnableDamping}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{EnableDamping()}{EnableDamping()}}
+{\footnotesize\ttfamily void AWhite\+Boat\+::\+Enable\+Damping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAWhiteBoat_a3db3fb4f21ffced9dc09bdb672843d5b}\label{classAWhiteBoat_a3db3fb4f21ffced9dc09bdb672843d5b}} 
+\index{AWhiteBoat@{AWhiteBoat}!GetAccelerationLimit@{GetAccelerationLimit}}
+\index{GetAccelerationLimit@{GetAccelerationLimit}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{GetAccelerationLimit()}{GetAccelerationLimit()}}
+{\footnotesize\ttfamily float AWhite\+Boat\+::\+Get\+Acceleration\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Acceleration\+Limit \begin{DoxyReturn}{Returns}
+Float The maximum acceleration the agent can endure before being abused. -\/1 means no limit. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAWhiteBoat_a1b8e14cf53cfd0a4b3acc4fc83586718}\label{classAWhiteBoat_a1b8e14cf53cfd0a4b3acc4fc83586718}} 
+\index{AWhiteBoat@{AWhiteBoat}!GetRawActionBuffer@{GetRawActionBuffer}}
+\index{GetRawActionBuffer@{GetRawActionBuffer}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{GetRawActionBuffer()}{GetRawActionBuffer()}}
+{\footnotesize\ttfamily void$\ast$ AWhite\+Boat\+::\+Get\+Raw\+Action\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Buffer \begin{DoxyReturn}{Returns}
+a pointer to the start of the action buffer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAWhiteBoat_a128939540730009904b3de2cf2f739d6}\label{classAWhiteBoat_a128939540730009904b3de2cf2f739d6}} 
+\index{AWhiteBoat@{AWhiteBoat}!GetRawActionSizeInBytes@{GetRawActionSizeInBytes}}
+\index{GetRawActionSizeInBytes@{GetRawActionSizeInBytes}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{GetRawActionSizeInBytes()}{GetRawActionSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int AWhite\+Boat\+::\+Get\+Raw\+Action\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Size\+In\+Bytes \begin{DoxyReturn}{Returns}
+the number of bytes used by the action space. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAWhiteBoat_a5c96f7972f90b7117f890fd3d1b47b59}\label{classAWhiteBoat_a5c96f7972f90b7117f890fd3d1b47b59}} 
+\index{AWhiteBoat@{AWhiteBoat}!InitializeAgent@{InitializeAgent}}
+\index{InitializeAgent@{InitializeAgent}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{InitializeAgent()}{InitializeAgent()}}
+{\footnotesize\ttfamily void AWhite\+Boat\+::\+Initialize\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Agent All agent initialization code should go in here. 
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_af4631f8d3fa15b78fafe84d2939c6d43}{AHolodeck\+Buoyant\+Agent}}.
+
+\mbox{\Hypertarget{classAWhiteBoat_adb0332361151f1f9f65e97309fcf4748}\label{classAWhiteBoat_adb0332361151f1f9f65e97309fcf4748}} 
+\index{AWhiteBoat@{AWhiteBoat}!Tick@{Tick}}
+\index{Tick@{Tick}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void AWhite\+Boat\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Tick Called each frame. 
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & the time since the last tick. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_a79ad3f12f79786954647d728998ec80c}{AHolodeck\+Buoyant\+Agent}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classAWhiteBoat_af5f97c2161011a6c9bd7a42983e843dd}\label{classAWhiteBoat_af5f97c2161011a6c9bd7a42983e843dd}} 
+\index{AWhiteBoat@{AWhiteBoat}!Perfect@{Perfect}}
+\index{Perfect@{Perfect}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{Perfect}{Perfect}}
+{\footnotesize\ttfamily bool AWhite\+Boat\+::\+Perfect = true}
+
+\mbox{\Hypertarget{classAWhiteBoat_aea3b3e1fc622ede6f3f55f2ecb8b3834}\label{classAWhiteBoat_aea3b3e1fc622ede6f3f55f2ecb8b3834}} 
+\index{AWhiteBoat@{AWhiteBoat}!thrusterLocations@{thrusterLocations}}
+\index{thrusterLocations@{thrusterLocations}!AWhiteBoat@{AWhiteBoat}}
+\doxysubsubsection{\texorpdfstring{thrusterLocations}{thrusterLocations}}
+{\footnotesize\ttfamily TArray$<$FVector$>$ AWhite\+Boat\+::thruster\+Locations \{ FVector(-\/250, -\/100, 0), FVector(-\/250, 100, 0) \}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{WhiteBoat_8h}{White\+Boat.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{WhiteBoat_8cpp}{White\+Boat.\+cpp}}\end{DoxyCompactItemize}

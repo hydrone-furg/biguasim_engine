@@ -1,0 +1,82 @@
+\hypertarget{classUFixedWingControlThrusters}{}\doxysection{UFixed\+Wing\+Control\+Thrusters Class Reference}
+\label{classUFixedWingControlThrusters}\index{UFixedWingControlThrusters@{UFixedWingControlThrusters}}
+
+
+{\ttfamily \#include $<$Fixed\+Wing\+Control\+Thrusters.\+h$>$}
+
+
+
+Inheritance diagram for UFixed\+Wing\+Control\+Thrusters\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classUFixedWingControlThrusters__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UFixed\+Wing\+Control\+Thrusters\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classUFixedWingControlThrusters__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUFixedWingControlThrusters_ab22e8375a38ea4423e5f60b294cd0907}{UFixed\+Wing\+Control\+Thrusters}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+void \mbox{\hyperlink{classUFixedWingControlThrusters_adb4738d74e021d53505ff8ee546d8b61}{Execute}} (void $\ast$const Command\+Array, void $\ast$const Input\+Command, float Delta\+Seconds) override
+\item 
+unsigned int \mbox{\hyperlink{classUFixedWingControlThrusters_ab0eca85de889e6457cb529db4281c5e3}{Get\+Control\+Scheme\+Size\+In\+Bytes}} () const override
+\item 
+void \mbox{\hyperlink{classUFixedWingControlThrusters_a2a269b331fdef7969651de6cd8fa3800}{Set\+Controller}} (\mbox{\hyperlink{classAHolodeckPawnController}{AHolodeck\+Pawn\+Controller}} $\ast$const Controller)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classUFixedWingControlThrusters}{UFixed\+Wing\+Control\+Thrusters}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUFixedWingControlThrusters_ab22e8375a38ea4423e5f60b294cd0907}\label{classUFixedWingControlThrusters_ab22e8375a38ea4423e5f60b294cd0907}} 
+\index{UFixedWingControlThrusters@{UFixedWingControlThrusters}!UFixedWingControlThrusters@{UFixedWingControlThrusters}}
+\index{UFixedWingControlThrusters@{UFixedWingControlThrusters}!UFixedWingControlThrusters@{UFixedWingControlThrusters}}
+\doxysubsubsection{\texorpdfstring{UFixedWingControlThrusters()}{UFixedWingControlThrusters()}}
+{\footnotesize\ttfamily UFixed\+Wing\+Control\+Thrusters\+::\+UFixed\+Wing\+Control\+Thrusters (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUFixedWingControlThrusters_adb4738d74e021d53505ff8ee546d8b61}\label{classUFixedWingControlThrusters_adb4738d74e021d53505ff8ee546d8b61}} 
+\index{UFixedWingControlThrusters@{UFixedWingControlThrusters}!Execute@{Execute}}
+\index{Execute@{Execute}!UFixedWingControlThrusters@{UFixedWingControlThrusters}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void UFixed\+Wing\+Control\+Thrusters\+::\+Execute (\begin{DoxyParamCaption}\item[{void $\ast$const}]{Command\+Array,  }\item[{void $\ast$const}]{Input\+Command,  }\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckControlScheme_a84185ec2e7515e8afd21e9b7567e6ae0}{UHolodeck\+Control\+Scheme}}.
+
+\mbox{\Hypertarget{classUFixedWingControlThrusters_ab0eca85de889e6457cb529db4281c5e3}\label{classUFixedWingControlThrusters_ab0eca85de889e6457cb529db4281c5e3}} 
+\index{UFixedWingControlThrusters@{UFixedWingControlThrusters}!GetControlSchemeSizeInBytes@{GetControlSchemeSizeInBytes}}
+\index{GetControlSchemeSizeInBytes@{GetControlSchemeSizeInBytes}!UFixedWingControlThrusters@{UFixedWingControlThrusters}}
+\doxysubsubsection{\texorpdfstring{GetControlSchemeSizeInBytes()}{GetControlSchemeSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int UFixed\+Wing\+Control\+Thrusters\+::\+Get\+Control\+Scheme\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+NOTE\+: These go counter-\/clockwise, starting in front right 0\+: Vertical Front Starboard Thruster 1\+: Vertical Front Port Thruster 2\+: Vertical Back Port Thruster 3\+: Vertical Back Starboard Thruster 4\+: Angled Front Starboard Thruster 5\+: Angled Front Port Thruster 6\+: Angled Back Port Thruster 7\+: Angled Back Starboard Thruster 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckControlScheme_abf94aa5488c43e99108ffc68a213e145}{UHolodeck\+Control\+Scheme}}.
+
+\mbox{\Hypertarget{classUFixedWingControlThrusters_a2a269b331fdef7969651de6cd8fa3800}\label{classUFixedWingControlThrusters_a2a269b331fdef7969651de6cd8fa3800}} 
+\index{UFixedWingControlThrusters@{UFixedWingControlThrusters}!SetController@{SetController}}
+\index{SetController@{SetController}!UFixedWingControlThrusters@{UFixedWingControlThrusters}}
+\doxysubsubsection{\texorpdfstring{SetController()}{SetController()}}
+{\footnotesize\ttfamily void UFixed\+Wing\+Control\+Thrusters\+::\+Set\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAHolodeckPawnController}{AHolodeck\+Pawn\+Controller}} $\ast$const}]{Controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{FixedWingControlThrusters_8h}{Fixed\+Wing\+Control\+Thrusters.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{FixedWingControlThrusters_8cpp}{Fixed\+Wing\+Control\+Thrusters.\+cpp}}\end{DoxyCompactItemize}

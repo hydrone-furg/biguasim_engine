@@ -1,0 +1,144 @@
+\hypertarget{classULocationTask}{}\doxysection{ULocation\+Task Class Reference}
+\label{classULocationTask}\index{ULocationTask@{ULocationTask}}
+
+
+{\ttfamily \#include $<$Location\+Task.\+h$>$}
+
+
+
+Inheritance diagram for ULocation\+Task\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classULocationTask__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ULocation\+Task\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classULocationTask__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classULocationTask_a11b1dd612844ab3712543d10629167be}{ULocation\+Task}} ()
+\item 
+virtual void \mbox{\hyperlink{classULocationTask_a5a2e4dbd2e533a2fe7077bb5a65b12ac}{Initialize\+Sensor}} () override
+\item 
+virtual void \mbox{\hyperlink{classULocationTask_ac9a9c3dd233df3d59441d61acdd4aff6}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classULocationTask_a0d962c8788aee0d68f6e851adeca85e6}{Negative\+Reward}}
+\item 
+bool \mbox{\hyperlink{classULocationTask_ab7292bc332711d8e6a1f6e2038fbfccf}{Has\+Terminal}}
+\item 
+float \mbox{\hyperlink{classULocationTask_a13a3c36f3534deaa0bd45d4f0115d4d9}{Goal\+Distance}}
+\item 
+AActor $\ast$ \mbox{\hyperlink{classULocationTask_ab28a776227e508d666bfcf70f3c915c2}{Goal\+Actor}}
+\item 
+FVector \mbox{\hyperlink{classULocationTask_a567c64bf6020d50f237be14d56334343}{Goal\+Location}}
+\item 
+AActor $\ast$ \mbox{\hyperlink{classULocationTask_a6be06c9c6140011a5a09e7aee6e9918f}{Location\+Actor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classULocationTask_a2c5849fcffb9a7a357d5cb964ec774c8}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classULocationTask}{ULocation\+Task}} Inherits from the Task\+Sensor class. Calculates a sparse distance reward. Maximizes Distance if Maximize distance is set to true. Location is used when actor is null. Terminal is set to true when the agent is within its Goal\+Distance. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classULocationTask_a11b1dd612844ab3712543d10629167be}\label{classULocationTask_a11b1dd612844ab3712543d10629167be}} 
+\index{ULocationTask@{ULocationTask}!ULocationTask@{ULocationTask}}
+\index{ULocationTask@{ULocationTask}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{ULocationTask()}{ULocationTask()}}
+{\footnotesize\ttfamily ULocation\+Task\+::\+ULocation\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classULocationTask_a5a2e4dbd2e533a2fe7077bb5a65b12ac}\label{classULocationTask_a5a2e4dbd2e533a2fe7077bb5a65b12ac}} 
+\index{ULocationTask@{ULocationTask}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void ULocation\+Task\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Sensor Sets up the class 
+
+Reimplemented from \mbox{\hyperlink{classUTaskSensor_aa934f58bc59ea730c4853f018ba8bcf9}{UTask\+Sensor}}.
+
+\mbox{\Hypertarget{classULocationTask_ac9a9c3dd233df3d59441d61acdd4aff6}\label{classULocationTask_ac9a9c3dd233df3d59441d61acdd4aff6}} 
+\index{ULocationTask@{ULocationTask}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void ULocation\+Task\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Allows parameters to be set dynamically 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_a29fe9c31ded6b9b4a898ec14aff1d8ea}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classULocationTask_a2c5849fcffb9a7a357d5cb964ec774c8}\label{classULocationTask_a2c5849fcffb9a7a357d5cb964ec774c8}} 
+\index{ULocationTask@{ULocationTask}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void ULocation\+Task\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Tick\+Sensor\+Component Mimics Unreal Engine\textquotesingle{}s UActor\+Component\+::\+Tick\+Component function. See it\textquotesingle{}s documentation for what the parameters are. Must be overridden by subclass Handles the logic for ticking the sensor Make sure to set the data, Cast Buffer into the right kind of pointer and set the data. 
+
+Reimplemented from \mbox{\hyperlink{classUTaskSensor_a21bfeae116d1ae6c436f6241bcb321e9}{UTask\+Sensor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classULocationTask_ab28a776227e508d666bfcf70f3c915c2}\label{classULocationTask_ab28a776227e508d666bfcf70f3c915c2}} 
+\index{ULocationTask@{ULocationTask}!GoalActor@{GoalActor}}
+\index{GoalActor@{GoalActor}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{GoalActor}{GoalActor}}
+{\footnotesize\ttfamily AActor$\ast$ ULocation\+Task\+::\+Goal\+Actor}
+
+\mbox{\Hypertarget{classULocationTask_a13a3c36f3534deaa0bd45d4f0115d4d9}\label{classULocationTask_a13a3c36f3534deaa0bd45d4f0115d4d9}} 
+\index{ULocationTask@{ULocationTask}!GoalDistance@{GoalDistance}}
+\index{GoalDistance@{GoalDistance}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{GoalDistance}{GoalDistance}}
+{\footnotesize\ttfamily float ULocation\+Task\+::\+Goal\+Distance}
+
+\mbox{\Hypertarget{classULocationTask_a567c64bf6020d50f237be14d56334343}\label{classULocationTask_a567c64bf6020d50f237be14d56334343}} 
+\index{ULocationTask@{ULocationTask}!GoalLocation@{GoalLocation}}
+\index{GoalLocation@{GoalLocation}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{GoalLocation}{GoalLocation}}
+{\footnotesize\ttfamily FVector ULocation\+Task\+::\+Goal\+Location}
+
+\mbox{\Hypertarget{classULocationTask_ab7292bc332711d8e6a1f6e2038fbfccf}\label{classULocationTask_ab7292bc332711d8e6a1f6e2038fbfccf}} 
+\index{ULocationTask@{ULocationTask}!HasTerminal@{HasTerminal}}
+\index{HasTerminal@{HasTerminal}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{HasTerminal}{HasTerminal}}
+{\footnotesize\ttfamily bool ULocation\+Task\+::\+Has\+Terminal}
+
+\mbox{\Hypertarget{classULocationTask_a6be06c9c6140011a5a09e7aee6e9918f}\label{classULocationTask_a6be06c9c6140011a5a09e7aee6e9918f}} 
+\index{ULocationTask@{ULocationTask}!LocationActor@{LocationActor}}
+\index{LocationActor@{LocationActor}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{LocationActor}{LocationActor}}
+{\footnotesize\ttfamily AActor$\ast$ ULocation\+Task\+::\+Location\+Actor}
+
+\mbox{\Hypertarget{classULocationTask_a0d962c8788aee0d68f6e851adeca85e6}\label{classULocationTask_a0d962c8788aee0d68f6e851adeca85e6}} 
+\index{ULocationTask@{ULocationTask}!NegativeReward@{NegativeReward}}
+\index{NegativeReward@{NegativeReward}!ULocationTask@{ULocationTask}}
+\doxysubsubsection{\texorpdfstring{NegativeReward}{NegativeReward}}
+{\footnotesize\ttfamily bool ULocation\+Task\+::\+Negative\+Reward}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Tasks/\+Public/\mbox{\hyperlink{LocationTask_8h}{Location\+Task.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Tasks/\+Private/\mbox{\hyperlink{LocationTask_8cpp}{Location\+Task.\+cpp}}\end{DoxyCompactItemize}

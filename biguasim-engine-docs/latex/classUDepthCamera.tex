@@ -1,0 +1,166 @@
+\hypertarget{classUDepthCamera}{}\doxysection{UDepth\+Camera Class Reference}
+\label{classUDepthCamera}\index{UDepthCamera@{UDepthCamera}}
+
+
+Custom high-\/fidelity Z-\/buffer depth camera. Inherits from the \mbox{\hyperlink{classUCameraSensor}{UCamera\+Sensor}} class. Captures pure geometric depth where each pixel represents a precise straight ray, rather than an expanding cone like an acoustic sonar. Ideal for point cloud generation.  
+
+
+
+
+{\ttfamily \#include $<$Depth\+Camera.\+h$>$}
+
+
+
+Inheritance diagram for UDepth\+Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classUDepthCamera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UDepth\+Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUDepthCamera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUDepthCamera_ac61710c1421fe102401d98d39f2410f7}{UDepth\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUDepthCamera_a2ee81df90daf52c4e805218d0d936637}{Initialize\+Sensor}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the sensor rendering parameters and disables visual artifacts. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUDepthCamera_a5e16b164dfac10856d98ba36ac6e322c}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\begin{DoxyCompactList}\small\item\em Parses JSON parameters to set resolution and capture rate. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classUDepthCamera_afdd95e5101c5dbea35046584fb9a0591}{Get\+Item\+Size}} () override
+\begin{DoxyCompactList}\small\item\em Gets the size of each pixel data structure. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classUDepthCamera_a49930240676b1f905ca978f3eb386cae}{Get\+Num\+Items}} () override
+\begin{DoxyCompactList}\small\item\em Gets the total number of pixels in the capture frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classUDepthCamera_a27ef310159187d5f9f90a31e90f61600}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\begin{DoxyCompactList}\small\item\em Executes the render extraction command and writes to shared memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Custom high-\/fidelity Z-\/buffer depth camera. Inherits from the \mbox{\hyperlink{classUCameraSensor}{UCamera\+Sensor}} class. Captures pure geometric depth where each pixel represents a precise straight ray, rather than an expanding cone like an acoustic sonar. Ideal for point cloud generation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUDepthCamera_ac61710c1421fe102401d98d39f2410f7}\label{classUDepthCamera_ac61710c1421fe102401d98d39f2410f7}} 
+\index{UDepthCamera@{UDepthCamera}!UDepthCamera@{UDepthCamera}}
+\index{UDepthCamera@{UDepthCamera}!UDepthCamera@{UDepthCamera}}
+\doxysubsubsection{\texorpdfstring{UDepthCamera()}{UDepthCamera()}}
+{\footnotesize\ttfamily UDepth\+Camera\+::\+UDepth\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Default Constructor. Sets the sensor identifier to Depth\+Camera. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUDepthCamera_afdd95e5101c5dbea35046584fb9a0591}\label{classUDepthCamera_afdd95e5101c5dbea35046584fb9a0591}} 
+\index{UDepthCamera@{UDepthCamera}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UDepthCamera@{UDepthCamera}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int UDepth\+Camera\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the size of each pixel data structure. 
+
+Gets the size of a single data item returned by the sensor.
+
+\begin{DoxyReturn}{Returns}
+Data size in bytes.
+
+16 bytes (4 floats of 32 bits) per pixel, maintaining the (h, w, 4) array shape. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUCameraSensor_a37fe5c03944ac6602c4fe871a5dcf900}{UCamera\+Sensor}}.
+
+\mbox{\Hypertarget{classUDepthCamera_a49930240676b1f905ca978f3eb386cae}\label{classUDepthCamera_a49930240676b1f905ca978f3eb386cae}} 
+\index{UDepthCamera@{UDepthCamera}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!UDepthCamera@{UDepthCamera}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily int UDepth\+Camera\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the total number of pixels in the capture frame. 
+
+Gets the total number of items (pixels) in the buffer.
+
+\begin{DoxyReturn}{Returns}
+Total items.
+
+Total pixel count (Capture\+Width $\ast$ Capture\+Height). 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUCameraSensor_abe9206d2e147eef354c1b375062c5350}{UCamera\+Sensor}}.
+
+\mbox{\Hypertarget{classUDepthCamera_a2ee81df90daf52c4e805218d0d936637}\label{classUDepthCamera_a2ee81df90daf52c4e805218d0d936637}} 
+\index{UDepthCamera@{UDepthCamera}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UDepthCamera@{UDepthCamera}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UDepth\+Camera\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the sensor rendering parameters and disables visual artifacts. 
+
+Initializes the rendering pipeline for the Depth Camera. Configures the Scene\+Capture\+Component to read raw Scene\+Depth instead of Post\+Process HDR. Disables translucency and atmospheric effects to ensure the camera rays ignore custom water assets and strictly measure solid geometry distances. 
+
+Reimplemented from \mbox{\hyperlink{classUCameraSensor_abd6e92cffae2d1c7e58f114fd3159806}{UCamera\+Sensor}}.
+
+\mbox{\Hypertarget{classUDepthCamera_a5e16b164dfac10856d98ba36ac6e322c}\label{classUDepthCamera_a5e16b164dfac10856d98ba36ac6e322c}} 
+\index{UDepthCamera@{UDepthCamera}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!UDepthCamera@{UDepthCamera}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void UDepth\+Camera\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Parses JSON parameters to set resolution and capture rate. 
+
+Parses the JSON configuration sent by the Python client. Sets the capture resolution and the tick rate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Parms\+Json} & JSON string containing configuration.\\
+\hline
+{\em Parms\+Json} & The JSON string containing the sensor configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUCameraSensor_a240a519075b11f54bb0afd8ae31e2f9d}{UCamera\+Sensor}}.
+
+\mbox{\Hypertarget{classUDepthCamera_a27ef310159187d5f9f90a31e90f61600}\label{classUDepthCamera_a27ef310159187d5f9f90a31e90f61600}} 
+\index{UDepthCamera@{UDepthCamera}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UDepthCamera@{UDepthCamera}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UDepth\+Camera\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Executes the render extraction command and writes to shared memory. 
+
+Main execution loop that captures and formats the depth buffer. Queues a rendering command to extract the raw FFloat16\+Color depth buffer, then parses the Red channel into a 32-\/bit float array for the shared memory. 
+
+Reimplemented from \mbox{\hyperlink{classUCameraSensor_a8445eb0c06daaf166b6d7598dd3a8191}{UCamera\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{DepthCamera_8h}{Depth\+Camera.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{DepthCamera_8cpp}{Depth\+Camera.\+cpp}}\end{DoxyCompactItemize}

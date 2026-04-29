@@ -1,0 +1,868 @@
+{
+	"folders": [
+		{
+			"name": "Biguasim",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/lh/Documents/unreal_engine"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Holodeck Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Debug",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Debug",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Debug",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"DebugGame",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"DebugGame",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"DebugGame",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Development",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Development",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Development",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Test",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Test",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Test",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Shipping",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Shipping",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"Linux",
+					"Shipping",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Debug",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Debug",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Debug",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Development",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Development",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Development",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Test",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Test",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Test",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Shipping",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Shipping",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Holodeck LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "Holodeck LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Holodeck",
+					"LinuxArm64",
+					"Shipping",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "HolodeckEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HolodeckEditor",
+					"Linux",
+					"Debug",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "HolodeckEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HolodeckEditor",
+					"Linux",
+					"Debug",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HolodeckEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "HolodeckEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HolodeckEditor",
+					"Linux",
+					"Debug",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "HolodeckEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HolodeckEditor",
+					"Linux",
+					"DebugGame",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "HolodeckEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HolodeckEditor",
+					"Linux",
+					"DebugGame",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HolodeckEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "HolodeckEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HolodeckEditor",
+					"Linux",
+					"DebugGame",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "HolodeckEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HolodeckEditor",
+					"Linux",
+					"Development",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "HolodeckEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HolodeckEditor",
+					"Linux",
+					"Development",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HolodeckEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			},
+			{
+				"label": "HolodeckEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HolodeckEditor",
+					"Linux",
+					"Development",
+					"/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/lh/Documents/unreal_engine"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch Holodeck (Debug)",
+				"request": "launch",
+				"program": "/home/lh/Documents/bs-engine/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "Holodeck Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/home/lh/Documents/unreal_engine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/lh/Documents/unreal_engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Holodeck (DebugGame)",
+				"request": "launch",
+				"program": "/home/lh/Documents/bs-engine/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "Holodeck Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/home/lh/Documents/unreal_engine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/lh/Documents/unreal_engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Holodeck (Development)",
+				"request": "launch",
+				"program": "/home/lh/Documents/bs-engine/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "Holodeck Linux Development Build",
+				"args": [
+				],
+				"cwd": "/home/lh/Documents/unreal_engine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/lh/Documents/unreal_engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Holodeck (Test)",
+				"request": "launch",
+				"program": "/home/lh/Documents/bs-engine/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "Holodeck Linux Test Build",
+				"args": [
+				],
+				"cwd": "/home/lh/Documents/unreal_engine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/lh/Documents/unreal_engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Holodeck (Shipping)",
+				"request": "launch",
+				"program": "/home/lh/Documents/bs-engine/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "Holodeck Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/home/lh/Documents/unreal_engine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/lh/Documents/unreal_engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HolodeckEditor (Debug)",
+				"request": "launch",
+				"program": "/home/lh/Documents/unreal_engine/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "HolodeckEditor Linux Debug Build",
+				"args": [
+					"/home/lh/Documents/bs-engine/Biguasim.uproject"
+				],
+				"cwd": "/home/lh/Documents/unreal_engine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/lh/Documents/unreal_engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HolodeckEditor (DebugGame)",
+				"request": "launch",
+				"program": "/home/lh/Documents/unreal_engine/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "HolodeckEditor Linux DebugGame Build",
+				"args": [
+					"/home/lh/Documents/bs-engine/Biguasim.uproject"
+				],
+				"cwd": "/home/lh/Documents/unreal_engine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/lh/Documents/unreal_engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HolodeckEditor (Development)",
+				"request": "launch",
+				"program": "/home/lh/Documents/unreal_engine/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "HolodeckEditor Linux Development Build",
+				"args": [
+					"/home/lh/Documents/bs-engine/Biguasim.uproject"
+				],
+				"cwd": "/home/lh/Documents/unreal_engine",
+				"type": "cppdbg",
+				"visualizerFile": "/home/lh/Documents/unreal_engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/home/lh/Documents/unreal_engine/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/lh/Documents/bs-engine/Biguasim.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/home/lh/Documents/unreal_engine"
+			}
+		]
+	}
+}

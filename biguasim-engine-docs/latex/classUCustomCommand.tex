@@ -1,0 +1,54 @@
+\hypertarget{classUCustomCommand}{}\doxysection{UCustom\+Command Class Reference}
+\label{classUCustomCommand}\index{UCustomCommand@{UCustomCommand}}
+
+
+{\ttfamily \#include $<$Custom\+Command.\+h$>$}
+
+
+
+Inheritance diagram for UCustom\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classUCustomCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UCustom\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classUCustomCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUCustomCommand_a3c14c66aa2daa07c44960fad3765bd34}{Execute}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Custom\+Command This command is inherited by a blueprint. It is to be used to easily implement simple commands for any number of different functions.
+
+String\+Parameters expect at least 1 argument as the name of the command and any number of additional string params. Number\+Parameters of any size. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUCustomCommand_a3c14c66aa2daa07c44960fad3765bd34}\label{classUCustomCommand_a3c14c66aa2daa07c44960fad3765bd34}} 
+\index{UCustomCommand@{UCustomCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!UCustomCommand@{UCustomCommand}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void UCustom\+Command\+::\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute The command performs its function when this is called. Override this function with what you want the child command to do. Use Number\+Params, String\+Params, and Target as input variables for the execute function. 
+
+Reimplemented from \mbox{\hyperlink{classUCommand_a298e5c82a4e4871b2369ada75d37a0b4}{UCommand}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Client\+Commands/\+Public/\mbox{\hyperlink{CustomCommand_8h}{Custom\+Command.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Client\+Commands/\+Private/\mbox{\hyperlink{CustomCommand_8cpp}{Custom\+Command.\+cpp}}\end{DoxyCompactItemize}

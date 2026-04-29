@@ -1,0 +1,258 @@
+\hypertarget{classAHolodeckAgent}{}\doxysection{AHolodeck\+Agent Class Reference}
+\label{classAHolodeckAgent}\index{AHolodeckAgent@{AHolodeckAgent}}
+
+
+{\ttfamily \#include $<$Holodeck\+Agent.\+h$>$}
+
+
+
+Inheritance diagram for AHolodeck\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAHolodeckAgent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AHolodeck\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAHolodeckAgent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAHolodeckAgent_a5a5f77573a5a30980587056c80ec2846}{AHolodeck\+Agent}} ()
+\item 
+virtual void \mbox{\hyperlink{classAHolodeckAgent_a5d6fb553b39e0f19949389ca2db871ba}{Begin\+Play}} () final
+\item 
+virtual void \mbox{\hyperlink{classAHolodeckAgent_a0576d34a9f13e3a4fd2806d0f2c64dea}{Initialize\+Agent}} ()
+\item 
+virtual void \mbox{\hyperlink{classAHolodeckAgent_a99953c7b1f1d4cf838573b3c8d33d9b9}{Tick}} (float Delta\+Seconds) override
+\item 
+bool \mbox{\hyperlink{classAHolodeckAgent_a4c797351c79a715b35fb9e6f93c4af30}{Teleport}} (const FVector \&New\+Location, const FRotator \&New\+Rotation) override
+\item 
+bool \mbox{\hyperlink{classAHolodeckAgent_a9090378abb532b7f11a9adee28110919}{Teleport}} (const FVector \&New\+Location) override
+\item 
+bool \mbox{\hyperlink{classAHolodeckAgent_acdfe4a8c12c3897b5f4e4575eae4e1b9}{Set\+State}} (const FVector \&New\+Location, const FRotator \&New\+Rotation, const FVector \&New\+Velocity, const FVector \&New\+Ang\+Velocity) override
+\item 
+bool \mbox{\hyperlink{classAHolodeckAgent_acc0e3aa7470768d633fe725948604e6c}{Initialize\+Controller}} () override
+\item 
+virtual unsigned int \mbox{\hyperlink{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}{Get\+Raw\+Action\+Size\+In\+Bytes}} () const override
+\item 
+virtual void $\ast$ \mbox{\hyperlink{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}{Get\+Raw\+Action\+Buffer}} () const override
+\item 
+virtual float \mbox{\hyperlink{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}{Get\+Acceleration\+Limit}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classAHolodeckAgent_a8835bf0ae37b45c45f813cce5e47505d}{Is\+Abused}}
+\item 
+TMap$<$ FString, \mbox{\hyperlink{classUHolodeckSensor}{UHolodeck\+Sensor}} $\ast$ $>$ \mbox{\hyperlink{classAHolodeckAgent_a6077eb9983b445e39598da0665284b90}{Sensor\+Map}}
+\item 
+\mbox{\hyperlink{classAHolodeckPawnControllerInterface}{AHolodeck\+Pawn\+Controller\+Interface}} $\ast$ \mbox{\hyperlink{classAHolodeckAgent_a80698a0c0f293d2e8d227398124d6846}{Holodeck\+Controller}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classAHolodeckAgent}{AHolodeck\+Agent}} The base class for holodeck agents. Holodeck\+Agents are controllable from python. A Holodeck\+Agent contains the logic for how it acts at a low level. To get to a higher level of control, the logic should be implemented in a Holodeck\+Control\+Scheme. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAHolodeckAgent_a5a5f77573a5a30980587056c80ec2846}\label{classAHolodeckAgent_a5a5f77573a5a30980587056c80ec2846}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!AHolodeckAgent@{AHolodeckAgent}}
+\index{AHolodeckAgent@{AHolodeckAgent}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{AHolodeckAgent()}{AHolodeckAgent()}}
+{\footnotesize\ttfamily AHolodeck\+Agent\+::\+AHolodeck\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAHolodeckAgent_a5d6fb553b39e0f19949389ca2db871ba}\label{classAHolodeckAgent_a5d6fb553b39e0f19949389ca2db871ba}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily void AHolodeck\+Agent\+::\+Begin\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+Begin\+Play Should only call Super() and \mbox{\hyperlink{classAHolodeckAgent_a0576d34a9f13e3a4fd2806d0f2c64dea}{Initialize\+Agent()}} all other initialization code should be called from within that function 
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgentInterface_ac0735977fbf21dd2ae84291ec6874bfa}{AHolodeck\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}\label{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!GetAccelerationLimit@{GetAccelerationLimit}}
+\index{GetAccelerationLimit@{GetAccelerationLimit}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{GetAccelerationLimit()}{GetAccelerationLimit()}}
+{\footnotesize\ttfamily virtual float AHolodeck\+Agent\+::\+Get\+Acceleration\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get\+Acceleration\+Limit \begin{DoxyReturn}{Returns}
+Float The maximum acceleration the agent can endure before being abused. -\/1 means no limit. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classAWhiteBoat_a3db3fb4f21ffced9dc09bdb672843d5b}{AWhite\+Boat}}, \mbox{\hyperlink{classAUav_a0551cea0191f056444051d68dc561ca1}{AUav}}, \mbox{\hyperlink{classATurtleAgent_ab7c061f8cbe14453429d81413496735d}{ATurtle\+Agent}}, \mbox{\hyperlink{classATorpedoAUV_ace3c943d72fa072a1f85363f6d716d20}{ATorpedo\+AUV}}, \mbox{\hyperlink{classASurfaceVessel_a8e72740c2efe8b2b6528da64e925d18c}{ASurface\+Vessel}}, \mbox{\hyperlink{classAHuauv_aa60e87101e080416f3053e43929c2c67}{AHuauv}}, \mbox{\hyperlink{classAHoveringAUV_acc529d61749ee41ead1e3c6f413c87e3}{AHovering\+AUV}}, \mbox{\hyperlink{classAFixedWing_a8d5dfad0a1a40fa00ff66f7d6496319f}{AFixed\+Wing}}, \mbox{\hyperlink{classACougUV_a6b54ae4b16b656c67d8cf1f12e68e8da}{ACoug\+UV}}, \mbox{\hyperlink{classABlueROV2Heavy_a3731c4e448cb8179dad10e4c20aabeea}{ABlue\+ROV2\+Heavy}}, \mbox{\hyperlink{classABlueROV2_a8c91cf362807f3af91d910fa1fddaf75}{ABlue\+ROV2}}, \mbox{\hyperlink{classABlueBoat_a43992c499117bd2bf75145a887ba8645}{ABlue\+Boat}}, and \mbox{\hyperlink{classAAndroid_ae5ee4693db95cb7c8725e6f236dcbee2}{AAndroid}}.
+
+\mbox{\Hypertarget{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}\label{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!GetRawActionBuffer@{GetRawActionBuffer}}
+\index{GetRawActionBuffer@{GetRawActionBuffer}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{GetRawActionBuffer()}{GetRawActionBuffer()}}
+{\footnotesize\ttfamily virtual void$\ast$ AHolodeck\+Agent\+::\+Get\+Raw\+Action\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Buffer \begin{DoxyReturn}{Returns}
+a pointer to the start of the action buffer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgentInterface_a2a4f12141ca4f006e58b178289535492}{AHolodeck\+Agent\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classAWhiteBoat_a1b8e14cf53cfd0a4b3acc4fc83586718}{AWhite\+Boat}}, \mbox{\hyperlink{classAUav_af0ae70c81bd80aa269f00152674fdc95}{AUav}}, \mbox{\hyperlink{classATurtleAgent_a5f56c58073832c6d89f35805b514d5dd}{ATurtle\+Agent}}, \mbox{\hyperlink{classATorpedoAUV_a16aa2a5800b38dff9163374e35ebe038}{ATorpedo\+AUV}}, \mbox{\hyperlink{classASurfaceVessel_acc39f474c6f77aaef4a58cd6ad25b34d}{ASurface\+Vessel}}, \mbox{\hyperlink{classASphereRobot_a5a737b9693856bcdc78743eb835e98b7}{ASphere\+Robot}}, \mbox{\hyperlink{classANavAgent_a0e9169e14e4b046e12326c3fd2af8c5d}{ANav\+Agent}}, \mbox{\hyperlink{classAHuauv_af68f0a85ac150eb22767c55ef168d5f1}{AHuauv}}, \mbox{\hyperlink{classAHoveringAUV_ae700256c8f0b520d451c60b58bac6d3c}{AHovering\+AUV}}, \mbox{\hyperlink{classAHandAgent_abc16fec224ca8867009e95e0539064dd}{AHand\+Agent}}, \mbox{\hyperlink{classAFixedWing_aa11291ead0777ce92466af15d207aba2}{AFixed\+Wing}}, \mbox{\hyperlink{classADjiMatrice_afb4f4b23990c704ece4db00d5e2d17da}{ADji\+Matrice}}, \mbox{\hyperlink{classACougUV_aaabe9bb03e8e2554321428decdf037b4}{ACoug\+UV}}, \mbox{\hyperlink{classABlueROV2Heavy_af12d4625a26513a544dce9573506ddcc}{ABlue\+ROV2\+Heavy}}, \mbox{\hyperlink{classABlueROV2_aaa2b24907f5a0e344e39effd5844d314}{ABlue\+ROV2}}, \mbox{\hyperlink{classABlueBoat_a91763234d90ae09ac6f4fd49358ee912}{ABlue\+Boat}}, and \mbox{\hyperlink{classAAndroid_a0d87ec97efd7b3268876ce4496a54a2b}{AAndroid}}.
+
+\mbox{\Hypertarget{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}\label{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!GetRawActionSizeInBytes@{GetRawActionSizeInBytes}}
+\index{GetRawActionSizeInBytes@{GetRawActionSizeInBytes}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{GetRawActionSizeInBytes()}{GetRawActionSizeInBytes()}}
+{\footnotesize\ttfamily virtual unsigned int AHolodeck\+Agent\+::\+Get\+Raw\+Action\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Size\+In\+Bytes \begin{DoxyReturn}{Returns}
+the number of bytes used by the action space. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgentInterface_aa613429a5097d85771804423b4528ceb}{AHolodeck\+Agent\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classAWhiteBoat_a128939540730009904b3de2cf2f739d6}{AWhite\+Boat}}, \mbox{\hyperlink{classAUav_a62436017a4ef38c266234b87517975f7}{AUav}}, \mbox{\hyperlink{classATurtleAgent_a0d064ffc9806ffc88c3259881fb068c4}{ATurtle\+Agent}}, \mbox{\hyperlink{classATorpedoAUV_aeb6100707536e0faee967525dad18aab}{ATorpedo\+AUV}}, \mbox{\hyperlink{classASurfaceVessel_ae60c3049c01e341f7d4555f34fa7395f}{ASurface\+Vessel}}, \mbox{\hyperlink{classASphereRobot_a41429307b0bcd8a72eb9d265d1e788ab}{ASphere\+Robot}}, \mbox{\hyperlink{classANavAgent_a155f82c6cb31770f3792c49d074b1832}{ANav\+Agent}}, \mbox{\hyperlink{classAHuauv_a4af465c40a55d83d1b8dce05364d5cdc}{AHuauv}}, \mbox{\hyperlink{classAHoveringAUV_a97dcef712ef5781f58e57f71831a0ed6}{AHovering\+AUV}}, \mbox{\hyperlink{classAHandAgent_a8d5b9bd31c92eb9f02e3f1bc5f64ac67}{AHand\+Agent}}, \mbox{\hyperlink{classAFixedWing_a70a3826474eedadbfd2b954959d3c193}{AFixed\+Wing}}, \mbox{\hyperlink{classADjiMatrice_a85f148bfd21d3f4954b416b3aa7f77a4}{ADji\+Matrice}}, \mbox{\hyperlink{classACougUV_a8ccf571ae6a07d4e44e3b47f8c30320e}{ACoug\+UV}}, \mbox{\hyperlink{classABlueROV2Heavy_a3722e5457411fed8925554048e2f7579}{ABlue\+ROV2\+Heavy}}, \mbox{\hyperlink{classABlueROV2_ac2d4163a63e1991e95f03782f996a27b}{ABlue\+ROV2}}, \mbox{\hyperlink{classABlueBoat_aa8a85e378173fca25b9a89f09a6f2bf3}{ABlue\+Boat}}, and \mbox{\hyperlink{classAAndroid_a7ff73d927df6a84179de2bb3424f2972}{AAndroid}}.
+
+\mbox{\Hypertarget{classAHolodeckAgent_a0576d34a9f13e3a4fd2806d0f2c64dea}\label{classAHolodeckAgent_a0576d34a9f13e3a4fd2806d0f2c64dea}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!InitializeAgent@{InitializeAgent}}
+\index{InitializeAgent@{InitializeAgent}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{InitializeAgent()}{InitializeAgent()}}
+{\footnotesize\ttfamily void AHolodeck\+Agent\+::\+Initialize\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize\+Agent All agent initialization code should go in here. 
+
+Reimplemented in \mbox{\hyperlink{classAHolodeckBuoyantAgent_af4631f8d3fa15b78fafe84d2939c6d43}{AHolodeck\+Buoyant\+Agent}}, \mbox{\hyperlink{classAWhiteBoat_a5c96f7972f90b7117f890fd3d1b47b59}{AWhite\+Boat}}, \mbox{\hyperlink{classAUav_a46e449d608833ef281c6b8d3bcfd3a65}{AUav}}, \mbox{\hyperlink{classATurtleAgent_aeade9da0aca01033493aecbaacdd77b1}{ATurtle\+Agent}}, \mbox{\hyperlink{classATorpedoAUV_a6c8f0ee8b83b97083a4f8170964ad119}{ATorpedo\+AUV}}, \mbox{\hyperlink{classASurfaceVessel_a06dbb452217dc1d395c95179ad8f95b5}{ASurface\+Vessel}}, \mbox{\hyperlink{classASphereRobot_a2c669f8873fdbfd11f5f680d591ae83f}{ASphere\+Robot}}, \mbox{\hyperlink{classANavAgent_a37225a7b8854bcea28edcf9efeb3bf8c}{ANav\+Agent}}, \mbox{\hyperlink{classAHuauv_a037681102340a8c2e839beda53500f2a}{AHuauv}}, \mbox{\hyperlink{classAHoveringAUV_a02e1af0dfca4fe1f342612c016aee70b}{AHovering\+AUV}}, \mbox{\hyperlink{classAHandAgent_af449f12e858ad541616c0f19a93a66ec}{AHand\+Agent}}, \mbox{\hyperlink{classAFixedWing_a99144e64bd4c47ac6daa5b9de2b7942f}{AFixed\+Wing}}, \mbox{\hyperlink{classADjiMatrice_a9b5091c3fa377d1d8bf0a4a1380f9ae4}{ADji\+Matrice}}, \mbox{\hyperlink{classACougUV_ae419895f65e921e97b97358bb82333ec}{ACoug\+UV}}, \mbox{\hyperlink{classABlueROV2Heavy_a9333379b4e60cce9fd3ea982dfdb28b1}{ABlue\+ROV2\+Heavy}}, \mbox{\hyperlink{classABlueROV2_a03a27e4545e954ee3a75ab23c3f6c91e}{ABlue\+ROV2}}, \mbox{\hyperlink{classABlueBoat_a329cdec07da93f74f6256459919c9d98}{ABlue\+Boat}}, and \mbox{\hyperlink{classAAndroid_a2b4d5412eadc8c110ef2b18305b8b8b5}{AAndroid}}.
+
+\mbox{\Hypertarget{classAHolodeckAgent_acc0e3aa7470768d633fe725948604e6c}\label{classAHolodeckAgent_acc0e3aa7470768d633fe725948604e6c}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!InitializeController@{InitializeController}}
+\index{InitializeController@{InitializeController}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{InitializeController()}{InitializeController()}}
+{\footnotesize\ttfamily bool AHolodeck\+Agent\+::\+Initialize\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Controller Hooks up everything with the controller. This is normally called in the begin\+Play function, but if you have to manually configure a controller, you will have to call this function after you do it. 
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgentInterface_a9427fcb74009254534b925340a5113e8}{AHolodeck\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classAHolodeckAgent_acdfe4a8c12c3897b5f4e4575eae4e1b9}\label{classAHolodeckAgent_acdfe4a8c12c3897b5f4e4575eae4e1b9}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!SetState@{SetState}}
+\index{SetState@{SetState}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{SetState()}{SetState()}}
+{\footnotesize\ttfamily bool AHolodeck\+Agent\+::\+Set\+State (\begin{DoxyParamCaption}\item[{const FVector \&}]{New\+Location,  }\item[{const FRotator \&}]{New\+Rotation,  }\item[{const FVector \&}]{New\+Velocity,  }\item[{const FVector \&}]{New\+Ang\+Velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set\+State Sets the state of the agent (pos,rot,vel,ang\+\_\+vel) 
+\begin{DoxyParams}{Parameters}
+{\em New\+Location} & The location to move to \\
+\hline
+{\em New\+Rotation} & The rotation that the object will take on \\
+\hline
+{\em New\+Velocity} & The new linear velocity \\
+\hline
+{\em New\+Ang\+Velocity} & The new angular velocity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool if the teleport was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgentInterface_a8145ba601d047ab2f07e30a4336113b9}{AHolodeck\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classAHolodeckAgent_a9090378abb532b7f11a9adee28110919}\label{classAHolodeckAgent_a9090378abb532b7f11a9adee28110919}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!Teleport@{Teleport}}
+\index{Teleport@{Teleport}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{Teleport()}{Teleport()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool AHolodeck\+Agent\+::\+Teleport (\begin{DoxyParamCaption}\item[{const FVector \&}]{New\+Location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Teleport Instantly moves the agent to target location, with the orientation that was given Orientation remains unchanged 
+\begin{DoxyParams}{Parameters}
+{\em New\+Location} & The location to move to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool if the teleport was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgentInterface_a7042e76f34d6dd8a0eba84fe3f125c1c}{AHolodeck\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classAHolodeckAgent_a4c797351c79a715b35fb9e6f93c4af30}\label{classAHolodeckAgent_a4c797351c79a715b35fb9e6f93c4af30}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!Teleport@{Teleport}}
+\index{Teleport@{Teleport}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{Teleport()}{Teleport()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool AHolodeck\+Agent\+::\+Teleport (\begin{DoxyParamCaption}\item[{const FVector \&}]{New\+Location,  }\item[{const FRotator \&}]{New\+Rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Teleport Instantly moves the agent to target location, with the orientation that was given If no orientation was given, orientation remains unchanged (see overloaded function) 
+\begin{DoxyParams}{Parameters}
+{\em New\+Location} & The location to move to \\
+\hline
+{\em New\+Rotation} & The rotation that the object will take on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool if the teleport was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgentInterface_a82b3478b1488b5750afd81e871a31bf0}{AHolodeck\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classAHolodeckAgent_a99953c7b1f1d4cf838573b3c8d33d9b9}\label{classAHolodeckAgent_a99953c7b1f1d4cf838573b3c8d33d9b9}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!Tick@{Tick}}
+\index{Tick@{Tick}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void AHolodeck\+Agent\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Tick Ticks the agent. If it is overridden, it must be called by the child class! 
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & the time since the last tick. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgentInterface_a12e2c2ed5ee6b3982cc4302f43f852ef}{AHolodeck\+Agent\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classAHolodeckBuoyantAgent_a79ad3f12f79786954647d728998ec80c}{AHolodeck\+Buoyant\+Agent}}, \mbox{\hyperlink{classAWhiteBoat_adb0332361151f1f9f65e97309fcf4748}{AWhite\+Boat}}, \mbox{\hyperlink{classAUav_a5c7f52794400f43bc3a3fb49e40957d3}{AUav}}, \mbox{\hyperlink{classATurtleAgent_ae1a3d0650e2f5c849405d5ee1f81ef59}{ATurtle\+Agent}}, \mbox{\hyperlink{classATorpedoAUV_a0bafe49db9633e54a7fbf7d0be728ace}{ATorpedo\+AUV}}, \mbox{\hyperlink{classASurfaceVessel_a28e928f9d36444b342e6ec785b163fe9}{ASurface\+Vessel}}, \mbox{\hyperlink{classASphereRobot_a0adcbf9e9932a7bf7e00d5696c02368b}{ASphere\+Robot}}, \mbox{\hyperlink{classANavAgent_afed27f856f5561b40dba2550c4ecc1fe}{ANav\+Agent}}, \mbox{\hyperlink{classAHuauv_add37d113a132c637540e739e7e95a711}{AHuauv}}, \mbox{\hyperlink{classAHoveringAUV_a59038459bbc1b68aebb2b6bfd5391882}{AHovering\+AUV}}, \mbox{\hyperlink{classAHandAgent_a963b78b2879822cb856948b528789bc6}{AHand\+Agent}}, \mbox{\hyperlink{classAFixedWing_a2ef045783511edfb82b7b143c79b489c}{AFixed\+Wing}}, \mbox{\hyperlink{classADjiMatrice_af77b67fa471a4b6c0cbe038967c69f99}{ADji\+Matrice}}, \mbox{\hyperlink{classACougUV_ae334b8aac78d559fa3030488ef0eb04b}{ACoug\+UV}}, \mbox{\hyperlink{classABlueROV2Heavy_aa06eec58309fe845d4bd00d8a94bd986}{ABlue\+ROV2\+Heavy}}, \mbox{\hyperlink{classABlueROV2_ad114b34db308841eace559ac86f52b17}{ABlue\+ROV2}}, \mbox{\hyperlink{classABlueBoat_a10633dc8a3ee2bd98d6df852141066d0}{ABlue\+Boat}}, and \mbox{\hyperlink{classAAndroid_aa54fe3f79d28fb549e38ddbcd72a50d0}{AAndroid}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classAHolodeckAgent_a80698a0c0f293d2e8d227398124d6846}\label{classAHolodeckAgent_a80698a0c0f293d2e8d227398124d6846}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!HolodeckController@{HolodeckController}}
+\index{HolodeckController@{HolodeckController}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{HolodeckController}{HolodeckController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAHolodeckPawnControllerInterface}{AHolodeck\+Pawn\+Controller\+Interface}}$\ast$ AHolodeck\+Agent\+::\+Holodeck\+Controller}
+
+\mbox{\Hypertarget{classAHolodeckAgent_a8835bf0ae37b45c45f813cce5e47505d}\label{classAHolodeckAgent_a8835bf0ae37b45c45f813cce5e47505d}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!IsAbused@{IsAbused}}
+\index{IsAbused@{IsAbused}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{IsAbused}{IsAbused}}
+{\footnotesize\ttfamily bool AHolodeck\+Agent\+::\+Is\+Abused}
+
+\mbox{\Hypertarget{classAHolodeckAgent_a6077eb9983b445e39598da0665284b90}\label{classAHolodeckAgent_a6077eb9983b445e39598da0665284b90}} 
+\index{AHolodeckAgent@{AHolodeckAgent}!SensorMap@{SensorMap}}
+\index{SensorMap@{SensorMap}!AHolodeckAgent@{AHolodeckAgent}}
+\doxysubsubsection{\texorpdfstring{SensorMap}{SensorMap}}
+{\footnotesize\ttfamily TMap$<$FString, \mbox{\hyperlink{classUHolodeckSensor}{UHolodeck\+Sensor}}$\ast$$>$ AHolodeck\+Agent\+::\+Sensor\+Map}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Public/\mbox{\hyperlink{HolodeckAgent_8h}{Holodeck\+Agent.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Private/\mbox{\hyperlink{HolodeckAgent_8cpp}{Holodeck\+Agent.\+cpp}}\end{DoxyCompactItemize}

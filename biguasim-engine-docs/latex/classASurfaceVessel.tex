@@ -1,0 +1,162 @@
+\hypertarget{classASurfaceVessel}{}\doxysection{ASurface\+Vessel Class Reference}
+\label{classASurfaceVessel}\index{ASurfaceVessel@{ASurfaceVessel}}
+
+
+{\ttfamily \#include $<$Surface\+Vessel.\+h$>$}
+
+
+
+Inheritance diagram for ASurface\+Vessel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classASurfaceVessel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ASurface\+Vessel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classASurfaceVessel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classASurfaceVessel_a207aedf50e502ac8dbcc3df9e79bcd03}{ASurface\+Vessel}} ()
+\item 
+void \mbox{\hyperlink{classASurfaceVessel_a06dbb452217dc1d395c95179ad8f95b5}{Initialize\+Agent}} () override
+\item 
+void \mbox{\hyperlink{classASurfaceVessel_a28e928f9d36444b342e6ec785b163fe9}{Tick}} (float Delta\+Seconds) override
+\item 
+unsigned int \mbox{\hyperlink{classASurfaceVessel_ae60c3049c01e341f7d4555f34fa7395f}{Get\+Raw\+Action\+Size\+In\+Bytes}} () const override
+\item 
+void $\ast$ \mbox{\hyperlink{classASurfaceVessel_acc39f474c6f77aaef4a58cd6ad25b34d}{Get\+Raw\+Action\+Buffer}} () const override
+\item 
+float \mbox{\hyperlink{classASurfaceVessel_a8e72740c2efe8b2b6528da64e925d18c}{Get\+Acceleration\+Limit}} () override
+\item 
+void \mbox{\hyperlink{classASurfaceVessel_a3696975a4493c5463c0b7735777f2eaa}{Apply\+Thrusters}} (float $\ast$const Thruster\+Array)
+\item 
+void \mbox{\hyperlink{classASurfaceVessel_aef49578139992b474c50e7d3d647390f}{Enable\+Damping}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ FVector $>$ \mbox{\hyperlink{classASurfaceVessel_af1205d9cc6019c156e5da4a111b76039}{thruster\+Locations}} \{ FVector(-\/250, -\/100, 0), FVector(-\/250, 100, 0) \}
+\item 
+bool \mbox{\hyperlink{classASurfaceVessel_a9090edec2653e8cb8f2eb85c8c5e7729}{Perfect}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classASurfaceVessel}{ASurface\+Vessel}} Inherits from the Holodeck\+Agent class On any tick this object will apply the given forces. Desired values must be set by a controller. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classASurfaceVessel_a207aedf50e502ac8dbcc3df9e79bcd03}\label{classASurfaceVessel_a207aedf50e502ac8dbcc3df9e79bcd03}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!ASurfaceVessel@{ASurfaceVessel}}
+\index{ASurfaceVessel@{ASurfaceVessel}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{ASurfaceVessel()}{ASurfaceVessel()}}
+{\footnotesize\ttfamily ASurface\+Vessel\+::\+ASurface\+Vessel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classASurfaceVessel_a3696975a4493c5463c0b7735777f2eaa}\label{classASurfaceVessel_a3696975a4493c5463c0b7735777f2eaa}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!ApplyThrusters@{ApplyThrusters}}
+\index{ApplyThrusters@{ApplyThrusters}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{ApplyThrusters()}{ApplyThrusters()}}
+{\footnotesize\ttfamily void ASurface\+Vessel\+::\+Apply\+Thrusters (\begin{DoxyParamCaption}\item[{float $\ast$const}]{Thruster\+Array }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classASurfaceVessel_aef49578139992b474c50e7d3d647390f}\label{classASurfaceVessel_aef49578139992b474c50e7d3d647390f}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!EnableDamping@{EnableDamping}}
+\index{EnableDamping@{EnableDamping}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{EnableDamping()}{EnableDamping()}}
+{\footnotesize\ttfamily void ASurface\+Vessel\+::\+Enable\+Damping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classASurfaceVessel_a8e72740c2efe8b2b6528da64e925d18c}\label{classASurfaceVessel_a8e72740c2efe8b2b6528da64e925d18c}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!GetAccelerationLimit@{GetAccelerationLimit}}
+\index{GetAccelerationLimit@{GetAccelerationLimit}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{GetAccelerationLimit()}{GetAccelerationLimit()}}
+{\footnotesize\ttfamily float ASurface\+Vessel\+::\+Get\+Acceleration\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Acceleration\+Limit \begin{DoxyReturn}{Returns}
+Float The maximum acceleration the agent can endure before being abused. -\/1 means no limit. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classASurfaceVessel_acc39f474c6f77aaef4a58cd6ad25b34d}\label{classASurfaceVessel_acc39f474c6f77aaef4a58cd6ad25b34d}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!GetRawActionBuffer@{GetRawActionBuffer}}
+\index{GetRawActionBuffer@{GetRawActionBuffer}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{GetRawActionBuffer()}{GetRawActionBuffer()}}
+{\footnotesize\ttfamily void$\ast$ ASurface\+Vessel\+::\+Get\+Raw\+Action\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Buffer \begin{DoxyReturn}{Returns}
+a pointer to the start of the action buffer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classASurfaceVessel_ae60c3049c01e341f7d4555f34fa7395f}\label{classASurfaceVessel_ae60c3049c01e341f7d4555f34fa7395f}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!GetRawActionSizeInBytes@{GetRawActionSizeInBytes}}
+\index{GetRawActionSizeInBytes@{GetRawActionSizeInBytes}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{GetRawActionSizeInBytes()}{GetRawActionSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int ASurface\+Vessel\+::\+Get\+Raw\+Action\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Size\+In\+Bytes \begin{DoxyReturn}{Returns}
+the number of bytes used by the action space. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classASurfaceVessel_a06dbb452217dc1d395c95179ad8f95b5}\label{classASurfaceVessel_a06dbb452217dc1d395c95179ad8f95b5}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!InitializeAgent@{InitializeAgent}}
+\index{InitializeAgent@{InitializeAgent}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{InitializeAgent()}{InitializeAgent()}}
+{\footnotesize\ttfamily void ASurface\+Vessel\+::\+Initialize\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Agent All agent initialization code should go in here. 
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_af4631f8d3fa15b78fafe84d2939c6d43}{AHolodeck\+Buoyant\+Agent}}.
+
+\mbox{\Hypertarget{classASurfaceVessel_a28e928f9d36444b342e6ec785b163fe9}\label{classASurfaceVessel_a28e928f9d36444b342e6ec785b163fe9}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!Tick@{Tick}}
+\index{Tick@{Tick}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void ASurface\+Vessel\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Tick Called each frame. 
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & the time since the last tick. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_a79ad3f12f79786954647d728998ec80c}{AHolodeck\+Buoyant\+Agent}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classASurfaceVessel_a9090edec2653e8cb8f2eb85c8c5e7729}\label{classASurfaceVessel_a9090edec2653e8cb8f2eb85c8c5e7729}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!Perfect@{Perfect}}
+\index{Perfect@{Perfect}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{Perfect}{Perfect}}
+{\footnotesize\ttfamily bool ASurface\+Vessel\+::\+Perfect = true}
+
+\mbox{\Hypertarget{classASurfaceVessel_af1205d9cc6019c156e5da4a111b76039}\label{classASurfaceVessel_af1205d9cc6019c156e5da4a111b76039}} 
+\index{ASurfaceVessel@{ASurfaceVessel}!thrusterLocations@{thrusterLocations}}
+\index{thrusterLocations@{thrusterLocations}!ASurfaceVessel@{ASurfaceVessel}}
+\doxysubsubsection{\texorpdfstring{thrusterLocations}{thrusterLocations}}
+{\footnotesize\ttfamily TArray$<$FVector$>$ ASurface\+Vessel\+::thruster\+Locations \{ FVector(-\/250, -\/100, 0), FVector(-\/250, 100, 0) \}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{SurfaceVessel_8h}{Surface\+Vessel.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{SurfaceVessel_8cpp}{Surface\+Vessel.\+cpp}}\end{DoxyCompactItemize}

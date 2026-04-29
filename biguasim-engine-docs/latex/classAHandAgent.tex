@@ -1,0 +1,298 @@
+\hypertarget{classAHandAgent}{}\doxysection{AHand\+Agent Class Reference}
+\label{classAHandAgent}\index{AHandAgent@{AHandAgent}}
+
+
+{\ttfamily \#include $<$Hand\+Agent.\+h$>$}
+
+
+
+Inheritance diagram for AHand\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classAHandAgent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AHand\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAHandAgent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAHandAgent_a365054d96d5493c2d23d3581f0b97700}{AHand\+Agent}} ()
+\item 
+virtual void \mbox{\hyperlink{classAHandAgent_af449f12e858ad541616c0f19a93a66ec}{Initialize\+Agent}} () override
+\item 
+void \mbox{\hyperlink{classAHandAgent_a963b78b2879822cb856948b528789bc6}{Tick}} (float Delta\+Seconds) override
+\item 
+const FName $\ast$ \mbox{\hyperlink{classAHandAgent_afc7c9ad1f89e049d5e9643c17823dc67}{Get\+Joints}} ()
+\item 
+unsigned int \mbox{\hyperlink{classAHandAgent_a8d5b9bd31c92eb9f02e3f1bc5f64ac67}{Get\+Raw\+Action\+Size\+In\+Bytes}} () const override
+\item 
+void $\ast$ \mbox{\hyperlink{classAHandAgent_abc16fec224ca8867009e95e0539064dd}{Get\+Raw\+Action\+Buffer}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+USkeletal\+Mesh\+Component $\ast$ \mbox{\hyperlink{classAHandAgent_a13787c5cebe23cc28a04226b67399f90}{Skeletal\+Mesh}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{classAHandAgent_a2691d69bb4fe6b0a2901219bee72f939}{NUM\+\_\+\+JOINTS}} = 16
+\item 
+static constexpr int \mbox{\hyperlink{classAHandAgent_a106824033011a7a87cf2fc0554d2dfa0}{NUM\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS}} = 1
+\item 
+static constexpr int \mbox{\hyperlink{classAHandAgent_ab80b2d3cd31651ca35eedef976e67e61}{NUM\+\_\+2\+\_\+\+AXIS\+\_\+\+JOINTS}} = 5
+\item 
+static constexpr int \mbox{\hyperlink{classAHandAgent_ab53037194799f3bceb1d9c721f727cf2}{NUM\+\_\+1\+\_\+\+AXIS\+\_\+\+JOINTS}} = 10
+\item 
+static constexpr int \mbox{\hyperlink{classAHandAgent_a5ddd0df6d5e1bc7ccc560421006163b1}{NUM\+\_\+2\+\_\+\+PLUS\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS}} = \mbox{\hyperlink{classAHandAgent_a106824033011a7a87cf2fc0554d2dfa0}{NUM\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS}} + \mbox{\hyperlink{classAHandAgent_ab80b2d3cd31651ca35eedef976e67e61}{NUM\+\_\+2\+\_\+\+AXIS\+\_\+\+JOINTS}}
+\item 
+static constexpr int \mbox{\hyperlink{classAHandAgent_a798559a324cdd5883c015b834ea22ac6}{NUM\+\_\+\+FLOAT\+\_\+\+DIRECTIONS}} = 3
+\item 
+static constexpr int \mbox{\hyperlink{classAHandAgent_a02bbf92a62c274a8c1451d38a37ab33a}{TOTAL\+\_\+\+JOINT\+\_\+\+DOF}}
+\item 
+static constexpr int \mbox{\hyperlink{classAHandAgent_ae01a97d17844b5e60fe2ce12284a96f6}{TOTAL\+\_\+\+DOF}} = \mbox{\hyperlink{classAHandAgent_a02bbf92a62c274a8c1451d38a37ab33a}{TOTAL\+\_\+\+JOINT\+\_\+\+DOF}} + \mbox{\hyperlink{classAHandAgent_a798559a324cdd5883c015b834ea22ac6}{NUM\+\_\+\+FLOAT\+\_\+\+DIRECTIONS}}
+\item 
+static constexpr float \mbox{\hyperlink{classAHandAgent_a205d6045f6bdae5b9ed451167943d1ff}{MAX\+\_\+\+MOVEMENT\+\_\+\+METERS}} = 0.\+5
+\item 
+static constexpr float \mbox{\hyperlink{classAHandAgent_a597a1688d7f0d91eda41535a31ea3948}{MAX\+\_\+\+TORQUE}} = 30
+\item 
+static const FName \mbox{\hyperlink{classAHandAgent_ac6fdb0e466f2bcce5d6f73fb23301e50}{Joints}} \mbox{[}$\,$\mbox{]}
+\item 
+static const FName \mbox{\hyperlink{classAHandAgent_a91f216aa5ce5ca8cd8db2ba65ca28679}{Bone\+Names}} \mbox{[}$\,$\mbox{]}
+\item 
+static const int \mbox{\hyperlink{classAHandAgent_a14c8e1a90d2740d70c089f5438eb49c3}{Num\+Bones}} = 17
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAHandAgent_a365054d96d5493c2d23d3581f0b97700}\label{classAHandAgent_a365054d96d5493c2d23d3581f0b97700}} 
+\index{AHandAgent@{AHandAgent}!AHandAgent@{AHandAgent}}
+\index{AHandAgent@{AHandAgent}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{AHandAgent()}{AHandAgent()}}
+{\footnotesize\ttfamily AHand\+Agent\+::\+AHand\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAHandAgent_afc7c9ad1f89e049d5e9643c17823dc67}\label{classAHandAgent_afc7c9ad1f89e049d5e9643c17823dc67}} 
+\index{AHandAgent@{AHandAgent}!GetJoints@{GetJoints}}
+\index{GetJoints@{GetJoints}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{GetJoints()}{GetJoints()}}
+{\footnotesize\ttfamily const FName$\ast$ AHand\+Agent\+::\+Get\+Joints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get\+Joints Gets pointer to constant array of FName joints \begin{DoxyReturn}{Returns}
+array of FName corresponding to android joint names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAHandAgent_abc16fec224ca8867009e95e0539064dd}\label{classAHandAgent_abc16fec224ca8867009e95e0539064dd}} 
+\index{AHandAgent@{AHandAgent}!GetRawActionBuffer@{GetRawActionBuffer}}
+\index{GetRawActionBuffer@{GetRawActionBuffer}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{GetRawActionBuffer()}{GetRawActionBuffer()}}
+{\footnotesize\ttfamily void$\ast$ AHand\+Agent\+::\+Get\+Raw\+Action\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Buffer \begin{DoxyReturn}{Returns}
+a pointer to the start of the action buffer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAHandAgent_a8d5b9bd31c92eb9f02e3f1bc5f64ac67}\label{classAHandAgent_a8d5b9bd31c92eb9f02e3f1bc5f64ac67}} 
+\index{AHandAgent@{AHandAgent}!GetRawActionSizeInBytes@{GetRawActionSizeInBytes}}
+\index{GetRawActionSizeInBytes@{GetRawActionSizeInBytes}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{GetRawActionSizeInBytes()}{GetRawActionSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int AHand\+Agent\+::\+Get\+Raw\+Action\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get\+Raw\+Action\+Size\+In\+Bytes \begin{DoxyReturn}{Returns}
+the number of bytes used by the action space. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAHandAgent_af449f12e858ad541616c0f19a93a66ec}\label{classAHandAgent_af449f12e858ad541616c0f19a93a66ec}} 
+\index{AHandAgent@{AHandAgent}!InitializeAgent@{InitializeAgent}}
+\index{InitializeAgent@{InitializeAgent}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{InitializeAgent()}{InitializeAgent()}}
+{\footnotesize\ttfamily void AHand\+Agent\+::\+Initialize\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the game starts. 
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a0576d34a9f13e3a4fd2806d0f2c64dea}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classAHandAgent_a963b78b2879822cb856948b528789bc6}\label{classAHandAgent_a963b78b2879822cb856948b528789bc6}} 
+\index{AHandAgent@{AHandAgent}!Tick@{Tick}}
+\index{Tick@{Tick}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void AHand\+Agent\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Tick Called every frame. 
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & the time since the last tick. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a99953c7b1f1d4cf838573b3c8d33d9b9}{AHolodeck\+Agent}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classAHandAgent_a91f216aa5ce5ca8cd8db2ba65ca28679}\label{classAHandAgent_a91f216aa5ce5ca8cd8db2ba65ca28679}} 
+\index{AHandAgent@{AHandAgent}!BoneNames@{BoneNames}}
+\index{BoneNames@{BoneNames}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{BoneNames}{BoneNames}}
+{\footnotesize\ttfamily const FName AHand\+Agent\+::\+Bone\+Names\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}lowerarm\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}hand\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}index\_01\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}index\_02\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}index\_03\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}middle\_01\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}middle\_02\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}middle\_03\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}pinky\_01\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}pinky\_02\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}pinky\_03\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}ring\_01\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}ring\_02\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}ring\_03\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}thumb\_01\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}thumb\_02\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}thumb\_03\_r"{}}))}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classAHandAgent_ac6fdb0e466f2bcce5d6f73fb23301e50}\label{classAHandAgent_ac6fdb0e466f2bcce5d6f73fb23301e50}} 
+\index{AHandAgent@{AHandAgent}!Joints@{Joints}}
+\index{Joints@{Joints}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{Joints}{Joints}}
+{\footnotesize\ttfamily const FName AHand\+Agent\+::\+Joints\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}hand\_r"{}})),}
+\DoxyCodeLine{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}thumb\_01\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}index\_01\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}middle\_01\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}ring\_01\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}pinky\_01\_r"{}})),}
+\DoxyCodeLine{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}thumb\_02\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}index\_02\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}middle\_02\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}ring\_02\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}pinky\_02\_r"{}})),}
+\DoxyCodeLine{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}thumb\_03\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}index\_03\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}middle\_03\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}ring\_03\_r"{}})),}
+\DoxyCodeLine{    FName(TEXT(\textcolor{stringliteral}{"{}pinky\_03\_r"{}})),}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classAHandAgent_a205d6045f6bdae5b9ed451167943d1ff}\label{classAHandAgent_a205d6045f6bdae5b9ed451167943d1ff}} 
+\index{AHandAgent@{AHandAgent}!MAX\_MOVEMENT\_METERS@{MAX\_MOVEMENT\_METERS}}
+\index{MAX\_MOVEMENT\_METERS@{MAX\_MOVEMENT\_METERS}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{MAX\_MOVEMENT\_METERS}{MAX\_MOVEMENT\_METERS}}
+{\footnotesize\ttfamily constexpr float AHand\+Agent\+::\+MAX\+\_\+\+MOVEMENT\+\_\+\+METERS = 0.\+5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAHandAgent_a597a1688d7f0d91eda41535a31ea3948}\label{classAHandAgent_a597a1688d7f0d91eda41535a31ea3948}} 
+\index{AHandAgent@{AHandAgent}!MAX\_TORQUE@{MAX\_TORQUE}}
+\index{MAX\_TORQUE@{MAX\_TORQUE}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{MAX\_TORQUE}{MAX\_TORQUE}}
+{\footnotesize\ttfamily constexpr float AHand\+Agent\+::\+MAX\+\_\+\+TORQUE = 30\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAHandAgent_ab53037194799f3bceb1d9c721f727cf2}\label{classAHandAgent_ab53037194799f3bceb1d9c721f727cf2}} 
+\index{AHandAgent@{AHandAgent}!NUM\_1\_AXIS\_JOINTS@{NUM\_1\_AXIS\_JOINTS}}
+\index{NUM\_1\_AXIS\_JOINTS@{NUM\_1\_AXIS\_JOINTS}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{NUM\_1\_AXIS\_JOINTS}{NUM\_1\_AXIS\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AHand\+Agent\+::\+NUM\+\_\+1\+\_\+\+AXIS\+\_\+\+JOINTS = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAHandAgent_ab80b2d3cd31651ca35eedef976e67e61}\label{classAHandAgent_ab80b2d3cd31651ca35eedef976e67e61}} 
+\index{AHandAgent@{AHandAgent}!NUM\_2\_AXIS\_JOINTS@{NUM\_2\_AXIS\_JOINTS}}
+\index{NUM\_2\_AXIS\_JOINTS@{NUM\_2\_AXIS\_JOINTS}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{NUM\_2\_AXIS\_JOINTS}{NUM\_2\_AXIS\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AHand\+Agent\+::\+NUM\+\_\+2\+\_\+\+AXIS\+\_\+\+JOINTS = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAHandAgent_a5ddd0df6d5e1bc7ccc560421006163b1}\label{classAHandAgent_a5ddd0df6d5e1bc7ccc560421006163b1}} 
+\index{AHandAgent@{AHandAgent}!NUM\_2\_PLUS\_3\_AXIS\_JOINTS@{NUM\_2\_PLUS\_3\_AXIS\_JOINTS}}
+\index{NUM\_2\_PLUS\_3\_AXIS\_JOINTS@{NUM\_2\_PLUS\_3\_AXIS\_JOINTS}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{NUM\_2\_PLUS\_3\_AXIS\_JOINTS}{NUM\_2\_PLUS\_3\_AXIS\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AHand\+Agent\+::\+NUM\+\_\+2\+\_\+\+PLUS\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS = \mbox{\hyperlink{classAHandAgent_a106824033011a7a87cf2fc0554d2dfa0}{NUM\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS}} + \mbox{\hyperlink{classAHandAgent_ab80b2d3cd31651ca35eedef976e67e61}{NUM\+\_\+2\+\_\+\+AXIS\+\_\+\+JOINTS}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAHandAgent_a106824033011a7a87cf2fc0554d2dfa0}\label{classAHandAgent_a106824033011a7a87cf2fc0554d2dfa0}} 
+\index{AHandAgent@{AHandAgent}!NUM\_3\_AXIS\_JOINTS@{NUM\_3\_AXIS\_JOINTS}}
+\index{NUM\_3\_AXIS\_JOINTS@{NUM\_3\_AXIS\_JOINTS}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{NUM\_3\_AXIS\_JOINTS}{NUM\_3\_AXIS\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AHand\+Agent\+::\+NUM\+\_\+3\+\_\+\+AXIS\+\_\+\+JOINTS = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAHandAgent_a798559a324cdd5883c015b834ea22ac6}\label{classAHandAgent_a798559a324cdd5883c015b834ea22ac6}} 
+\index{AHandAgent@{AHandAgent}!NUM\_FLOAT\_DIRECTIONS@{NUM\_FLOAT\_DIRECTIONS}}
+\index{NUM\_FLOAT\_DIRECTIONS@{NUM\_FLOAT\_DIRECTIONS}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{NUM\_FLOAT\_DIRECTIONS}{NUM\_FLOAT\_DIRECTIONS}}
+{\footnotesize\ttfamily constexpr int AHand\+Agent\+::\+NUM\+\_\+\+FLOAT\+\_\+\+DIRECTIONS = 3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAHandAgent_a2691d69bb4fe6b0a2901219bee72f939}\label{classAHandAgent_a2691d69bb4fe6b0a2901219bee72f939}} 
+\index{AHandAgent@{AHandAgent}!NUM\_JOINTS@{NUM\_JOINTS}}
+\index{NUM\_JOINTS@{NUM\_JOINTS}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{NUM\_JOINTS}{NUM\_JOINTS}}
+{\footnotesize\ttfamily constexpr int AHand\+Agent\+::\+NUM\+\_\+\+JOINTS = 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAHandAgent_a14c8e1a90d2740d70c089f5438eb49c3}\label{classAHandAgent_a14c8e1a90d2740d70c089f5438eb49c3}} 
+\index{AHandAgent@{AHandAgent}!NumBones@{NumBones}}
+\index{NumBones@{NumBones}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{NumBones}{NumBones}}
+{\footnotesize\ttfamily const int AHand\+Agent\+::\+Num\+Bones = 17\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classAHandAgent_a13787c5cebe23cc28a04226b67399f90}\label{classAHandAgent_a13787c5cebe23cc28a04226b67399f90}} 
+\index{AHandAgent@{AHandAgent}!SkeletalMesh@{SkeletalMesh}}
+\index{SkeletalMesh@{SkeletalMesh}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{SkeletalMesh}{SkeletalMesh}}
+{\footnotesize\ttfamily USkeletal\+Mesh\+Component$\ast$ AHand\+Agent\+::\+Skeletal\+Mesh}
+
+\mbox{\Hypertarget{classAHandAgent_ae01a97d17844b5e60fe2ce12284a96f6}\label{classAHandAgent_ae01a97d17844b5e60fe2ce12284a96f6}} 
+\index{AHandAgent@{AHandAgent}!TOTAL\_DOF@{TOTAL\_DOF}}
+\index{TOTAL\_DOF@{TOTAL\_DOF}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{TOTAL\_DOF}{TOTAL\_DOF}}
+{\footnotesize\ttfamily constexpr int AHand\+Agent\+::\+TOTAL\+\_\+\+DOF = \mbox{\hyperlink{classAHandAgent_a02bbf92a62c274a8c1451d38a37ab33a}{TOTAL\+\_\+\+JOINT\+\_\+\+DOF}} + \mbox{\hyperlink{classAHandAgent_a798559a324cdd5883c015b834ea22ac6}{NUM\+\_\+\+FLOAT\+\_\+\+DIRECTIONS}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classAHandAgent_a02bbf92a62c274a8c1451d38a37ab33a}\label{classAHandAgent_a02bbf92a62c274a8c1451d38a37ab33a}} 
+\index{AHandAgent@{AHandAgent}!TOTAL\_JOINT\_DOF@{TOTAL\_JOINT\_DOF}}
+\index{TOTAL\_JOINT\_DOF@{TOTAL\_JOINT\_DOF}!AHandAgent@{AHandAgent}}
+\doxysubsubsection{\texorpdfstring{TOTAL\_JOINT\_DOF}{TOTAL\_JOINT\_DOF}}
+{\footnotesize\ttfamily constexpr int AHand\+Agent\+::\+TOTAL\+\_\+\+JOINT\+\_\+\+DOF\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{classAHandAgent_a106824033011a7a87cf2fc0554d2dfa0}{NUM\_3\_AXIS\_JOINTS}} * 3 +}
+\DoxyCodeLine{                                           \mbox{\hyperlink{classAHandAgent_ab80b2d3cd31651ca35eedef976e67e61}{NUM\_2\_AXIS\_JOINTS}} * 2 +}
+\DoxyCodeLine{                                           \mbox{\hyperlink{classAHandAgent_ab53037194799f3bceb1d9c721f727cf2}{NUM\_1\_AXIS\_JOINTS}}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{HandAgent_8h}{Hand\+Agent.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{HandAgent_8cpp}{Hand\+Agent.\+cpp}}\end{DoxyCompactItemize}

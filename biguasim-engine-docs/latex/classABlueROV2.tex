@@ -1,0 +1,260 @@
+\hypertarget{classABlueROV2}{}\doxysection{ABlue\+ROV2 Class Reference}
+\label{classABlueROV2}\index{ABlueROV2@{ABlueROV2}}
+
+
+Standard configuration of the Blue\+ROV2 agent.  
+
+
+
+
+{\ttfamily \#include $<$Blue\+ROV2.\+h$>$}
+
+
+
+Inheritance diagram for ABlue\+ROV2\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classABlueROV2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ABlue\+ROV2\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classABlueROV2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classABlueROV2_a2faf48cc1571f120f232ad821db727c1}{ABlue\+ROV2}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classABlueROV2_a03a27e4545e954ee3a75ab23c3f6c91e}{Initialize\+Agent}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the agent and its physical components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classABlueROV2_ad114b34db308841eace559ac86f52b17}{Tick}} (float Delta\+Seconds) override
+\begin{DoxyCompactList}\small\item\em Called each frame. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classABlueROV2_ac2d4163a63e1991e95f03782f996a27b}{Get\+Raw\+Action\+Size\+In\+Bytes}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the size of the action buffer in bytes. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classABlueROV2_aaa2b24907f5a0e344e39effd5844d314}{Get\+Raw\+Action\+Buffer}} () const override
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the raw action buffer. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classABlueROV2_a8c91cf362807f3af91d910fa1fddaf75}{Get\+Acceleration\+Limit}} () override
+\begin{DoxyCompactList}\small\item\em Gets the acceleration limit for the agent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classABlueROV2_a747e55756ac863727af2aafa423b27c9}{Apply\+Thrusters}} (float $\ast$const Thruster\+Array)
+\begin{DoxyCompactList}\small\item\em Applies specific force values to the ROV\textquotesingle{}s thrusters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classABlueROV2_a278dd2de0c9c4c5de62bca6f6542fab8}{Enable\+Damping}} ()
+\begin{DoxyCompactList}\small\item\em Enables linear and angular damping for the ROV\textquotesingle{}s physical mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ FVector $>$ \mbox{\hyperlink{classABlueROV2_ac30541c621f291e0dddc24c6d158f04f}{thruster\+Locations}}
+\begin{DoxyCompactList}\small\item\em Location of all thrusters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classABlueROV2_a87ad272173a563a10d0a0bb3f20ba417}{Perfect}} = true
+\begin{DoxyCompactList}\small\item\em Defines if the buoyancy calculation is mathematically idealized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Standard configuration of the Blue\+ROV2 agent. 
+
+
+\begin{DoxyItemize}
+\item Inherits from the Holodeck\+Buoyant\+Agent class. On any tick this object will apply the given forces. Desired values must be set by a controller. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classABlueROV2_a2faf48cc1571f120f232ad821db727c1}\label{classABlueROV2_a2faf48cc1571f120f232ad821db727c1}} 
+\index{ABlueROV2@{ABlueROV2}!ABlueROV2@{ABlueROV2}}
+\index{ABlueROV2@{ABlueROV2}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{ABlueROV2()}{ABlueROV2()}}
+{\footnotesize\ttfamily ABlue\+ROV2\+::\+ABlue\+ROV2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Sets default values for the Blue\+ROV2 agent.
+
+
+\begin{DoxyItemize}
+\item Initializes the AI controller, physical properties (mass, volume, buoyancy center), and the physical offset to align the Unreal Engine origin with the model\textquotesingle{}s center. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classABlueROV2_a747e55756ac863727af2aafa423b27c9}\label{classABlueROV2_a747e55756ac863727af2aafa423b27c9}} 
+\index{ABlueROV2@{ABlueROV2}!ApplyThrusters@{ApplyThrusters}}
+\index{ApplyThrusters@{ApplyThrusters}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{ApplyThrusters()}{ApplyThrusters()}}
+{\footnotesize\ttfamily void ABlue\+ROV2\+::\+Apply\+Thrusters (\begin{DoxyParamCaption}\item[{float $\ast$const}]{Thruster\+Array }\end{DoxyParamCaption})}
+
+
+
+Applies specific force values to the ROV\textquotesingle{}s thrusters. 
+
+Applies specific force values to the thrusters of the Blue\+ROV2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Thruster\+Array} & Pointer to an array containing the requested force for each thruster.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Currently iterates through 8 thrusters (4 vertical, 4 angled). 
+\begin{DoxyParams}{Parameters}
+{\em Thruster\+Array} & Pointer to an array containing the requested force for each thruster. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\mbox{\Hypertarget{classABlueROV2_a278dd2de0c9c4c5de62bca6f6542fab8}\label{classABlueROV2_a278dd2de0c9c4c5de62bca6f6542fab8}} 
+\index{ABlueROV2@{ABlueROV2}!EnableDamping@{EnableDamping}}
+\index{EnableDamping@{EnableDamping}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{EnableDamping()}{EnableDamping()}}
+{\footnotesize\ttfamily void ABlue\+ROV2\+::\+Enable\+Damping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables linear and angular damping for the ROV\textquotesingle{}s physical mesh. 
+
+\mbox{\Hypertarget{classABlueROV2_a8c91cf362807f3af91d910fa1fddaf75}\label{classABlueROV2_a8c91cf362807f3af91d910fa1fddaf75}} 
+\index{ABlueROV2@{ABlueROV2}!GetAccelerationLimit@{GetAccelerationLimit}}
+\index{GetAccelerationLimit@{GetAccelerationLimit}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{GetAccelerationLimit()}{GetAccelerationLimit()}}
+{\footnotesize\ttfamily float ABlue\+ROV2\+::\+Get\+Acceleration\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the acceleration limit for the agent. 
+
+
+\begin{DoxyItemize}
+\item Allows agent to fall up to $\sim$8 meters. \begin{DoxyReturn}{Returns}
+The acceleration limit. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classABlueROV2_aaa2b24907f5a0e344e39effd5844d314}\label{classABlueROV2_aaa2b24907f5a0e344e39effd5844d314}} 
+\index{ABlueROV2@{ABlueROV2}!GetRawActionBuffer@{GetRawActionBuffer}}
+\index{GetRawActionBuffer@{GetRawActionBuffer}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{GetRawActionBuffer()}{GetRawActionBuffer()}}
+{\footnotesize\ttfamily void$\ast$ ABlue\+ROV2\+::\+Get\+Raw\+Action\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a pointer to the raw action buffer. 
+
+\begin{DoxyReturn}{Returns}
+A void pointer to the command array. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classABlueROV2_ac2d4163a63e1991e95f03782f996a27b}\label{classABlueROV2_ac2d4163a63e1991e95f03782f996a27b}} 
+\index{ABlueROV2@{ABlueROV2}!GetRawActionSizeInBytes@{GetRawActionSizeInBytes}}
+\index{GetRawActionSizeInBytes@{GetRawActionSizeInBytes}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{GetRawActionSizeInBytes()}{GetRawActionSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int ABlue\+ROV2\+::\+Get\+Raw\+Action\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the size of the action buffer in bytes. 
+
+\begin{DoxyReturn}{Returns}
+The size of the command array in bytes. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classABlueROV2_a03a27e4545e954ee3a75ab23c3f6c91e}\label{classABlueROV2_a03a27e4545e954ee3a75ab23c3f6c91e}} 
+\index{ABlueROV2@{ABlueROV2}!InitializeAgent@{InitializeAgent}}
+\index{InitializeAgent@{InitializeAgent}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{InitializeAgent()}{InitializeAgent()}}
+{\footnotesize\ttfamily void ABlue\+ROV2\+::\+Initialize\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the agent and its physical components. 
+
+
+\begin{DoxyItemize}
+\item Casts the Root\+Component to a UStatic\+Mesh\+Component to allow physics manipulation. If the \textquotesingle{}Perfect\textquotesingle{} flag is true, recalculates optimal center of mass and buoyancy. Also applies the Offset\+To\+Origin to all 8 thruster locations. 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_af4631f8d3fa15b78fafe84d2939c6d43}{AHolodeck\+Buoyant\+Agent}}.
+
+\mbox{\Hypertarget{classABlueROV2_ad114b34db308841eace559ac86f52b17}\label{classABlueROV2_ad114b34db308841eace559ac86f52b17}} 
+\index{ABlueROV2@{ABlueROV2}!Tick@{Tick}}
+\index{Tick@{Tick}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void ABlue\+ROV2\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called each frame. 
+
+Called every frame to apply physical forces to the ROV.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & The time since the last tick.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Converts linear and angular accelerations from the Python Command\+Array into forces and torques, clamps them to maximum limits, and applies them to the Root\+Mesh. 
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & The time elapsed since the last tick. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_a79ad3f12f79786954647d728998ec80c}{AHolodeck\+Buoyant\+Agent}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classABlueROV2_a87ad272173a563a10d0a0bb3f20ba417}\label{classABlueROV2_a87ad272173a563a10d0a0bb3f20ba417}} 
+\index{ABlueROV2@{ABlueROV2}!Perfect@{Perfect}}
+\index{Perfect@{Perfect}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{Perfect}{Perfect}}
+{\footnotesize\ttfamily bool ABlue\+ROV2\+::\+Perfect = true}
+
+
+
+Defines if the buoyancy calculation is mathematically idealized. 
+
+\mbox{\Hypertarget{classABlueROV2_ac30541c621f291e0dddc24c6d158f04f}\label{classABlueROV2_ac30541c621f291e0dddc24c6d158f04f}} 
+\index{ABlueROV2@{ABlueROV2}!thrusterLocations@{thrusterLocations}}
+\index{thrusterLocations@{thrusterLocations}!ABlueROV2@{ABlueROV2}}
+\doxysubsubsection{\texorpdfstring{thrusterLocations}{thrusterLocations}}
+{\footnotesize\ttfamily TArray$<$FVector$>$ ABlue\+ROV2\+::thruster\+Locations}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ FVector(18.18, 22.14, -\/4), }
+\DoxyCodeLine{                                            FVector(18.18, -\/22.14, -\/4),}
+\DoxyCodeLine{                                            FVector(-\/31.43, -\/22.14, -\/4),}
+\DoxyCodeLine{                                            FVector(-\/31.43, 22.14, -\/4),}
+\DoxyCodeLine{                                            FVector(7.39, 18.23, -\/0.21),}
+\DoxyCodeLine{                                            FVector(7.39, -\/18.23, -\/0.21),}
+\DoxyCodeLine{                                            FVector(-\/20.64, -\/18.23, -\/0.21),}
+\DoxyCodeLine{                                            FVector(-\/20.64, 18.23, -\/0.21) \}}
+
+\end{DoxyCode}
+
+
+Location of all thrusters. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{BlueROV2_8h}{Blue\+ROV2.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{BlueROV2_8cpp}{Blue\+ROV2.\+cpp}}\end{DoxyCompactItemize}

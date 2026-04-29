@@ -1,0 +1,82 @@
+\hypertarget{classUCougUVControlFins}{}\doxysection{UCoug\+UVControl\+Fins Class Reference}
+\label{classUCougUVControlFins}\index{UCougUVControlFins@{UCougUVControlFins}}
+
+
+{\ttfamily \#include $<$Coug\+UVControl\+Fins.\+h$>$}
+
+
+
+Inheritance diagram for UCoug\+UVControl\+Fins\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classUCougUVControlFins__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UCoug\+UVControl\+Fins\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classUCougUVControlFins__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUCougUVControlFins_ad181a2d68d1c6ef08f515eb205b52872}{UCoug\+UVControl\+Fins}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+void \mbox{\hyperlink{classUCougUVControlFins_a76564bac9acaa6673e8f69255fb6d307}{Execute}} (void $\ast$const Command\+Array, void $\ast$const Input\+Command, float Delta\+Seconds) override
+\item 
+unsigned int \mbox{\hyperlink{classUCougUVControlFins_acde1beeece3c20c293ff03644cffc080}{Get\+Control\+Scheme\+Size\+In\+Bytes}} () const override
+\item 
+void \mbox{\hyperlink{classUCougUVControlFins_a9433bbf0cc387fb819c440b20e3de29e}{Set\+Controller}} (\mbox{\hyperlink{classAHolodeckPawnController}{AHolodeck\+Pawn\+Controller}} $\ast$const Controller)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classUCougUVControlFins}{UCoug\+UVControl\+Fins}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUCougUVControlFins_ad181a2d68d1c6ef08f515eb205b52872}\label{classUCougUVControlFins_ad181a2d68d1c6ef08f515eb205b52872}} 
+\index{UCougUVControlFins@{UCougUVControlFins}!UCougUVControlFins@{UCougUVControlFins}}
+\index{UCougUVControlFins@{UCougUVControlFins}!UCougUVControlFins@{UCougUVControlFins}}
+\doxysubsubsection{\texorpdfstring{UCougUVControlFins()}{UCougUVControlFins()}}
+{\footnotesize\ttfamily UCoug\+UVControl\+Fins\+::\+UCoug\+UVControl\+Fins (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUCougUVControlFins_a76564bac9acaa6673e8f69255fb6d307}\label{classUCougUVControlFins_a76564bac9acaa6673e8f69255fb6d307}} 
+\index{UCougUVControlFins@{UCougUVControlFins}!Execute@{Execute}}
+\index{Execute@{Execute}!UCougUVControlFins@{UCougUVControlFins}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void UCoug\+UVControl\+Fins\+::\+Execute (\begin{DoxyParamCaption}\item[{void $\ast$const}]{Command\+Array,  }\item[{void $\ast$const}]{Input\+Command,  }\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckControlScheme_a84185ec2e7515e8afd21e9b7567e6ae0}{UHolodeck\+Control\+Scheme}}.
+
+\mbox{\Hypertarget{classUCougUVControlFins_acde1beeece3c20c293ff03644cffc080}\label{classUCougUVControlFins_acde1beeece3c20c293ff03644cffc080}} 
+\index{UCougUVControlFins@{UCougUVControlFins}!GetControlSchemeSizeInBytes@{GetControlSchemeSizeInBytes}}
+\index{GetControlSchemeSizeInBytes@{GetControlSchemeSizeInBytes}!UCougUVControlFins@{UCougUVControlFins}}
+\doxysubsubsection{\texorpdfstring{GetControlSchemeSizeInBytes()}{GetControlSchemeSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int UCoug\+UVControl\+Fins\+::\+Get\+Control\+Scheme\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+NOTE\+: These go counter-\/clockwise, starting in front right 0\+: Left Fin 1\+: Top Fin 2\+: Right Fin 3\+: Bottom Fin 4\+: Thruster 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckControlScheme_abf94aa5488c43e99108ffc68a213e145}{UHolodeck\+Control\+Scheme}}.
+
+\mbox{\Hypertarget{classUCougUVControlFins_a9433bbf0cc387fb819c440b20e3de29e}\label{classUCougUVControlFins_a9433bbf0cc387fb819c440b20e3de29e}} 
+\index{UCougUVControlFins@{UCougUVControlFins}!SetController@{SetController}}
+\index{SetController@{SetController}!UCougUVControlFins@{UCougUVControlFins}}
+\doxysubsubsection{\texorpdfstring{SetController()}{SetController()}}
+{\footnotesize\ttfamily void UCoug\+UVControl\+Fins\+::\+Set\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAHolodeckPawnController}{AHolodeck\+Pawn\+Controller}} $\ast$const}]{Controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{CougUVControlFins_8h}{Coug\+UVControl\+Fins.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{CougUVControlFins_8cpp}{Coug\+UVControl\+Fins.\+cpp}}\end{DoxyCompactItemize}

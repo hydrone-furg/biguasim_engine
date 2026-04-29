@@ -1,0 +1,167 @@
+\hypertarget{classATagger}{}\doxysection{ATagger Class Reference}
+\label{classATagger}\index{ATagger@{ATagger}}
+
+
+{\ttfamily \#include $<$Tagger.\+h$>$}
+
+
+
+Inheritance diagram for ATagger\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{classATagger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ATagger\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{classATagger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classATagger_aa719f4c59cd510c07f5bda6e0e55f58f}{ATagger}} ()
+\item 
+virtual void \mbox{\hyperlink{classATagger_a9aa98ca4e01014458cc5c6b6976920dd}{Begin\+Play}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classATagger_aeefc99b84c6135404b8bb0afeebe59d4}{Tag\+Actor}} (const AActor \&Actor, bool b\+Should\+Tag\+For\+Semantic\+Segmentation)
+\item 
+static void \mbox{\hyperlink{classATagger_a39c7e6644008d81f6be57232070243e0}{Tag\+Actors\+In\+Level}} (UWorld \&World, bool b\+Should\+Tag\+For\+Semantic\+Segmentation)
+\item 
+static void \mbox{\hyperlink{classATagger_a936026bb2a713845f2d829c5a78f88ad}{Tag\+Actors\+In\+Level}} (ULevel \&Level, bool b\+Should\+Tag\+For\+Semantic\+Segmentation)
+\item 
+static \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} \mbox{\hyperlink{classATagger_ad52b338128a912d09b3dff9c7e7c0c13}{Get\+Tag\+Of\+Tagged\+Component}} (const UPrimitive\+Component \&Component)
+\item 
+static void \mbox{\hyperlink{classATagger_a278e202f6d86913155b761600f09920b}{Get\+Tags\+Of\+Tagged\+Actor}} (const AActor \&Actor, TSet$<$ \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} $>$ \&Tags)
+\item 
+static bool \mbox{\hyperlink{classATagger_a67385a801344e13e83c22f069d040456}{Match\+Component}} (const UPrimitive\+Component \&Component, \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} Tag)
+\begin{DoxyCompactList}\small\item\em Return true if {\itshape Component} has been tagged with the given {\itshape Tag}. \end{DoxyCompactList}\item 
+static FString \mbox{\hyperlink{classATagger_a68cad80555561e55e1ff8127defdb262}{Get\+Tag\+As\+String}} (\mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} Tag)
+\item 
+static \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} \mbox{\hyperlink{classATagger_a353a570cd9051ee56a8e42b09b0b304f}{Get\+Label\+By\+Folder\+Name}} (const FString \&String)
+\begin{DoxyCompactList}\small\item\em Method that computes the label corresponding to a folder path. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} \mbox{\hyperlink{classATagger_a72d98dd3b1491b1699079b9003808896}{Get\+Label\+By\+Path}} (const TObject\+Ptr$<$ T $>$ Object)
+\item 
+static void \mbox{\hyperlink{classATagger_a1f832d954fbb337b2eaa26d0bf01c103}{Set\+Stencil\+Value}} (UPrimitive\+Component \&Component, const \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} \&Label, const bool b\+Should\+Set\+Render\+Custom\+Depth)
+\item 
+static FLinear\+Color \mbox{\hyperlink{classATagger_af038a8608857f9bd7414139ca2c12251}{Get\+Actor\+Label\+Color}} (const AActor \&Actor, const \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} \&Label)
+\item 
+static bool \mbox{\hyperlink{classATagger_af8572fb9908c2a7c6b819151089c4a27}{Is\+Thing}} (const \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} \&Label)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classATagger_aa719f4c59cd510c07f5bda6e0e55f58f}\label{classATagger_aa719f4c59cd510c07f5bda6e0e55f58f}} 
+\index{ATagger@{ATagger}!ATagger@{ATagger}}
+\index{ATagger@{ATagger}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{ATagger()}{ATagger()}}
+{\footnotesize\ttfamily ATagger\+::\+ATagger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classATagger_a9aa98ca4e01014458cc5c6b6976920dd}\label{classATagger_a9aa98ca4e01014458cc5c6b6976920dd}} 
+\index{ATagger@{ATagger}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily virtual void ATagger\+::\+Begin\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classATagger_af038a8608857f9bd7414139ca2c12251}\label{classATagger_af038a8608857f9bd7414139ca2c12251}} 
+\index{ATagger@{ATagger}!GetActorLabelColor@{GetActorLabelColor}}
+\index{GetActorLabelColor@{GetActorLabelColor}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{GetActorLabelColor()}{GetActorLabelColor()}}
+{\footnotesize\ttfamily FLinear\+Color ATagger\+::\+Get\+Actor\+Label\+Color (\begin{DoxyParamCaption}\item[{const AActor \&}]{Actor,  }\item[{const \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} \&}]{Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classATagger_a353a570cd9051ee56a8e42b09b0b304f}\label{classATagger_a353a570cd9051ee56a8e42b09b0b304f}} 
+\index{ATagger@{ATagger}!GetLabelByFolderName@{GetLabelByFolderName}}
+\index{GetLabelByFolderName@{GetLabelByFolderName}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{GetLabelByFolderName()}{GetLabelByFolderName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} ATagger\+::\+Get\+Label\+By\+Folder\+Name (\begin{DoxyParamCaption}\item[{const FString \&}]{String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method that computes the label corresponding to a folder path. 
+
+\mbox{\Hypertarget{classATagger_a72d98dd3b1491b1699079b9003808896}\label{classATagger_a72d98dd3b1491b1699079b9003808896}} 
+\index{ATagger@{ATagger}!GetLabelByPath@{GetLabelByPath}}
+\index{GetLabelByPath@{GetLabelByPath}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{GetLabelByPath()}{GetLabelByPath()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} ATagger\+::\+Get\+Label\+By\+Path (\begin{DoxyParamCaption}\item[{const TObject\+Ptr$<$ T $>$}]{Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Method that computes the label corresponding to an specific object using the folder path in which it is stored \mbox{\Hypertarget{classATagger_a68cad80555561e55e1ff8127defdb262}\label{classATagger_a68cad80555561e55e1ff8127defdb262}} 
+\index{ATagger@{ATagger}!GetTagAsString@{GetTagAsString}}
+\index{GetTagAsString@{GetTagAsString}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{GetTagAsString()}{GetTagAsString()}}
+{\footnotesize\ttfamily FString ATagger\+::\+Get\+Tag\+As\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}}}]{Tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Retrieve the tags of an already tagged actor. City\+Object\+Label\+::\+None is not added to the array. \mbox{\Hypertarget{classATagger_ad52b338128a912d09b3dff9c7e7c0c13}\label{classATagger_ad52b338128a912d09b3dff9c7e7c0c13}} 
+\index{ATagger@{ATagger}!GetTagOfTaggedComponent@{GetTagOfTaggedComponent}}
+\index{GetTagOfTaggedComponent@{GetTagOfTaggedComponent}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{GetTagOfTaggedComponent()}{GetTagOfTaggedComponent()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} ATagger\+::\+Get\+Tag\+Of\+Tagged\+Component (\begin{DoxyParamCaption}\item[{const UPrimitive\+Component \&}]{Component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classATagger_a278e202f6d86913155b761600f09920b}\label{classATagger_a278e202f6d86913155b761600f09920b}} 
+\index{ATagger@{ATagger}!GetTagsOfTaggedActor@{GetTagsOfTaggedActor}}
+\index{GetTagsOfTaggedActor@{GetTagsOfTaggedActor}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{GetTagsOfTaggedActor()}{GetTagsOfTaggedActor()}}
+{\footnotesize\ttfamily void ATagger\+::\+Get\+Tags\+Of\+Tagged\+Actor (\begin{DoxyParamCaption}\item[{const AActor \&}]{Actor,  }\item[{TSet$<$ \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} $>$ \&}]{Tags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Retrieve the tags of an already tagged actor. City\+Object\+Label\+::\+None is not added to the array. \mbox{\Hypertarget{classATagger_af8572fb9908c2a7c6b819151089c4a27}\label{classATagger_af8572fb9908c2a7c6b819151089c4a27}} 
+\index{ATagger@{ATagger}!IsThing@{IsThing}}
+\index{IsThing@{IsThing}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{IsThing()}{IsThing()}}
+{\footnotesize\ttfamily bool ATagger\+::\+Is\+Thing (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} \&}]{Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classATagger_a67385a801344e13e83c22f069d040456}\label{classATagger_a67385a801344e13e83c22f069d040456}} 
+\index{ATagger@{ATagger}!MatchComponent@{MatchComponent}}
+\index{MatchComponent@{MatchComponent}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{MatchComponent()}{MatchComponent()}}
+{\footnotesize\ttfamily static bool ATagger\+::\+Match\+Component (\begin{DoxyParamCaption}\item[{const UPrimitive\+Component \&}]{Component,  }\item[{\mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}}}]{Tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return true if {\itshape Component} has been tagged with the given {\itshape Tag}. 
+
+\mbox{\Hypertarget{classATagger_a1f832d954fbb337b2eaa26d0bf01c103}\label{classATagger_a1f832d954fbb337b2eaa26d0bf01c103}} 
+\index{ATagger@{ATagger}!SetStencilValue@{SetStencilValue}}
+\index{SetStencilValue@{SetStencilValue}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{SetStencilValue()}{SetStencilValue()}}
+{\footnotesize\ttfamily void ATagger\+::\+Set\+Stencil\+Value (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \&}]{Component,  }\item[{const \mbox{\hyperlink{namespaceholoocean_afb9e864582c4d92b442ae2d6ea8aa007}{holoocean\+::\+Object\+Label}} \&}]{Label,  }\item[{const bool}]{b\+Should\+Set\+Render\+Custom\+Depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classATagger_aeefc99b84c6135404b8bb0afeebe59d4}\label{classATagger_aeefc99b84c6135404b8bb0afeebe59d4}} 
+\index{ATagger@{ATagger}!TagActor@{TagActor}}
+\index{TagActor@{TagActor}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{TagActor()}{TagActor()}}
+{\footnotesize\ttfamily void ATagger\+::\+Tag\+Actor (\begin{DoxyParamCaption}\item[{const AActor \&}]{Actor,  }\item[{bool}]{b\+Should\+Tag\+For\+Semantic\+Segmentation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set the tag of an actor.
+
+If b\+Tag\+For\+Semantic\+Segmentation true, activate the custom depth pass. This pass is necessary for rendering the semantic segmentation. However, it may add a performance penalty since occlusion doesn\textquotesingle{}t seem to be applied to objects having this value active. \mbox{\Hypertarget{classATagger_a936026bb2a713845f2d829c5a78f88ad}\label{classATagger_a936026bb2a713845f2d829c5a78f88ad}} 
+\index{ATagger@{ATagger}!TagActorsInLevel@{TagActorsInLevel}}
+\index{TagActorsInLevel@{TagActorsInLevel}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{TagActorsInLevel()}{TagActorsInLevel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ATagger\+::\+Tag\+Actors\+In\+Level (\begin{DoxyParamCaption}\item[{ULevel \&}]{Level,  }\item[{bool}]{b\+Should\+Tag\+For\+Semantic\+Segmentation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classATagger_a39c7e6644008d81f6be57232070243e0}\label{classATagger_a39c7e6644008d81f6be57232070243e0}} 
+\index{ATagger@{ATagger}!TagActorsInLevel@{TagActorsInLevel}}
+\index{TagActorsInLevel@{TagActorsInLevel}!ATagger@{ATagger}}
+\doxysubsubsection{\texorpdfstring{TagActorsInLevel()}{TagActorsInLevel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ATagger\+::\+Tag\+Actors\+In\+Level (\begin{DoxyParamCaption}\item[{UWorld \&}]{World,  }\item[{bool}]{b\+Should\+Tag\+For\+Semantic\+Segmentation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set the tag of every actor in level.
+
+If should\+Tag\+For\+Semantic\+Segmentation true, activate the custom depth pass. This pass is necessary for rendering the semantic segmentation. However, it may add a performance penalty since occlusion doesn\textquotesingle{}t seem to be applied to objects having this value active. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Utils/\+Public/\mbox{\hyperlink{Tagger_8h}{Tagger.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Utils/\+Private/\mbox{\hyperlink{Tagger_8cpp}{Tagger.\+cpp}}\end{DoxyCompactItemize}

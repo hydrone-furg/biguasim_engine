@@ -1,0 +1,82 @@
+\hypertarget{BlueBoatControlPD_8h}{}\doxysection{/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\+Blue\+Boat\+Control\+PD.h File Reference}
+\label{BlueBoatControlPD_8h}\index{/home/lh/Documents/bs-\/engine/Source/Holodeck/Agents/Public/BlueBoatControlPD.h@{/home/lh/Documents/bs-\/engine/Source/Holodeck/Agents/Public/BlueBoatControlPD.h}}
+{\ttfamily \#include \char`\"{}Holodeck.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Holodeck\+Pawn\+Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Blue\+Boat.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Holodeck\+Control\+Scheme.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Simple\+PID.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Blue\+Boat\+Control\+PD.\+generated.\+h\char`\"{}}\newline
+Include dependency graph for Blue\+Boat\+Control\+PD.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BlueBoatControlPD_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BlueBoatControlPD_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classUBlueBoatControlPD}{UBlue\+Boat\+Control\+PD}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{BlueBoatControlPD_8h_a90e96b064437f33bb94da818c6767511}{BB\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+FORCE}} = 1000
+\item 
+const float \mbox{\hyperlink{BlueBoatControlPD_8h_a7a1cdcda17c88349b4052afe2a59f2df}{BB\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+TORQUE}} = 1000
+\item 
+const float \mbox{\hyperlink{BlueBoatControlPD_8h_ad61d65d842c9005e8d25d224f949e1a5}{BB\+\_\+\+POS\+\_\+P}} = 100
+\item 
+const float \mbox{\hyperlink{BlueBoatControlPD_8h_a37383d2d9564c07a15971f5da1ca24a0}{BB\+\_\+\+POS\+\_\+D}} = 50
+\item 
+const float \mbox{\hyperlink{BlueBoatControlPD_8h_a44c35720ff44542a27f38eaabfeca0ec}{BB\+\_\+\+YAW\+\_\+P}} = 15
+\item 
+const float \mbox{\hyperlink{BlueBoatControlPD_8h_aeb487fb3d6501cdcb3e050630d583d44}{BB\+\_\+\+YAW\+\_\+D}} = 7
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{BlueBoatControlPD_8h_a90e96b064437f33bb94da818c6767511}\label{BlueBoatControlPD_8h_a90e96b064437f33bb94da818c6767511}} 
+\index{BlueBoatControlPD.h@{BlueBoatControlPD.h}!BB\_CONTROL\_MAX\_FORCE@{BB\_CONTROL\_MAX\_FORCE}}
+\index{BB\_CONTROL\_MAX\_FORCE@{BB\_CONTROL\_MAX\_FORCE}!BlueBoatControlPD.h@{BlueBoatControlPD.h}}
+\doxysubsubsection{\texorpdfstring{BB\_CONTROL\_MAX\_FORCE}{BB\_CONTROL\_MAX\_FORCE}}
+{\footnotesize\ttfamily const float BB\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+FORCE = 1000}
+
+\mbox{\Hypertarget{BlueBoatControlPD_8h_a7a1cdcda17c88349b4052afe2a59f2df}\label{BlueBoatControlPD_8h_a7a1cdcda17c88349b4052afe2a59f2df}} 
+\index{BlueBoatControlPD.h@{BlueBoatControlPD.h}!BB\_CONTROL\_MAX\_TORQUE@{BB\_CONTROL\_MAX\_TORQUE}}
+\index{BB\_CONTROL\_MAX\_TORQUE@{BB\_CONTROL\_MAX\_TORQUE}!BlueBoatControlPD.h@{BlueBoatControlPD.h}}
+\doxysubsubsection{\texorpdfstring{BB\_CONTROL\_MAX\_TORQUE}{BB\_CONTROL\_MAX\_TORQUE}}
+{\footnotesize\ttfamily const float BB\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+TORQUE = 1000}
+
+\mbox{\Hypertarget{BlueBoatControlPD_8h_a37383d2d9564c07a15971f5da1ca24a0}\label{BlueBoatControlPD_8h_a37383d2d9564c07a15971f5da1ca24a0}} 
+\index{BlueBoatControlPD.h@{BlueBoatControlPD.h}!BB\_POS\_D@{BB\_POS\_D}}
+\index{BB\_POS\_D@{BB\_POS\_D}!BlueBoatControlPD.h@{BlueBoatControlPD.h}}
+\doxysubsubsection{\texorpdfstring{BB\_POS\_D}{BB\_POS\_D}}
+{\footnotesize\ttfamily const float BB\+\_\+\+POS\+\_\+D = 50}
+
+\mbox{\Hypertarget{BlueBoatControlPD_8h_ad61d65d842c9005e8d25d224f949e1a5}\label{BlueBoatControlPD_8h_ad61d65d842c9005e8d25d224f949e1a5}} 
+\index{BlueBoatControlPD.h@{BlueBoatControlPD.h}!BB\_POS\_P@{BB\_POS\_P}}
+\index{BB\_POS\_P@{BB\_POS\_P}!BlueBoatControlPD.h@{BlueBoatControlPD.h}}
+\doxysubsubsection{\texorpdfstring{BB\_POS\_P}{BB\_POS\_P}}
+{\footnotesize\ttfamily const float BB\+\_\+\+POS\+\_\+P = 100}
+
+\mbox{\Hypertarget{BlueBoatControlPD_8h_aeb487fb3d6501cdcb3e050630d583d44}\label{BlueBoatControlPD_8h_aeb487fb3d6501cdcb3e050630d583d44}} 
+\index{BlueBoatControlPD.h@{BlueBoatControlPD.h}!BB\_YAW\_D@{BB\_YAW\_D}}
+\index{BB\_YAW\_D@{BB\_YAW\_D}!BlueBoatControlPD.h@{BlueBoatControlPD.h}}
+\doxysubsubsection{\texorpdfstring{BB\_YAW\_D}{BB\_YAW\_D}}
+{\footnotesize\ttfamily const float BB\+\_\+\+YAW\+\_\+D = 7}
+
+\mbox{\Hypertarget{BlueBoatControlPD_8h_a44c35720ff44542a27f38eaabfeca0ec}\label{BlueBoatControlPD_8h_a44c35720ff44542a27f38eaabfeca0ec}} 
+\index{BlueBoatControlPD.h@{BlueBoatControlPD.h}!BB\_YAW\_P@{BB\_YAW\_P}}
+\index{BB\_YAW\_P@{BB\_YAW\_P}!BlueBoatControlPD.h@{BlueBoatControlPD.h}}
+\doxysubsubsection{\texorpdfstring{BB\_YAW\_P}{BB\_YAW\_P}}
+{\footnotesize\ttfamily const float BB\+\_\+\+YAW\+\_\+P = 15}
+

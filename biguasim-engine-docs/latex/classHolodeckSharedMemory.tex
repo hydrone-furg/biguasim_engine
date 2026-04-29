@@ -1,0 +1,92 @@
+\hypertarget{classHolodeckSharedMemory}{}\doxysection{Holodeck\+Shared\+Memory Class Reference}
+\label{classHolodeckSharedMemory}\index{HolodeckSharedMemory@{HolodeckSharedMemory}}
+
+
+A cross-\/platform abstraction for memory-\/mapped files (Shared Memory). Handles the low-\/level OS calls to allocate, map, and release shared RAM blocks for both Windows and Linux, enabling high-\/speed IPC (Inter-\/\+Process Communication) between the Unreal Engine and the Python client.  
+
+
+
+
+{\ttfamily \#include $<$Holodeck\+Shared\+Memory.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHolodeckSharedMemory_a1a3e3f63dd94734d83ea4c48197b76f4}{Holodeck\+Shared\+Memory}} (const std\+::string \&Name, unsigned int Buffer\+Size, const std\+::string \&UUID)
+\begin{DoxyCompactList}\small\item\em Constructs and allocates a memory-\/mapped file. The final system path for the memory block is constructed by prepending \char`\"{}/\+HOLODECK\+\_\+\+MEM\+\_\+\char`\"{} and the UUID to the provided Name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHolodeckSharedMemory_a994a10967a70698ebe4f0ac12362e7d3}{$\sim$\+Holodeck\+Shared\+Memory}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Safely unmaps the memory view and closes the OS handles. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classHolodeckSharedMemory_ad3581adcb92f7cd338a9fc63f7157afd}{Get\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the pointer to the start of the mapped memory block. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classHolodeckSharedMemory_a02924598b0ac81465de4906e4181f5f4}{Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the allocated memory mapped file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A cross-\/platform abstraction for memory-\/mapped files (Shared Memory). Handles the low-\/level OS calls to allocate, map, and release shared RAM blocks for both Windows and Linux, enabling high-\/speed IPC (Inter-\/\+Process Communication) between the Unreal Engine and the Python client. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHolodeckSharedMemory_a1a3e3f63dd94734d83ea4c48197b76f4}\label{classHolodeckSharedMemory_a1a3e3f63dd94734d83ea4c48197b76f4}} 
+\index{HolodeckSharedMemory@{HolodeckSharedMemory}!HolodeckSharedMemory@{HolodeckSharedMemory}}
+\index{HolodeckSharedMemory@{HolodeckSharedMemory}!HolodeckSharedMemory@{HolodeckSharedMemory}}
+\doxysubsubsection{\texorpdfstring{HolodeckSharedMemory()}{HolodeckSharedMemory()}}
+{\footnotesize\ttfamily Holodeck\+Shared\+Memory\+::\+Holodeck\+Shared\+Memory (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Name,  }\item[{unsigned int}]{Buffer\+Size,  }\item[{const std\+::string \&}]{UUID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs and allocates a memory-\/mapped file. The final system path for the memory block is constructed by prepending \char`\"{}/\+HOLODECK\+\_\+\+MEM\+\_\+\char`\"{} and the UUID to the provided Name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & The specific identifier for this memory block (e.\+g., \char`\"{}auv0\+\_\+\+Imaging\+Sonar\char`\"{}). \\
+\hline
+{\em Buffer\+Size} & The exact number of bytes to allocate in RAM. \\
+\hline
+{\em UUID} & A unique identifier for the engine instance to prevent collisions when running multiple instances. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHolodeckSharedMemory_a994a10967a70698ebe4f0ac12362e7d3}\label{classHolodeckSharedMemory_a994a10967a70698ebe4f0ac12362e7d3}} 
+\index{HolodeckSharedMemory@{HolodeckSharedMemory}!````~HolodeckSharedMemory@{$\sim$HolodeckSharedMemory}}
+\index{````~HolodeckSharedMemory@{$\sim$HolodeckSharedMemory}!HolodeckSharedMemory@{HolodeckSharedMemory}}
+\doxysubsubsection{\texorpdfstring{$\sim$HolodeckSharedMemory()}{~HolodeckSharedMemory()}}
+{\footnotesize\ttfamily Holodeck\+Shared\+Memory\+::$\sim$\+Holodeck\+Shared\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. Safely unmaps the memory view and closes the OS handles. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHolodeckSharedMemory_ad3581adcb92f7cd338a9fc63f7157afd}\label{classHolodeckSharedMemory_ad3581adcb92f7cd338a9fc63f7157afd}} 
+\index{HolodeckSharedMemory@{HolodeckSharedMemory}!GetPtr@{GetPtr}}
+\index{GetPtr@{GetPtr}!HolodeckSharedMemory@{HolodeckSharedMemory}}
+\doxysubsubsection{\texorpdfstring{GetPtr()}{GetPtr()}}
+{\footnotesize\ttfamily void$\ast$ Holodeck\+Shared\+Memory\+::\+Get\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the pointer to the start of the mapped memory block. 
+
+\begin{DoxyReturn}{Returns}
+A void pointer to the memory buffer. Cast this to the appropriate type before writing data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHolodeckSharedMemory_a02924598b0ac81465de4906e4181f5f4}\label{classHolodeckSharedMemory_a02924598b0ac81465de4906e4181f5f4}} 
+\index{HolodeckSharedMemory@{HolodeckSharedMemory}!Size@{Size}}
+\index{Size@{Size}!HolodeckSharedMemory@{HolodeckSharedMemory}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily int Holodeck\+Shared\+Memory\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the size of the allocated memory mapped file. 
+
+\begin{DoxyReturn}{Returns}
+The size in bytes. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Public/\mbox{\hyperlink{HolodeckSharedMemory_8h}{Holodeck\+Shared\+Memory.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Private/\mbox{\hyperlink{HolodeckSharedMemory_8cpp}{Holodeck\+Shared\+Memory.\+cpp}}\end{DoxyCompactItemize}

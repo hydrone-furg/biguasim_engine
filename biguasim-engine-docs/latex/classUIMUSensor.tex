@@ -1,0 +1,222 @@
+\hypertarget{classUIMUSensor}{}\doxysection{UIMUSensor Class Reference}
+\label{classUIMUSensor}\index{UIMUSensor@{UIMUSensor}}
+
+
+Simulated Inertial Measurement Unit (IMU). Inherits from the Holodeck\+Sensor class. Calculates and returns a 6-\/DOF data array representing local linear acceleration and angular velocity (gyroscope). Simulates real-\/world sensor imperfections including Gaussian noise and Random Walk Bias accumulation.  
+
+
+
+
+{\ttfamily \#include $<$IMUSensor.\+h$>$}
+
+
+
+Inheritance diagram for UIMUSensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classUIMUSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UIMUSensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIMUSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUIMUSensor_adb5c1c86e1a743bf898c0a7227a770ce}{UIMUSensor}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUIMUSensor_a93d34496183082bf372de197218c5163}{Initialize\+Sensor}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the sensor and caches physics components. \end{DoxyCompactList}\item 
+FVector \mbox{\hyperlink{classUIMUSensor_a392b52e7f6d612e375dae96cd038e6c1}{Get\+Acceleration\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current linear acceleration vector. \end{DoxyCompactList}\item 
+FVector \mbox{\hyperlink{classUIMUSensor_aed6d8094a9908bf71547288740838967}{Get\+Angular\+Velocity\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current angular velocity vector. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUIMUSensor_ab30c55892dbed8344ba797730fbf6d6c}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\begin{DoxyCompactList}\small\item\em Parses JSON parameters to set noise limits and bias configurations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUIMUSensor_a947669bf4a49183747bfd76e2eac4fb5}{Get\+Num\+Items}} () override
+\begin{DoxyCompactList}\small\item\em Gets the number of items this sensor returns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUIMUSensor_ab131f040c597b84d2ff51447d3cdd924}{Get\+Item\+Size}} () override
+\begin{DoxyCompactList}\small\item\em Gets the size of each item in bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIMUSensor_aaf6c1c5bacb2a7f80ceabea46d961518}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\begin{DoxyCompactList}\small\item\em Main tick function calculating kinematics and applying noise models. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classUIMUSensor_a43e84adff13fe3ec9bba4c49b8553ce4}{Return\+Bias}} = false
+\begin{DoxyCompactList}\small\item\em Determines if the sensor should export its internal accumulated bias state to the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Simulated Inertial Measurement Unit (IMU). Inherits from the Holodeck\+Sensor class. Calculates and returns a 6-\/DOF data array representing local linear acceleration and angular velocity (gyroscope). Simulates real-\/world sensor imperfections including Gaussian noise and Random Walk Bias accumulation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUIMUSensor_adb5c1c86e1a743bf898c0a7227a770ce}\label{classUIMUSensor_adb5c1c86e1a743bf898c0a7227a770ce}} 
+\index{UIMUSensor@{UIMUSensor}!UIMUSensor@{UIMUSensor}}
+\index{UIMUSensor@{UIMUSensor}!UIMUSensor@{UIMUSensor}}
+\doxysubsubsection{\texorpdfstring{UIMUSensor()}{UIMUSensor()}}
+{\footnotesize\ttfamily UIMUSensor\+::\+UIMUSensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Default Constructor. Sets the sensor name and enables ticking every frame. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUIMUSensor_a392b52e7f6d612e375dae96cd038e6c1}\label{classUIMUSensor_a392b52e7f6d612e375dae96cd038e6c1}} 
+\index{UIMUSensor@{UIMUSensor}!GetAccelerationVector@{GetAccelerationVector}}
+\index{GetAccelerationVector@{GetAccelerationVector}!UIMUSensor@{UIMUSensor}}
+\doxysubsubsection{\texorpdfstring{GetAccelerationVector()}{GetAccelerationVector()}}
+{\footnotesize\ttfamily FVector UIMUSensor\+::\+Get\+Acceleration\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current linear acceleration vector. 
+
+Retrieves the current local linear acceleration vector.
+
+\begin{DoxyReturn}{Returns}
+FVector representing local acceleration.
+
+The acceleration vector (X, Y, Z). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUIMUSensor_aed6d8094a9908bf71547288740838967}\label{classUIMUSensor_aed6d8094a9908bf71547288740838967}} 
+\index{UIMUSensor@{UIMUSensor}!GetAngularVelocityVector@{GetAngularVelocityVector}}
+\index{GetAngularVelocityVector@{GetAngularVelocityVector}!UIMUSensor@{UIMUSensor}}
+\doxysubsubsection{\texorpdfstring{GetAngularVelocityVector()}{GetAngularVelocityVector()}}
+{\footnotesize\ttfamily FVector UIMUSensor\+::\+Get\+Angular\+Velocity\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current angular velocity vector. 
+
+Retrieves the current local angular velocity vector.
+
+\begin{DoxyReturn}{Returns}
+FVector representing local angular velocity.
+
+The angular velocity vector (Roll, Pitch, Yaw). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUIMUSensor_ab131f040c597b84d2ff51447d3cdd924}\label{classUIMUSensor_ab131f040c597b84d2ff51447d3cdd924}} 
+\index{UIMUSensor@{UIMUSensor}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UIMUSensor@{UIMUSensor}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int UIMUSensor\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the size of each item in bytes. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUIMUSensor_a947669bf4a49183747bfd76e2eac4fb5}\label{classUIMUSensor_a947669bf4a49183747bfd76e2eac4fb5}} 
+\index{UIMUSensor@{UIMUSensor}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!UIMUSensor@{UIMUSensor}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily int UIMUSensor\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of items this sensor returns. 
+
+$\ast$\begin{DoxyReturn}{Returns}
+12 items if Return\+Bias is true (6 IMU data + 6 Bias data), otherwise 6 items. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUIMUSensor_a93d34496183082bf372de197218c5163}\label{classUIMUSensor_a93d34496183082bf372de197218c5163}} 
+\index{UIMUSensor@{UIMUSensor}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UIMUSensor@{UIMUSensor}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UIMUSensor\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the sensor and caches physics components. 
+
+Initializes the sensor, caches the parent component, and extracts world gravity. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUIMUSensor_ab30c55892dbed8344ba797730fbf6d6c}\label{classUIMUSensor_ab30c55892dbed8344ba797730fbf6d6c}} 
+\index{UIMUSensor@{UIMUSensor}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!UIMUSensor@{UIMUSensor}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void UIMUSensor\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Parses JSON parameters to set noise limits and bias configurations. 
+
+Parses the JSON configuration sent by the Python client to dynamically set sensor parameters. Extracts the noise matrices (Sigma and Covariance) for Acceleration and Angular Velocity. Also parses the Random Walk Bias parameters for both, allowing realistic IMU drift simulation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Parms\+Json} & JSON string containing configuration.\\
+\hline
+{\em Parms\+Json} & The JSON string containing the sensor configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_a29fe9c31ded6b9b4a898ec14aff1d8ea}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUIMUSensor_aaf6c1c5bacb2a7f80ceabea46d961518}\label{classUIMUSensor_aaf6c1c5bacb2a7f80ceabea46d961518}} 
+\index{UIMUSensor@{UIMUSensor}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UIMUSensor@{UIMUSensor}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UIMUSensor\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Main tick function calculating kinematics and applying noise models. 
+
+Main execution loop that calculates and reports IMU data. Computes the 6-\/DOF inertial data, applies coordinate transformations, introduces Gaussian noise and random walk bias, and writes to shared memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & The time elapsed since the last tick. \\
+\hline
+{\em Tick\+Type} & The type of tick this is. \\
+\hline
+{\em This\+Tick\+Function} & Tick function that is calling this. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}{UHolodeck\+Sensor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUIMUSensor_a43e84adff13fe3ec9bba4c49b8553ce4}\label{classUIMUSensor_a43e84adff13fe3ec9bba4c49b8553ce4}} 
+\index{UIMUSensor@{UIMUSensor}!ReturnBias@{ReturnBias}}
+\index{ReturnBias@{ReturnBias}!UIMUSensor@{UIMUSensor}}
+\doxysubsubsection{\texorpdfstring{ReturnBias}{ReturnBias}}
+{\footnotesize\ttfamily bool UIMUSensor\+::\+Return\+Bias = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Determines if the sensor should export its internal accumulated bias state to the buffer. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{IMUSensor_8h}{IMUSensor.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{IMUSensor_8cpp}{IMUSensor.\+cpp}}\end{DoxyCompactItemize}

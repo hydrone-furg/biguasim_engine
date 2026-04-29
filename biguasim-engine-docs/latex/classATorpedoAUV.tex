@@ -1,0 +1,277 @@
+\hypertarget{classATorpedoAUV}{}\doxysection{ATorpedo\+AUV Class Reference}
+\label{classATorpedoAUV}\index{ATorpedoAUV@{ATorpedoAUV}}
+
+
+Torpedo-\/style Autonomous Underwater Vehicle (AUV) agent. Inherits from the Holodeck\+Buoyant\+Agent class. On any tick this object will apply the given forces. Desired values must be set by a controller.  
+
+
+
+
+{\ttfamily \#include $<$Torpedo\+AUV.\+h$>$}
+
+
+
+Inheritance diagram for ATorpedo\+AUV\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classATorpedoAUV__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ATorpedo\+AUV\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classATorpedoAUV__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classATorpedoAUV_aa267ffa5899291b38a5547a73400ea7b}{ATorpedo\+AUV}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classATorpedoAUV_a6c8f0ee8b83b97083a4f8170964ad119}{Initialize\+Agent}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the agent and its physical components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classATorpedoAUV_a0bafe49db9633e54a7fbf7d0be728ace}{Tick}} (float Delta\+Seconds) override
+\begin{DoxyCompactList}\small\item\em Called each frame. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classATorpedoAUV_aeb6100707536e0faee967525dad18aab}{Get\+Raw\+Action\+Size\+In\+Bytes}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the size of the action buffer in bytes. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classATorpedoAUV_a16aa2a5800b38dff9163374e35ebe038}{Get\+Raw\+Action\+Buffer}} () const override
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the raw action buffer. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classATorpedoAUV_ace3c943d72fa072a1f85363f6d716d20}{Get\+Acceleration\+Limit}} () override
+\begin{DoxyCompactList}\small\item\em Gets the acceleration limit for the agent. Allows agent to fall up to $\sim$8 meters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classATorpedoAUV_adc9db203da8df0b2f4095a1ad32dd9a5}{Apply\+Fin}} (int i, float command)
+\begin{DoxyCompactList}\small\item\em Calculates and applies lift and drag forces for a specific fin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classATorpedoAUV_aee3ab184484e3492de40fe98971a7ade}{Apply\+Thrust}} (float thrust)
+\begin{DoxyCompactList}\small\item\em Applies linear thrust from the main rear propeller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classATorpedoAUV_a4052e3afcb3746232f4bcdc3f3fdcdfd}{Enable\+Damping}} ()
+\begin{DoxyCompactList}\small\item\em Enables linear and angular damping for the AUV\textquotesingle{}s physical mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FVector \mbox{\hyperlink{classATorpedoAUV_ab102c4d5974acdf817c6bf184dcedc13}{thruster}} = FVector(-\/120, 0, 0)
+\begin{DoxyCompactList}\small\item\em Location of the main rear thruster force application point. \end{DoxyCompactList}\item 
+TArray$<$ FVector $>$ \mbox{\hyperlink{classATorpedoAUV_a6ba7f4307e7ad67fdcf73441a19232a8}{fin\+Translation}}
+\begin{DoxyCompactList}\small\item\em Locations of the 4 control fins. \end{DoxyCompactList}\item 
+TArray$<$ FRotator $>$ \mbox{\hyperlink{classATorpedoAUV_af1bce2de3c251e02834039685bc5355e}{fin\+Rotation}}
+\begin{DoxyCompactList}\small\item\em Rotations of the 4 control fins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Torpedo-\/style Autonomous Underwater Vehicle (AUV) agent. Inherits from the Holodeck\+Buoyant\+Agent class. On any tick this object will apply the given forces. Desired values must be set by a controller. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classATorpedoAUV_aa267ffa5899291b38a5547a73400ea7b}\label{classATorpedoAUV_aa267ffa5899291b38a5547a73400ea7b}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!ATorpedoAUV@{ATorpedoAUV}}
+\index{ATorpedoAUV@{ATorpedoAUV}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{ATorpedoAUV()}{ATorpedoAUV()}}
+{\footnotesize\ttfamily ATorpedo\+AUV\+::\+ATorpedo\+AUV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Sets default values for the Torpedo AUV agent. Initializes the AI controller, physical properties (mass, volume, buoyancy center), and zero offset to origin. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classATorpedoAUV_adc9db203da8df0b2f4095a1ad32dd9a5}\label{classATorpedoAUV_adc9db203da8df0b2f4095a1ad32dd9a5}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!ApplyFin@{ApplyFin}}
+\index{ApplyFin@{ApplyFin}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{ApplyFin()}{ApplyFin()}}
+{\footnotesize\ttfamily void ATorpedo\+AUV\+::\+Apply\+Fin (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{float}]{command }\end{DoxyParamCaption})}
+
+
+
+Calculates and applies lift and drag forces for a specific fin. 
+
+Calculates and applies lift and drag forces for a specific stabilizing fin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the fin (0 to 3). \\
+\hline
+{\em command} & The commanded angle for the fin.\\
+\hline
+\end{DoxyParams}
+$\ast$$\ast$ Based on the models found in\+: \char`\"{}\+Preliminary Evaluation of Cooperative Navigation of Underwater Vehicles  without a DVL Utilizing a Dynamic Process Model\char`\"{}, Section III-\/3) Control Inputs. (\href{https://ieeexplore.ieee.org/document/8460970}{\texttt{ https\+://ieeexplore.\+ieee.\+org/document/8460970}})
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the fin (0 to 3). \\
+\hline
+{\em command} & The commanded angle for the fin. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\mbox{\Hypertarget{classATorpedoAUV_aee3ab184484e3492de40fe98971a7ade}\label{classATorpedoAUV_aee3ab184484e3492de40fe98971a7ade}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!ApplyThrust@{ApplyThrust}}
+\index{ApplyThrust@{ApplyThrust}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{ApplyThrust()}{ApplyThrust()}}
+{\footnotesize\ttfamily void ATorpedo\+AUV\+::\+Apply\+Thrust (\begin{DoxyParamCaption}\item[{float}]{thrust }\end{DoxyParamCaption})}
+
+
+
+Applies linear thrust from the main rear propeller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thrust} & The thrust value to apply.\\
+\hline
+{\em thrust} & The raw thrust command to apply. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classATorpedoAUV_a4052e3afcb3746232f4bcdc3f3fdcdfd}\label{classATorpedoAUV_a4052e3afcb3746232f4bcdc3f3fdcdfd}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!EnableDamping@{EnableDamping}}
+\index{EnableDamping@{EnableDamping}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{EnableDamping()}{EnableDamping()}}
+{\footnotesize\ttfamily void ATorpedo\+AUV\+::\+Enable\+Damping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables linear and angular damping for the AUV\textquotesingle{}s physical mesh. 
+
+Enables linear and angular damping for the Torpedo\textquotesingle{}s physical mesh. Should be enabled when using the thruster and fins for proper fluid dynamics simulation. \mbox{\Hypertarget{classATorpedoAUV_ace3c943d72fa072a1f85363f6d716d20}\label{classATorpedoAUV_ace3c943d72fa072a1f85363f6d716d20}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!GetAccelerationLimit@{GetAccelerationLimit}}
+\index{GetAccelerationLimit@{GetAccelerationLimit}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{GetAccelerationLimit()}{GetAccelerationLimit()}}
+{\footnotesize\ttfamily float ATorpedo\+AUV\+::\+Get\+Acceleration\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the acceleration limit for the agent. Allows agent to fall up to $\sim$8 meters. 
+
+\begin{DoxyReturn}{Returns}
+The acceleration limit. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a69e23855a513e9a45874e39928d65633}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classATorpedoAUV_a16aa2a5800b38dff9163374e35ebe038}\label{classATorpedoAUV_a16aa2a5800b38dff9163374e35ebe038}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!GetRawActionBuffer@{GetRawActionBuffer}}
+\index{GetRawActionBuffer@{GetRawActionBuffer}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{GetRawActionBuffer()}{GetRawActionBuffer()}}
+{\footnotesize\ttfamily void$\ast$ ATorpedo\+AUV\+::\+Get\+Raw\+Action\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a pointer to the raw action buffer. 
+
+\begin{DoxyReturn}{Returns}
+A void pointer to the command array. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7554f753cc28bac3cd80484c892e3915}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classATorpedoAUV_aeb6100707536e0faee967525dad18aab}\label{classATorpedoAUV_aeb6100707536e0faee967525dad18aab}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!GetRawActionSizeInBytes@{GetRawActionSizeInBytes}}
+\index{GetRawActionSizeInBytes@{GetRawActionSizeInBytes}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{GetRawActionSizeInBytes()}{GetRawActionSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int ATorpedo\+AUV\+::\+Get\+Raw\+Action\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the size of the action buffer in bytes. 
+
+\begin{DoxyReturn}{Returns}
+The size of the command array in bytes (6 floats). 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckAgent_a7a63bc9f3c7cf0f0c63c23443e3600a8}{AHolodeck\+Agent}}.
+
+\mbox{\Hypertarget{classATorpedoAUV_a6c8f0ee8b83b97083a4f8170964ad119}\label{classATorpedoAUV_a6c8f0ee8b83b97083a4f8170964ad119}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!InitializeAgent@{InitializeAgent}}
+\index{InitializeAgent@{InitializeAgent}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{InitializeAgent()}{InitializeAgent()}}
+{\footnotesize\ttfamily void ATorpedo\+AUV\+::\+Initialize\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the agent and its physical components. 
+
+Initializes the agent and its physical components. Casts the Root\+Component to a UStatic\+Mesh\+Component to allow physics manipulation. 
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_af4631f8d3fa15b78fafe84d2939c6d43}{AHolodeck\+Buoyant\+Agent}}.
+
+\mbox{\Hypertarget{classATorpedoAUV_a0bafe49db9633e54a7fbf7d0be728ace}\label{classATorpedoAUV_a0bafe49db9633e54a7fbf7d0be728ace}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!Tick@{Tick}}
+\index{Tick@{Tick}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void ATorpedo\+AUV\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called each frame. 
+
+Called every frame when the custom dynamics control scheme is active. Converts linear and angular accelerations from the Python Command\+Array into forces and torques, and applies them to the Root\+Mesh.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Seconds} & The time since the last tick.\\
+\hline
+{\em Delta\+Seconds} & The time elapsed since the last tick. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAHolodeckBuoyantAgent_a79ad3f12f79786954647d728998ec80c}{AHolodeck\+Buoyant\+Agent}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classATorpedoAUV_af1bce2de3c251e02834039685bc5355e}\label{classATorpedoAUV_af1bce2de3c251e02834039685bc5355e}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!finRotation@{finRotation}}
+\index{finRotation@{finRotation}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{finRotation}{finRotation}}
+{\footnotesize\ttfamily TArray$<$FRotator$>$ ATorpedo\+AUV\+::fin\+Rotation}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{   FRotator(0, 0, 0),}
+\DoxyCodeLine{                                    FRotator(0, 0, -\/90),}
+\DoxyCodeLine{                                    FRotator(0, 0, -\/180),}
+\DoxyCodeLine{                                    FRotator(0, 0, -\/270) \}}
+
+\end{DoxyCode}
+
+
+Rotations of the 4 control fins. 
+
+\mbox{\Hypertarget{classATorpedoAUV_a6ba7f4307e7ad67fdcf73441a19232a8}\label{classATorpedoAUV_a6ba7f4307e7ad67fdcf73441a19232a8}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!finTranslation@{finTranslation}}
+\index{finTranslation@{finTranslation}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{finTranslation}{finTranslation}}
+{\footnotesize\ttfamily TArray$<$FVector$>$ ATorpedo\+AUV\+::fin\+Translation}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ FVector(-\/105, 7.07, 0),}
+\DoxyCodeLine{                                    FVector(-\/105, 0, 7.07),}
+\DoxyCodeLine{                                    FVector(-\/105, -\/7.07, 0),}
+\DoxyCodeLine{                                    FVector(-\/105, 0, -\/7.07) \}}
+
+\end{DoxyCode}
+
+
+Locations of the 4 control fins. 
+
+\mbox{\Hypertarget{classATorpedoAUV_ab102c4d5974acdf817c6bf184dcedc13}\label{classATorpedoAUV_ab102c4d5974acdf817c6bf184dcedc13}} 
+\index{ATorpedoAUV@{ATorpedoAUV}!thruster@{thruster}}
+\index{thruster@{thruster}!ATorpedoAUV@{ATorpedoAUV}}
+\doxysubsubsection{\texorpdfstring{thruster}{thruster}}
+{\footnotesize\ttfamily FVector ATorpedo\+AUV\+::thruster = FVector(-\/120, 0, 0)}
+
+
+
+Location of the main rear thruster force application point. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{TorpedoAUV_8h}{Torpedo\+AUV.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{TorpedoAUV_8cpp}{Torpedo\+AUV.\+cpp}}\end{DoxyCompactItemize}

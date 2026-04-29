@@ -1,0 +1,138 @@
+\hypertarget{classUVelocitySensor}{}\doxysection{UVelocity\+Sensor Class Reference}
+\label{classUVelocitySensor}\index{UVelocitySensor@{UVelocitySensor}}
+
+
+Ground Truth Velocity Sensor. Inherits from the Holodeck\+Sensor class. Gets the true absolute linear velocity of the component that the sensor is attached to. Returns a 3-\/element array representing the X, Y, and Z velocity vectors.  
+
+
+
+
+{\ttfamily \#include $<$Velocity\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for UVelocity\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classUVelocitySensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UVelocity\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUVelocitySensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUVelocitySensor_aff95846e8dad9fa1e5d27dfafe27054c}{UVelocity\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUVelocitySensor_a7a8b86894a24b385a042d7dc7812cc89}{Initialize\+Sensor}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the sensor and caches the parent component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUVelocitySensor_a511ad0f3fb8bd39ef916326ffc765b21}{Get\+Num\+Items}} () override
+\begin{DoxyCompactList}\small\item\em Gets the number of items this sensor returns (3 for X, Y, Z velocity). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUVelocitySensor_a48c8c4a6b3106e01e30082f8281de372}{Get\+Item\+Size}} () override
+\begin{DoxyCompactList}\small\item\em Gets the size of each item in bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUVelocitySensor_ab5f822b5d467af5bca7d6c240bbb488d}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\begin{DoxyCompactList}\small\item\em Main tick function calculating and exporting the linear velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Ground Truth Velocity Sensor. Inherits from the Holodeck\+Sensor class. Gets the true absolute linear velocity of the component that the sensor is attached to. Returns a 3-\/element array representing the X, Y, and Z velocity vectors. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUVelocitySensor_aff95846e8dad9fa1e5d27dfafe27054c}\label{classUVelocitySensor_aff95846e8dad9fa1e5d27dfafe27054c}} 
+\index{UVelocitySensor@{UVelocitySensor}!UVelocitySensor@{UVelocitySensor}}
+\index{UVelocitySensor@{UVelocitySensor}!UVelocitySensor@{UVelocitySensor}}
+\doxysubsubsection{\texorpdfstring{UVelocitySensor()}{UVelocitySensor()}}
+{\footnotesize\ttfamily UVelocity\+Sensor\+::\+UVelocity\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Default Constructor. Sets the sensor name and enables ticking every frame. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUVelocitySensor_a48c8c4a6b3106e01e30082f8281de372}\label{classUVelocitySensor_a48c8c4a6b3106e01e30082f8281de372}} 
+\index{UVelocitySensor@{UVelocitySensor}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UVelocitySensor@{UVelocitySensor}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int UVelocity\+Sensor\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the size of each item in bytes. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUVelocitySensor_a511ad0f3fb8bd39ef916326ffc765b21}\label{classUVelocitySensor_a511ad0f3fb8bd39ef916326ffc765b21}} 
+\index{UVelocitySensor@{UVelocitySensor}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!UVelocitySensor@{UVelocitySensor}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily int UVelocity\+Sensor\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of items this sensor returns (3 for X, Y, Z velocity). 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUVelocitySensor_a7a8b86894a24b385a042d7dc7812cc89}\label{classUVelocitySensor_a7a8b86894a24b385a042d7dc7812cc89}} 
+\index{UVelocitySensor@{UVelocitySensor}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UVelocitySensor@{UVelocitySensor}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UVelocity\+Sensor\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the sensor and caches the parent component. 
+
+Initializes the sensor. Fetches and caches the root primitive component that this sensor is attached to. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUVelocitySensor_ab5f822b5d467af5bca7d6c240bbb488d}\label{classUVelocitySensor_ab5f822b5d467af5bca7d6c240bbb488d}} 
+\index{UVelocitySensor@{UVelocitySensor}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UVelocitySensor@{UVelocitySensor}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UVelocity\+Sensor\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Main tick function calculating and exporting the linear velocity. 
+
+Main execution loop that calculates and reports the linear velocity. Retrieves the true physical linear velocity of the attached component at its specific location, converts it to the client\textquotesingle{}s coordinate system, and writes the XYZ vector to the buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & The time elapsed since the last tick. \\
+\hline
+{\em Tick\+Type} & The type of tick this is. \\
+\hline
+{\em This\+Tick\+Function} & Tick function that is calling this. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}{UHolodeck\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{VelocitySensor_8h}{Velocity\+Sensor.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{VelocitySensor_8cpp}{Velocity\+Sensor.\+cpp}}\end{DoxyCompactItemize}

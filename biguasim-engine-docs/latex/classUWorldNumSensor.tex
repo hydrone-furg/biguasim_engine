@@ -1,0 +1,114 @@
+\hypertarget{classUWorldNumSensor}{}\doxysection{UWorld\+Num\+Sensor Class Reference}
+\label{classUWorldNumSensor}\index{UWorldNumSensor@{UWorldNumSensor}}
+
+
+{\ttfamily \#include $<$World\+Num\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for UWorld\+Num\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classUWorldNumSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UWorld\+Num\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUWorldNumSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUWorldNumSensor_a868317d2ab02ab2af54b3d31152d1944}{UWorld\+Num\+Sensor}} ()
+\item 
+virtual void \mbox{\hyperlink{classUWorldNumSensor_a4663015a236e527b74c7c0d38f1c212c}{Initialize\+Sensor}} () override
+\item 
+virtual void \mbox{\hyperlink{classUWorldNumSensor_acefdfe1ab97a3d888fbaf1b7f3d879e9}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUWorldNumSensor_a25d3b3aaf1d6629cf5037e2573fedda4}{Get\+Num\+Items}} () override
+\item 
+int \mbox{\hyperlink{classUWorldNumSensor_ab8153e288fc5388ea31f7b1b06e5fa5d}{Get\+Item\+Size}} () override
+\item 
+void \mbox{\hyperlink{classUWorldNumSensor_a02fc47b644af6f89729108fa9dab6fac}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+World\+Num\+Sensor Inherits from the Holodeck\+Sensor class Check out the parent class for documentation on all of the overridden functions. Reports a specific number value (int or float) corresponding to a string key. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUWorldNumSensor_a868317d2ab02ab2af54b3d31152d1944}\label{classUWorldNumSensor_a868317d2ab02ab2af54b3d31152d1944}} 
+\index{UWorldNumSensor@{UWorldNumSensor}!UWorldNumSensor@{UWorldNumSensor}}
+\index{UWorldNumSensor@{UWorldNumSensor}!UWorldNumSensor@{UWorldNumSensor}}
+\doxysubsubsection{\texorpdfstring{UWorldNumSensor()}{UWorldNumSensor()}}
+{\footnotesize\ttfamily UWorld\+Num\+Sensor\+::\+UWorld\+Num\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUWorldNumSensor_ab8153e288fc5388ea31f7b1b06e5fa5d}\label{classUWorldNumSensor_ab8153e288fc5388ea31f7b1b06e5fa5d}} 
+\index{UWorldNumSensor@{UWorldNumSensor}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UWorldNumSensor@{UWorldNumSensor}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int UWorld\+Num\+Sensor\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the size of each data item e.\+g. return sizeof(float) 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUWorldNumSensor_a25d3b3aaf1d6629cf5037e2573fedda4}\label{classUWorldNumSensor_a25d3b3aaf1d6629cf5037e2573fedda4}} 
+\index{UWorldNumSensor@{UWorldNumSensor}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!UWorldNumSensor@{UWorldNumSensor}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily int UWorld\+Num\+Sensor\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the number of data items e.\+g. return 100 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUWorldNumSensor_a4663015a236e527b74c7c0d38f1c212c}\label{classUWorldNumSensor_a4663015a236e527b74c7c0d38f1c212c}} 
+\index{UWorldNumSensor@{UWorldNumSensor}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UWorldNumSensor@{UWorldNumSensor}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UWorld\+Num\+Sensor\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Sensor Sets up the class 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUWorldNumSensor_acefdfe1ab97a3d888fbaf1b7f3d879e9}\label{classUWorldNumSensor_acefdfe1ab97a3d888fbaf1b7f3d879e9}} 
+\index{UWorldNumSensor@{UWorldNumSensor}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!UWorldNumSensor@{UWorldNumSensor}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void UWorld\+Num\+Sensor\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Override this function if sensor has parameters to initialize. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_a29fe9c31ded6b9b4a898ec14aff1d8ea}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUWorldNumSensor_a02fc47b644af6f89729108fa9dab6fac}\label{classUWorldNumSensor_a02fc47b644af6f89729108fa9dab6fac}} 
+\index{UWorldNumSensor@{UWorldNumSensor}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UWorldNumSensor@{UWorldNumSensor}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UWorld\+Num\+Sensor\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Tick\+Sensor\+Component Mimics Unreal Engine\textquotesingle{}s UActor\+Component\+::\+Tick\+Component function. See it\textquotesingle{}s documentation for what the parameters are. Must be overridden by subclass Handles the logic for ticking the sensor Make sure to set the data, Cast Buffer into the right kind of pointer and set the data. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}{UHolodeck\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{WorldNumSensor_8h}{World\+Num\+Sensor.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{WorldNumSensor_8cpp}{World\+Num\+Sensor.\+cpp}}\end{DoxyCompactItemize}

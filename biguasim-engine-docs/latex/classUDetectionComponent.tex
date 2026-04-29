@@ -1,0 +1,143 @@
+\hypertarget{classUDetectionComponent}{}\doxysection{UDetection\+Component Class Reference}
+\label{classUDetectionComponent}\index{UDetectionComponent@{UDetectionComponent}}
+
+
+{\ttfamily \#include $<$Detection\+Component.\+h$>$}
+
+
+
+Inheritance diagram for UDetection\+Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classUDetectionComponent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UDetection\+Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUDetectionComponent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUDetectionComponent_a00cf561a8c55cc989916b44a0645f9b5}{UDetection\+Component}} ()
+\item 
+virtual void \mbox{\hyperlink{classUDetectionComponent_a7dcaf5b24ccb2433b0ace03c6cab5b67}{Initialize\+Sensor}} () override
+\item 
+virtual void \mbox{\hyperlink{classUDetectionComponent_a15e54af18b704969301eadeaf42fe7b4}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\item 
+int \mbox{\hyperlink{classUDetectionComponent_afbc473465471fdc3bf7299869007d9e3}{Get\+Num\+Items}} () override
+\item 
+int \mbox{\hyperlink{classUDetectionComponent_ae3d72b5b5c35714f87e5d09dde2cdec8}{Get\+Item\+Size}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classUDetectionComponent_a213f1c2aabc26a9b320bf040ced1ee11}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\item 
+void \mbox{\hyperlink{classUDetectionComponent_a4d32b16cf575c2b573eadb2c0ec6ea14}{get\+Detections}} (std\+::string $\ast$buffer)
+\item 
+void \mbox{\hyperlink{classUDetectionComponent_a03b06d3910ddb456e89effe5a71cc266}{add\+Mesh\+Name}} (const std\+::string \&mesh\+\_\+name)
+\item 
+void \mbox{\hyperlink{classUDetectionComponent_a661a50d25e98df852bc37d87d799a3bb}{set\+Filter\+Radius}} (const float radius\+\_\+cm)
+\item 
+void \mbox{\hyperlink{classUDetectionComponent_a2e941cecebdae0b06c00790903276a82}{clear\+Mesh\+Names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUDetectionComponent_a00cf561a8c55cc989916b44a0645f9b5}\label{classUDetectionComponent_a00cf561a8c55cc989916b44a0645f9b5}} 
+\index{UDetectionComponent@{UDetectionComponent}!UDetectionComponent@{UDetectionComponent}}
+\index{UDetectionComponent@{UDetectionComponent}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{UDetectionComponent()}{UDetectionComponent()}}
+{\footnotesize\ttfamily UDetection\+Component\+::\+UDetection\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUDetectionComponent_a03b06d3910ddb456e89effe5a71cc266}\label{classUDetectionComponent_a03b06d3910ddb456e89effe5a71cc266}} 
+\index{UDetectionComponent@{UDetectionComponent}!addMeshName@{addMeshName}}
+\index{addMeshName@{addMeshName}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{addMeshName()}{addMeshName()}}
+{\footnotesize\ttfamily void UDetection\+Component\+::add\+Mesh\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mesh\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUDetectionComponent_a2e941cecebdae0b06c00790903276a82}\label{classUDetectionComponent_a2e941cecebdae0b06c00790903276a82}} 
+\index{UDetectionComponent@{UDetectionComponent}!clearMeshNames@{clearMeshNames}}
+\index{clearMeshNames@{clearMeshNames}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{clearMeshNames()}{clearMeshNames()}}
+{\footnotesize\ttfamily void UDetection\+Component\+::clear\+Mesh\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUDetectionComponent_a4d32b16cf575c2b573eadb2c0ec6ea14}\label{classUDetectionComponent_a4d32b16cf575c2b573eadb2c0ec6ea14}} 
+\index{UDetectionComponent@{UDetectionComponent}!getDetections@{getDetections}}
+\index{getDetections@{getDetections}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{getDetections()}{getDetections()}}
+{\footnotesize\ttfamily void UDetection\+Component\+::get\+Detections (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUDetectionComponent_ae3d72b5b5c35714f87e5d09dde2cdec8}\label{classUDetectionComponent_ae3d72b5b5c35714f87e5d09dde2cdec8}} 
+\index{UDetectionComponent@{UDetectionComponent}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int UDetection\+Component\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the size of each data item e.\+g. return sizeof(float) 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUDetectionComponent_afbc473465471fdc3bf7299869007d9e3}\label{classUDetectionComponent_afbc473465471fdc3bf7299869007d9e3}} 
+\index{UDetectionComponent@{UDetectionComponent}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily int UDetection\+Component\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the number of data items e.\+g. return 100 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUDetectionComponent_a7dcaf5b24ccb2433b0ace03c6cab5b67}\label{classUDetectionComponent_a7dcaf5b24ccb2433b0ace03c6cab5b67}} 
+\index{UDetectionComponent@{UDetectionComponent}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UDetection\+Component\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Sensor Sets up the class 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckCamera_ada2ff5b72dca11cb1fc1e0feab932b32}{UHolodeck\+Camera}}.
+
+\mbox{\Hypertarget{classUDetectionComponent_a15e54af18b704969301eadeaf42fe7b4}\label{classUDetectionComponent_a15e54af18b704969301eadeaf42fe7b4}} 
+\index{UDetectionComponent@{UDetectionComponent}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void UDetection\+Component\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Allows parameters to be set dynamically 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckCamera_a0eb17f6f94e4a772d66e6f543b17afeb}{UHolodeck\+Camera}}.
+
+\mbox{\Hypertarget{classUDetectionComponent_a661a50d25e98df852bc37d87d799a3bb}\label{classUDetectionComponent_a661a50d25e98df852bc37d87d799a3bb}} 
+\index{UDetectionComponent@{UDetectionComponent}!setFilterRadius@{setFilterRadius}}
+\index{setFilterRadius@{setFilterRadius}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{setFilterRadius()}{setFilterRadius()}}
+{\footnotesize\ttfamily void UDetection\+Component\+::set\+Filter\+Radius (\begin{DoxyParamCaption}\item[{const float}]{radius\+\_\+cm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUDetectionComponent_a213f1c2aabc26a9b320bf040ced1ee11}\label{classUDetectionComponent_a213f1c2aabc26a9b320bf040ced1ee11}} 
+\index{UDetectionComponent@{UDetectionComponent}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UDetectionComponent@{UDetectionComponent}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UDetection\+Component\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Tick\+Sensor\+Component Mimics Unreal Engine\textquotesingle{}s UActor\+Component\+::\+Tick\+Component function. See it\textquotesingle{}s documentation for what the parameters are. Must be overridden by subclass Handles the logic for ticking the sensor Make sure to set the data, Cast Buffer into the right kind of pointer and set the data. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckCamera_a8b0b95bf4e4248ae75b8d36923864d5a}{UHolodeck\+Camera}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{DetectionComponent_8h}{Detection\+Component.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{DetectionComponent_8cpp}{Detection\+Component.\+cpp}}\end{DoxyCompactItemize}

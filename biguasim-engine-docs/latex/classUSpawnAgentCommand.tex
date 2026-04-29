@@ -1,0 +1,61 @@
+\hypertarget{classUSpawnAgentCommand}{}\doxysection{USpawn\+Agent\+Command Class Reference}
+\label{classUSpawnAgentCommand}\index{USpawnAgentCommand@{USpawnAgentCommand}}
+
+
+{\ttfamily \#include $<$Spawn\+Agent\+Command.\+h$>$}
+
+
+
+Inheritance diagram for USpawn\+Agent\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classUSpawnAgentCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for USpawn\+Agent\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classUSpawnAgentCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUSpawnAgentCommand_ad9a6ee98e32a33516d0e231b4a812638}{Execute}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Spawn\+Agent\+Command The command used to spawn agents in the world.
+
+String\+Parameters are expected to be Agent\+Type, and then Name. Number\+Parameters are expected to be X, Y, then Z coords of the location to spawn at.
+
+To enable it to spawn other agents you will need to\+:
+\begin{DoxyEnumerate}
+\item Go to the Holodeck\+Game\+Mode\+Blueprint in editor
+\item Go to the Spawn\+Agent Function and select the Agent\+Bp\+Map data field
+\item Add the agent\textquotesingle{}s name and bp reference to the map 
+\end{DoxyEnumerate}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUSpawnAgentCommand_ad9a6ee98e32a33516d0e231b4a812638}\label{classUSpawnAgentCommand_ad9a6ee98e32a33516d0e231b4a812638}} 
+\index{USpawnAgentCommand@{USpawnAgentCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!USpawnAgentCommand@{USpawnAgentCommand}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void USpawn\+Agent\+Command\+::\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute The command performs its function when this is called. Override this function with what you want the child command to do. Use Number\+Params, String\+Params, and Target as input variables for the execute function. 
+
+Reimplemented from \mbox{\hyperlink{classUCommand_a298e5c82a4e4871b2369ada75d37a0b4}{UCommand}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Client\+Commands/\+Public/\mbox{\hyperlink{SpawnAgentCommand_8h}{Spawn\+Agent\+Command.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Client\+Commands/\+Private/\mbox{\hyperlink{SpawnAgentCommand_8cpp}{Spawn\+Agent\+Command.\+cpp}}\end{DoxyCompactItemize}

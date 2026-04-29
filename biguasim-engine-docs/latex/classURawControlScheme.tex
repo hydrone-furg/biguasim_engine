@@ -1,0 +1,96 @@
+\hypertarget{classURawControlScheme}{}\doxysection{URaw\+Control\+Scheme Class Reference}
+\label{classURawControlScheme}\index{URawControlScheme@{URawControlScheme}}
+
+
+{\ttfamily \#include $<$Raw\+Control\+Scheme.\+h$>$}
+
+
+
+Inheritance diagram for URaw\+Control\+Scheme\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classURawControlScheme__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for URaw\+Control\+Scheme\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classURawControlScheme__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classURawControlScheme_ae9714721f964ed5f918e62ff5337a8dc}{URaw\+Control\+Scheme}} (const FObject\+Initializer \&Object\+Initializer)
+\item 
+\mbox{\hyperlink{classURawControlScheme_aa9af036086a5594b89d7c5766f3d8725}{URaw\+Control\+Scheme}} (\mbox{\hyperlink{classAHolodeckAgentInterface}{AHolodeck\+Agent\+Interface}} $\ast$const Controlled\+Agent)
+\item 
+void \mbox{\hyperlink{classURawControlScheme_acbec5e34e9c20d2b2bd56bb6d6755d0a}{Execute}} (void $\ast$const Command\+Array, void $\ast$const Input\+Command, float Delta\+Seconds) override
+\item 
+unsigned int \mbox{\hyperlink{classURawControlScheme_a54c6c9ac353ba3a62edb34623a458388}{Get\+Control\+Scheme\+Size\+In\+Bytes}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAHolodeckAgentInterface}{AHolodeck\+Agent\+Interface}} $\ast$ \mbox{\hyperlink{classURawControlScheme_a5414143f9d57799baae7856c959016d1}{Agent}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classURawControlScheme}{URaw\+Control\+Scheme}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classURawControlScheme_ae9714721f964ed5f918e62ff5337a8dc}\label{classURawControlScheme_ae9714721f964ed5f918e62ff5337a8dc}} 
+\index{URawControlScheme@{URawControlScheme}!URawControlScheme@{URawControlScheme}}
+\index{URawControlScheme@{URawControlScheme}!URawControlScheme@{URawControlScheme}}
+\doxysubsubsection{\texorpdfstring{URawControlScheme()}{URawControlScheme()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily URaw\+Control\+Scheme\+::\+URaw\+Control\+Scheme (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{Object\+Initializer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classURawControlScheme_aa9af036086a5594b89d7c5766f3d8725}\label{classURawControlScheme_aa9af036086a5594b89d7c5766f3d8725}} 
+\index{URawControlScheme@{URawControlScheme}!URawControlScheme@{URawControlScheme}}
+\index{URawControlScheme@{URawControlScheme}!URawControlScheme@{URawControlScheme}}
+\doxysubsubsection{\texorpdfstring{URawControlScheme()}{URawControlScheme()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily URaw\+Control\+Scheme\+::\+URaw\+Control\+Scheme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAHolodeckAgentInterface}{AHolodeck\+Agent\+Interface}} $\ast$const}]{Controlled\+Agent }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classURawControlScheme_acbec5e34e9c20d2b2bd56bb6d6755d0a}\label{classURawControlScheme_acbec5e34e9c20d2b2bd56bb6d6755d0a}} 
+\index{URawControlScheme@{URawControlScheme}!Execute@{Execute}}
+\index{Execute@{Execute}!URawControlScheme@{URawControlScheme}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void URaw\+Control\+Scheme\+::\+Execute (\begin{DoxyParamCaption}\item[{void $\ast$const}]{Command\+Array,  }\item[{void $\ast$const}]{Input\+Command,  }\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckControlScheme_a84185ec2e7515e8afd21e9b7567e6ae0}{UHolodeck\+Control\+Scheme}}.
+
+\mbox{\Hypertarget{classURawControlScheme_a54c6c9ac353ba3a62edb34623a458388}\label{classURawControlScheme_a54c6c9ac353ba3a62edb34623a458388}} 
+\index{URawControlScheme@{URawControlScheme}!GetControlSchemeSizeInBytes@{GetControlSchemeSizeInBytes}}
+\index{GetControlSchemeSizeInBytes@{GetControlSchemeSizeInBytes}!URawControlScheme@{URawControlScheme}}
+\doxysubsubsection{\texorpdfstring{GetControlSchemeSizeInBytes()}{GetControlSchemeSizeInBytes()}}
+{\footnotesize\ttfamily unsigned int URaw\+Control\+Scheme\+::\+Get\+Control\+Scheme\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckControlScheme_abf94aa5488c43e99108ffc68a213e145}{UHolodeck\+Control\+Scheme}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classURawControlScheme_a5414143f9d57799baae7856c959016d1}\label{classURawControlScheme_a5414143f9d57799baae7856c959016d1}} 
+\index{URawControlScheme@{URawControlScheme}!Agent@{Agent}}
+\index{Agent@{Agent}!URawControlScheme@{URawControlScheme}}
+\doxysubsubsection{\texorpdfstring{Agent}{Agent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAHolodeckAgentInterface}{AHolodeck\+Agent\+Interface}}$\ast$ URaw\+Control\+Scheme\+::\+Agent}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\mbox{\hyperlink{RawControlScheme_8h}{Raw\+Control\+Scheme.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Private/\mbox{\hyperlink{RawControlScheme_8cpp}{Raw\+Control\+Scheme.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,218 @@
+\hypertarget{classUHolodeckSensor}{}\doxysection{UHolodeck\+Sensor Class Reference}
+\label{classUHolodeckSensor}\index{UHolodeckSensor@{UHolodeckSensor}}
+
+
+{\ttfamily \#include $<$Holodeck\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for UHolodeck\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUHolodeckSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UHolodeck\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUHolodeckSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUHolodeckSensor_af384ae6f7c5c1f2004dca92d0140bcfb}{UHolodeck\+Sensor}} ()
+\item 
+virtual void \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{Initialize\+Sensor}} ()
+\item 
+virtual void \mbox{\hyperlink{classUHolodeckSensor_ab5a6ea26b4b439bc0c1298fdb5c3d708}{Set\+Agent\+And\+Controller}} (\mbox{\hyperlink{classAHolodeckPawnControllerInterface}{AHolodeck\+Pawn\+Controller\+Interface}} $\ast$Controller\+Param, FString \mbox{\hyperlink{classUHolodeckSensor_a447da76fc8ca40e9024f73c83dabd268}{Agent\+Name}})
+\item 
+virtual void \mbox{\hyperlink{classUHolodeckSensor_afa3561e0b8b71c0f4da6c3d35010b465}{Begin\+Play}} () final
+\item 
+virtual void \mbox{\hyperlink{classUHolodeckSensor_a780e359cc7b22357c021509a84ee1e37}{Tick\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\item 
+virtual void \mbox{\hyperlink{classUHolodeckSensor_a29fe9c31ded6b9b4a898ec14aff1d8ea}{Parse\+Sensor\+Parms}} (FString Parms\+Json)
+\item 
+virtual FString \mbox{\hyperlink{classUHolodeckSensor_a0b2077093356b5ad931ae81772ec6a0a}{Get\+Agent\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FString \mbox{\hyperlink{classUHolodeckSensor_a447da76fc8ca40e9024f73c83dabd268}{Agent\+Name}}
+\item 
+FString \mbox{\hyperlink{classUHolodeckSensor_a6168c87d80b2a7f39710e797173a0844}{Sensor\+Name}} = \char`\"{}\char`\"{}
+\item 
+bool \mbox{\hyperlink{classUHolodeckSensor_a1cd0adf7ed5697f00f9951a41b9c895f}{b\+On}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}{Get\+Num\+Items}} ()
+\item 
+virtual int \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{Get\+Item\+Size}} ()
+\item 
+virtual void \mbox{\hyperlink{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function)
+\item 
+void \mbox{\hyperlink{classUHolodeckSensor_aadceb1ac7ecb941b59af0551c729e826}{Reset}} ()
+\item 
+void \mbox{\hyperlink{classUHolodeckSensor_ad93d69c5bc6d8471efe34fc8d31dddf4}{Secure\+Zero\+Memory}} (void $\ast$ptr, size\+\_\+t size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAHolodeckPawnControllerInterface}{AHolodeck\+Pawn\+Controller\+Interface}} $\ast$ \mbox{\hyperlink{classUHolodeckSensor_a34867ea360201dea6af96758668ef0df}{Controller}}
+\item 
+void $\ast$ \mbox{\hyperlink{classUHolodeckSensor_aa08629a4d7f315680116f5b1dee9c0fc}{Buffer}}
+\item 
+const FString \mbox{\hyperlink{classUHolodeckSensor_aa8f202ad998cbad550730ddce420e97a}{Sensor\+Data\+Key}} = \char`\"{}\+\_\+sensor\+\_\+data\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holodeck\+Sensor Abstract base class for sensors within holodeck Handles publishing sensor data To function properly, Holodeck\+Sensors must be attached to an agent that is controlled by a holodeck controller. To override, you must implement\+: Get\+Data\+Key Get\+Data\+Length Tick\+Sensor\+Component And in Begin\+Play you must call Super\+::\+Begin\+Play But you cannot override\+: Tick\+Component 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUHolodeckSensor_af384ae6f7c5c1f2004dca92d0140bcfb}\label{classUHolodeckSensor_af384ae6f7c5c1f2004dca92d0140bcfb}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!UHolodeckSensor@{UHolodeckSensor}}
+\index{UHolodeckSensor@{UHolodeckSensor}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{UHolodeckSensor()}{UHolodeckSensor()}}
+{\footnotesize\ttfamily UHolodeck\+Sensor\+::\+UHolodeck\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUHolodeckSensor_afa3561e0b8b71c0f4da6c3d35010b465}\label{classUHolodeckSensor_afa3561e0b8b71c0f4da6c3d35010b465}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily void UHolodeck\+Sensor\+::\+Begin\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+Begin\+Play Should only call Super\+::\+Begin\+Play() and \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{Initialize\+Sensor()}} all other initialization code should be called from within that function \mbox{\Hypertarget{classUHolodeckSensor_a0b2077093356b5ad931ae81772ec6a0a}\label{classUHolodeckSensor_a0b2077093356b5ad931ae81772ec6a0a}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!GetAgentName@{GetAgentName}}
+\index{GetAgentName@{GetAgentName}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{GetAgentName()}{GetAgentName()}}
+{\footnotesize\ttfamily virtual FString UHolodeck\+Sensor\+::\+Get\+Agent\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}\label{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily virtual int UHolodeck\+Sensor\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the size of each data item e.\+g. return sizeof(float) 
+
+Reimplemented in \mbox{\hyperlink{classUTaskSensor_a1d9f229527a400c65bb242ea795ba54d}{UTask\+Sensor}}, \mbox{\hyperlink{classUWorldNumSensor_ab8153e288fc5388ea31f7b1b06e5fa5d}{UWorld\+Num\+Sensor}}, \mbox{\hyperlink{classUViewportCapture_a22229e6e56d2631d22bfcd522ee83522}{UViewport\+Capture}}, \mbox{\hyperlink{classUVelocitySensor_a48c8c4a6b3106e01e30082f8281de372}{UVelocity\+Sensor}}, \mbox{\hyperlink{classUSinglebeamSonar_a7d65bb4e78702e044e130ce4e1ffcca7}{USinglebeam\+Sonar}}, \mbox{\hyperlink{classUSidescanSonar_aae7efbfce8a29cf2cbff7487999ab5a1}{USidescan\+Sonar}}, \mbox{\hyperlink{classURotationSensor_a8ae4937a9548ded57a72ecc792ad9103}{URotation\+Sensor}}, \mbox{\hyperlink{classURGBCamera_a0eaab131e44cc6267156bbdaaf6ff042}{URGBCamera}}, \mbox{\hyperlink{classURelativeSkeletalPositionSensor_a7577bad0a351cfe9c4413ee2589ef3d3}{URelative\+Skeletal\+Position\+Sensor}}, \mbox{\hyperlink{classURaycastSemanticLidar_a0aa1f599b33dc11566959c194a14f1ac}{URaycast\+Semantic\+Lidar}}, \mbox{\hyperlink{classURaycastLidar_a31513e9ec3687d14bff5430df3b44f36}{URaycast\+Lidar}}, \mbox{\hyperlink{classURangeFinderSensor_a907a04e2544c08150c5e0fbf8ce1bba2}{URange\+Finder\+Sensor}}, \mbox{\hyperlink{classUPressureSensor_acb412a727ca1728d86fc3cfca24ff349}{UPressure\+Sensor}}, \mbox{\hyperlink{classUPoseSensor_a0f65a13ddb800a5518c38c23b3567b15}{UPose\+Sensor}}, \mbox{\hyperlink{classUOrientationSensor_af0ab05d10cad0a314a42be0c072efec0}{UOrientation\+Sensor}}, \mbox{\hyperlink{classUOpticalModemSensor_aa8ea170decfa5481404401fc057ea3dc}{UOptical\+Modem\+Sensor}}, \mbox{\hyperlink{classUMagnetometerSensor_a956a6bde75c96777bb63fde2e5a1e9b9}{UMagnetometer\+Sensor}}, \mbox{\hyperlink{classULocationSensor_ab471aebbfdf5f8c7dff1cb7be23d2f94}{ULocation\+Sensor}}, \mbox{\hyperlink{classUJointRotationSensor_a3184f37a1a29d519307be578e9e806e8}{UJoint\+Rotation\+Sensor}}, \mbox{\hyperlink{classUIMUSensor_ab131f040c597b84d2ff51447d3cdd924}{UIMUSensor}}, \mbox{\hyperlink{classUImagingSonar_a9aaa05cb486d3cd70148866f50358a29}{UImaging\+Sonar}}, \mbox{\hyperlink{classUGPSSensor_aed71a9c309ef2c7aad2febe5dc9ca1ee}{UGPSSensor}}, \mbox{\hyperlink{classUDynamicsSensor_a0da1ac024f03ae97af4edf7cba8d4314}{UDynamics\+Sensor}}, \mbox{\hyperlink{classUDVLSensor_a03f1bd5432d154f7ff5ef9a2c7077d7e}{UDVLSensor}}, \mbox{\hyperlink{classUDetectionComponent_ae3d72b5b5c35714f87e5d09dde2cdec8}{UDetection\+Component}}, \mbox{\hyperlink{classUDepthSensor_a6502fd54e5d77421d053e1dbea53a2de}{UDepth\+Sensor}}, \mbox{\hyperlink{classUDepthCamera_afdd95e5101c5dbea35046584fb9a0591}{UDepth\+Camera}}, \mbox{\hyperlink{classUCollisionSensor_a58a9f1bd26cf99a93c7fc12f9b327893}{UCollision\+Sensor}}, \mbox{\hyperlink{classUAnnotationComponent_a9f31b2333c34d992e37874324add824c}{UAnnotation\+Component}}, \mbox{\hyperlink{classUAcousticBeaconSensor_a8a77b2484ee4e050a9fce93bb3de8b22}{UAcoustic\+Beacon\+Sensor}}, \mbox{\hyperlink{classUAbuseSensor_a88cac39a132f6b860d1f6eb4fd0a8e4a}{UAbuse\+Sensor}}, and \mbox{\hyperlink{classUCameraSensor_a37fe5c03944ac6602c4fe871a5dcf900}{UCamera\+Sensor}}.
+
+\mbox{\Hypertarget{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}\label{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily virtual int UHolodeck\+Sensor\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the number of data items e.\+g. return 100 
+
+Reimplemented in \mbox{\hyperlink{classUTaskSensor_abb5bff495c6d14e1371ea11edf1156bb}{UTask\+Sensor}}, \mbox{\hyperlink{classUWorldNumSensor_a25d3b3aaf1d6629cf5037e2573fedda4}{UWorld\+Num\+Sensor}}, \mbox{\hyperlink{classUViewportCapture_ae1dc03b06b03728d3e37d514e348712a}{UViewport\+Capture}}, \mbox{\hyperlink{classUVelocitySensor_a511ad0f3fb8bd39ef916326ffc765b21}{UVelocity\+Sensor}}, \mbox{\hyperlink{classURotationSensor_ab53f90cd8bf67497525cfc41ff39a9e5}{URotation\+Sensor}}, \mbox{\hyperlink{classURGBCamera_a67f478d49e225bafcdb7bfb337bc2b4b}{URGBCamera}}, \mbox{\hyperlink{classURelativeSkeletalPositionSensor_a4a6125f12d9459f69dc4786d27a02cc3}{URelative\+Skeletal\+Position\+Sensor}}, \mbox{\hyperlink{classURaycastSemanticLidar_aa1fde54bc3c0d2b3f06ad58223662300}{URaycast\+Semantic\+Lidar}}, \mbox{\hyperlink{classURaycastLidar_a6acc9405ecfbe219f65e551a9d77896f}{URaycast\+Lidar}}, \mbox{\hyperlink{classURangeFinderSensor_a388d3c035febf2dc07866f8d4337293c}{URange\+Finder\+Sensor}}, \mbox{\hyperlink{classUPressureSensor_a420853ccdb448c15ac528257ff3d90e5}{UPressure\+Sensor}}, \mbox{\hyperlink{classUPoseSensor_aaf6baf44e06700e54d659e8fc12bcd37}{UPose\+Sensor}}, \mbox{\hyperlink{classUOrientationSensor_a7f1ee39b980d2a1e783a53801084068a}{UOrientation\+Sensor}}, \mbox{\hyperlink{classUOpticalModemSensor_afa8fe00ebec3e19b447ef83084468bf6}{UOptical\+Modem\+Sensor}}, \mbox{\hyperlink{classUMagnetometerSensor_a80ea19c3a0de9760b7a2643571e48cca}{UMagnetometer\+Sensor}}, \mbox{\hyperlink{classULocationSensor_a8f7d1359bb9900497906094921ed66e2}{ULocation\+Sensor}}, \mbox{\hyperlink{classUJointRotationSensor_a6a478462ca429dafa648248db8b7654b}{UJoint\+Rotation\+Sensor}}, \mbox{\hyperlink{classUIMUSensor_a947669bf4a49183747bfd76e2eac4fb5}{UIMUSensor}}, \mbox{\hyperlink{classUGPSSensor_ac8a2d10d5a91bdb97f3da006c5d72f4c}{UGPSSensor}}, \mbox{\hyperlink{classUDynamicsSensor_ae1438d0d38013c317b5edf6e0ee31fc6}{UDynamics\+Sensor}}, \mbox{\hyperlink{classUDVLSensor_a16eef7799b0148f836cf41527d0056d4}{UDVLSensor}}, \mbox{\hyperlink{classUDetectionComponent_afbc473465471fdc3bf7299869007d9e3}{UDetection\+Component}}, \mbox{\hyperlink{classUDepthSensor_acbf9d5a84060d6cf89a965064ca4ac4d}{UDepth\+Sensor}}, \mbox{\hyperlink{classUDepthCamera_a49930240676b1f905ca978f3eb386cae}{UDepth\+Camera}}, \mbox{\hyperlink{classUCollisionSensor_ae811c4dfae8502c160911c08211addbd}{UCollision\+Sensor}}, \mbox{\hyperlink{classUAnnotationComponent_ad0274733588755f5ffa42cee3531feb6}{UAnnotation\+Component}}, \mbox{\hyperlink{classUAcousticBeaconSensor_ac769b381f3aee5d6ddefc964e2cf4bd0}{UAcoustic\+Beacon\+Sensor}}, \mbox{\hyperlink{classUAbuseSensor_ac5b3c552112f1a4e2ee28844496e3add}{UAbuse\+Sensor}}, \mbox{\hyperlink{classUHolodeckSonar_a427fc02a580e54033d9dfd1c333d4993}{UHolodeck\+Sonar}}, and \mbox{\hyperlink{classUCameraSensor_abe9206d2e147eef354c1b375062c5350}{UCamera\+Sensor}}.
+
+\mbox{\Hypertarget{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}\label{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UHolodeck\+Sensor\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Contains all sensor initialization code and subscribes the sensor Subclasses should make sure to call Super\+::\+Initialize\+Sensor() 
+
+Reimplemented in \mbox{\hyperlink{classUTaskSensor_aa934f58bc59ea730c4853f018ba8bcf9}{UTask\+Sensor}}, \mbox{\hyperlink{classULocationTask_a5a2e4dbd2e533a2fe7077bb5a65b12ac}{ULocation\+Task}}, \mbox{\hyperlink{classUFollowTask_ae7e84b72002b693b4a2e63ea2659be4e}{UFollow\+Task}}, \mbox{\hyperlink{classUDistanceTask_a7619f44c72165e6adcbfd387f6bd00ea}{UDistance\+Task}}, \mbox{\hyperlink{classUCupGameTask_aeb68ebd69ec2b63c1505985fe0987cb6}{UCup\+Game\+Task}}, \mbox{\hyperlink{classUCleanUpTask_aed391bff870e79704917af10bfa899db}{UClean\+Up\+Task}}, \mbox{\hyperlink{classUAvoidTask_ac4545e087e051a5d18d77eece4ffab7a}{UAvoid\+Task}}, \mbox{\hyperlink{classUWorldNumSensor_a4663015a236e527b74c7c0d38f1c212c}{UWorld\+Num\+Sensor}}, \mbox{\hyperlink{classUViewportCapture_a49863ccb6894c2871045f2324d5d81c2}{UViewport\+Capture}}, \mbox{\hyperlink{classUVelocitySensor_a7a8b86894a24b385a042d7dc7812cc89}{UVelocity\+Sensor}}, \mbox{\hyperlink{classUSinglebeamSonar_aa7ae30ff08fa2141edbea2ec8ed56c2e}{USinglebeam\+Sonar}}, \mbox{\hyperlink{classUSidescanSonar_a0b86c5d66b0d87209adde83da329a914}{USidescan\+Sonar}}, \mbox{\hyperlink{classUShaderBasedSensor_aa2267ca2f144a6681903014a28a9ef3a}{UShader\+Based\+Sensor}}, \mbox{\hyperlink{classUSemanticSegmentationCamera_ac66ebe42ee78ac695ac4c5ecfde05659}{USemantic\+Segmentation\+Camera}}, \mbox{\hyperlink{classURotationSensor_ad288e1cdea1f3bec1aef47106155c186}{URotation\+Sensor}}, \mbox{\hyperlink{classURGBDCamera_afc8c069d4bb424fa432f0aea96fb73eb}{URGBDCamera}}, \mbox{\hyperlink{classURGBCamera_ad4b27364535a2bdc1fc746d36f89fe84}{URGBCamera}}, \mbox{\hyperlink{classURelativeSkeletalPositionSensor_aa4e5ff1d81ff62424cee4989888eef21}{URelative\+Skeletal\+Position\+Sensor}}, \mbox{\hyperlink{classURaycastSemanticLidar_a9560757db79b564ae4bb58d44d798af2}{URaycast\+Semantic\+Lidar}}, \mbox{\hyperlink{classURaycastLidar_a22d71038c652debbee6ca8a740435f61}{URaycast\+Lidar}}, \mbox{\hyperlink{classURangeFinderSensor_acaec97186e8d0ac9932e67cbf109384f}{URange\+Finder\+Sensor}}, \mbox{\hyperlink{classUPressureSensor_a1c6bdd674c2ffc7deae172e70258f461}{UPressure\+Sensor}}, \mbox{\hyperlink{classUPoseSensor_aa2f14b9fbffb5dfcc259ff6e14527074}{UPose\+Sensor}}, \mbox{\hyperlink{classUOrientationSensor_ac65cb7f0377f47be149e33aa9b9cad38}{UOrientation\+Sensor}}, \mbox{\hyperlink{classUOpticalModemSensor_a89aa45d7934502c29cadd3e49e59840d}{UOptical\+Modem\+Sensor}}, \mbox{\hyperlink{classUMagnetometerSensor_a16bd2fafeb902b44a65d6a9fff60aa60}{UMagnetometer\+Sensor}}, \mbox{\hyperlink{classULocationSensor_a68f55282f65f07aec1a3547491ff6c33}{ULocation\+Sensor}}, \mbox{\hyperlink{classUJointRotationSensor_ab12cd1d56e44f6b4f8ca5e270d6fe378}{UJoint\+Rotation\+Sensor}}, \mbox{\hyperlink{classUIMUSensor_a93d34496183082bf372de197218c5163}{UIMUSensor}}, \mbox{\hyperlink{classUImagingSonar_a9e4f5539cfe48218adb05628577d5bd7}{UImaging\+Sonar}}, \mbox{\hyperlink{classUHolodeckCamera_ada2ff5b72dca11cb1fc1e0feab932b32}{UHolodeck\+Camera}}, \mbox{\hyperlink{classUGPSSensor_a53f8d9fd96be7b7a146e648b9cfcaa4c}{UGPSSensor}}, \mbox{\hyperlink{classUDynamicsSensor_a32d6159acf32e07754fbdcb264382ec1}{UDynamics\+Sensor}}, \mbox{\hyperlink{classUDVLSensor_a33e9ccb992f98aa0b54d16afb117b35d}{UDVLSensor}}, \mbox{\hyperlink{classUDetectionComponent_a7dcaf5b24ccb2433b0ace03c6cab5b67}{UDetection\+Component}}, \mbox{\hyperlink{classUDepthSensor_a490feddc12f3a50b35b2367c8f7a8ebf}{UDepth\+Sensor}}, \mbox{\hyperlink{classUDepthCamera_a2ee81df90daf52c4e805218d0d936637}{UDepth\+Camera}}, \mbox{\hyperlink{classUCameraSensor_abd6e92cffae2d1c7e58f114fd3159806}{UCamera\+Sensor}}, \mbox{\hyperlink{classUAnnotationComponent_a5b6e039180e180032473a48f3d67e2a4}{UAnnotation\+Component}}, \mbox{\hyperlink{classUAcousticBeaconSensor_a743fa17c70060e3e6bff5f9768b0083a}{UAcoustic\+Beacon\+Sensor}}, and \mbox{\hyperlink{classUAbuseSensor_aeaf4765687697ec930ce3f90ab7439f5}{UAbuse\+Sensor}}.
+
+\mbox{\Hypertarget{classUHolodeckSensor_a29fe9c31ded6b9b4a898ec14aff1d8ea}\label{classUHolodeckSensor_a29fe9c31ded6b9b4a898ec14aff1d8ea}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily virtual void UHolodeck\+Sensor\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Override this function if sensor has parameters to initialize. 
+
+Reimplemented in \mbox{\hyperlink{classULocationTask_ac9a9c3dd233df3d59441d61acdd4aff6}{ULocation\+Task}}, \mbox{\hyperlink{classUFollowTask_abd3041efa066142e085780e73ccb5bf8}{UFollow\+Task}}, \mbox{\hyperlink{classUDistanceTask_a6c39bb9beba80c7a1a6d83cef4b189db}{UDistance\+Task}}, \mbox{\hyperlink{classUCupGameTask_a927fea428834e187d40a548267250687}{UCup\+Game\+Task}}, \mbox{\hyperlink{classUCleanUpTask_a6347dfffad7e7e9954c92e533bae8d8b}{UClean\+Up\+Task}}, \mbox{\hyperlink{classUAvoidTask_acf91ec2a01b99a4a42465454a38ab8ca}{UAvoid\+Task}}, \mbox{\hyperlink{classUWorldNumSensor_acefdfe1ab97a3d888fbaf1b7f3d879e9}{UWorld\+Num\+Sensor}}, \mbox{\hyperlink{classUViewportCapture_a48deba491aa3f4e851852cbe4ded920c}{UViewport\+Capture}}, \mbox{\hyperlink{classUSinglebeamSonar_a7454dc448bcf73b93088b8846f7dffc4}{USinglebeam\+Sonar}}, \mbox{\hyperlink{classUSidescanSonar_a0c7519a4981c5e414be3a5d505840914}{USidescan\+Sonar}}, \mbox{\hyperlink{classUShaderBasedSensor_a5cdc9ae0188bfd880db67e30f9982d49}{UShader\+Based\+Sensor}}, \mbox{\hyperlink{classUSemanticSegmentationCamera_a5d584f6161f66648206a321fc5f4f506}{USemantic\+Segmentation\+Camera}}, \mbox{\hyperlink{classURGBDCamera_a4f2374d7db3e8f1e74ec80ee3c6b9bb8}{URGBDCamera}}, \mbox{\hyperlink{classURGBCamera_a0bfe80b652713f66450424f65887f4c8}{URGBCamera}}, \mbox{\hyperlink{classURaycastSemanticLidar_ad45e5b8b68a867e129dd7c505f09006b}{URaycast\+Semantic\+Lidar}}, \mbox{\hyperlink{classURaycastLidar_aacde889ba51e45586c987e5bddf942d4}{URaycast\+Lidar}}, \mbox{\hyperlink{classURangeFinderSensor_a6d9d9a85b30647687ed20324bd1bcf55}{URange\+Finder\+Sensor}}, \mbox{\hyperlink{classUProfilingSonar_a224732c5001f66f74ab5607166c514b6}{UProfiling\+Sonar}}, \mbox{\hyperlink{classUOpticalModemSensor_abab4a32dc9ac166936a72b5111cf6283}{UOptical\+Modem\+Sensor}}, \mbox{\hyperlink{classUMagnetometerSensor_a3d980927cba8b7fcc9fb21290f11125c}{UMagnetometer\+Sensor}}, \mbox{\hyperlink{classULocationSensor_abbf275adae8bd2a01a871ea83eb98cb2}{ULocation\+Sensor}}, \mbox{\hyperlink{classUIMUSensor_ab30c55892dbed8344ba797730fbf6d6c}{UIMUSensor}}, \mbox{\hyperlink{classUImagingSonar_a22c972e8ee49146332610700392667ea}{UImaging\+Sonar}}, \mbox{\hyperlink{classUHolodeckCamera_a0eb17f6f94e4a772d66e6f543b17afeb}{UHolodeck\+Camera}}, \mbox{\hyperlink{classUGPSSensor_a0416b2a710734e583f4074f3821957e7}{UGPSSensor}}, \mbox{\hyperlink{classUDynamicsSensor_ad9c3c1d281d44065b6aa799d390b6f82}{UDynamics\+Sensor}}, \mbox{\hyperlink{classUDVLSensor_a9f410a0e7d00a9497c99d5de54d26ad8}{UDVLSensor}}, \mbox{\hyperlink{classUDetectionComponent_a15e54af18b704969301eadeaf42fe7b4}{UDetection\+Component}}, \mbox{\hyperlink{classUDepthSensor_a7d51cefcb60e1abf022654eab6c96279}{UDepth\+Sensor}}, \mbox{\hyperlink{classUDepthCamera_a5e16b164dfac10856d98ba36ac6e322c}{UDepth\+Camera}}, \mbox{\hyperlink{classUCameraSensor_a240a519075b11f54bb0afd8ae31e2f9d}{UCamera\+Sensor}}, \mbox{\hyperlink{classUAnnotationComponent_aba4f0e97945bd40bdd948f801bf1d0df}{UAnnotation\+Component}}, \mbox{\hyperlink{classUAcousticBeaconSensor_a8cee1914f0a5baf6f08e96815eb64bba}{UAcoustic\+Beacon\+Sensor}}, \mbox{\hyperlink{classUAbuseSensor_a24c6fc36d428bc96621e9372909398d2}{UAbuse\+Sensor}}, and \mbox{\hyperlink{classUHolodeckSonar_a39cf61016a7e988a639fa384423252f2}{UHolodeck\+Sonar}}.
+
+\mbox{\Hypertarget{classUHolodeckSensor_aadceb1ac7ecb941b59af0551c729e826}\label{classUHolodeckSensor_aadceb1ac7ecb941b59af0551c729e826}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!Reset@{Reset}}
+\index{Reset@{Reset}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void UHolodeck\+Sensor\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUHolodeckSensor_ad93d69c5bc6d8471efe34fc8d31dddf4}\label{classUHolodeckSensor_ad93d69c5bc6d8471efe34fc8d31dddf4}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!SecureZeroMemory@{SecureZeroMemory}}
+\index{SecureZeroMemory@{SecureZeroMemory}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{SecureZeroMemory()}{SecureZeroMemory()}}
+{\footnotesize\ttfamily void UHolodeck\+Sensor\+::\+Secure\+Zero\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUHolodeckSensor_ab5a6ea26b4b439bc0c1298fdb5c3d708}\label{classUHolodeckSensor_ab5a6ea26b4b439bc0c1298fdb5c3d708}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!SetAgentAndController@{SetAgentAndController}}
+\index{SetAgentAndController@{SetAgentAndController}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{SetAgentAndController()}{SetAgentAndController()}}
+{\footnotesize\ttfamily void UHolodeck\+Sensor\+::\+Set\+Agent\+And\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAHolodeckPawnControllerInterface}{AHolodeck\+Pawn\+Controller\+Interface}} $\ast$}]{Controller\+Param,  }\item[{FString}]{Agent\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Set\+Agent\+And\+Controller Sets the agent and controller Should be called before \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{Initialize\+Sensor()}} \mbox{\Hypertarget{classUHolodeckSensor_a780e359cc7b22357c021509a84ee1e37}\label{classUHolodeckSensor_a780e359cc7b22357c021509a84ee1e37}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!TickComponent@{TickComponent}}
+\index{TickComponent@{TickComponent}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{TickComponent()}{TickComponent()}}
+{\footnotesize\ttfamily void UHolodeck\+Sensor\+::\+Tick\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Publishes sensor data each tick Subclasses should NOT override this function. Instead, they should override \mbox{\hyperlink{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}{Tick\+Sensor\+Component(float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function$\ast$ This\+Tick\+Function)}} Tick\+Sensor\+Component is called from this \mbox{\Hypertarget{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}\label{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily virtual void UHolodeck\+Sensor\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Tick\+Sensor\+Component Mimics Unreal Engine\textquotesingle{}s UActor\+Component\+::\+Tick\+Component function. See it\textquotesingle{}s documentation for what the parameters are. Must be overridden by subclass Handles the logic for ticking the sensor Make sure to set the data, Cast Buffer into the right kind of pointer and set the data. 
+
+Reimplemented in \mbox{\hyperlink{classUTaskSensor_a21bfeae116d1ae6c436f6241bcb321e9}{UTask\+Sensor}}, \mbox{\hyperlink{classULocationTask_a2c5849fcffb9a7a357d5cb964ec774c8}{ULocation\+Task}}, \mbox{\hyperlink{classUFollowTask_ab7729862068aa66aa4d9eb4bb6bdca93}{UFollow\+Task}}, \mbox{\hyperlink{classUDistanceTask_a837257ee4ea741082d6f4ed27afde13e}{UDistance\+Task}}, \mbox{\hyperlink{classUCupGameTask_a807a023dfc0593a3ee9b5724daa8165a}{UCup\+Game\+Task}}, \mbox{\hyperlink{classUCleanUpTask_aa2d9120beb684ea38896a8f4face4c87}{UClean\+Up\+Task}}, \mbox{\hyperlink{classUAvoidTask_aa1c113fed449b4122c77d6a35b51c2d8}{UAvoid\+Task}}, \mbox{\hyperlink{classUWorldNumSensor_a02fc47b644af6f89729108fa9dab6fac}{UWorld\+Num\+Sensor}}, \mbox{\hyperlink{classUViewportCapture_a1b39889adebc5c95e027244b4b1fc421}{UViewport\+Capture}}, \mbox{\hyperlink{classUVelocitySensor_ab5f822b5d467af5bca7d6c240bbb488d}{UVelocity\+Sensor}}, \mbox{\hyperlink{classUSinglebeamSonar_acf80db1299503df1fe7520fde350ec56}{USinglebeam\+Sonar}}, \mbox{\hyperlink{classUSidescanSonar_a10caab5c60609d3ca23fb5fec87e162c}{USidescan\+Sonar}}, \mbox{\hyperlink{classUShaderBasedSensor_ac59a168a293938f92908e1b8e60a45a7}{UShader\+Based\+Sensor}}, \mbox{\hyperlink{classUSemanticSegmentationCamera_a6e820ed34d456ba14348b5cd425f0925}{USemantic\+Segmentation\+Camera}}, \mbox{\hyperlink{classURotationSensor_a422790f2b16d859dc04d3e98a1b8a8f3}{URotation\+Sensor}}, \mbox{\hyperlink{classURGBDCamera_af07c146edf664e6f68ab4f5202df1e01}{URGBDCamera}}, \mbox{\hyperlink{classURGBCamera_a9be14b20791ad0c942d30e18341396f4}{URGBCamera}}, \mbox{\hyperlink{classURelativeSkeletalPositionSensor_a0ff9a7fc753381c12892ae5873d45e87}{URelative\+Skeletal\+Position\+Sensor}}, \mbox{\hyperlink{classURaycastSemanticLidar_a561e75f13997eaa5a05cb17c7a41d6e2}{URaycast\+Semantic\+Lidar}}, \mbox{\hyperlink{classURaycastLidar_a34e74fc0ce440f80ea14a97a0b990158}{URaycast\+Lidar}}, \mbox{\hyperlink{classURangeFinderSensor_ae4c304c6d14eb2c5d71400ce2cc772d0}{URange\+Finder\+Sensor}}, \mbox{\hyperlink{classUPressureSensor_a983809856f2106b3eab10257deaa3546}{UPressure\+Sensor}}, \mbox{\hyperlink{classUPoseSensor_a534c9d81afea649dc32768f9340814da}{UPose\+Sensor}}, \mbox{\hyperlink{classUOrientationSensor_a5fd8ca5220836f01c6df6c1aba4cc9e8}{UOrientation\+Sensor}}, \mbox{\hyperlink{classUOpticalModemSensor_ab6aa08106c9d48abfd7b7330cf18b2ab}{UOptical\+Modem\+Sensor}}, \mbox{\hyperlink{classUMagnetometerSensor_a6b6e56846d7af11ade9b4958bba06bf7}{UMagnetometer\+Sensor}}, \mbox{\hyperlink{classULocationSensor_a5cbb12107bcf084739d8c4b84fa3c3bb}{ULocation\+Sensor}}, \mbox{\hyperlink{classUJointRotationSensor_a8b7d6bebd3880444ea00cd57d9f3fdf3}{UJoint\+Rotation\+Sensor}}, \mbox{\hyperlink{classUIMUSensor_aaf6c1c5bacb2a7f80ceabea46d961518}{UIMUSensor}}, \mbox{\hyperlink{classUImagingSonar_af336570765a077e4d19238a9d1e7c4a1}{UImaging\+Sonar}}, \mbox{\hyperlink{classUGPSSensor_a64441d0413c276adb9b648729fbea497}{UGPSSensor}}, \mbox{\hyperlink{classUDynamicsSensor_afc5a38da41baecb6bde647879c2a8123}{UDynamics\+Sensor}}, \mbox{\hyperlink{classUDVLSensor_a28d709430be6c61bdfb98e980436cda7}{UDVLSensor}}, \mbox{\hyperlink{classUDetectionComponent_a213f1c2aabc26a9b320bf040ced1ee11}{UDetection\+Component}}, \mbox{\hyperlink{classUDepthSensor_ae40d1272443ef1e7be161bc466ea0872}{UDepth\+Sensor}}, \mbox{\hyperlink{classUDepthCamera_a27ef310159187d5f9f90a31e90f61600}{UDepth\+Camera}}, \mbox{\hyperlink{classUCollisionSensor_a45e8576804739e7408335cefba748cbb}{UCollision\+Sensor}}, \mbox{\hyperlink{classUAnnotationComponent_aaec8452c89cc712c65f750a4735fdfe8}{UAnnotation\+Component}}, \mbox{\hyperlink{classUAcousticBeaconSensor_a79939ae341c2591619e86251e4ecc14d}{UAcoustic\+Beacon\+Sensor}}, \mbox{\hyperlink{classUAbuseSensor_aa84f8a0ce3eb251b4384c2b5fe6789ee}{UAbuse\+Sensor}}, \mbox{\hyperlink{classUHolodeckSonar_a84323d822827fe22874f324a391b33e1}{UHolodeck\+Sonar}}, \mbox{\hyperlink{classUHolodeckCamera_a8b0b95bf4e4248ae75b8d36923864d5a}{UHolodeck\+Camera}}, and \mbox{\hyperlink{classUCameraSensor_a8445eb0c06daaf166b6d7598dd3a8191}{UCamera\+Sensor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUHolodeckSensor_a447da76fc8ca40e9024f73c83dabd268}\label{classUHolodeckSensor_a447da76fc8ca40e9024f73c83dabd268}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!AgentName@{AgentName}}
+\index{AgentName@{AgentName}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{AgentName}{AgentName}}
+{\footnotesize\ttfamily FString UHolodeck\+Sensor\+::\+Agent\+Name}
+
+\mbox{\Hypertarget{classUHolodeckSensor_a1cd0adf7ed5697f00f9951a41b9c895f}\label{classUHolodeckSensor_a1cd0adf7ed5697f00f9951a41b9c895f}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!bOn@{bOn}}
+\index{bOn@{bOn}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{bOn}{bOn}}
+{\footnotesize\ttfamily bool UHolodeck\+Sensor\+::b\+On}
+
+\mbox{\Hypertarget{classUHolodeckSensor_aa08629a4d7f315680116f5b1dee9c0fc}\label{classUHolodeckSensor_aa08629a4d7f315680116f5b1dee9c0fc}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{Buffer}{Buffer}}
+{\footnotesize\ttfamily void$\ast$ UHolodeck\+Sensor\+::\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUHolodeckSensor_a34867ea360201dea6af96758668ef0df}\label{classUHolodeckSensor_a34867ea360201dea6af96758668ef0df}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!Controller@{Controller}}
+\index{Controller@{Controller}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{Controller}{Controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAHolodeckPawnControllerInterface}{AHolodeck\+Pawn\+Controller\+Interface}}$\ast$ UHolodeck\+Sensor\+::\+Controller\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUHolodeckSensor_aa8f202ad998cbad550730ddce420e97a}\label{classUHolodeckSensor_aa8f202ad998cbad550730ddce420e97a}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!SensorDataKey@{SensorDataKey}}
+\index{SensorDataKey@{SensorDataKey}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{SensorDataKey}{SensorDataKey}}
+{\footnotesize\ttfamily const FString UHolodeck\+Sensor\+::\+Sensor\+Data\+Key = \char`\"{}\+\_\+sensor\+\_\+data\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUHolodeckSensor_a6168c87d80b2a7f39710e797173a0844}\label{classUHolodeckSensor_a6168c87d80b2a7f39710e797173a0844}} 
+\index{UHolodeckSensor@{UHolodeckSensor}!SensorName@{SensorName}}
+\index{SensorName@{SensorName}!UHolodeckSensor@{UHolodeckSensor}}
+\doxysubsubsection{\texorpdfstring{SensorName}{SensorName}}
+{\footnotesize\ttfamily FString UHolodeck\+Sensor\+::\+Sensor\+Name = \char`\"{}\char`\"{}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Public/\mbox{\hyperlink{HolodeckSensor_8h}{Holodeck\+Sensor.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Holodeck\+Core/\+Private/\mbox{\hyperlink{HolodeckSensor_8cpp}{Holodeck\+Sensor.\+cpp}}\end{DoxyCompactItemize}

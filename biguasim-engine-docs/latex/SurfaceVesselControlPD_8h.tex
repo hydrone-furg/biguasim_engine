@@ -1,0 +1,82 @@
+\hypertarget{SurfaceVesselControlPD_8h}{}\doxysection{/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\+Surface\+Vessel\+Control\+PD.h File Reference}
+\label{SurfaceVesselControlPD_8h}\index{/home/lh/Documents/bs-\/engine/Source/Holodeck/Agents/Public/SurfaceVesselControlPD.h@{/home/lh/Documents/bs-\/engine/Source/Holodeck/Agents/Public/SurfaceVesselControlPD.h}}
+{\ttfamily \#include \char`\"{}Holodeck.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Holodeck\+Pawn\+Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Surface\+Vessel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Holodeck\+Control\+Scheme.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Simple\+PID.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Surface\+Vessel\+Control\+PD.\+generated.\+h\char`\"{}}\newline
+Include dependency graph for Surface\+Vessel\+Control\+PD.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SurfaceVesselControlPD_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SurfaceVesselControlPD_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classUSurfaceVesselControlPD}{USurface\+Vessel\+Control\+PD}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{SurfaceVesselControlPD_8h_a859a63c95acd4557c2e8765e1442186e}{SV\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+FORCE}} = 1000
+\item 
+const float \mbox{\hyperlink{SurfaceVesselControlPD_8h_a9a736fd63dc491d47b3f47f7024b60b6}{SV\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+TORQUE}} = 1000
+\item 
+const float \mbox{\hyperlink{SurfaceVesselControlPD_8h_aa5dcfcb98dce6813c710fc7ed18298f8}{SV\+\_\+\+POS\+\_\+P}} = 100
+\item 
+const float \mbox{\hyperlink{SurfaceVesselControlPD_8h_aec0673c55dd1ab8842f3cc7a292a323a}{SV\+\_\+\+POS\+\_\+D}} = 50
+\item 
+const float \mbox{\hyperlink{SurfaceVesselControlPD_8h_a110642f9882a2a265e7e42067ba52f30}{SV\+\_\+\+YAW\+\_\+P}} = 15
+\item 
+const float \mbox{\hyperlink{SurfaceVesselControlPD_8h_a9233f21e8c1d942d0b8101e65b7fb59c}{SV\+\_\+\+YAW\+\_\+D}} = 7
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{SurfaceVesselControlPD_8h_a859a63c95acd4557c2e8765e1442186e}\label{SurfaceVesselControlPD_8h_a859a63c95acd4557c2e8765e1442186e}} 
+\index{SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}!SV\_CONTROL\_MAX\_FORCE@{SV\_CONTROL\_MAX\_FORCE}}
+\index{SV\_CONTROL\_MAX\_FORCE@{SV\_CONTROL\_MAX\_FORCE}!SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}}
+\doxysubsubsection{\texorpdfstring{SV\_CONTROL\_MAX\_FORCE}{SV\_CONTROL\_MAX\_FORCE}}
+{\footnotesize\ttfamily const float SV\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+FORCE = 1000}
+
+\mbox{\Hypertarget{SurfaceVesselControlPD_8h_a9a736fd63dc491d47b3f47f7024b60b6}\label{SurfaceVesselControlPD_8h_a9a736fd63dc491d47b3f47f7024b60b6}} 
+\index{SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}!SV\_CONTROL\_MAX\_TORQUE@{SV\_CONTROL\_MAX\_TORQUE}}
+\index{SV\_CONTROL\_MAX\_TORQUE@{SV\_CONTROL\_MAX\_TORQUE}!SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}}
+\doxysubsubsection{\texorpdfstring{SV\_CONTROL\_MAX\_TORQUE}{SV\_CONTROL\_MAX\_TORQUE}}
+{\footnotesize\ttfamily const float SV\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+TORQUE = 1000}
+
+\mbox{\Hypertarget{SurfaceVesselControlPD_8h_aec0673c55dd1ab8842f3cc7a292a323a}\label{SurfaceVesselControlPD_8h_aec0673c55dd1ab8842f3cc7a292a323a}} 
+\index{SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}!SV\_POS\_D@{SV\_POS\_D}}
+\index{SV\_POS\_D@{SV\_POS\_D}!SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}}
+\doxysubsubsection{\texorpdfstring{SV\_POS\_D}{SV\_POS\_D}}
+{\footnotesize\ttfamily const float SV\+\_\+\+POS\+\_\+D = 50}
+
+\mbox{\Hypertarget{SurfaceVesselControlPD_8h_aa5dcfcb98dce6813c710fc7ed18298f8}\label{SurfaceVesselControlPD_8h_aa5dcfcb98dce6813c710fc7ed18298f8}} 
+\index{SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}!SV\_POS\_P@{SV\_POS\_P}}
+\index{SV\_POS\_P@{SV\_POS\_P}!SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}}
+\doxysubsubsection{\texorpdfstring{SV\_POS\_P}{SV\_POS\_P}}
+{\footnotesize\ttfamily const float SV\+\_\+\+POS\+\_\+P = 100}
+
+\mbox{\Hypertarget{SurfaceVesselControlPD_8h_a9233f21e8c1d942d0b8101e65b7fb59c}\label{SurfaceVesselControlPD_8h_a9233f21e8c1d942d0b8101e65b7fb59c}} 
+\index{SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}!SV\_YAW\_D@{SV\_YAW\_D}}
+\index{SV\_YAW\_D@{SV\_YAW\_D}!SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}}
+\doxysubsubsection{\texorpdfstring{SV\_YAW\_D}{SV\_YAW\_D}}
+{\footnotesize\ttfamily const float SV\+\_\+\+YAW\+\_\+D = 7}
+
+\mbox{\Hypertarget{SurfaceVesselControlPD_8h_a110642f9882a2a265e7e42067ba52f30}\label{SurfaceVesselControlPD_8h_a110642f9882a2a265e7e42067ba52f30}} 
+\index{SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}!SV\_YAW\_P@{SV\_YAW\_P}}
+\index{SV\_YAW\_P@{SV\_YAW\_P}!SurfaceVesselControlPD.h@{SurfaceVesselControlPD.h}}
+\doxysubsubsection{\texorpdfstring{SV\_YAW\_P}{SV\_YAW\_P}}
+{\footnotesize\ttfamily const float SV\+\_\+\+YAW\+\_\+P = 15}
+

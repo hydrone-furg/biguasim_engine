@@ -1,0 +1,100 @@
+\hypertarget{HydroneClassicPD_8h}{}\doxysection{/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Bigua\+Core/\+Public/\+Hydrone\+Classic\+PD.h File Reference}
+\label{HydroneClassicPD_8h}\index{/home/lh/Documents/bs-\/engine/Source/Holodeck/BiguaCore/Public/HydroneClassicPD.h@{/home/lh/Documents/bs-\/engine/Source/Holodeck/BiguaCore/Public/HydroneClassicPD.h}}
+{\ttfamily \#include \char`\"{}Holodeck.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Holodeck\+Pawn\+Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Hydrone\+Classic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Holodeck\+Control\+Scheme.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Simple\+PID.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Hydrone\+Classic\+PD.\+generated.\+h\char`\"{}}\newline
+Include dependency graph for Hydrone\+Classic\+PD.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HydroneClassicPD_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HydroneClassicPD_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classUHydroneClassicPD}{UHydrone\+Classic\+PD}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{HydroneClassicPD_8h_aeb6f2c4e82146eef22b3da3abb2bea66}{HC\+\_\+\+AIR\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+LIN\+\_\+\+ACCEL}} = 30
+\item 
+const float \mbox{\hyperlink{HydroneClassicPD_8h_a1f60ebe4da7ef91ae54c8c7511f82892}{HC\+\_\+\+AIR\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+ANG\+\_\+\+ACCEL}} = 30
+\item 
+const float \mbox{\hyperlink{HydroneClassicPD_8h_a33926399d3e13dbf11f55e371c730b15}{HC\+\_\+\+UNDERWATER\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+LIN\+\_\+\+ACCEL}} = 10
+\item 
+const float \mbox{\hyperlink{HydroneClassicPD_8h_a27cab03c030239770cda672fdcc8cb08}{HC\+\_\+\+UNDERWATER\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+ANG\+\_\+\+ACCEL}} = 10
+\item 
+const float \mbox{\hyperlink{HydroneClassicPD_8h_abb54255b724fc3b99de63114f174759d}{HC\+\_\+\+POS\+\_\+P}} = 100
+\item 
+const float \mbox{\hyperlink{HydroneClassicPD_8h_a0b4d43a85d9717b58d42128b77f2a84f}{HC\+\_\+\+POS\+\_\+D}} = 50
+\item 
+const float \mbox{\hyperlink{HydroneClassicPD_8h_a2e8773f192f43a44444c4f8cbff06ae0}{HC\+\_\+\+ROT\+\_\+P}} = 0.\+5
+\item 
+const float \mbox{\hyperlink{HydroneClassicPD_8h_a427201f9ac1ce7db9da5eb163fe6c8bf}{HC\+\_\+\+ROT\+\_\+D}} = 0.\+5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{HydroneClassicPD_8h_a1f60ebe4da7ef91ae54c8c7511f82892}\label{HydroneClassicPD_8h_a1f60ebe4da7ef91ae54c8c7511f82892}} 
+\index{HydroneClassicPD.h@{HydroneClassicPD.h}!HC\_AIR\_CONTROL\_MAX\_ANG\_ACCEL@{HC\_AIR\_CONTROL\_MAX\_ANG\_ACCEL}}
+\index{HC\_AIR\_CONTROL\_MAX\_ANG\_ACCEL@{HC\_AIR\_CONTROL\_MAX\_ANG\_ACCEL}!HydroneClassicPD.h@{HydroneClassicPD.h}}
+\doxysubsubsection{\texorpdfstring{HC\_AIR\_CONTROL\_MAX\_ANG\_ACCEL}{HC\_AIR\_CONTROL\_MAX\_ANG\_ACCEL}}
+{\footnotesize\ttfamily const float HC\+\_\+\+AIR\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+ANG\+\_\+\+ACCEL = 30}
+
+\mbox{\Hypertarget{HydroneClassicPD_8h_aeb6f2c4e82146eef22b3da3abb2bea66}\label{HydroneClassicPD_8h_aeb6f2c4e82146eef22b3da3abb2bea66}} 
+\index{HydroneClassicPD.h@{HydroneClassicPD.h}!HC\_AIR\_CONTROL\_MAX\_LIN\_ACCEL@{HC\_AIR\_CONTROL\_MAX\_LIN\_ACCEL}}
+\index{HC\_AIR\_CONTROL\_MAX\_LIN\_ACCEL@{HC\_AIR\_CONTROL\_MAX\_LIN\_ACCEL}!HydroneClassicPD.h@{HydroneClassicPD.h}}
+\doxysubsubsection{\texorpdfstring{HC\_AIR\_CONTROL\_MAX\_LIN\_ACCEL}{HC\_AIR\_CONTROL\_MAX\_LIN\_ACCEL}}
+{\footnotesize\ttfamily const float HC\+\_\+\+AIR\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+LIN\+\_\+\+ACCEL = 30}
+
+\mbox{\Hypertarget{HydroneClassicPD_8h_a0b4d43a85d9717b58d42128b77f2a84f}\label{HydroneClassicPD_8h_a0b4d43a85d9717b58d42128b77f2a84f}} 
+\index{HydroneClassicPD.h@{HydroneClassicPD.h}!HC\_POS\_D@{HC\_POS\_D}}
+\index{HC\_POS\_D@{HC\_POS\_D}!HydroneClassicPD.h@{HydroneClassicPD.h}}
+\doxysubsubsection{\texorpdfstring{HC\_POS\_D}{HC\_POS\_D}}
+{\footnotesize\ttfamily const float HC\+\_\+\+POS\+\_\+D = 50}
+
+\mbox{\Hypertarget{HydroneClassicPD_8h_abb54255b724fc3b99de63114f174759d}\label{HydroneClassicPD_8h_abb54255b724fc3b99de63114f174759d}} 
+\index{HydroneClassicPD.h@{HydroneClassicPD.h}!HC\_POS\_P@{HC\_POS\_P}}
+\index{HC\_POS\_P@{HC\_POS\_P}!HydroneClassicPD.h@{HydroneClassicPD.h}}
+\doxysubsubsection{\texorpdfstring{HC\_POS\_P}{HC\_POS\_P}}
+{\footnotesize\ttfamily const float HC\+\_\+\+POS\+\_\+P = 100}
+
+\mbox{\Hypertarget{HydroneClassicPD_8h_a427201f9ac1ce7db9da5eb163fe6c8bf}\label{HydroneClassicPD_8h_a427201f9ac1ce7db9da5eb163fe6c8bf}} 
+\index{HydroneClassicPD.h@{HydroneClassicPD.h}!HC\_ROT\_D@{HC\_ROT\_D}}
+\index{HC\_ROT\_D@{HC\_ROT\_D}!HydroneClassicPD.h@{HydroneClassicPD.h}}
+\doxysubsubsection{\texorpdfstring{HC\_ROT\_D}{HC\_ROT\_D}}
+{\footnotesize\ttfamily const float HC\+\_\+\+ROT\+\_\+D = 0.\+5}
+
+\mbox{\Hypertarget{HydroneClassicPD_8h_a2e8773f192f43a44444c4f8cbff06ae0}\label{HydroneClassicPD_8h_a2e8773f192f43a44444c4f8cbff06ae0}} 
+\index{HydroneClassicPD.h@{HydroneClassicPD.h}!HC\_ROT\_P@{HC\_ROT\_P}}
+\index{HC\_ROT\_P@{HC\_ROT\_P}!HydroneClassicPD.h@{HydroneClassicPD.h}}
+\doxysubsubsection{\texorpdfstring{HC\_ROT\_P}{HC\_ROT\_P}}
+{\footnotesize\ttfamily const float HC\+\_\+\+ROT\+\_\+P = 0.\+5}
+
+\mbox{\Hypertarget{HydroneClassicPD_8h_a27cab03c030239770cda672fdcc8cb08}\label{HydroneClassicPD_8h_a27cab03c030239770cda672fdcc8cb08}} 
+\index{HydroneClassicPD.h@{HydroneClassicPD.h}!HC\_UNDERWATER\_CONTROL\_MAX\_ANG\_ACCEL@{HC\_UNDERWATER\_CONTROL\_MAX\_ANG\_ACCEL}}
+\index{HC\_UNDERWATER\_CONTROL\_MAX\_ANG\_ACCEL@{HC\_UNDERWATER\_CONTROL\_MAX\_ANG\_ACCEL}!HydroneClassicPD.h@{HydroneClassicPD.h}}
+\doxysubsubsection{\texorpdfstring{HC\_UNDERWATER\_CONTROL\_MAX\_ANG\_ACCEL}{HC\_UNDERWATER\_CONTROL\_MAX\_ANG\_ACCEL}}
+{\footnotesize\ttfamily const float HC\+\_\+\+UNDERWATER\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+ANG\+\_\+\+ACCEL = 10}
+
+\mbox{\Hypertarget{HydroneClassicPD_8h_a33926399d3e13dbf11f55e371c730b15}\label{HydroneClassicPD_8h_a33926399d3e13dbf11f55e371c730b15}} 
+\index{HydroneClassicPD.h@{HydroneClassicPD.h}!HC\_UNDERWATER\_CONTROL\_MAX\_LIN\_ACCEL@{HC\_UNDERWATER\_CONTROL\_MAX\_LIN\_ACCEL}}
+\index{HC\_UNDERWATER\_CONTROL\_MAX\_LIN\_ACCEL@{HC\_UNDERWATER\_CONTROL\_MAX\_LIN\_ACCEL}!HydroneClassicPD.h@{HydroneClassicPD.h}}
+\doxysubsubsection{\texorpdfstring{HC\_UNDERWATER\_CONTROL\_MAX\_LIN\_ACCEL}{HC\_UNDERWATER\_CONTROL\_MAX\_LIN\_ACCEL}}
+{\footnotesize\ttfamily const float HC\+\_\+\+UNDERWATER\+\_\+\+CONTROL\+\_\+\+MAX\+\_\+\+LIN\+\_\+\+ACCEL = 10}
+

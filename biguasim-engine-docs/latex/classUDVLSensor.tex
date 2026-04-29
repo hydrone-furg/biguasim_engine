@@ -1,0 +1,220 @@
+\hypertarget{classUDVLSensor}{}\doxysection{UDVLSensor Class Reference}
+\label{classUDVLSensor}\index{UDVLSensor@{UDVLSensor}}
+
+
+Doppler Velocity Log (DVL) acoustic sensor. Inherits from the Holodeck\+Sensor class. Emits 4 simulated acoustic beams (Janus configuration) to estimate the true linear velocity of the attached agent relative to the environment. Can optionally perform raycasts to return the altitude/range of each beam.  
+
+
+
+
+{\ttfamily \#include $<$DVLSensor.\+h$>$}
+
+
+
+Inheritance diagram for UDVLSensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classUDVLSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UDVLSensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUDVLSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUDVLSensor_a88ba6f724eb5aec88c6968cbf02fe6d8}{UDVLSensor}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUDVLSensor_a33e9ccb992f98aa0b54d16afb117b35d}{Initialize\+Sensor}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the sensor and pre-\/computes the Janus transformation matrices. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUDVLSensor_a9f410a0e7d00a9497c99d5de54d26ad8}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\begin{DoxyCompactList}\small\item\em Parses JSON parameters to set elevation, max range, and multivariate noise profiles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUDVLSensor_a16eef7799b0148f836cf41527d0056d4}{Get\+Num\+Items}} () override
+\begin{DoxyCompactList}\small\item\em Gets the number of items returned. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUDVLSensor_a03f1bd5432d154f7ff5ef9a2c7077d7e}{Get\+Item\+Size}} () override
+\begin{DoxyCompactList}\small\item\em Gets the size of each item in bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUDVLSensor_a28d709430be6c61bdfb98e980436cda7}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\begin{DoxyCompactList}\small\item\em Main tick function calculating velocity and performing raycasts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classUDVLSensor_a7cf4d9a5957e38fcd920e43c0c1b24a6}{Debug\+Lines}} = false
+\begin{DoxyCompactList}\small\item\em Toggles drawing the 4 acoustic beams in the Unreal Editor for debugging. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classUDVLSensor_a9894a2352437b9450100a42fd10b6275}{elevation}} = 22.\+5
+\begin{DoxyCompactList}\small\item\em The angle (in degrees) of the acoustic beams relative to the horizontal plane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUDVLSensor_a9faffe07f29d7c1bcbc4ff2ab64b46ab}{Return\+Range}} = true
+\begin{DoxyCompactList}\small\item\em Determines if the sensor should raycast and return the distances of the 4 beams. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classUDVLSensor_a7226bf0b827b139e9b620b5b9220301c}{Max\+Range}} = 20 $\ast$ 100
+\begin{DoxyCompactList}\small\item\em The maximum operational distance of the acoustic beams (in cm). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Doppler Velocity Log (DVL) acoustic sensor. Inherits from the Holodeck\+Sensor class. Emits 4 simulated acoustic beams (Janus configuration) to estimate the true linear velocity of the attached agent relative to the environment. Can optionally perform raycasts to return the altitude/range of each beam. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUDVLSensor_a88ba6f724eb5aec88c6968cbf02fe6d8}\label{classUDVLSensor_a88ba6f724eb5aec88c6968cbf02fe6d8}} 
+\index{UDVLSensor@{UDVLSensor}!UDVLSensor@{UDVLSensor}}
+\index{UDVLSensor@{UDVLSensor}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{UDVLSensor()}{UDVLSensor()}}
+{\footnotesize\ttfamily UDVLSensor\+::\+UDVLSensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+Default Constructor. Sets the sensor name and enables ticking every frame. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUDVLSensor_a03f1bd5432d154f7ff5ef9a2c7077d7e}\label{classUDVLSensor_a03f1bd5432d154f7ff5ef9a2c7077d7e}} 
+\index{UDVLSensor@{UDVLSensor}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int UDVLSensor\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the size of each item in bytes. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUDVLSensor_a16eef7799b0148f836cf41527d0056d4}\label{classUDVLSensor_a16eef7799b0148f836cf41527d0056d4}} 
+\index{UDVLSensor@{UDVLSensor}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily int UDVLSensor\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of items returned. 
+
+$\ast$\begin{DoxyReturn}{Returns}
+7 items if Return\+Range is true (3 velocities + 4 beam ranges), otherwise 3 items. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUDVLSensor_a33e9ccb992f98aa0b54d16afb117b35d}\label{classUDVLSensor_a33e9ccb992f98aa0b54d16afb117b35d}} 
+\index{UDVLSensor@{UDVLSensor}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UDVLSensor\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the sensor and pre-\/computes the Janus transformation matrices. 
+
+Initializes the sensor matrices and computes the Janus configuration transformation. Uses the elevation angle to build the mathematical matrix that maps the 4 acoustic beams to the vehicle\textquotesingle{}s local 3D velocity vectors. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUDVLSensor_a9f410a0e7d00a9497c99d5de54d26ad8}\label{classUDVLSensor_a9f410a0e7d00a9497c99d5de54d26ad8}} 
+\index{UDVLSensor@{UDVLSensor}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void UDVLSensor\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Parses JSON parameters to set elevation, max range, and multivariate noise profiles. 
+
+Parses the JSON configuration sent by the Python client to dynamically set sensor parameters. Extracts the beam elevation angle, max range, debug flags, and multivariate noise parameters (Sigma and Covariance) for both velocity and range measurements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Parms\+Json} & JSON string containing configuration.\\
+\hline
+{\em Parms\+Json} & The JSON string containing the sensor configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_a29fe9c31ded6b9b4a898ec14aff1d8ea}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUDVLSensor_a28d709430be6c61bdfb98e980436cda7}\label{classUDVLSensor_a28d709430be6c61bdfb98e980436cda7}} 
+\index{UDVLSensor@{UDVLSensor}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UDVLSensor\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Main tick function calculating velocity and performing raycasts. 
+
+Main execution loop that calculates the true relative velocity and beam ranges. Queries the physics engine for linear velocity, transforms it to the sensor\textquotesingle{}s local frame, adds simulated acoustic noise, and optionally performs 4 line traces to simulate acoustic pings bouncing off the sea floor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & The time elapsed since the last tick. \\
+\hline
+{\em Tick\+Type} & The type of tick this is. \\
+\hline
+{\em This\+Tick\+Function} & Tick function that is calling this. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}{UHolodeck\+Sensor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUDVLSensor_a7cf4d9a5957e38fcd920e43c0c1b24a6}\label{classUDVLSensor_a7cf4d9a5957e38fcd920e43c0c1b24a6}} 
+\index{UDVLSensor@{UDVLSensor}!DebugLines@{DebugLines}}
+\index{DebugLines@{DebugLines}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{DebugLines}{DebugLines}}
+{\footnotesize\ttfamily bool UDVLSensor\+::\+Debug\+Lines = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Toggles drawing the 4 acoustic beams in the Unreal Editor for debugging. 
+
+\mbox{\Hypertarget{classUDVLSensor_a9894a2352437b9450100a42fd10b6275}\label{classUDVLSensor_a9894a2352437b9450100a42fd10b6275}} 
+\index{UDVLSensor@{UDVLSensor}!elevation@{elevation}}
+\index{elevation@{elevation}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{elevation}{elevation}}
+{\footnotesize\ttfamily float UDVLSensor\+::elevation = 22.\+5\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The angle (in degrees) of the acoustic beams relative to the horizontal plane. 
+
+\mbox{\Hypertarget{classUDVLSensor_a7226bf0b827b139e9b620b5b9220301c}\label{classUDVLSensor_a7226bf0b827b139e9b620b5b9220301c}} 
+\index{UDVLSensor@{UDVLSensor}!MaxRange@{MaxRange}}
+\index{MaxRange@{MaxRange}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{MaxRange}{MaxRange}}
+{\footnotesize\ttfamily float UDVLSensor\+::\+Max\+Range = 20 $\ast$ 100\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The maximum operational distance of the acoustic beams (in cm). 
+
+\mbox{\Hypertarget{classUDVLSensor_a9faffe07f29d7c1bcbc4ff2ab64b46ab}\label{classUDVLSensor_a9faffe07f29d7c1bcbc4ff2ab64b46ab}} 
+\index{UDVLSensor@{UDVLSensor}!ReturnRange@{ReturnRange}}
+\index{ReturnRange@{ReturnRange}!UDVLSensor@{UDVLSensor}}
+\doxysubsubsection{\texorpdfstring{ReturnRange}{ReturnRange}}
+{\footnotesize\ttfamily bool UDVLSensor\+::\+Return\+Range = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Determines if the sensor should raycast and return the distances of the 4 beams. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{DVLSensor_8h}{DVLSensor.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{DVLSensor_8cpp}{DVLSensor.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+// void AHydroneV0::ApplyThrusters(float* const ThrusterArray){
+// 	float pct0 = FMath::Clamp(ThrusterArray[0], 0, 100);
+// 	float pct1 = FMath::Clamp(ThrusterArray[1], 0, 100);
+// 	float pct2 = FMath::Clamp(ThrusterArray[2], 0, 100);
+// 	float pct3 = FMath::Clamp(ThrusterArray[3], 0, 100);
+
+// 	float rpm0 = GetRPM(pct0);
+// 	float rpm1 = GetRPM(pct1);
+// 	float rpm2 = GetRPM(pct2);
+// 	float rpm3 = GetRPM(pct3);
+	
+// 	float t = GetThrust(pct0) +  GetThrust(pct1) +  GetThrust(pct2) +  GetThrust(pct3);
+
+// 	FVector InertiaTensor = RootMesh->GetBodyInstance()->GetBodyInertiaTensor();
+// 	FRotator Rotation = RootMesh->GetComponentRotation();
+// 	FVector LinearVelocity = RootMesh->GetPhysicsLinearVelocity();
+//     FVector AngularVelocity = RootMesh->GetPhysicsAngularVelocityInRadians();
+
+// 	float phi = Rotation.Roll;
+// 	float theta = Rotation.Pitch;
+// 	float psi = Rotation.Yaw;
+
+// 	float Ixx = InertiaTensor[0];
+// 	float Iyy = InertiaTensor[1];
+// 	float Izz = InertiaTensor[2];
+
+// 	float vx = LinearVelocity[0];
+// 	float vy = LinearVelocity[1];
+// 	float vz = LinearVelocity[2];
+
+// 	float p = AngularVelocity[0];
+// 	float q = AngularVelocity[1];
+// 	float r = AngularVelocity[2];
+
+// 	FVector linAccel = FVector(1/MassInKG * (-(FMath::Cos(phi)*FMath::Cos(psi)*FMath::Sin(theta)) + FMath::Sin(phi)*FMath::Sin(psi)) * t - Kd*vx,
+// 								   1/MassInKG * (-(FMath::Cos(phi)*FMath::Sin(psi)*FMath::Sin(theta)) - FMath::Cos(psi)*FMath::Sin(phi)) * t - Kd*vy,
+// 								   1/MassInKG * (-(FMath::Cos(phi)*FMath::Cos(theta))) * t - Kd*vz + Gravity);
+
+// 	linAccel = ClampVector(linAccel, -FVector(M_MAX_LIN_ACCEL), FVector(M_MAX_LIN_ACCEL));
+// 	linAccel = ConvertLinearVector(linAccel, ClientToUE);
+
+// 	// FVector angAccel = FVector(1/InertiaTensor[0] * ((InertiaTensor[1] - InertiaTensor[2]) * AngularVelocity[1]*AngularVelocity[2] + ((M_DP / 2) * Kt / sqrt(2)) * (-pow(rpm1,2) + pow(rpm3,2) - pow(rpm0,2) + pow(rpm2,2))),
+// 	// 							1/InertiaTensor[1] * ((InertiaTensor[2] - InertiaTensor[0]) * AngularVelocity[0]*AngularVelocity[2] + ((M_DP / 2) * Kt / sqrt(2)) * (pow(rpm0,2) - pow(rpm1,2) - pow(rpm2,2) + pow(rpm3,2))),
+// 	// 							1/InertiaTensor[2] * ((InertiaTensor[0] - InertiaTensor[1]) * AngularVelocity[0]*AngularVelocity[1] + Kd * (pow(rpm0,2) - pow(rpm1,2) + pow(rpm2,2) - pow(rpm3,2))));
+
+// 	FVector angAccel = FVector(1/Ixx * ((Iyy - Izz)*q*r - rho_max*q*(rpm0 - rpm1 + rpm2 - rpm3) + (M_DP / 2)*Kt*(pow(rpm3,2) - pow(rpm1,2))),
+// 								1/Iyy *((Izz - Ixx)*p*r	+ rho_max*p*(rpm0 - rpm1 + rpm2 - rpm3) + (M_DP / 2)*Kt*(pow(rpm0,2) - pow(rpm2,2))),
+// 								1/Izz * ((Ixx - Iyy)*p*q + Kd * (pow(rpm0,2) - pow(rpm1,2) + pow(rpm2,2) - pow(rpm3,2))));
+
+// 	angAccel = ClampVector(angAccel, -FVector(M_MAX_ANG_ACCEL), FVector(M_MAX_ANG_ACCEL));
+// 	angAccel = ConvertAngularVector(angAccel, NoScale);
+
+// 	RootMesh->GetBodyInstance()->AddForce(linAccel, true, true);
+// 	RootMesh->GetBodyInstance()->AddTorqueInRadians(angAccel, true, true);
+
+// }

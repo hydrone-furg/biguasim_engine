@@ -1,0 +1,124 @@
+\hypertarget{classSimplePID}{}\doxysection{Simple\+PID Class Reference}
+\label{classSimplePID}\index{SimplePID@{SimplePID}}
+
+
+{\ttfamily \#include $<$Simple\+PID.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSimplePID_a3b6b3b88d98f89fd4bc25539f87d4934}{Simple\+PID}} ()
+\item 
+\mbox{\hyperlink{classSimplePID_a5654ac4bef3392901a0a39eb9ac0d8ab}{Simple\+PID}} (const float P, const float I, const float D)
+\item 
+\mbox{\hyperlink{classSimplePID_a61e7f4002d938671e230121c3edb98d7}{$\sim$\+Simple\+PID}} ()=default
+\item 
+float \mbox{\hyperlink{classSimplePID_a1352c22e01821db936f4875ff376c435}{Compute\+PID}} (float Desired, float Current, float Delta)
+\item 
+float \mbox{\hyperlink{classSimplePID_afdf6d909c44674031a73b7ce84c1f945}{Compute\+PIDDirect}} (float XC, float X, float XDot, float Delta)
+\item 
+float \mbox{\hyperlink{classSimplePID_a6ad6bf987ddb6857b9e379e254bf7783}{Compute\+PIDDirect}} (float XC, float X, float XDot, float Delta, bool b\+Is\+Angle, bool Degrees=false)
+\item 
+void \mbox{\hyperlink{classSimplePID_a081d4fea4fa2b7b2035e7cccf30e59cb}{Set\+Gains}} (const float P, const float I, const float D)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple PID controller. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSimplePID_a3b6b3b88d98f89fd4bc25539f87d4934}\label{classSimplePID_a3b6b3b88d98f89fd4bc25539f87d4934}} 
+\index{SimplePID@{SimplePID}!SimplePID@{SimplePID}}
+\index{SimplePID@{SimplePID}!SimplePID@{SimplePID}}
+\doxysubsubsection{\texorpdfstring{SimplePID()}{SimplePID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Simple\+PID\+::\+Simple\+PID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor. \mbox{\Hypertarget{classSimplePID_a5654ac4bef3392901a0a39eb9ac0d8ab}\label{classSimplePID_a5654ac4bef3392901a0a39eb9ac0d8ab}} 
+\index{SimplePID@{SimplePID}!SimplePID@{SimplePID}}
+\index{SimplePID@{SimplePID}!SimplePID@{SimplePID}}
+\doxysubsubsection{\texorpdfstring{SimplePID()}{SimplePID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Simple\+PID\+::\+Simple\+PID (\begin{DoxyParamCaption}\item[{const float}]{P,  }\item[{const float}]{I,  }\item[{const float}]{D }\end{DoxyParamCaption})}
+
+Full Constructor. Constructs the PID controller with values for P, I, D, and Tau. \mbox{\Hypertarget{classSimplePID_a61e7f4002d938671e230121c3edb98d7}\label{classSimplePID_a61e7f4002d938671e230121c3edb98d7}} 
+\index{SimplePID@{SimplePID}!````~SimplePID@{$\sim$SimplePID}}
+\index{````~SimplePID@{$\sim$SimplePID}!SimplePID@{SimplePID}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimplePID()}{~SimplePID()}}
+{\footnotesize\ttfamily Simple\+PID\+::$\sim$\+Simple\+PID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default Destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSimplePID_a1352c22e01821db936f4875ff376c435}\label{classSimplePID_a1352c22e01821db936f4875ff376c435}} 
+\index{SimplePID@{SimplePID}!ComputePID@{ComputePID}}
+\index{ComputePID@{ComputePID}!SimplePID@{SimplePID}}
+\doxysubsubsection{\texorpdfstring{ComputePID()}{ComputePID()}}
+{\footnotesize\ttfamily float Simple\+PID\+::\+Compute\+PID (\begin{DoxyParamCaption}\item[{float}]{Desired,  }\item[{float}]{Current,  }\item[{float}]{Delta }\end{DoxyParamCaption})}
+
+Compute\+PID Computes the control 
+\begin{DoxyParams}{Parameters}
+{\em Desired} & the desired value \\
+\hline
+{\em Current} & the current value \\
+\hline
+{\em Delta} & the delta time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the PID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSimplePID_afdf6d909c44674031a73b7ce84c1f945}\label{classSimplePID_afdf6d909c44674031a73b7ce84c1f945}} 
+\index{SimplePID@{SimplePID}!ComputePIDDirect@{ComputePIDDirect}}
+\index{ComputePIDDirect@{ComputePIDDirect}!SimplePID@{SimplePID}}
+\doxysubsubsection{\texorpdfstring{ComputePIDDirect()}{ComputePIDDirect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float Simple\+PID\+::\+Compute\+PIDDirect (\begin{DoxyParamCaption}\item[{float}]{XC,  }\item[{float}]{X,  }\item[{float}]{XDot,  }\item[{float}]{Delta }\end{DoxyParamCaption})}
+
+Compute\+PIDDirect Computes the PID directly? 
+\begin{DoxyParams}{Parameters}
+{\em XC} & desired \\
+\hline
+{\em X} & current \\
+\hline
+{\em XDot} & the gradient (angular velocity?) \\
+\hline
+{\em Delta} & the change in time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+force or torque 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSimplePID_a6ad6bf987ddb6857b9e379e254bf7783}\label{classSimplePID_a6ad6bf987ddb6857b9e379e254bf7783}} 
+\index{SimplePID@{SimplePID}!ComputePIDDirect@{ComputePIDDirect}}
+\index{ComputePIDDirect@{ComputePIDDirect}!SimplePID@{SimplePID}}
+\doxysubsubsection{\texorpdfstring{ComputePIDDirect()}{ComputePIDDirect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Simple\+PID\+::\+Compute\+PIDDirect (\begin{DoxyParamCaption}\item[{float}]{XC,  }\item[{float}]{X,  }\item[{float}]{XDot,  }\item[{float}]{Delta,  }\item[{bool}]{b\+Is\+Angle,  }\item[{bool}]{Degrees = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Compute\+PIDDirect Computes the PID directly? 
+\begin{DoxyParams}{Parameters}
+{\em XC} & desired \\
+\hline
+{\em X} & current \\
+\hline
+{\em XDot} & the gradient (angular velocity?) \\
+\hline
+{\em Delta} & the change in time \\
+\hline
+{\em b\+Is\+Angle} & ? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Force or torque 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSimplePID_a081d4fea4fa2b7b2035e7cccf30e59cb}\label{classSimplePID_a081d4fea4fa2b7b2035e7cccf30e59cb}} 
+\index{SimplePID@{SimplePID}!SetGains@{SetGains}}
+\index{SetGains@{SetGains}!SimplePID@{SimplePID}}
+\doxysubsubsection{\texorpdfstring{SetGains()}{SetGains()}}
+{\footnotesize\ttfamily void Simple\+PID\+::\+Set\+Gains (\begin{DoxyParamCaption}\item[{const float}]{P,  }\item[{const float}]{I,  }\item[{const float}]{D }\end{DoxyParamCaption})}
+
+Set\+Gains
+
+Used for late initialization or a redo 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+General/\+Public/\mbox{\hyperlink{SimplePID_8h}{Simple\+PID.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+General/\+Private/\mbox{\hyperlink{SimplePID_8cpp}{Simple\+PID.\+cpp}}\end{DoxyCompactItemize}

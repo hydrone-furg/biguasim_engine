@@ -1,0 +1,137 @@
+\hypertarget{HydroneClassic_8h}{}\doxysection{/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Bigua\+Core/\+Public/\+Hydrone\+Classic.h File Reference}
+\label{HydroneClassic_8h}\index{/home/lh/Documents/bs-\/engine/Source/Holodeck/BiguaCore/Public/HydroneClassic.h@{/home/lh/Documents/bs-\/engine/Source/Holodeck/BiguaCore/Public/HydroneClassic.h}}
+{\ttfamily \#include \char`\"{}Containers/\+Array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Game\+Framework/\+Pawn.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Holodeck\+Buoyant\+Agent.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Hydrone\+Classic.\+generated.\+h\char`\"{}}\newline
+Include dependency graph for Hydrone\+Classic.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HydroneClassic_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HydroneClassic_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classAHydroneClassic}{AHydrone\+Classic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_a6ac09d104343e01b99727a8ea71e6606}{Air\+Density}} = 1225
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_a7bc5b90af226c78049c807c25870b88b}{HC\+\_\+\+MAX\+\_\+\+LIN\+\_\+\+ACCEL}} = 5
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_a481f01d9b5676825d91810ea0469b661}{HC\+\_\+\+MAX\+\_\+\+ANG\+\_\+\+ACCEL}} = 0.\+5
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_afdf1751536368be25334822eee4800ad}{HC\+\_\+\+MAX\+\_\+\+THRUST}} = \mbox{\hyperlink{HydroneClassic_8h_a7bc5b90af226c78049c807c25870b88b}{HC\+\_\+\+MAX\+\_\+\+LIN\+\_\+\+ACCEL}}$\ast$2.\+55 / 2
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_af81d1d34b8d0182cbb3f5170eaf8f9e3}{HC\+\_\+\+MAX\+\_\+\+FORCE}} = 1000 $\ast$ 4
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_a691992210204d2ce2063b3c3c122a49d}{HC\+\_\+\+MAX\+\_\+\+ANGULAR\+\_\+\+FORCE}} = 1 $\ast$ 4
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_a3fbf3a4667dc495906c4d8a93e35a851}{HC\+\_\+\+KV}} = 930
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_a42580585baa5134e12d5f7456811a80d}{HC\+\_\+\+VB}} = 15.\+1
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_afd97dd9bd8eb6c4dcec2496dae606887}{HC\+\_\+\+DP}} = 24.\+4
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_a6bd246e215187a5e85f23a6ce3c93ceb}{HC\+\_\+D}} = 18.\+15
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_a6eebbe36735a128a606fe02e4ec397b2}{HC\+\_\+\+CHORD}} = 0.\+2286
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_a623f468d6cc60d9050461486320a42f1}{HC\+\_\+\+NUM\+\_\+\+BLADES}} = 2
+\item 
+const float \mbox{\hyperlink{HydroneClassic_8h_acd68275042adccefa4c3588c1ec71dc7}{HC\+\_\+\+CD}} = 0.\+035
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{HydroneClassic_8h_a6ac09d104343e01b99727a8ea71e6606}\label{HydroneClassic_8h_a6ac09d104343e01b99727a8ea71e6606}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!AirDensity@{AirDensity}}
+\index{AirDensity@{AirDensity}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{AirDensity}{AirDensity}}
+{\footnotesize\ttfamily const float Air\+Density = 1225}
+
+\mbox{\Hypertarget{HydroneClassic_8h_acd68275042adccefa4c3588c1ec71dc7}\label{HydroneClassic_8h_acd68275042adccefa4c3588c1ec71dc7}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_CD@{HC\_CD}}
+\index{HC\_CD@{HC\_CD}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_CD}{HC\_CD}}
+{\footnotesize\ttfamily const float HC\+\_\+\+CD = 0.\+035}
+
+\mbox{\Hypertarget{HydroneClassic_8h_a6eebbe36735a128a606fe02e4ec397b2}\label{HydroneClassic_8h_a6eebbe36735a128a606fe02e4ec397b2}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_CHORD@{HC\_CHORD}}
+\index{HC\_CHORD@{HC\_CHORD}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_CHORD}{HC\_CHORD}}
+{\footnotesize\ttfamily const float HC\+\_\+\+CHORD = 0.\+2286}
+
+\mbox{\Hypertarget{HydroneClassic_8h_a6bd246e215187a5e85f23a6ce3c93ceb}\label{HydroneClassic_8h_a6bd246e215187a5e85f23a6ce3c93ceb}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_D@{HC\_D}}
+\index{HC\_D@{HC\_D}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_D}{HC\_D}}
+{\footnotesize\ttfamily const float HC\+\_\+D = 18.\+15}
+
+\mbox{\Hypertarget{HydroneClassic_8h_afd97dd9bd8eb6c4dcec2496dae606887}\label{HydroneClassic_8h_afd97dd9bd8eb6c4dcec2496dae606887}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_DP@{HC\_DP}}
+\index{HC\_DP@{HC\_DP}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_DP}{HC\_DP}}
+{\footnotesize\ttfamily const float HC\+\_\+\+DP = 24.\+4}
+
+\mbox{\Hypertarget{HydroneClassic_8h_a3fbf3a4667dc495906c4d8a93e35a851}\label{HydroneClassic_8h_a3fbf3a4667dc495906c4d8a93e35a851}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_KV@{HC\_KV}}
+\index{HC\_KV@{HC\_KV}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_KV}{HC\_KV}}
+{\footnotesize\ttfamily const float HC\+\_\+\+KV = 930}
+
+\mbox{\Hypertarget{HydroneClassic_8h_a481f01d9b5676825d91810ea0469b661}\label{HydroneClassic_8h_a481f01d9b5676825d91810ea0469b661}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_MAX\_ANG\_ACCEL@{HC\_MAX\_ANG\_ACCEL}}
+\index{HC\_MAX\_ANG\_ACCEL@{HC\_MAX\_ANG\_ACCEL}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_MAX\_ANG\_ACCEL}{HC\_MAX\_ANG\_ACCEL}}
+{\footnotesize\ttfamily const float HC\+\_\+\+MAX\+\_\+\+ANG\+\_\+\+ACCEL = 0.\+5}
+
+\mbox{\Hypertarget{HydroneClassic_8h_a691992210204d2ce2063b3c3c122a49d}\label{HydroneClassic_8h_a691992210204d2ce2063b3c3c122a49d}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_MAX\_ANGULAR\_FORCE@{HC\_MAX\_ANGULAR\_FORCE}}
+\index{HC\_MAX\_ANGULAR\_FORCE@{HC\_MAX\_ANGULAR\_FORCE}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_MAX\_ANGULAR\_FORCE}{HC\_MAX\_ANGULAR\_FORCE}}
+{\footnotesize\ttfamily const float HC\+\_\+\+MAX\+\_\+\+ANGULAR\+\_\+\+FORCE = 1 $\ast$ 4}
+
+\mbox{\Hypertarget{HydroneClassic_8h_af81d1d34b8d0182cbb3f5170eaf8f9e3}\label{HydroneClassic_8h_af81d1d34b8d0182cbb3f5170eaf8f9e3}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_MAX\_FORCE@{HC\_MAX\_FORCE}}
+\index{HC\_MAX\_FORCE@{HC\_MAX\_FORCE}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_MAX\_FORCE}{HC\_MAX\_FORCE}}
+{\footnotesize\ttfamily const float HC\+\_\+\+MAX\+\_\+\+FORCE = 1000 $\ast$ 4}
+
+\mbox{\Hypertarget{HydroneClassic_8h_a7bc5b90af226c78049c807c25870b88b}\label{HydroneClassic_8h_a7bc5b90af226c78049c807c25870b88b}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_MAX\_LIN\_ACCEL@{HC\_MAX\_LIN\_ACCEL}}
+\index{HC\_MAX\_LIN\_ACCEL@{HC\_MAX\_LIN\_ACCEL}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_MAX\_LIN\_ACCEL}{HC\_MAX\_LIN\_ACCEL}}
+{\footnotesize\ttfamily const float HC\+\_\+\+MAX\+\_\+\+LIN\+\_\+\+ACCEL = 5}
+
+\mbox{\Hypertarget{HydroneClassic_8h_afdf1751536368be25334822eee4800ad}\label{HydroneClassic_8h_afdf1751536368be25334822eee4800ad}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_MAX\_THRUST@{HC\_MAX\_THRUST}}
+\index{HC\_MAX\_THRUST@{HC\_MAX\_THRUST}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_MAX\_THRUST}{HC\_MAX\_THRUST}}
+{\footnotesize\ttfamily const float HC\+\_\+\+MAX\+\_\+\+THRUST = \mbox{\hyperlink{HydroneClassic_8h_a7bc5b90af226c78049c807c25870b88b}{HC\+\_\+\+MAX\+\_\+\+LIN\+\_\+\+ACCEL}}$\ast$2.\+55 / 2}
+
+\mbox{\Hypertarget{HydroneClassic_8h_a623f468d6cc60d9050461486320a42f1}\label{HydroneClassic_8h_a623f468d6cc60d9050461486320a42f1}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_NUM\_BLADES@{HC\_NUM\_BLADES}}
+\index{HC\_NUM\_BLADES@{HC\_NUM\_BLADES}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_NUM\_BLADES}{HC\_NUM\_BLADES}}
+{\footnotesize\ttfamily const float HC\+\_\+\+NUM\+\_\+\+BLADES = 2}
+
+\mbox{\Hypertarget{HydroneClassic_8h_a42580585baa5134e12d5f7456811a80d}\label{HydroneClassic_8h_a42580585baa5134e12d5f7456811a80d}} 
+\index{HydroneClassic.h@{HydroneClassic.h}!HC\_VB@{HC\_VB}}
+\index{HC\_VB@{HC\_VB}!HydroneClassic.h@{HydroneClassic.h}}
+\doxysubsubsection{\texorpdfstring{HC\_VB}{HC\_VB}}
+{\footnotesize\ttfamily const float HC\+\_\+\+VB = 15.\+1}
+

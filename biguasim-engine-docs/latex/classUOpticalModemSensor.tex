@@ -1,0 +1,183 @@
+\hypertarget{classUOpticalModemSensor}{}\doxysection{UOptical\+Modem\+Sensor Class Reference}
+\label{classUOpticalModemSensor}\index{UOpticalModemSensor@{UOpticalModemSensor}}
+
+
+{\ttfamily \#include $<$Optical\+Modem\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for UOptical\+Modem\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classUOpticalModemSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UOptical\+Modem\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUOpticalModemSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUOpticalModemSensor_a9b40eb8b50eb03090354f0c22549308e}{UOptical\+Modem\+Sensor}} ()
+\item 
+virtual void \mbox{\hyperlink{classUOpticalModemSensor_a89aa45d7934502c29cadd3e49e59840d}{Initialize\+Sensor}} () override
+\item 
+virtual void \mbox{\hyperlink{classUOpticalModemSensor_abab4a32dc9ac166936a72b5111cf6283}{Parse\+Sensor\+Parms}} (FString Parms\+Json) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUOpticalModemSensor}{UOptical\+Modem\+Sensor}} $\ast$ \mbox{\hyperlink{classUOpticalModemSensor_a2a2c6dd51052dd299d0fd97c16048c1d}{From\+Sensor}} = \mbox{\hyperlink{gason_8h_ab979d9d4b4923f7c54d6caa6e1a61936}{nullptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUOpticalModemSensor_afa8fe00ebec3e19b447ef83084468bf6}{Get\+Num\+Items}} () override
+\item 
+int \mbox{\hyperlink{classUOpticalModemSensor_aa8ea170decfa5481404401fc057ea3dc}{Get\+Item\+Size}} () override
+\item 
+void \mbox{\hyperlink{classUOpticalModemSensor_ab6aa08106c9d48abfd7b7330cf18b2ab}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classUOpticalModemSensor_adc491826ed48625ef01d37a9f2719d65}{Max\+Distance}} = 50
+\item 
+float \mbox{\hyperlink{classUOpticalModemSensor_ac4922efe4dea2ee7f428a8f78e001fa7}{Noise\+Max\+Distance}}
+\item 
+float \mbox{\hyperlink{classUOpticalModemSensor_a9e6d085b31de0cc6b41b1a7385f58bea}{Laser\+Angle}} = 60
+\item 
+float \mbox{\hyperlink{classUOpticalModemSensor_a52ffc37879769993683028553e5ca04a}{Noise\+Laser\+Angle}}
+\item 
+bool \mbox{\hyperlink{classUOpticalModemSensor_a61cd92fb4f7acb7a20fecb8461df71c3}{Laser\+Debug}} = false
+\item 
+int \mbox{\hyperlink{classUOpticalModemSensor_aac46bafe4be5f553379f268ff6dd8371}{Debug\+Num\+Sides}} = 72
+\item 
+FColor \mbox{\hyperlink{classUOpticalModemSensor_a88622294603fc67ce8ea9000d40a425e}{Debug\+Color}} = FColor\+::\+Green
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUOpticalModemSensor_a9b40eb8b50eb03090354f0c22549308e}\label{classUOpticalModemSensor_a9b40eb8b50eb03090354f0c22549308e}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!UOpticalModemSensor@{UOpticalModemSensor}}
+\index{UOpticalModemSensor@{UOpticalModemSensor}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{UOpticalModemSensor()}{UOpticalModemSensor()}}
+{\footnotesize\ttfamily UOptical\+Modem\+Sensor\+::\+UOptical\+Modem\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUOpticalModemSensor_aa8ea170decfa5481404401fc057ea3dc}\label{classUOpticalModemSensor_aa8ea170decfa5481404401fc057ea3dc}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int UOptical\+Modem\+Sensor\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the size of each data item e.\+g. return sizeof(float) 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUOpticalModemSensor_afa8fe00ebec3e19b447ef83084468bf6}\label{classUOpticalModemSensor_afa8fe00ebec3e19b447ef83084468bf6}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily int UOptical\+Modem\+Sensor\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the number of data items e.\+g. return 100 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUOpticalModemSensor_a89aa45d7934502c29cadd3e49e59840d}\label{classUOpticalModemSensor_a89aa45d7934502c29cadd3e49e59840d}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UOptical\+Modem\+Sensor\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Contains all sensor initialization code and subscribes the sensor Subclasses should make sure to call Super\+::\+Initialize\+Sensor() 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUOpticalModemSensor_abab4a32dc9ac166936a72b5111cf6283}\label{classUOpticalModemSensor_abab4a32dc9ac166936a72b5111cf6283}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!ParseSensorParms@{ParseSensorParms}}
+\index{ParseSensorParms@{ParseSensorParms}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{ParseSensorParms()}{ParseSensorParms()}}
+{\footnotesize\ttfamily void UOptical\+Modem\+Sensor\+::\+Parse\+Sensor\+Parms (\begin{DoxyParamCaption}\item[{FString}]{Parms\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Override this function if sensor has parameters to initialize. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_a29fe9c31ded6b9b4a898ec14aff1d8ea}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUOpticalModemSensor_ab6aa08106c9d48abfd7b7330cf18b2ab}\label{classUOpticalModemSensor_ab6aa08106c9d48abfd7b7330cf18b2ab}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UOptical\+Modem\+Sensor\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Tick\+Sensor\+Component Mimics Unreal Engine\textquotesingle{}s UActor\+Component\+::\+Tick\+Component function. See it\textquotesingle{}s documentation for what the parameters are. Must be overridden by subclass Handles the logic for ticking the sensor Make sure to set the data, Cast Buffer into the right kind of pointer and set the data. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}{UHolodeck\+Sensor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUOpticalModemSensor_a88622294603fc67ce8ea9000d40a425e}\label{classUOpticalModemSensor_a88622294603fc67ce8ea9000d40a425e}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!DebugColor@{DebugColor}}
+\index{DebugColor@{DebugColor}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{DebugColor}{DebugColor}}
+{\footnotesize\ttfamily FColor UOptical\+Modem\+Sensor\+::\+Debug\+Color = FColor\+::\+Green\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUOpticalModemSensor_aac46bafe4be5f553379f268ff6dd8371}\label{classUOpticalModemSensor_aac46bafe4be5f553379f268ff6dd8371}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!DebugNumSides@{DebugNumSides}}
+\index{DebugNumSides@{DebugNumSides}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{DebugNumSides}{DebugNumSides}}
+{\footnotesize\ttfamily int UOptical\+Modem\+Sensor\+::\+Debug\+Num\+Sides = 72\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUOpticalModemSensor_a2a2c6dd51052dd299d0fd97c16048c1d}\label{classUOpticalModemSensor_a2a2c6dd51052dd299d0fd97c16048c1d}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!FromSensor@{FromSensor}}
+\index{FromSensor@{FromSensor}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{FromSensor}{FromSensor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUOpticalModemSensor}{UOptical\+Modem\+Sensor}}$\ast$ UOptical\+Modem\+Sensor\+::\+From\+Sensor = \mbox{\hyperlink{gason_8h_ab979d9d4b4923f7c54d6caa6e1a61936}{nullptr}}}
+
+\mbox{\Hypertarget{classUOpticalModemSensor_a9e6d085b31de0cc6b41b1a7385f58bea}\label{classUOpticalModemSensor_a9e6d085b31de0cc6b41b1a7385f58bea}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!LaserAngle@{LaserAngle}}
+\index{LaserAngle@{LaserAngle}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{LaserAngle}{LaserAngle}}
+{\footnotesize\ttfamily float UOptical\+Modem\+Sensor\+::\+Laser\+Angle = 60\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUOpticalModemSensor_a61cd92fb4f7acb7a20fecb8461df71c3}\label{classUOpticalModemSensor_a61cd92fb4f7acb7a20fecb8461df71c3}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!LaserDebug@{LaserDebug}}
+\index{LaserDebug@{LaserDebug}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{LaserDebug}{LaserDebug}}
+{\footnotesize\ttfamily bool UOptical\+Modem\+Sensor\+::\+Laser\+Debug = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUOpticalModemSensor_adc491826ed48625ef01d37a9f2719d65}\label{classUOpticalModemSensor_adc491826ed48625ef01d37a9f2719d65}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!MaxDistance@{MaxDistance}}
+\index{MaxDistance@{MaxDistance}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{MaxDistance}{MaxDistance}}
+{\footnotesize\ttfamily float UOptical\+Modem\+Sensor\+::\+Max\+Distance = 50\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUOpticalModemSensor_a52ffc37879769993683028553e5ca04a}\label{classUOpticalModemSensor_a52ffc37879769993683028553e5ca04a}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!NoiseLaserAngle@{NoiseLaserAngle}}
+\index{NoiseLaserAngle@{NoiseLaserAngle}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{NoiseLaserAngle}{NoiseLaserAngle}}
+{\footnotesize\ttfamily float UOptical\+Modem\+Sensor\+::\+Noise\+Laser\+Angle\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUOpticalModemSensor_ac4922efe4dea2ee7f428a8f78e001fa7}\label{classUOpticalModemSensor_ac4922efe4dea2ee7f428a8f78e001fa7}} 
+\index{UOpticalModemSensor@{UOpticalModemSensor}!NoiseMaxDistance@{NoiseMaxDistance}}
+\index{NoiseMaxDistance@{NoiseMaxDistance}!UOpticalModemSensor@{UOpticalModemSensor}}
+\doxysubsubsection{\texorpdfstring{NoiseMaxDistance}{NoiseMaxDistance}}
+{\footnotesize\ttfamily float UOptical\+Modem\+Sensor\+::\+Noise\+Max\+Distance\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{OpticalModemSensor_8h}{Optical\+Modem\+Sensor.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{OpticalModemSensor_8cpp}{Optical\+Modem\+Sensor.\+cpp}}\end{DoxyCompactItemize}

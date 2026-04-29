@@ -1,0 +1,99 @@
+\hypertarget{gason_8h}{}\doxysection{/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Utils/\+Public/gason.h File Reference}
+\label{gason_8h}\index{/home/lh/Documents/bs-\/engine/Source/Holodeck/Utils/Public/gason.h@{/home/lh/Documents/bs-\/engine/Source/Holodeck/Utils/Public/gason.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for gason.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gason_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gason_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgason_1_1JsonValue}{gason\+::\+Json\+Value}}
+\item 
+struct \mbox{\hyperlink{structgason_1_1JsonNode}{gason\+::\+Json\+Node}}
+\item 
+struct \mbox{\hyperlink{structgason_1_1JsonIterator}{gason\+::\+Json\+Iterator}}
+\item 
+class \mbox{\hyperlink{classgason_1_1JsonAllocator}{gason\+::\+Json\+Allocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegason}{gason}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gason_8h_a62e2e4d186a2010d468331eeffa37434}{GASON\+\_\+\+OLDTOOLCHAINS\+\_\+\+SUPPORT}}
+\item 
+\#define \mbox{\hyperlink{gason_8h_ab979d9d4b4923f7c54d6caa6e1a61936}{nullptr}}~NULL
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacegason_abb18737b3d73f6080a0829d35963945c}{gason\+::\+Json\+Tag}} \{ \newline
+\mbox{\hyperlink{namespacegason_abb18737b3d73f6080a0829d35963945caf9a5593f2c1f8cca7b13d6053dc9224c}{gason\+::\+JSON\+\_\+\+NUMBER}} = 0
+, \mbox{\hyperlink{namespacegason_abb18737b3d73f6080a0829d35963945ca60f6e2a7d759f2bacc00ae3a940ce6c7}{gason\+::\+JSON\+\_\+\+STRING}}
+, \mbox{\hyperlink{namespacegason_abb18737b3d73f6080a0829d35963945ca6bd0fc8be3739c3abf1708e0d4de70aa}{gason\+::\+JSON\+\_\+\+ARRAY}}
+, \mbox{\hyperlink{namespacegason_abb18737b3d73f6080a0829d35963945caf6d74ac75d8e0a63cd331a3f7ab45d85}{gason\+::\+JSON\+\_\+\+OBJECT}}
+, \newline
+\mbox{\hyperlink{namespacegason_abb18737b3d73f6080a0829d35963945caf4b2c480742ef9586731c64c8131f9f0}{gason\+::\+JSON\+\_\+\+TRUE}}
+, \mbox{\hyperlink{namespacegason_abb18737b3d73f6080a0829d35963945ca4befffc4d1a7d1a9b4074824079d49aa}{gason\+::\+JSON\+\_\+\+FALSE}}
+, \mbox{\hyperlink{namespacegason_abb18737b3d73f6080a0829d35963945ca5d70c40fc27b77c82f1c78185f8ad170}{gason\+::\+JSON\+\_\+\+NULL}} = 0xF
+ \}
+\item 
+enum \mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0b}{gason\+::\+Json\+Parse\+Status}} \{ \newline
+\mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0baf5862a98b1764a0d8bb183ef0ce1b19b}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+OK}}
+, \mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0ba6a7f816095fd12d898bd312b1c14912a}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+BAD\+\_\+\+NUMBER}}
+, \mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0ba788e0f197dc14d4a1d379dc18fb97a7c}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+BAD\+\_\+\+STRING}}
+, \mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0ba33f5277c4fcea9bf0ed226bf075fd41e}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+BAD\+\_\+\+IDENTIFIER}}
+, \newline
+\mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0baafa98ab715d660f1eaeb06bde5100985}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+STACK\+\_\+\+OVERFLOW}}
+, \mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0ba3fa5e3e26f54c50e353c214b2127b8c6}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+STACK\+\_\+\+UNDERFLOW}}
+, \mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0ba9bab1092f90e1272209e0b0647736faf}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+MISMATCH\+\_\+\+BRACKET}}
+, \mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0ba854356ecef271f32b04c0611dc1b7b2e}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+UNEXPECTED\+\_\+\+CHARACTER}}
+, \newline
+\mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0ba3d746d289945c2a49a7a2b28a5ae8b1d}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+UNQUOTED\+\_\+\+KEY}}
+, \mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0ba89b4dae235db1b68bcc1d9d46f8ef5c7}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+BREAKING\+\_\+\+BAD}}
+, \mbox{\hyperlink{namespacegason_af84c9b75c32aa947dc35e42d003cca0ba4b07baeae88bebc2834984179ce5383d}{gason\+::\+JSON\+\_\+\+PARSE\+\_\+\+ALLOCATION\+\_\+\+FAILURE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Json\+Iterator \mbox{\hyperlink{namespacegason_ad76b4c8c10a737fdf36121ac3f2602be}{gason\+::begin}} (Json\+Value o)
+\item 
+Json\+Iterator \mbox{\hyperlink{namespacegason_ab8dd8ddceaa26bc5f9227a974fcc216b}{gason\+::end}} (Json\+Value)
+\item 
+Json\+Parse\+Status \mbox{\hyperlink{namespacegason_aa709efe6384c05827b24e0a5c2404fde}{gason\+::json\+Parse}} (char $\ast$s, char $\ast$$\ast$endptr, Json\+Value $\ast$value, Json\+Allocator \&allocator)
+\item 
+Json\+Parse\+Status \mbox{\hyperlink{namespacegason_ac5b79bacf45f97768c0ad72f582385b5}{gason\+::json\+Parse}} (char $\ast$json\+String, Json\+Value \&root, Json\+Allocator \&allocator)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gason_8h_a62e2e4d186a2010d468331eeffa37434}\label{gason_8h_a62e2e4d186a2010d468331eeffa37434}} 
+\index{gason.h@{gason.h}!GASON\_OLDTOOLCHAINS\_SUPPORT@{GASON\_OLDTOOLCHAINS\_SUPPORT}}
+\index{GASON\_OLDTOOLCHAINS\_SUPPORT@{GASON\_OLDTOOLCHAINS\_SUPPORT}!gason.h@{gason.h}}
+\doxysubsubsection{\texorpdfstring{GASON\_OLDTOOLCHAINS\_SUPPORT}{GASON\_OLDTOOLCHAINS\_SUPPORT}}
+{\footnotesize\ttfamily \#define GASON\+\_\+\+OLDTOOLCHAINS\+\_\+\+SUPPORT}
+
+\mbox{\Hypertarget{gason_8h_ab979d9d4b4923f7c54d6caa6e1a61936}\label{gason_8h_ab979d9d4b4923f7c54d6caa6e1a61936}} 
+\index{gason.h@{gason.h}!nullptr@{nullptr}}
+\index{nullptr@{nullptr}!gason.h@{gason.h}}
+\doxysubsubsection{\texorpdfstring{nullptr}{nullptr}}
+{\footnotesize\ttfamily \#define nullptr~NULL}
+

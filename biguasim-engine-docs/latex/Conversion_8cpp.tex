@@ -1,0 +1,95 @@
+\hypertarget{Conversion_8cpp}{}\doxysection{/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+General/\+Private/\+Conversion.cpp File Reference}
+\label{Conversion_8cpp}\index{/home/lh/Documents/bs-\/engine/Source/Holodeck/General/Private/Conversion.cpp@{/home/lh/Documents/bs-\/engine/Source/Holodeck/General/Private/Conversion.cpp}}
+{\ttfamily \#include \char`\"{}Holodeck.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Conversion.\+h\char`\"{}}\newline
+Include dependency graph for Conversion.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{Conversion_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+FRotator \mbox{\hyperlink{Conversion_8cpp_a4ce87a12207fa692e340b4f4090690a2}{RPYTo\+Rotator}} (float Roll, float Pitch, float Yaw)
+\item 
+FVector \mbox{\hyperlink{Conversion_8cpp_a630721456125f9d0fcc4a7c31ceeb28b}{Rotator\+To\+RPY}} (FRotator Rot)
+\item 
+FVector \mbox{\hyperlink{Conversion_8cpp_adba20d6d423c9c8a61a5ebbb479196b3}{Convert\+Linear\+Vector}} (FVector Vector, \mbox{\hyperlink{Conversion_8h_a3eb2ef7126c12e67d97d307c7aaa381d}{Convert\+Type}} Type)
+\item 
+FVector \mbox{\hyperlink{Conversion_8cpp_ac907d386066e102443a08e02edde5094}{Convert\+Angular\+Vector}} (FVector Vector, \mbox{\hyperlink{Conversion_8h_a3eb2ef7126c12e67d97d307c7aaa381d}{Convert\+Type}} Type)
+\item 
+FRotator \mbox{\hyperlink{Conversion_8cpp_a849485d543065b4e82f2779d3fd6fa62}{Convert\+Angular\+Vector}} (FRotator Rotator, \mbox{\hyperlink{Conversion_8h_a3eb2ef7126c12e67d97d307c7aaa381d}{Convert\+Type}} Type)
+\item 
+FVector \mbox{\hyperlink{Conversion_8cpp_a2a237e7f58c8452c145d6f483d6d49f3}{Convert\+Torque}} (FVector Vector, \mbox{\hyperlink{Conversion_8h_a3eb2ef7126c12e67d97d307c7aaa381d}{Convert\+Type}} Type)
+\item 
+float \mbox{\hyperlink{Conversion_8cpp_aa70bce1fef0d53d2df8561327e3aee61}{Convert\+Client\+Distance\+To\+Unreal}} (float client)
+\item 
+float \mbox{\hyperlink{Conversion_8cpp_aee63cb41eb7e9077d90c04a3acc6f471}{Convert\+Unreal\+Distance\+To\+Client}} (float unreal)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const bool \mbox{\hyperlink{Conversion_8cpp_a28cc1f1dfd1918012f619bf302cfcd98}{USE\+\_\+\+RHS}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Conversion_8cpp_a849485d543065b4e82f2779d3fd6fa62}\label{Conversion_8cpp_a849485d543065b4e82f2779d3fd6fa62}} 
+\index{Conversion.cpp@{Conversion.cpp}!ConvertAngularVector@{ConvertAngularVector}}
+\index{ConvertAngularVector@{ConvertAngularVector}!Conversion.cpp@{Conversion.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertAngularVector()}{ConvertAngularVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily FRotator Convert\+Angular\+Vector (\begin{DoxyParamCaption}\item[{FRotator}]{Rotator,  }\item[{\mbox{\hyperlink{Conversion_8h_a3eb2ef7126c12e67d97d307c7aaa381d}{Convert\+Type}}}]{Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Conversion_8cpp_ac907d386066e102443a08e02edde5094}\label{Conversion_8cpp_ac907d386066e102443a08e02edde5094}} 
+\index{Conversion.cpp@{Conversion.cpp}!ConvertAngularVector@{ConvertAngularVector}}
+\index{ConvertAngularVector@{ConvertAngularVector}!Conversion.cpp@{Conversion.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertAngularVector()}{ConvertAngularVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily FVector Convert\+Angular\+Vector (\begin{DoxyParamCaption}\item[{FVector}]{Vector,  }\item[{\mbox{\hyperlink{Conversion_8h_a3eb2ef7126c12e67d97d307c7aaa381d}{Convert\+Type}}}]{Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Conversion_8cpp_aa70bce1fef0d53d2df8561327e3aee61}\label{Conversion_8cpp_aa70bce1fef0d53d2df8561327e3aee61}} 
+\index{Conversion.cpp@{Conversion.cpp}!ConvertClientDistanceToUnreal@{ConvertClientDistanceToUnreal}}
+\index{ConvertClientDistanceToUnreal@{ConvertClientDistanceToUnreal}!Conversion.cpp@{Conversion.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertClientDistanceToUnreal()}{ConvertClientDistanceToUnreal()}}
+{\footnotesize\ttfamily float Convert\+Client\+Distance\+To\+Unreal (\begin{DoxyParamCaption}\item[{float}]{client }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Conversion_8cpp_adba20d6d423c9c8a61a5ebbb479196b3}\label{Conversion_8cpp_adba20d6d423c9c8a61a5ebbb479196b3}} 
+\index{Conversion.cpp@{Conversion.cpp}!ConvertLinearVector@{ConvertLinearVector}}
+\index{ConvertLinearVector@{ConvertLinearVector}!Conversion.cpp@{Conversion.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertLinearVector()}{ConvertLinearVector()}}
+{\footnotesize\ttfamily FVector Convert\+Linear\+Vector (\begin{DoxyParamCaption}\item[{FVector}]{Vector,  }\item[{\mbox{\hyperlink{Conversion_8h_a3eb2ef7126c12e67d97d307c7aaa381d}{Convert\+Type}}}]{Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Conversion_8cpp_a2a237e7f58c8452c145d6f483d6d49f3}\label{Conversion_8cpp_a2a237e7f58c8452c145d6f483d6d49f3}} 
+\index{Conversion.cpp@{Conversion.cpp}!ConvertTorque@{ConvertTorque}}
+\index{ConvertTorque@{ConvertTorque}!Conversion.cpp@{Conversion.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertTorque()}{ConvertTorque()}}
+{\footnotesize\ttfamily FVector Convert\+Torque (\begin{DoxyParamCaption}\item[{FVector}]{Vector,  }\item[{\mbox{\hyperlink{Conversion_8h_a3eb2ef7126c12e67d97d307c7aaa381d}{Convert\+Type}}}]{Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Conversion_8cpp_aee63cb41eb7e9077d90c04a3acc6f471}\label{Conversion_8cpp_aee63cb41eb7e9077d90c04a3acc6f471}} 
+\index{Conversion.cpp@{Conversion.cpp}!ConvertUnrealDistanceToClient@{ConvertUnrealDistanceToClient}}
+\index{ConvertUnrealDistanceToClient@{ConvertUnrealDistanceToClient}!Conversion.cpp@{Conversion.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertUnrealDistanceToClient()}{ConvertUnrealDistanceToClient()}}
+{\footnotesize\ttfamily float Convert\+Unreal\+Distance\+To\+Client (\begin{DoxyParamCaption}\item[{float}]{unreal }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Conversion_8cpp_a630721456125f9d0fcc4a7c31ceeb28b}\label{Conversion_8cpp_a630721456125f9d0fcc4a7c31ceeb28b}} 
+\index{Conversion.cpp@{Conversion.cpp}!RotatorToRPY@{RotatorToRPY}}
+\index{RotatorToRPY@{RotatorToRPY}!Conversion.cpp@{Conversion.cpp}}
+\doxysubsubsection{\texorpdfstring{RotatorToRPY()}{RotatorToRPY()}}
+{\footnotesize\ttfamily FVector Rotator\+To\+RPY (\begin{DoxyParamCaption}\item[{FRotator}]{Rot }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Conversion_8cpp_a4ce87a12207fa692e340b4f4090690a2}\label{Conversion_8cpp_a4ce87a12207fa692e340b4f4090690a2}} 
+\index{Conversion.cpp@{Conversion.cpp}!RPYToRotator@{RPYToRotator}}
+\index{RPYToRotator@{RPYToRotator}!Conversion.cpp@{Conversion.cpp}}
+\doxysubsubsection{\texorpdfstring{RPYToRotator()}{RPYToRotator()}}
+{\footnotesize\ttfamily FRotator RPYTo\+Rotator (\begin{DoxyParamCaption}\item[{float}]{Roll,  }\item[{float}]{Pitch,  }\item[{float}]{Yaw }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Conversion_8cpp_a28cc1f1dfd1918012f619bf302cfcd98}\label{Conversion_8cpp_a28cc1f1dfd1918012f619bf302cfcd98}} 
+\index{Conversion.cpp@{Conversion.cpp}!USE\_RHS@{USE\_RHS}}
+\index{USE\_RHS@{USE\_RHS}!Conversion.cpp@{Conversion.cpp}}
+\doxysubsubsection{\texorpdfstring{USE\_RHS}{USE\_RHS}}
+{\footnotesize\ttfamily const bool USE\+\_\+\+RHS = true}
+

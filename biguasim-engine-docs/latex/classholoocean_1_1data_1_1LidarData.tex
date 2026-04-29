@@ -1,0 +1,149 @@
+\hypertarget{classholoocean_1_1data_1_1LidarData}{}\doxysection{holoocean\+::data\+::Lidar\+Data Class Reference}
+\label{classholoocean_1_1data_1_1LidarData}\index{holoocean::data::LidarData@{holoocean::data::LidarData}}
+
+
+{\ttfamily \#include $<$Lidar\+Data.\+h$>$}
+
+
+
+Inheritance diagram for holoocean\+::data\+::Lidar\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classholoocean_1_1data_1_1LidarData__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for holoocean\+::data\+::Lidar\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classholoocean_1_1data_1_1LidarData__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_a75dc9d4aac085c750f99dcc1b91fbb85}{Lidar\+Data}} (uint32\+\_\+t \mbox{\hyperlink{classholoocean_1_1data_1_1SemanticLidarData_a623c0ba7155228eae1508516871c7f26a989499017681e3c1088bd52b6e149cfa}{Channel\+Count}}=0u)
+\item 
+\mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_a04a2d71a641e8660ce8c73320d61b24a}{Lidar\+Data}} (float $\ast$buffer, uint32\+\_\+t \mbox{\hyperlink{classholoocean_1_1data_1_1SemanticLidarData_a623c0ba7155228eae1508516871c7f26a989499017681e3c1088bd52b6e149cfa}{Channel\+Count}}=0u)
+\item 
+\mbox{\hyperlink{classholoocean_1_1data_1_1LidarData}{Lidar\+Data}} \& \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_a6656e404d28b6f391503aa4e0fac4125}{operator=}} (\mbox{\hyperlink{classholoocean_1_1data_1_1LidarData}{Lidar\+Data}} \&\&)=default
+\item 
+\mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_a943662ef38d77b83be0999013d36ee54}{$\sim$\+Lidar\+Data}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_a3150b65da5304efda37758b6d2900d4a}{Reset\+Memory}} (std\+::vector$<$ uint32\+\_\+t $>$ points\+\_\+per\+\_\+channel)
+\item 
+void \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_af9856e6b6c6f026ca6a269b2db5279d4}{Write\+Point\+Sync}} (\mbox{\hyperlink{classholoocean_1_1data_1_1LidarDetection}{Lidar\+Detection}} \&detection)
+\item 
+virtual void \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_a3c9971db56fb84d51c1ec97e81a98ae9}{Write\+Point\+Sync}} (\mbox{\hyperlink{classholoocean_1_1data_1_1SemanticLidarDetection}{Semantic\+Lidar\+Detection}} \&detection) override
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_a0aa72c380b3ae7a7bd8c9f9e3b8c0e0e}{Count\+Of\+Points}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_a77f58591ee7fcffd4d3d0e018890a7ef}{points}}
+\item 
+float $\ast$ \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_a980cf590645978013848fff06b043af2}{Buffer}}
+\item 
+int \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_aeb52494810eace912fbfd8462e0863a5}{Num\+Points}} = 0
+\item 
+int \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData_abc0f2b50a405682dbb1c09dc6e01f274}{Last\+Frame\+Max\+Points}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_a75dc9d4aac085c750f99dcc1b91fbb85}\label{classholoocean_1_1data_1_1LidarData_a75dc9d4aac085c750f99dcc1b91fbb85}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!LidarData@{LidarData}}
+\index{LidarData@{LidarData}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{LidarData()}{LidarData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily holoocean\+::data\+::\+Lidar\+Data\+::\+Lidar\+Data (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Channel\+Count = {\ttfamily 0u} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_a04a2d71a641e8660ce8c73320d61b24a}\label{classholoocean_1_1data_1_1LidarData_a04a2d71a641e8660ce8c73320d61b24a}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!LidarData@{LidarData}}
+\index{LidarData@{LidarData}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{LidarData()}{LidarData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily holoocean\+::data\+::\+Lidar\+Data\+::\+Lidar\+Data (\begin{DoxyParamCaption}\item[{float $\ast$}]{buffer,  }\item[{uint32\+\_\+t}]{Channel\+Count = {\ttfamily 0u} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_a943662ef38d77b83be0999013d36ee54}\label{classholoocean_1_1data_1_1LidarData_a943662ef38d77b83be0999013d36ee54}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!````~LidarData@{$\sim$LidarData}}
+\index{````~LidarData@{$\sim$LidarData}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{$\sim$LidarData()}{~LidarData()}}
+{\footnotesize\ttfamily holoocean\+::data\+::\+Lidar\+Data\+::$\sim$\+Lidar\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_a0aa72c380b3ae7a7bd8c9f9e3b8c0e0e}\label{classholoocean_1_1data_1_1LidarData_a0aa72c380b3ae7a7bd8c9f9e3b8c0e0e}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!CountOfPoints@{CountOfPoints}}
+\index{CountOfPoints@{CountOfPoints}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{CountOfPoints()}{CountOfPoints()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t holoocean\+::data\+::\+Lidar\+Data\+::\+Count\+Of\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_a6656e404d28b6f391503aa4e0fac4125}\label{classholoocean_1_1data_1_1LidarData_a6656e404d28b6f391503aa4e0fac4125}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!operator=@{operator=}}
+\index{operator=@{operator=}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classholoocean_1_1data_1_1LidarData}{Lidar\+Data}}\& holoocean\+::data\+::\+Lidar\+Data\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classholoocean_1_1data_1_1LidarData}{Lidar\+Data}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_a3150b65da5304efda37758b6d2900d4a}\label{classholoocean_1_1data_1_1LidarData_a3150b65da5304efda37758b6d2900d4a}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!ResetMemory@{ResetMemory}}
+\index{ResetMemory@{ResetMemory}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{ResetMemory()}{ResetMemory()}}
+{\footnotesize\ttfamily virtual void holoocean\+::data\+::\+Lidar\+Data\+::\+Reset\+Memory (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint32\+\_\+t $>$}]{points\+\_\+per\+\_\+channel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classholoocean_1_1data_1_1SemanticLidarData_a0e58926dbfd2e281a1e786e581f3a744}{holoocean\+::data\+::\+Semantic\+Lidar\+Data}}.
+
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_af9856e6b6c6f026ca6a269b2db5279d4}\label{classholoocean_1_1data_1_1LidarData_af9856e6b6c6f026ca6a269b2db5279d4}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!WritePointSync@{WritePointSync}}
+\index{WritePointSync@{WritePointSync}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{WritePointSync()}{WritePointSync()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void holoocean\+::data\+::\+Lidar\+Data\+::\+Write\+Point\+Sync (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classholoocean_1_1data_1_1LidarDetection}{Lidar\+Detection}} \&}]{detection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_a3c9971db56fb84d51c1ec97e81a98ae9}\label{classholoocean_1_1data_1_1LidarData_a3c9971db56fb84d51c1ec97e81a98ae9}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!WritePointSync@{WritePointSync}}
+\index{WritePointSync@{WritePointSync}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{WritePointSync()}{WritePointSync()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void holoocean\+::data\+::\+Lidar\+Data\+::\+Write\+Point\+Sync (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classholoocean_1_1data_1_1SemanticLidarDetection}{Semantic\+Lidar\+Detection}} \&}]{detection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classholoocean_1_1data_1_1SemanticLidarData_a407a4b1c3608182f1ffa6fd94a0f05ee}{holoocean\+::data\+::\+Semantic\+Lidar\+Data}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_a980cf590645978013848fff06b043af2}\label{classholoocean_1_1data_1_1LidarData_a980cf590645978013848fff06b043af2}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{Buffer}{Buffer}}
+{\footnotesize\ttfamily float$\ast$ holoocean\+::data\+::\+Lidar\+Data\+::\+Buffer}
+
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_abc0f2b50a405682dbb1c09dc6e01f274}\label{classholoocean_1_1data_1_1LidarData_abc0f2b50a405682dbb1c09dc6e01f274}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!LastFrameMaxPoints@{LastFrameMaxPoints}}
+\index{LastFrameMaxPoints@{LastFrameMaxPoints}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{LastFrameMaxPoints}{LastFrameMaxPoints}}
+{\footnotesize\ttfamily int holoocean\+::data\+::\+Lidar\+Data\+::\+Last\+Frame\+Max\+Points = 0}
+
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_aeb52494810eace912fbfd8462e0863a5}\label{classholoocean_1_1data_1_1LidarData_aeb52494810eace912fbfd8462e0863a5}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!NumPoints@{NumPoints}}
+\index{NumPoints@{NumPoints}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{NumPoints}{NumPoints}}
+{\footnotesize\ttfamily int holoocean\+::data\+::\+Lidar\+Data\+::\+Num\+Points = 0}
+
+\mbox{\Hypertarget{classholoocean_1_1data_1_1LidarData_a77f58591ee7fcffd4d3d0e018890a7ef}\label{classholoocean_1_1data_1_1LidarData_a77f58591ee7fcffd4d3d0e018890a7ef}} 
+\index{holoocean::data::LidarData@{holoocean::data::LidarData}!points@{points}}
+\index{points@{points}!holoocean::data::LidarData@{holoocean::data::LidarData}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ holoocean\+::data\+::\+Lidar\+Data\+::points}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{LidarData_8h}{Lidar\+Data.\+h}}\end{DoxyCompactItemize}

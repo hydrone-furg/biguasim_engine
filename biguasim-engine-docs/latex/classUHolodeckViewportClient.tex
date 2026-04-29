@@ -1,0 +1,84 @@
+\hypertarget{classUHolodeckViewportClient}{}\doxysection{UHolodeck\+Viewport\+Client Class Reference}
+\label{classUHolodeckViewportClient}\index{UHolodeckViewportClient@{UHolodeckViewportClient}}
+
+
+{\ttfamily \#include $<$Holodeck\+Viewport\+Client.\+h$>$}
+
+
+
+Inheritance diagram for UHolodeck\+Viewport\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classUHolodeckViewportClient__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UHolodeck\+Viewport\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classUHolodeckViewportClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUHolodeckViewportClient_ab14a1527dd19d2b3daed6d1a3db196c0}{UHolodeck\+Viewport\+Client}} (const FObject\+Initializer \&PCIP)
+\item 
+void \mbox{\hyperlink{classUHolodeckViewportClient_a4285fcac23e742efc3589b5be772bb0a}{Draw}} (FViewport $\ast$Viewport, FCanvas $\ast$Scene\+Canvas) override
+\item 
+void \mbox{\hyperlink{classUHolodeckViewportClient_ab841da899949ae965c1711fdcb7518f8}{Set\+Buffer}} (void $\ast$New\+Buffer)
+\item 
+bool \mbox{\hyperlink{classUHolodeckViewportClient_a9a4b4dd7bcfcc9945a145f5f0864a999}{Buffer\+Is\+Set}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classUHolodeckViewportClient}{UHolodeck\+Viewport\+Client}} Handles capturing the main player camera image data. Must be set in the editor to be the viewport client.
+
+THIS MUST BE IN Default\+Engine.\+ini Game\+Viewport\+Client\+Class\+Name = /\+Script/\+Holodeck.Holodeck\+Viewport\+Client 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUHolodeckViewportClient_ab14a1527dd19d2b3daed6d1a3db196c0}\label{classUHolodeckViewportClient_ab14a1527dd19d2b3daed6d1a3db196c0}} 
+\index{UHolodeckViewportClient@{UHolodeckViewportClient}!UHolodeckViewportClient@{UHolodeckViewportClient}}
+\index{UHolodeckViewportClient@{UHolodeckViewportClient}!UHolodeckViewportClient@{UHolodeckViewportClient}}
+\doxysubsubsection{\texorpdfstring{UHolodeckViewportClient()}{UHolodeckViewportClient()}}
+{\footnotesize\ttfamily UHolodeck\+Viewport\+Client\+::\+UHolodeck\+Viewport\+Client (\begin{DoxyParamCaption}\item[{const FObject\+Initializer \&}]{PCIP }\end{DoxyParamCaption})}
+
+Default Constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUHolodeckViewportClient_a9a4b4dd7bcfcc9945a145f5f0864a999}\label{classUHolodeckViewportClient_a9a4b4dd7bcfcc9945a145f5f0864a999}} 
+\index{UHolodeckViewportClient@{UHolodeckViewportClient}!BufferIsSet@{BufferIsSet}}
+\index{BufferIsSet@{BufferIsSet}!UHolodeckViewportClient@{UHolodeckViewportClient}}
+\doxysubsubsection{\texorpdfstring{BufferIsSet()}{BufferIsSet()}}
+{\footnotesize\ttfamily bool UHolodeck\+Viewport\+Client\+::\+Buffer\+Is\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Buffer\+Is\+Set Gets whether the buffer has been set. \begin{DoxyReturn}{Returns}
+true if the buffer has been set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUHolodeckViewportClient_a4285fcac23e742efc3589b5be772bb0a}\label{classUHolodeckViewportClient_a4285fcac23e742efc3589b5be772bb0a}} 
+\index{UHolodeckViewportClient@{UHolodeckViewportClient}!Draw@{Draw}}
+\index{Draw@{Draw}!UHolodeckViewportClient@{UHolodeckViewportClient}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void UHolodeck\+Viewport\+Client\+::\+Draw (\begin{DoxyParamCaption}\item[{FViewport $\ast$}]{Viewport,  }\item[{FCanvas $\ast$}]{Scene\+Canvas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Draw Calls the parent draw function, and captures the pixels. \mbox{\Hypertarget{classUHolodeckViewportClient_ab841da899949ae965c1711fdcb7518f8}\label{classUHolodeckViewportClient_ab841da899949ae965c1711fdcb7518f8}} 
+\index{UHolodeckViewportClient@{UHolodeckViewportClient}!SetBuffer@{SetBuffer}}
+\index{SetBuffer@{SetBuffer}!UHolodeckViewportClient@{UHolodeckViewportClient}}
+\doxysubsubsection{\texorpdfstring{SetBuffer()}{SetBuffer()}}
+{\footnotesize\ttfamily void UHolodeck\+Viewport\+Client\+::\+Set\+Buffer (\begin{DoxyParamCaption}\item[{void $\ast$}]{New\+Buffer }\end{DoxyParamCaption})}
+
+Set\+Buffer Sets the buffer to capture pixels to. 
+\begin{DoxyParams}{Parameters}
+{\em New\+Buffer} & the buffer to save the pixel data to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+General/\+Public/\mbox{\hyperlink{HolodeckViewportClient_8h}{Holodeck\+Viewport\+Client.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+General/\+Private/\mbox{\hyperlink{HolodeckViewportClient_8cpp}{Holodeck\+Viewport\+Client.\+cpp}}\end{DoxyCompactItemize}

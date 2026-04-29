@@ -1,0 +1,63 @@
+\hypertarget{TorpedoAUV_8h}{}\doxysection{/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Agents/\+Public/\+Torpedo\+AUV.h File Reference}
+\label{TorpedoAUV_8h}\index{/home/lh/Documents/bs-\/engine/Source/Holodeck/Agents/Public/TorpedoAUV.h@{/home/lh/Documents/bs-\/engine/Source/Holodeck/Agents/Public/TorpedoAUV.h}}
+{\ttfamily \#include \char`\"{}Containers/\+Array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Game\+Framework/\+Pawn.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Holodeck\+Buoyant\+Agent.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Torpedo\+AUV.\+generated.\+h\char`\"{}}\newline
+Include dependency graph for Torpedo\+AUV.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TorpedoAUV_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TorpedoAUV_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classATorpedoAUV}{ATorpedo\+AUV}}
+\begin{DoxyCompactList}\small\item\em Torpedo-\/style Autonomous Underwater Vehicle (AUV) agent. Inherits from the Holodeck\+Buoyant\+Agent class. On any tick this object will apply the given forces. Desired values must be set by a controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr float \mbox{\hyperlink{TorpedoAUV_8h_ae26b5e6853972bbb78721cedff46f7a8}{TAUV\+\_\+\+MIN\+\_\+\+THRUST}} = -\/100.\+0f
+\item 
+constexpr float \mbox{\hyperlink{TorpedoAUV_8h_a3b67d142c072258bf8d58a23f58d0aa0}{TAUV\+\_\+\+MAX\+\_\+\+THRUST}} = 100.\+0f
+\item 
+constexpr float \mbox{\hyperlink{TorpedoAUV_8h_a2a2db4a28694190c7d9b78c9f19f744f}{TAUV\+\_\+\+MIN\+\_\+\+FIN}} = -\/45.\+0f
+\item 
+constexpr float \mbox{\hyperlink{TorpedoAUV_8h_ae0b342eff83162015e1c7524693f4ac3}{TAUV\+\_\+\+MAX\+\_\+\+FIN}} = 45.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{TorpedoAUV_8h_ae0b342eff83162015e1c7524693f4ac3}\label{TorpedoAUV_8h_ae0b342eff83162015e1c7524693f4ac3}} 
+\index{TorpedoAUV.h@{TorpedoAUV.h}!TAUV\_MAX\_FIN@{TAUV\_MAX\_FIN}}
+\index{TAUV\_MAX\_FIN@{TAUV\_MAX\_FIN}!TorpedoAUV.h@{TorpedoAUV.h}}
+\doxysubsubsection{\texorpdfstring{TAUV\_MAX\_FIN}{TAUV\_MAX\_FIN}}
+{\footnotesize\ttfamily constexpr float TAUV\+\_\+\+MAX\+\_\+\+FIN = 45.\+0f\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{TorpedoAUV_8h_a3b67d142c072258bf8d58a23f58d0aa0}\label{TorpedoAUV_8h_a3b67d142c072258bf8d58a23f58d0aa0}} 
+\index{TorpedoAUV.h@{TorpedoAUV.h}!TAUV\_MAX\_THRUST@{TAUV\_MAX\_THRUST}}
+\index{TAUV\_MAX\_THRUST@{TAUV\_MAX\_THRUST}!TorpedoAUV.h@{TorpedoAUV.h}}
+\doxysubsubsection{\texorpdfstring{TAUV\_MAX\_THRUST}{TAUV\_MAX\_THRUST}}
+{\footnotesize\ttfamily constexpr float TAUV\+\_\+\+MAX\+\_\+\+THRUST = 100.\+0f\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{TorpedoAUV_8h_a2a2db4a28694190c7d9b78c9f19f744f}\label{TorpedoAUV_8h_a2a2db4a28694190c7d9b78c9f19f744f}} 
+\index{TorpedoAUV.h@{TorpedoAUV.h}!TAUV\_MIN\_FIN@{TAUV\_MIN\_FIN}}
+\index{TAUV\_MIN\_FIN@{TAUV\_MIN\_FIN}!TorpedoAUV.h@{TorpedoAUV.h}}
+\doxysubsubsection{\texorpdfstring{TAUV\_MIN\_FIN}{TAUV\_MIN\_FIN}}
+{\footnotesize\ttfamily constexpr float TAUV\+\_\+\+MIN\+\_\+\+FIN = -\/45.\+0f\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{TorpedoAUV_8h_ae26b5e6853972bbb78721cedff46f7a8}\label{TorpedoAUV_8h_ae26b5e6853972bbb78721cedff46f7a8}} 
+\index{TorpedoAUV.h@{TorpedoAUV.h}!TAUV\_MIN\_THRUST@{TAUV\_MIN\_THRUST}}
+\index{TAUV\_MIN\_THRUST@{TAUV\_MIN\_THRUST}!TorpedoAUV.h@{TorpedoAUV.h}}
+\doxysubsubsection{\texorpdfstring{TAUV\_MIN\_THRUST}{TAUV\_MIN\_THRUST}}
+{\footnotesize\ttfamily constexpr float TAUV\+\_\+\+MIN\+\_\+\+THRUST = -\/100.\+0f\hspace{0.3cm}{\ttfamily [constexpr]}}
+

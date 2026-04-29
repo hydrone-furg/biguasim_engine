@@ -1,0 +1,164 @@
+\hypertarget{classUPressureSensor}{}\doxysection{UPressure\+Sensor Class Reference}
+\label{classUPressureSensor}\index{UPressureSensor@{UPressureSensor}}
+
+
+{\ttfamily \#include $<$Pressure\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for UPressure\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classUPressureSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UPressure\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUPressureSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUPressureSensor_adbdb9494166a5927597e8266f0eb2b6a}{UPressure\+Sensor}} ()
+\item 
+virtual void \mbox{\hyperlink{classUPressureSensor_a1c6bdd674c2ffc7deae172e70258f461}{Initialize\+Sensor}} () override
+\item 
+void \mbox{\hyperlink{classUPressureSensor_a2eb5ff275f8120af5106965a6de0888e}{On\+Hit}} (AActor $\ast$Self\+Actor, AActor $\ast$Other\+Actor, FVector Normal\+Impulse, const FHit\+Result \&Hit)
+\item 
+virtual void \mbox{\hyperlink{classUPressureSensor_a830ce9ef985602b1a90338a481639358}{Begin\+Destroy}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUPressureSensor_a420853ccdb448c15ac528257ff3d90e5}{Get\+Num\+Items}} () override
+\item 
+int \mbox{\hyperlink{classUPressureSensor_acb412a727ca1728d86fc3cfca24ff349}{Get\+Item\+Size}} () override
+\item 
+virtual void \mbox{\hyperlink{classUPressureSensor_a983809856f2106b3eab10257deaa3546}{Tick\+Sensor\+Component}} (float Delta\+Time, ELevel\+Tick Tick\+Type, FActor\+Component\+Tick\+Function $\ast$This\+Tick\+Function) override
+\item 
+float $\ast$ \mbox{\hyperlink{classUPressureSensor_a87b6c7225889c5dbd3243123088f706e}{Add\+Hit\+To\+Buffer}} (FString Bone\+Name, FVector Hit\+Bone\+Location, FVector Normal\+Impulse, float $\ast$Data)
+\item 
+void \mbox{\hyperlink{classUPressureSensor_a2eee76a5e5b1a111a561e6a9c2a08b2b}{Init\+Joint\+Map}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+AActor $\ast$ \mbox{\hyperlink{classUPressureSensor_aa7dba4d12f4476b6a2ea3fcebc050b9e}{Parent}}
+\item 
+USkeletal\+Mesh\+Component $\ast$ \mbox{\hyperlink{classUPressureSensor_a32865d280b5f2b7e43c0524727e90404}{Skeletal\+Mesh\+Component}}
+\item 
+TMap$<$ FString, int $>$ \mbox{\hyperlink{classUPressureSensor_aa718d4e5f6808097f47b4891dfb56d3b}{Joint\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classUPressureSensor}{UPressure\+Sensor}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUPressureSensor_adbdb9494166a5927597e8266f0eb2b6a}\label{classUPressureSensor_adbdb9494166a5927597e8266f0eb2b6a}} 
+\index{UPressureSensor@{UPressureSensor}!UPressureSensor@{UPressureSensor}}
+\index{UPressureSensor@{UPressureSensor}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{UPressureSensor()}{UPressureSensor()}}
+{\footnotesize\ttfamily UPressure\+Sensor\+::\+UPressure\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUPressureSensor_a87b6c7225889c5dbd3243123088f706e}\label{classUPressureSensor_a87b6c7225889c5dbd3243123088f706e}} 
+\index{UPressureSensor@{UPressureSensor}!AddHitToBuffer@{AddHitToBuffer}}
+\index{AddHitToBuffer@{AddHitToBuffer}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{AddHitToBuffer()}{AddHitToBuffer()}}
+{\footnotesize\ttfamily float $\ast$ UPressure\+Sensor\+::\+Add\+Hit\+To\+Buffer (\begin{DoxyParamCaption}\item[{FString}]{Bone\+Name,  }\item[{FVector}]{Hit\+Bone\+Location,  }\item[{FVector}]{Normal\+Impulse,  }\item[{float $\ast$}]{Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUPressureSensor_a830ce9ef985602b1a90338a481639358}\label{classUPressureSensor_a830ce9ef985602b1a90338a481639358}} 
+\index{UPressureSensor@{UPressureSensor}!BeginDestroy@{BeginDestroy}}
+\index{BeginDestroy@{BeginDestroy}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{BeginDestroy()}{BeginDestroy()}}
+{\footnotesize\ttfamily void UPressure\+Sensor\+::\+Begin\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classUPressureSensor_acb412a727ca1728d86fc3cfca24ff349}\label{classUPressureSensor_acb412a727ca1728d86fc3cfca24ff349}} 
+\index{UPressureSensor@{UPressureSensor}!GetItemSize@{GetItemSize}}
+\index{GetItemSize@{GetItemSize}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{GetItemSize()}{GetItemSize()}}
+{\footnotesize\ttfamily int UPressure\+Sensor\+::\+Get\+Item\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the size of each data item e.\+g. return sizeof(float) 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acc6abdbca26f56a4a0a211a3e6355732}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUPressureSensor_a420853ccdb448c15ac528257ff3d90e5}\label{classUPressureSensor_a420853ccdb448c15ac528257ff3d90e5}} 
+\index{UPressureSensor@{UPressureSensor}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{GetNumItems()}{GetNumItems()}}
+{\footnotesize\ttfamily int UPressure\+Sensor\+::\+Get\+Num\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Must be overridden by subclass Set the number of data items e.\+g. return 100 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5855bfb68f1e2fde65065d4f34799}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUPressureSensor_a1c6bdd674c2ffc7deae172e70258f461}\label{classUPressureSensor_a1c6bdd674c2ffc7deae172e70258f461}} 
+\index{UPressureSensor@{UPressureSensor}!InitializeSensor@{InitializeSensor}}
+\index{InitializeSensor@{InitializeSensor}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{InitializeSensor()}{InitializeSensor()}}
+{\footnotesize\ttfamily void UPressure\+Sensor\+::\+Initialize\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize\+Sensor Sets up the class 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_ae160d2cab91cbfc0e8cc5f31ace79cb4}{UHolodeck\+Sensor}}.
+
+\mbox{\Hypertarget{classUPressureSensor_a2eee76a5e5b1a111a561e6a9c2a08b2b}\label{classUPressureSensor_a2eee76a5e5b1a111a561e6a9c2a08b2b}} 
+\index{UPressureSensor@{UPressureSensor}!InitJointMap@{InitJointMap}}
+\index{InitJointMap@{InitJointMap}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{InitJointMap()}{InitJointMap()}}
+{\footnotesize\ttfamily void UPressure\+Sensor\+::\+Init\+Joint\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUPressureSensor_a2eb5ff275f8120af5106965a6de0888e}\label{classUPressureSensor_a2eb5ff275f8120af5106965a6de0888e}} 
+\index{UPressureSensor@{UPressureSensor}!OnHit@{OnHit}}
+\index{OnHit@{OnHit}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{OnHit()}{OnHit()}}
+{\footnotesize\ttfamily void UPressure\+Sensor\+::\+On\+Hit (\begin{DoxyParamCaption}\item[{AActor $\ast$}]{Self\+Actor,  }\item[{AActor $\ast$}]{Other\+Actor,  }\item[{FVector}]{Normal\+Impulse,  }\item[{const FHit\+Result \&}]{Hit }\end{DoxyParamCaption})}
+
+Callback function that is called whenever part of the actor is hit. \mbox{\Hypertarget{classUPressureSensor_a983809856f2106b3eab10257deaa3546}\label{classUPressureSensor_a983809856f2106b3eab10257deaa3546}} 
+\index{UPressureSensor@{UPressureSensor}!TickSensorComponent@{TickSensorComponent}}
+\index{TickSensorComponent@{TickSensorComponent}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{TickSensorComponent()}{TickSensorComponent()}}
+{\footnotesize\ttfamily void UPressure\+Sensor\+::\+Tick\+Sensor\+Component (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{ELevel\+Tick}]{Tick\+Type,  }\item[{FActor\+Component\+Tick\+Function $\ast$}]{This\+Tick\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Tick\+Sensor\+Component Mimics Unreal Engine\textquotesingle{}s UActor\+Component\+::\+Tick\+Component function. See it\textquotesingle{}s documentation for what the parameters are. Must be overridden by subclass Handles the logic for ticking the sensor Make sure to set the data, Cast Buffer into the right kind of pointer and set the data. 
+
+Reimplemented from \mbox{\hyperlink{classUHolodeckSensor_acad5f0acb4f0e397460b6d3a982a4c27}{UHolodeck\+Sensor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUPressureSensor_aa718d4e5f6808097f47b4891dfb56d3b}\label{classUPressureSensor_aa718d4e5f6808097f47b4891dfb56d3b}} 
+\index{UPressureSensor@{UPressureSensor}!JointMap@{JointMap}}
+\index{JointMap@{JointMap}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{JointMap}{JointMap}}
+{\footnotesize\ttfamily TMap$<$FString, int$>$ UPressure\+Sensor\+::\+Joint\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUPressureSensor_aa7dba4d12f4476b6a2ea3fcebc050b9e}\label{classUPressureSensor_aa7dba4d12f4476b6a2ea3fcebc050b9e}} 
+\index{UPressureSensor@{UPressureSensor}!Parent@{Parent}}
+\index{Parent@{Parent}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{Parent}{Parent}}
+{\footnotesize\ttfamily AActor$\ast$ UPressure\+Sensor\+::\+Parent\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUPressureSensor_a32865d280b5f2b7e43c0524727e90404}\label{classUPressureSensor_a32865d280b5f2b7e43c0524727e90404}} 
+\index{UPressureSensor@{UPressureSensor}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!UPressureSensor@{UPressureSensor}}
+\doxysubsubsection{\texorpdfstring{SkeletalMeshComponent}{SkeletalMeshComponent}}
+{\footnotesize\ttfamily USkeletal\+Mesh\+Component$\ast$ UPressure\+Sensor\+::\+Skeletal\+Mesh\+Component\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Public/\mbox{\hyperlink{PressureSensor_8h}{Pressure\+Sensor.\+h}}\item 
+/home/lh/\+Documents/bs-\/engine/\+Source/\+Holodeck/\+Sensors/\+Private/\mbox{\hyperlink{PressureSensor_8cpp}{Pressure\+Sensor.\+cpp}}\end{DoxyCompactItemize}
